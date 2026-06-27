@@ -1,0 +1,1030 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Distrito Federal no espelho</title>
+  <style>
+    :root {
+      --blue: #05a6ff;
+      --violet: #8800f8;
+      --red: #ff0c1f;
+      --yellow: #ffd006;
+      --ink: #111111;
+      --muted: #666666;
+      --line: #dfdfdf;
+      --paper: #ffffff;
+      --soft: #f3f3f3;
+      --blue-grad: linear-gradient(90deg, #05a6ff 0%, #306dff 52%, #8800f8 100%);
+      --warm-grad: linear-gradient(90deg, #ff0c1f 0%, #e2007a 48%, #8800f8 100%);
+      --sun-grad: linear-gradient(90deg, #ffd006 0%, #ff8c00 55%, #ff0c1f 100%);
+      font-family: "Inter", "Aptos", "Segoe UI", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--paper);
+      color: var(--ink);
+    }
+
+    body {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.45;
+      letter-spacing: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration-color: rgba(5, 166, 255, .55);
+      text-underline-offset: 3px;
+    }
+
+    .shell {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .hero {
+      min-height: 92vh;
+      display: grid;
+      align-items: end;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.98) 0%, rgba(255,255,255,.92) 35%, rgba(255,255,255,.2) 70%),
+        url("df-hero.png") center / cover no-repeat;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -6vw -7vw auto;
+      width: 30vw;
+      aspect-ratio: 1;
+      min-width: 280px;
+      border-radius: 50%;
+      background: conic-gradient(from 220deg, var(--blue), var(--violet), var(--red), var(--yellow), var(--blue));
+      opacity: .16;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 56px;
+      padding: 34px 0 72px;
+    }
+
+    nav {
+      align-self: start;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      font-size: .92rem;
+      color: var(--muted);
+    }
+
+    .mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 750;
+      color: var(--ink);
+    }
+
+    .mark-logo {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+      flex: 0 0 auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .hero-copy {
+      max-width: 720px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--muted);
+      font-weight: 700;
+      margin: 0 0 18px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 42px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--blue-grad);
+    }
+
+    h1 {
+      font-size: clamp(3.3rem, 8vw, 8.6rem);
+      line-height: .88;
+      margin: 0;
+      max-width: 760px;
+      letter-spacing: 0;
+    }
+
+    h1 span {
+      display: block;
+      background: var(--blue-grad);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-lede {
+      max-width: 620px;
+      margin: 28px 0 0;
+      color: #303030;
+      font-size: clamp(1.05rem, 1.7vw, 1.32rem);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      max-width: 980px;
+    }
+
+    .hero-stat {
+      background: rgba(255,255,255,.92);
+      padding: 20px;
+      min-height: 126px;
+    }
+
+    .hero-stat strong {
+      display: block;
+      font-size: clamp(1.55rem, 3vw, 2.25rem);
+      line-height: 1;
+      margin-bottom: 9px;
+    }
+
+    .hero-stat small {
+      color: var(--muted);
+      font-weight: 650;
+    }
+
+    main {
+      background:
+        linear-gradient(180deg, #fff 0, #fff 12%, #f7f7f7 12%, #f7f7f7 100%);
+    }
+
+    section {
+      padding: 78px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(220px, .75fr) minmax(0, 1.25fr);
+      gap: 44px;
+      align-items: start;
+      margin-bottom: 34px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4.5vw, 4.2rem);
+      line-height: .95;
+      margin: 0;
+      letter-spacing: 0;
+    }
+
+    .section-head p {
+      margin: 6px 0 0;
+      color: #333;
+      font-size: 1.08rem;
+      max-width: 680px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 22px;
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 12px 28px rgba(0,0,0,.04);
+    }
+
+    .card.feature {
+      grid-column: span 2;
+      background: #111;
+      color: white;
+      border-color: #111;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card.feature::after {
+      content: "df";
+      position: absolute;
+      right: -10px;
+      bottom: -42px;
+      color: transparent;
+      -webkit-text-stroke: 3px rgba(255,255,255,.16);
+      font-size: 13rem;
+      line-height: 1;
+      font-weight: 900;
+      pointer-events: none;
+    }
+
+    .card h3 {
+      margin: 0 0 12px;
+      font-size: 1.25rem;
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .metric {
+      display: block;
+      font-size: clamp(2.3rem, 5vw, 4.6rem);
+      line-height: .95;
+      font-weight: 850;
+      letter-spacing: 0;
+      margin: 4px 0 12px;
+    }
+
+    .metric.blue { color: var(--blue); }
+    .metric.violet { color: var(--violet); }
+    .metric.red { color: var(--red); }
+    .metric.yellow { color: #db9800; }
+
+    .card p {
+      margin: 0;
+      color: #333;
+    }
+
+    .feature p { color: rgba(255,255,255,.82); max-width: 560px; }
+
+    .source {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: .82rem;
+    }
+
+    .feature .source { color: rgba(255,255,255,.62); }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(320px, .72fr);
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .panel {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 26px;
+    }
+
+    .bar-list {
+      display: grid;
+      gap: 17px;
+      margin-top: 20px;
+    }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: minmax(120px, .6fr) minmax(0, 1fr) 56px;
+      gap: 12px;
+      align-items: center;
+      font-size: .95rem;
+    }
+
+    .bar {
+      height: 12px;
+      border-radius: 999px;
+      background: #ececec;
+      overflow: hidden;
+    }
+
+    .bar i {
+      display: block;
+      height: 100%;
+      border-radius: inherit;
+      background: var(--blue-grad);
+    }
+
+    .rail {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .tile {
+      border-radius: 8px;
+      padding: 18px;
+      min-height: 170px;
+      background: var(--soft);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .tile:nth-child(2) { background: linear-gradient(135deg, #f4f4f4, #eaf7ff); }
+    .tile:nth-child(3) { background: linear-gradient(135deg, #fff4e2, #fff); }
+    .tile:nth-child(4) { background: linear-gradient(135deg, #fff, #f4edff); }
+
+    .tile strong {
+      font-size: 1.55rem;
+      line-height: 1;
+    }
+
+    .quote-band {
+      background: var(--blue-grad);
+      color: white;
+      padding: 64px 0;
+    }
+
+    .quote-band blockquote {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 5.8rem);
+      line-height: .96;
+      font-weight: 850;
+      letter-spacing: 0;
+      max-width: 980px;
+    }
+
+    .quote-band p {
+      margin: 18px 0 0;
+      max-width: 640px;
+      color: rgba(255,255,255,.82);
+    }
+
+    .source-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .source-link {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: white;
+      padding: 16px;
+      display: grid;
+      gap: 6px;
+    }
+
+    .source-link b {
+      font-size: .98rem;
+    }
+
+    .source-link span {
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    footer {
+      padding: 40px 0 56px;
+      color: var(--muted);
+      background: white;
+      font-size: .92rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        min-height: auto;
+        background:
+          linear-gradient(180deg, rgba(255,255,255,.98) 0%, rgba(255,255,255,.86) 48%, rgba(255,255,255,.28) 100%),
+          url("df-hero.png") center bottom / cover no-repeat;
+      }
+
+      .hero-grid { padding-bottom: 44px; }
+      nav { align-items: flex-start; }
+      .nav-links { display: none; }
+      .hero-stats, .cards, .rail, .source-grid { grid-template-columns: 1fr 1fr; }
+      .section-head, .split { grid-template-columns: 1fr; }
+      .card.feature { grid-column: span 2; }
+    }
+
+    @media (max-width: 620px) {
+      .shell { width: min(100% - 28px, 1180px); }
+      .hero-grid { gap: 40px; padding-top: 24px; }
+      h1 { font-size: clamp(3rem, 17vw, 5rem); }
+      section { padding: 54px 0; }
+      .hero-stats, .cards, .rail, .source-grid { grid-template-columns: 1fr; }
+      .card.feature { grid-column: span 1; }
+      .bar-row { grid-template-columns: 1fr; gap: 8px; }
+      .bar-row b { justify-self: start; }
+      .quote-band { padding: 48px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="shell hero-grid">
+      <nav aria-label="navegação principal">
+        <div class="mark"><img class="mark-logo" src="plimplim.png" alt="" aria-hidden="true">Distrito Federal no espelho</div>
+        <div class="nav-links">
+          <a href="#panorama">panorama</a>
+          <a href="#territorio">território</a>
+          <a href="#vida">vida cotidiana</a>
+          <a href="#agenda">agendas</a>
+          <a href="#cultura">cultura</a>
+          <a href="#fontes">fontes</a>
+        </div>
+      </nav>
+      <div class="hero-copy">
+        <p class="eyebrow">leitura sintética a partir do documento df no espelho</p>
+        <h1>Distrito Federal <span>em contexto</span></h1>
+        <p class="hero-lede">Um retrato do DF que combina dados demográficos, trabalho, mobilidade, segurança, cultura e hábitos de mídia. A proposta é mostrar o território como ele funciona: capital política, metrópole de serviços, cidade modernista e conjunto diverso de regiões administrativas.</p>
+      </div>
+      <div class="hero-stats" aria-label="indicadores principais">
+        <div class="hero-stat"><strong>2,99 mi</strong><small>habitantes no Censo 2022</small></div>
+        <div class="hero-stat"><strong>489/km²</strong><small>maior densidade populacional entre as UFs</small></div>
+        <div class="hero-stat"><strong>0,814</strong><small>IDH, o melhor resultado do país no recorte citado</small></div>
+        <div class="hero-stat"><strong>66%</strong><small>moram em apartamentos, segundo o documento-base</small></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="panorama">
+      <div class="shell">
+        <div class="section-head">
+          <h2>panorama do df</h2>
+          <p>O Distrito Federal reúne indicadores nacionais de ponta e contrastes muito visíveis: renda alta, escolaridade elevada, forte presença do setor público e desigualdade urbana expressiva.</p>
+        </div>
+        <div class="cards">
+          <article class="card feature">
+            <div>
+              <h3>renda alta, desigualdade também</h3>
+              <span class="metric">R$ 3.444</span>
+              <p>O documento-base aponta a maior renda média domiciliar per capita do Brasil, mas também o maior Índice de Gini entre as UFs citadas: 0,584. O retrato pede leitura dupla: prosperidade média e concentração.</p>
+            </div>
+            <div class="source">fontes: DF no Espelho, IBGE e Pnud</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>escolaridade como ativo</h3>
+              <span class="metric blue">97,2%</span>
+              <p>Percentual de alfabetizados no recorte do documento. O DF também aparece com 33,2% da população com superior completo.</p>
+            </div>
+            <div class="source">fontes: DF no Espelho e Censo 2022</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>economia de serviços</h3>
+              <span class="metric violet">95%</span>
+              <p>O setor de serviços domina a economia local, reforçado pela administração pública, educação, saúde, comunicação, comércio e atividades profissionais.</p>
+            </div>
+            <div class="source">fontes: DF no Espelho e IPEDF</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>mais mulheres que homens</h3>
+              <span class="metric red">52,3%</span>
+              <p>As mulheres são maioria na população do DF no recorte apresentado no documento-base.</p>
+            </div>
+            <div class="source">fonte: Censo 2022</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>população envelhecendo</h3>
+              <span class="metric yellow">378 mil</span>
+              <p>Pessoas com 60 anos ou mais, além de 50 mil pessoas com 80 anos ou mais. A pauta de serviços, saúde, mobilidade, consumo e programação local precisa considerar esse peso demográfico.</p>
+            </div>
+            <div class="source">fontes: DF no Espelho, IPEDF e Censo 2022</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>jovens no mercado</h3>
+              <span class="metric blue">27,3%</span>
+              <p>Os jovens representam 27,3% da População em Idade Ativa do DF. O documento-base aponta 20,2% de desemprego nesse grupo, um gancho direto para formação, primeiro emprego, renda extra e concursos.</p>
+            </div>
+            <div class="source">fonte: IPEDF 2024, citado em DF no Espelho</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="territorio">
+      <div class="shell">
+        <div class="section-head">
+          <h2>território policêntrico</h2>
+          <p>Brasília não é só o Plano Piloto. As regiões administrativas formam um mosaico de centralidades, deslocamentos e identidades locais. Ceilândia, Samambaia, Plano Piloto, Taguatinga e Planaltina concentram grandes contingentes populacionais, enquanto Águas Claras se destaca pela verticalização e densidade.</p>
+        </div>
+        <div class="split">
+          <div class="panel">
+            <h3>maiores populações por região administrativa</h3>
+            <div class="bar-list" aria-label="população por região administrativa">
+              <div class="bar-row"><span>Ceilândia</span><div class="bar"><i style="width:100%"></i></div><b>287 mil</b></div>
+              <div class="bar-row"><span>Samambaia</span><div class="bar"><i style="width:76%"></i></div><b>219 mil</b></div>
+              <div class="bar-row"><span>Plano Piloto</span><div class="bar"><i style="width:69%"></i></div><b>199 mil</b></div>
+              <div class="bar-row"><span>Taguatinga</span><div class="bar"><i style="width:67%"></i></div><b>193 mil</b></div>
+              <div class="bar-row"><span>Planaltina</span><div class="bar"><i style="width:63%"></i></div><b>180 mil</b></div>
+              <div class="bar-row"><span>Gama</span><div class="bar"><i style="width:49%"></i></div><b>139 mil</b></div>
+            </div>
+            <div class="source">fonte: DF no Espelho, com dados do IBGE 2022</div>
+          </div>
+          <aside class="panel">
+            <h3>o que muda a leitura</h3>
+            <p>O DF combina cidade planejada, expansão periférica, verticalização residencial e áreas de proteção ambiental. Essa configuração ajuda a explicar a dependência do automóvel, a desigualdade entre centralidades e a importância das políticas de transporte e moradia.</p>
+            <p style="margin-top:18px">Ceilândia, Samambaia, Taguatinga, Águas Claras e Sol Nascente/Pôr do Sol ajudam a deslocar a leitura do DF para além da Esplanada e do Plano Piloto. São centralidades populacionais, simbólicas e de consumo.</p>
+            <p style="margin-top:18px">Brasília também é Patrimônio Cultural da Humanidade pela UNESCO desde 1987, reconhecimento ligado ao urbanismo de Lúcio Costa e à arquitetura modernista de Oscar Niemeyer.</p>
+            <div class="source">fontes: DF no Espelho e UNESCO</div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <div class="quote-band">
+      <div class="shell">
+        <blockquote>o df é capital, metrópole e vizinhança ao mesmo tempo.</blockquote>
+        <p>Essa sobreposição explica por que os dados precisam ser lidos por território, renda, idade, mobilidade e repertório cultural, não apenas por média geral.</p>
+      </div>
+    </div>
+
+    <section id="vida">
+      <div class="shell">
+        <div class="section-head">
+          <h2>vida cotidiana</h2>
+          <p>Mobilidade, segurança, trabalho, família, pets e consumo digital aparecem como temas centrais para entender os hábitos de quem vive no DF.</p>
+        </div>
+        <div class="rail">
+          <article class="tile">
+            <span>carro como principal meio para ir ao trabalho</span>
+            <strong>46,3%</strong>
+            <small>ônibus vem depois, com 32,9%</small>
+          </article>
+          <article class="tile">
+            <span>deslocamento de 30 a 60 minutos</span>
+            <strong>32%</strong>
+            <small>mais 15% levam de 1 a 2 horas</small>
+          </article>
+          <article class="tile">
+            <span>lares com algum pet</span>
+            <strong>55%</strong>
+            <small>837,7 mil animais estimados em 2024</small>
+          </article>
+          <article class="tile">
+            <span>sensação de insegurança</span>
+            <strong>64%</strong>
+            <small>mesmo com queda histórica de homicídios</small>
+          </article>
+        </div>
+        <div class="cards" style="margin-top:16px">
+          <article class="card feature">
+            <div>
+              <h3>população LGBT+ e violência</h3>
+              <span class="metric">64 ações</span>
+              <p>Levantamento da plataforma Escavador citado pelo Correio Braziliense identificou 64 processos relacionados a intolerância e/ou injúria por orientação sexual no DF entre 2023 e 2026, colocando a unidade federativa em 3º lugar no ranking nacional. A matéria também alerta para dificuldades de denúncia, subnotificação e falta de uma base unificada para medir a violência LGBTfóbica.</p>
+            </div>
+            <div class="source">fonte: Correio Braziliense, 27/06/2026</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>trabalho e estabilidade</h3>
+              <p>O DF tem perfil mais associado à estabilidade do emprego que ao empreendedorismo. Esse traço pode ser tensionado por renda extra, IA, creator economy, concursos e trabalho por aplicativo.</p>
+            </div>
+            <div class="source">fontes: DF no Espelho, Brasil no Espelho 2024 e IPEDF</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>família, conforto e pertencimento</h3>
+              <p>O documento mostra alta valorização da família, dos amigos de apoio e da casa como lugar de conforto, mas também sinais de abertura a novas configurações familiares.</p>
+            </div>
+            <div class="source">fontes: DF no Espelho e TGI Kantar Ibope 2025</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>confiança social baixa</h3>
+              <p>Apenas 7% dizem confiar na maioria das pessoas. Esse dado é importante para comunicação pública, jornalismo local e desenho de serviços.</p>
+            </div>
+            <div class="source">fonte: Brasil no Espelho 2024, citado no documento-base</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="agenda">
+      <div class="shell">
+        <div class="section-head">
+          <h2>radar de atualização</h2>
+          <p>Uma matriz de temas para manter o retrato do DF vivo. A demografia deve ter revisão anual. Tendências, consumo de mídia e comportamento pedem leitura mensal, com checagem em fontes confiáveis antes de virar pauta.</p>
+        </div>
+        <div class="cards">
+          <article class="card feature">
+            <div>
+              <h3>1. demografia</h3>
+              <span class="metric">anual</span>
+              <p>Atualizar crescimento populacional, novas RAs, envelhecimento, migração, densidade, arranjos familiares e pessoas vivendo sozinhas. O recorte ajuda a conectar serviços, programação local, mobilidade, moradia e consumo.</p>
+            </div>
+            <div class="source">fontes: IBGE, IPEDF, PDAD e PNAD Contínua</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>2. economia</h3>
+              <p>PIB, setores econômicos, renda, inflação local, consumo, endividamento, crédito e empregos mostram como a economia de serviços se espalha pelo cotidiano das RAs.</p>
+            </div>
+            <div class="source">fontes: IBGE, Banco Central, Fecomércio, Sebrae, CNC e CNI</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>3. trabalho</h3>
+              <p>Concursos, home office, servidor público, empreendedorismo, IA, creator economy e informalidade tensionam o perfil de estabilidade profissional do DF.</p>
+            </div>
+            <div class="source">fontes: Ministério do Trabalho, Caged, PNAD e Sebrae</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>4. habitação</h3>
+              <p>Preço do aluguel, compra de imóveis, verticalização, novos bairros e moradia em apartamentos explicam estilos de vida, pets, delivery, vizinhança e deslocamento.</p>
+            </div>
+            <div class="source">fontes: Secovi, FipeZap, IPEDF e ADEMI</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>5. mobilidade</h3>
+              <p>Tempo médio de deslocamento, metrô, ônibus, bicicletas, transporte por aplicativo e congestionamentos ajudam a contar o DF vivido entre casa, trabalho e serviços.</p>
+            </div>
+            <div class="source">fontes: Detran-DF, Semob-DF, DER-DF, Waze e Google Mobility</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>6. saúde</h3>
+              <p>Saúde mental, obesidade, ansiedade, depressão, vacinação e expectativa de vida devem ser cruzadas com idade, renda, deslocamento, alimentação e acesso a serviços.</p>
+            </div>
+            <div class="source">fontes: Ministério da Saúde, SES-DF, Fiocruz e Vigitel</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>7. diversidade</h3>
+              <p>População LGBTQIA+, mulheres, pessoas negras, pessoas com deficiência, povos indígenas e imigrantes precisam aparecer como recortes de pertencimento, vulnerabilidade e representação.</p>
+            </div>
+            <div class="source">fontes: IBGE, MDHC, MPDFT, Correio Braziliense, Antra e ABGLT</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>8. segurança</h3>
+              <p>Homicídios, violência doméstica, feminicídio, LGBTfobia, crimes digitais e sensação de segurança compõem uma agenda de serviço e proteção cotidiana.</p>
+            </div>
+            <div class="source">fontes: SSP-DF, Fórum Brasileiro de Segurança Pública e MPDFT</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>9. educação</h3>
+              <p>Escolaridade, ensino superior, evasão e ensino técnico organizam pautas de futuro, juventude, concursos, renda, requalificação e vocações profissionais.</p>
+            </div>
+            <div class="source">fontes: MEC, Inep, Enem, UnB, IESB e Universidade Católica de Brasília</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>10. cultura</h3>
+              <p>Música, cinema, festivais, quadrilhas, carnaval, gastronomia e economia criativa mostram circulação, identidade, renda e pertencimento nas RAs.</p>
+            </div>
+            <div class="source">fontes: Secult-DF, Ancine e Ministério da Cultura</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>11. turismo</h3>
+              <p>Visitantes, turismo cívico, gastronomia e eventos ajudam a separar Brasília como destino institucional do DF como experiência urbana e cultural.</p>
+            </div>
+            <div class="source">fontes: Setur-DF e Embratur</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>12. meio ambiente</h3>
+              <p>Qualidade do ar, seca, chuvas, Cerrado e incêndios conectam clima, saúde, escolas, parques, água, mobilidade e jornalismo de serviço.</p>
+            </div>
+            <div class="source">fontes: Inmet, MapBiomas, Ibram-DF e ANA</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>13. esporte</h3>
+              <p>Futebol, corridas, ciclismo, esportes urbanos e centros olímpicos podem revelar hábitos de saúde, juventude, ocupação de espaços públicos e eventos locais.</p>
+            </div>
+            <div class="source">fontes: Ministério do Esporte, GDF e CBF</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>14. pets</h3>
+              <p>Número de animais, gastos, clínicas e humanização dos pets devem ser cruzados com apartamentos, envelhecimento, solidão, renda e serviços de bairro.</p>
+            </div>
+            <div class="source">fontes: Abinpet, Instituto Pet Brasil e IPEDF/PDAD</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>15. tecnologia</h3>
+              <p>IA, internet, streaming, redes sociais e smart TVs mostram como o DF consome informação, entretenimento, educação, serviços públicos e trabalho remoto.</p>
+            </div>
+            <div class="source">fontes: Cetic.br, TIC Domicílios, CGI.br, DataReportal e CIIA-DF</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>16. consumo de mídia</h3>
+              <p>TV aberta, streaming, rádio, podcasts, YouTube, TikTok e credibilidade devem ser acompanhados como ecossistema único, não como canais isolados.</p>
+            </div>
+            <div class="source">fontes: Kantar Ibope Media, TGI, Inside Video e Globo Pesquisa</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>17. comportamento</h3>
+              <p>Felicidade, solidão, família, religião, masculinidades, geração Z, consumo, alimentação e relacionamentos ajudam a traduzir dados em linguagem cotidiana.</p>
+            </div>
+            <div class="source">fontes: Ipsos, DataSenado, Quaest, Opinion Box e AtlasIntel</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>18. política</h3>
+              <p>Perfil eleitoral, participação política e confiança nas instituições devem separar a Brasília institucional do DF vivido pelas regiões administrativas.</p>
+            </div>
+            <div class="source">fontes: TSE, Câmara Legislativa, Senado e DataSenado</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>19. conteúdo local</h3>
+              <p>Produção audiovisual, influenciadores do DF, podcasts locais, cinema brasiliense e música local ajudam a mapear narrativas, talentos e comunidades.</p>
+            </div>
+            <div class="source">fontes: Globo DF, Globoplay, Ancine, OCA e BRAVI</div>
+          </article>
+          <article class="card feature">
+            <div>
+              <h3>20. tendências</h3>
+              <span class="metric">mensal</span>
+              <p>Uma seção viva para monitorar o que viraliza no DF: novos comportamentos, expressões populares, eventos que movimentam a cidade, mudanças de hábito e tecnologias emergentes. Reddit e redes ajudam a captar sinais, mas todo achado precisa ser checado em fonte confiável antes de entrar no estudo.</p>
+            </div>
+            <div class="source">fontes: Google Trends, TikTok Creative Center, Meta, YouTube Culture & Trends, Pinterest Predicts, Think with Google e Reddit com checagem</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="cultura">
+      <div class="shell">
+        <div class="section-head">
+          <h2>cultura e mídia</h2>
+          <p>O DF combina alta conectividade, consumo de redes sociais, força das notícias locais e uma agenda cultural que ainda depende muito de deslocamento para fora do bairro.</p>
+        </div>
+        <div class="cards">
+          <article class="card feature">
+            <div>
+              <h3>informação passa primeiro pelas redes</h3>
+              <span class="metric">46%</span>
+              <p>Redes sociais aparecem como principal fonte de informação para brasilienses no estudo citado pelo documento-base. TV aberta e Google Notícias aparecem com 34%.</p>
+            </div>
+            <div class="source">fonte: Quanti DF, citado em DF no Espelho</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>cinema e leitura lideram práticas culturais</h3>
+              <p>Leitura de livros e cinema são as atividades culturais mais comuns, enquanto boa parte da programação frequentada ocorre longe do bairro de moradia.</p>
+            </div>
+            <div class="source">fonte: Cultura nas Capitais 2024</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>notícia local segue decisiva</h3>
+              <p>Telejornais locais são reconhecidos por mostrar problemas da região e por terem tom mais próximo da rotina da cidade.</p>
+            </div>
+            <div class="source">fonte: Quanti DF, citado em DF no Espelho</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>música popular plural</h3>
+              <p>Sertanejo aparece como gênero preferido, seguido por gospel e MPB. O consumo digital de música pelo celular é dominante.</p>
+            </div>
+            <div class="source">fonte: Cultura nas Capitais 2024</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>festas populares</h3>
+              <p>Festas juninas têm participação muito alta entre moradores de Brasília. Carnaval, festas religiosas, aniversários das RAs, Parada LGBTQIA+ e festivais de música completam o repertório.</p>
+            </div>
+            <div class="source">fonte: Cultura nas Capitais 2024</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="fontes">
+      <div class="shell">
+        <div class="section-head">
+          <h2>fontes usadas</h2>
+          <p>O documento “DF no Espelho” foi usado como ponto de partida. A página também referencia bases públicas e estudos citados ou complementares para dar contexto aos temas.</p>
+        </div>
+        <div class="source-grid">
+          <a class="source-link" href="https://cidades.ibge.gov.br/brasil/df/panorama" target="_blank" rel="noreferrer">
+            <b>IBGE Cidades - Distrito Federal</b>
+            <span>panorama territorial, populacional e socioeconômico</span>
+          </a>
+          <a class="source-link" href="https://www.ibge.gov.br/estatisticas/sociais/populacao/22827-censo-demografico-2022.html" target="_blank" rel="noreferrer">
+            <b>Censo Demográfico 2022</b>
+            <span>população, domicílios, deslocamento e recortes demográficos</span>
+          </a>
+          <a class="source-link" href="https://www.ipe.df.gov.br/" target="_blank" rel="noreferrer">
+            <b>IPEDF / Codeplan</b>
+            <span>indicadores distritais, PDAD, economia e estudos territoriais</span>
+          </a>
+          <a class="source-link" href="https://whc.unesco.org/en/list/445/" target="_blank" rel="noreferrer">
+            <b>UNESCO - Brasília</b>
+            <span>reconhecimento como Patrimônio Cultural da Humanidade</span>
+          </a>
+          <a class="source-link" href="https://www.ipea.gov.br/atlasviolencia/" target="_blank" rel="noreferrer">
+            <b>Atlas da Violência</b>
+            <span>comparações nacionais sobre homicídios e segurança pública</span>
+          </a>
+          <a class="source-link" href="https://www.culturanascapitais.com.br/" target="_blank" rel="noreferrer">
+            <b>Cultura nas Capitais</b>
+            <span>hábitos culturais, cinema, música, museus e festas populares</span>
+          </a>
+          <a class="source-link" href="https://www.agenciabrasilia.df.gov.br/" target="_blank" rel="noreferrer">
+            <b>Agência Brasília</b>
+            <span>complementos sobre governo, segurança, saúde e vida urbana</span>
+          </a>
+          <a class="source-link" href="https://cetic.br/pt/pesquisa/domicilios/" target="_blank" rel="noreferrer">
+            <b>TIC Domicílios / Cetic.br</b>
+            <span>acesso digital, uso de internet, plataformas e competências digitais</span>
+          </a>
+          <a class="source-link" href="https://sidra.ibge.gov.br/tabela/7307" target="_blank" rel="noreferrer">
+            <b>IBGE / PNAD TIC</b>
+            <span>acesso domiciliar à internet, dispositivos, televisão e hábitos digitais</span>
+          </a>
+          <a class="source-link" href="https://ciia.com.br/ciia/" target="_blank" rel="noreferrer">
+            <b>CIIA-DF</b>
+            <span>agenda institucional de inteligência artificial, capacitação, pesquisa e inovação</span>
+          </a>
+          <a class="source-link" href="https://www12.senado.leg.br/institucional/datasenado" target="_blank" rel="noreferrer">
+            <b>DataSenado</b>
+            <span>opinião pública, política, sociedade, tecnologia e cidadania</span>
+          </a>
+          <a class="source-link" href="https://www.bcb.gov.br/" target="_blank" rel="noreferrer">
+            <b>Banco Central</b>
+            <span>crédito, endividamento, inflação, atividade econômica e indicadores financeiros</span>
+          </a>
+          <a class="source-link" href="https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/estatisticas-trabalho/novo-caged" target="_blank" rel="noreferrer">
+            <b>Novo Caged</b>
+            <span>admissões, desligamentos e saldo de empregos formais</span>
+          </a>
+          <a class="source-link" href="https://www.sebrae.com.br/sites/PortalSebrae/ufs/df" target="_blank" rel="noreferrer">
+            <b>Sebrae DF</b>
+            <span>empreendedorismo, pequenos negócios, economia criativa e comportamento empresarial</span>
+          </a>
+          <a class="source-link" href="https://www.fipe.org.br/pt-br/indices/fipezap/" target="_blank" rel="noreferrer">
+            <b>FipeZap</b>
+            <span>preços de venda e aluguel de imóveis residenciais e comerciais</span>
+          </a>
+          <a class="source-link" href="https://ademidf.com.br/" target="_blank" rel="noreferrer">
+            <b>ADEMI-DF</b>
+            <span>mercado imobiliário, lançamentos, construção e incorporação</span>
+          </a>
+          <a class="source-link" href="https://www.gov.br/saude/pt-br/composicao/svsa/vigitel" target="_blank" rel="noreferrer">
+            <b>Ministério da Saúde / Vigitel</b>
+            <span>saúde, fatores de risco, bem-estar e hábitos da população adulta</span>
+          </a>
+          <a class="source-link" href="https://www.saude.df.gov.br/" target="_blank" rel="noreferrer">
+            <b>SES-DF</b>
+            <span>saúde pública, vacinação, rede assistencial e indicadores locais</span>
+          </a>
+          <a class="source-link" href="https://www.gov.br/mdh/pt-br" target="_blank" rel="noreferrer">
+            <b>Ministério dos Direitos Humanos</b>
+            <span>diversidade, violações de direitos, Disque 100 e políticas de proteção</span>
+          </a>
+          <a class="source-link" href="https://antrabrasil.org/" target="_blank" rel="noreferrer">
+            <b>ANTRA</b>
+            <span>dados, dossiês e monitoramento de violência contra pessoas trans</span>
+          </a>
+          <a class="source-link" href="https://www.ssp.df.gov.br/" target="_blank" rel="noreferrer">
+            <b>SSP-DF</b>
+            <span>homicídios, crimes, violência doméstica, segurança pública e estatísticas locais</span>
+          </a>
+          <a class="source-link" href="https://forumseguranca.org.br/" target="_blank" rel="noreferrer">
+            <b>Fórum Brasileiro de Segurança Pública</b>
+            <span>comparativos nacionais e anuários de segurança pública</span>
+          </a>
+          <a class="source-link" href="https://www.gov.br/inep/pt-br" target="_blank" rel="noreferrer">
+            <b>Inep</b>
+            <span>educação básica, Enem, ensino superior, indicadores e microdados educacionais</span>
+          </a>
+          <a class="source-link" href="https://www.turismo.df.gov.br/" target="_blank" rel="noreferrer">
+            <b>Setur-DF</b>
+            <span>turismo cívico, eventos, visitantes, gastronomia e promoção turística local</span>
+          </a>
+          <a class="source-link" href="https://embratur.com.br/" target="_blank" rel="noreferrer">
+            <b>Embratur</b>
+            <span>turismo internacional, promoção do Brasil e inteligência turística</span>
+          </a>
+          <a class="source-link" href="https://www.semob.df.gov.br/" target="_blank" rel="noreferrer">
+            <b>Semob-DF</b>
+            <span>mobilidade, transporte público, BRT, ônibus e políticas de deslocamento</span>
+          </a>
+          <a class="source-link" href="https://metro.df.gov.br/" target="_blank" rel="noreferrer">
+            <b>Metrô-DF</b>
+            <span>linhas, estações, integração e operação metroviária</span>
+          </a>
+          <a class="source-link" href="https://www.detran.df.gov.br/" target="_blank" rel="noreferrer">
+            <b>Detran-DF</b>
+            <span>frota, trânsito, segurança viária e comportamento no deslocamento</span>
+          </a>
+          <a class="source-link" href="https://www.cultura.df.gov.br/" target="_blank" rel="noreferrer">
+            <b>Secult-DF</b>
+            <span>economia criativa, eventos, equipamentos culturais e políticas culturais</span>
+          </a>
+          <a class="source-link" href="https://www.itaucultural.org.br/observatorio" target="_blank" rel="noreferrer">
+            <b>Observatório Itaú Cultural</b>
+            <span>dados e estudos sobre cultura, economia criativa e trabalho cultural</span>
+          </a>
+          <a class="source-link" href="https://brasil.mapbiomas.org/" target="_blank" rel="noreferrer">
+            <b>MapBiomas</b>
+            <span>Cerrado, cobertura do solo, queimadas, clima e sustentabilidade</span>
+          </a>
+          <a class="source-link" href="https://www.ibram.df.gov.br/" target="_blank" rel="noreferrer">
+            <b>Ibram-DF</b>
+            <span>meio ambiente, Cerrado, parques, licenciamento e preservação</span>
+          </a>
+          <a class="source-link" href="https://www.inmet.gov.br/" target="_blank" rel="noreferrer">
+            <b>Inmet</b>
+            <span>clima, seca, temperatura, umidade e alertas meteorológicos</span>
+          </a>
+          <a class="source-link" href="https://www.adasa.df.gov.br/" target="_blank" rel="noreferrer">
+            <b>Adasa</b>
+            <span>água, recursos hídricos e regulação ambiental no DF</span>
+          </a>
+          <a class="source-link" href="https://www.gov.br/ana/pt-br" target="_blank" rel="noreferrer">
+            <b>ANA</b>
+            <span>recursos hídricos, chuvas, seca, água e regulação nacional</span>
+          </a>
+          <a class="source-link" href="https://www.gov.br/esporte/pt-br" target="_blank" rel="noreferrer">
+            <b>Ministério do Esporte</b>
+            <span>políticas esportivas, infraestrutura, programas e dados nacionais</span>
+          </a>
+          <a class="source-link" href="https://abinpet.org.br/" target="_blank" rel="noreferrer">
+            <b>Abinpet</b>
+            <span>mercado pet, consumo, serviços, alimentação e tendências do setor</span>
+          </a>
+          <a class="source-link" href="https://datareportal.com/" target="_blank" rel="noreferrer">
+            <b>DataReportal</b>
+            <span>internet, redes sociais, plataformas digitais e comportamento online</span>
+          </a>
+          <a class="source-link" href="https://www.tse.jus.br/" target="_blank" rel="noreferrer">
+            <b>TSE</b>
+            <span>perfil eleitoral, resultados, participação política e estatísticas eleitorais</span>
+          </a>
+          <a class="source-link" href="https://www.cl.df.gov.br/" target="_blank" rel="noreferrer">
+            <b>Câmara Legislativa do DF</b>
+            <span>política local, legislação, participação e agenda parlamentar</span>
+          </a>
+          <a class="source-link" href="https://www.gov.br/ancine/pt-br/oca" target="_blank" rel="noreferrer">
+            <b>OCA / Ancine</b>
+            <span>audiovisual, cinema, produção, salas, bilheteria e mercado</span>
+          </a>
+          <a class="source-link" href="https://trends.google.com.br/trends/" target="_blank" rel="noreferrer">
+            <b>Google Trends</b>
+            <span>sinais de busca, tendências emergentes e interesse por temas locais</span>
+          </a>
+          <a class="source-link" href="https://ads.tiktok.com/business/creativecenter/" target="_blank" rel="noreferrer">
+            <b>TikTok Creative Center</b>
+            <span>tendências criativas, hashtags, músicas e sinais de viralização</span>
+          </a>
+          <a class="source-link" href="https://www.correiobraziliense.com.br/cidades-df/2026/06/amp/7449878-df-acende-alerta-para-violencia-contra-populacao-lgbtqia-.html" target="_blank" rel="noreferrer">
+            <b>Correio Braziliense - violência contra população LGBTQIA+</b>
+            <span>levantamento de processos, relatos de denúncia e alerta sobre apagão de dados</span>
+          </a>
+          <div class="source-link">
+            <b>DF no Espelho</b>
+            <span>documento-base fornecido pelo usuário, com dados citados de IBGE, IPEDF, Pnud, Kantar Ibope, Quanti DF e Brasil no Espelho</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell">
+      Estudo e página desenvolvidos pela área de Programação da TV Globo DF
+    </div>
+  </footer>
+</body>
+</html>
