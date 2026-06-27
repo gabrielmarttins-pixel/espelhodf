@@ -5,6 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Distrito Federal no espelho</title>
   <style>
+    @font-face {
+      font-family: "Globotipo";
+      src: url("GlobotipoCorporativa-Regular.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Globotipo";
+      src: url("GlobotipoCorporativa-Bold.ttf") format("truetype");
+      font-weight: 700 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
     :root {
       --blue: #05a6ff;
       --violet: #8800f8;
@@ -18,7 +34,7 @@
       --blue-grad: linear-gradient(90deg, #05a6ff 0%, #306dff 52%, #8800f8 100%);
       --warm-grad: linear-gradient(90deg, #ff0c1f 0%, #e2007a 48%, #8800f8 100%);
       --sun-grad: linear-gradient(90deg, #ffd006 0%, #ff8c00 55%, #ff0c1f 100%);
-      font-family: "Inter", "Aptos", "Segoe UI", Arial, sans-serif;
+      font-family: "Globotipo", "Aptos", "Segoe UI", Arial, sans-serif;
     }
 
     * { box-sizing: border-box; }
@@ -107,10 +123,24 @@
 
     .nav-links {
       display: flex;
-      gap: 18px;
+      gap: 9px;
       flex-wrap: wrap;
       justify-content: flex-end;
     }
+
+    .nav-links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      color: white;
+      text-decoration: none;
+      font-weight: 800;
+      box-shadow: 0 8px 18px rgba(0,0,0,.10);
+    }
+
+    .nav-links a { background: var(--blue-grad); }
 
     .hero-copy {
       max-width: 720px;
@@ -345,19 +375,75 @@
       border-radius: 8px;
       padding: 18px;
       min-height: 170px;
-      background: var(--soft);
+      background: var(--blue-grad);
+      color: white;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      box-shadow: 0 14px 30px rgba(0,0,0,.12);
     }
 
-    .tile:nth-child(2) { background: linear-gradient(135deg, #f4f4f4, #eaf7ff); }
-    .tile:nth-child(3) { background: linear-gradient(135deg, #fff4e2, #fff); }
-    .tile:nth-child(4) { background: linear-gradient(135deg, #fff, #f4edff); }
+    .tile:nth-child(2) { background: linear-gradient(135deg, #8800f8, #05a6ff); }
+    .tile:nth-child(3) { background: linear-gradient(135deg, #ff0c1f, #ff8c00); }
+    .tile:nth-child(4) { background: linear-gradient(135deg, #111, #8800f8); }
 
     .tile strong {
-      font-size: 1.55rem;
+      font-size: 1.85rem;
       line-height: 1;
+    }
+
+    .tile small { color: rgba(255,255,255,.82); }
+
+    details.expand {
+      margin-top: 16px;
+      border-top: 1px solid rgba(0,0,0,.12);
+      padding-top: 12px;
+    }
+
+    .feature details.expand {
+      border-top-color: rgba(255,255,255,.22);
+    }
+
+    details.expand summary {
+      cursor: pointer;
+      font-weight: 850;
+      color: var(--blue);
+      list-style-position: outside;
+    }
+
+    .feature details.expand summary {
+      color: white;
+    }
+
+    details.expand ul,
+    details.expand ol {
+      margin: 12px 0 0;
+      padding-left: 20px;
+      color: #333;
+    }
+
+    .feature details.expand ul,
+    .feature details.expand ol {
+      color: rgba(255,255,255,.86);
+    }
+
+    details.expand li + li {
+      margin-top: 6px;
+    }
+
+    #vida {
+      background: linear-gradient(135deg, #fff 0%, #edf8ff 42%, #fff4f5 100%);
+    }
+
+    #cultura {
+      background: linear-gradient(135deg, #fff7e0 0%, #f1edff 46%, #e8f8ff 100%);
+    }
+
+    .brand-footer-logo {
+      display: block;
+      width: min(260px, 72vw);
+      height: auto;
+      margin: 0 auto 20px;
     }
 
     .quote-band {
@@ -383,34 +469,40 @@
 
     .source-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 24px;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 18px;
     }
 
     .source-link {
       border: 1px solid var(--line);
       border-radius: 8px;
       background: white;
-      padding: 16px;
+      padding: 10px 12px;
       display: grid;
-      gap: 6px;
+      gap: 3px;
+      min-height: 52px;
+      align-content: center;
     }
 
     .source-link b {
-      font-size: .98rem;
+      font-size: .86rem;
+      line-height: 1.1;
     }
 
     .source-link span {
       color: var(--muted);
-      font-size: .88rem;
+      font-size: .72rem;
+      line-height: 1.2;
+      display: none;
     }
 
     footer {
-      padding: 40px 0 56px;
+      padding: 34px 0 48px;
       color: var(--muted);
       background: white;
       font-size: .92rem;
+      text-align: center;
     }
 
     @media (max-width: 900px) {
@@ -424,7 +516,8 @@
       .hero-grid { padding-bottom: 44px; }
       nav { align-items: flex-start; }
       .nav-links { display: none; }
-      .hero-stats, .cards, .rail, .source-grid { grid-template-columns: 1fr 1fr; }
+      .hero-stats, .cards, .rail { grid-template-columns: 1fr 1fr; }
+      .source-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .section-head, .split { grid-template-columns: 1fr; }
       .card.feature { grid-column: span 2; }
     }
@@ -434,7 +527,8 @@
       .hero-grid { gap: 40px; padding-top: 24px; }
       h1 { font-size: clamp(3rem, 17vw, 5rem); }
       section { padding: 54px 0; }
-      .hero-stats, .cards, .rail, .source-grid { grid-template-columns: 1fr; }
+      .hero-stats, .cards, .rail { grid-template-columns: 1fr; }
+      .source-grid { grid-template-columns: 1fr 1fr; }
       .card.feature { grid-column: span 1; }
       .bar-row { grid-template-columns: 1fr; gap: 8px; }
       .bar-row b { justify-self: start; }
@@ -451,8 +545,10 @@
           <a href="#panorama">panorama</a>
           <a href="#territorio">território</a>
           <a href="#vida">vida cotidiana</a>
-          <a href="#agenda">agendas</a>
           <a href="#cultura">cultura</a>
+          <a href="#homem-df">homem do df</a>
+          <a href="#book-masculinidade">book masculinidade</a>
+          <a href="#agenda">radar</a>
           <a href="#fontes">fontes</a>
         </div>
       </nav>
@@ -547,6 +643,27 @@
               <div class="bar-row"><span>Planaltina</span><div class="bar"><i style="width:63%"></i></div><b>180 mil</b></div>
               <div class="bar-row"><span>Gama</span><div class="bar"><i style="width:49%"></i></div><b>139 mil</b></div>
             </div>
+            <details class="expand">
+              <summary>ver demais regiões administrativas</summary>
+              <ol>
+                <li>Águas Claras: 128 mil habitantes</li>
+                <li>Guará: 121 mil</li>
+                <li>Santa Maria: 117 mil</li>
+                <li>Recanto das Emas: 116 mil</li>
+                <li>Riacho Fundo II: 105 mil</li>
+                <li>Sol Nascente/Pôr do Sol: 102 mil</li>
+                <li>São Sebastião: 99 mil</li>
+                <li>Vicente Pires: 97 mil</li>
+                <li>Sobradinho II: 83 mil</li>
+                <li>Jardim Botânico: 78 mil</li>
+                <li>Sobradinho: 72 mil</li>
+                <li>Itapoã: 65 mil</li>
+                <li>Paranoá: 64 mil</li>
+                <li>Brazlândia: 56 mil</li>
+                <li>Sudoeste/Octogonal: 44 mil</li>
+                <li>Arniqueiras, Lago Norte, Riacho Fundo, SCIA/Estrutural, Lago Sul, Cruzeiro, Park Way, Núcleo Bandeirante, Candangolândia, Fercal, Varjão e SIA completam o retrato territorial.</li>
+              </ol>
+            </details>
             <div class="source">fonte: DF no Espelho, com dados do IBGE 2022</div>
           </div>
           <aside class="panel">
@@ -601,6 +718,14 @@
               <h3>população LGBT+ e violência</h3>
               <span class="metric">64 ações</span>
               <p>Levantamento da plataforma Escavador citado pelo Correio Braziliense identificou 64 processos relacionados a intolerância e/ou injúria por orientação sexual no DF entre 2023 e 2026, colocando a unidade federativa em 3º lugar no ranking nacional. A matéria também alerta para dificuldades de denúncia, subnotificação e falta de uma base unificada para medir a violência LGBTfóbica.</p>
+              <details class="expand">
+                <summary>ver implicações editoriais</summary>
+                <ul>
+                  <li>Tratar LGBTfobia como pauta de segurança, cidadania e acesso à rede de proteção.</li>
+                  <li>Evitar leitura apenas quantitativa: subnotificação e classificação genérica podem esconder parte do problema.</li>
+                  <li>Ouvir territórios diferentes, porque Plano Piloto e periferias podem ter experiências distintas de denúncia, acolhimento e exposição pública.</li>
+                </ul>
+              </details>
             </div>
             <div class="source">fonte: Correio Braziliense, 27/06/2026</div>
           </article>
@@ -608,6 +733,14 @@
             <div>
               <h3>trabalho e estabilidade</h3>
               <p>O DF tem perfil mais associado à estabilidade do emprego que ao empreendedorismo. Esse traço pode ser tensionado por renda extra, IA, creator economy, concursos e trabalho por aplicativo.</p>
+              <details class="expand">
+                <summary>ver leituras adicionais</summary>
+                <ul>
+                  <li>Concursos e serviço público continuam como imaginário de ascensão e segurança.</li>
+                  <li>Renda extra, informalidade e creators tensionam esse modelo, principalmente entre jovens.</li>
+                  <li>IA e home office podem reposicionar o valor da formação continuada no DF.</li>
+                </ul>
+              </details>
             </div>
             <div class="source">fontes: DF no Espelho, Brasil no Espelho 2024 e IPEDF</div>
           </article>
@@ -629,159 +762,6 @@
       </div>
     </section>
 
-    <section id="agenda">
-      <div class="shell">
-        <div class="section-head">
-          <h2>radar de atualização</h2>
-          <p>Uma matriz de temas para manter o retrato do DF vivo. A demografia deve ter revisão anual. Tendências, consumo de mídia e comportamento pedem leitura mensal, com checagem em fontes confiáveis antes de virar pauta.</p>
-        </div>
-        <div class="cards">
-          <article class="card feature">
-            <div>
-              <h3>1. demografia</h3>
-              <span class="metric">anual</span>
-              <p>Atualizar crescimento populacional, novas RAs, envelhecimento, migração, densidade, arranjos familiares e pessoas vivendo sozinhas. O recorte ajuda a conectar serviços, programação local, mobilidade, moradia e consumo.</p>
-            </div>
-            <div class="source">fontes: IBGE, IPEDF, PDAD e PNAD Contínua</div>
-          </article>
-          <article class="card">
-            <div>
-              <h3>2. economia</h3>
-              <p>PIB, setores econômicos, renda, inflação local, consumo, endividamento, crédito e empregos mostram como a economia de serviços se espalha pelo cotidiano das RAs.</p>
-            </div>
-            <div class="source">fontes: IBGE, Banco Central, Fecomércio, Sebrae, CNC e CNI</div>
-          </article>
-          <article class="card">
-            <div>
-              <h3>3. trabalho</h3>
-              <p>Concursos, home office, servidor público, empreendedorismo, IA, creator economy e informalidade tensionam o perfil de estabilidade profissional do DF.</p>
-            </div>
-            <div class="source">fontes: Ministério do Trabalho, Caged, PNAD e Sebrae</div>
-          </article>
-          <article class="card">
-            <div>
-              <h3>4. habitação</h3>
-              <p>Preço do aluguel, compra de imóveis, verticalização, novos bairros e moradia em apartamentos explicam estilos de vida, pets, delivery, vizinhança e deslocamento.</p>
-            </div>
-            <div class="source">fontes: Secovi, FipeZap, IPEDF e ADEMI</div>
-          </article>
-          <article class="card">
-            <div>
-              <h3>5. mobilidade</h3>
-              <p>Tempo médio de deslocamento, metrô, ônibus, bicicletas, transporte por aplicativo e congestionamentos ajudam a contar o DF vivido entre casa, trabalho e serviços.</p>
-            </div>
-            <div class="source">fontes: Detran-DF, Semob-DF, DER-DF, Waze e Google Mobility</div>
-          </article>
-          <article class="card">
-            <div>
-              <h3>6. saúde</h3>
-              <p>Saúde mental, obesidade, ansiedade, depressão, vacinação e expectativa de vida devem ser cruzadas com idade, renda, deslocamento, alimentação e acesso a serviços.</p>
-            </div>
-            <div class="source">fontes: Ministério da Saúde, SES-DF, Fiocruz e Vigitel</div>
-          </article>
-          <article class="card">
-            <div>
-              <h3>7. diversidade</h3>
-              <p>População LGBTQIA+, mulheres, pessoas negras, pessoas com deficiência, povos indígenas e imigrantes precisam aparecer como recortes de pertencimento, vulnerabilidade e representação.</p>
-            </div>
-            <div class="source">fontes: IBGE, MDHC, MPDFT, Correio Braziliense, Antra e ABGLT</div>
-          </article>
-          <article class="card">
-            <div>
-              <h3>8. segurança</h3>
-              <p>Homicídios, violência doméstica, feminicídio, LGBTfobia, crimes digitais e sensação de segurança compõem uma agenda de serviço e proteção cotidiana.</p>
-            </div>
-            <div class="source">fontes: SSP-DF, Fórum Brasileiro de Segurança Pública e MPDFT</div>
-          </article>
-          <article class="card">
-            <div>
-              <h3>9. educação</h3>
-              <p>Escolaridade, ensino superior, evasão e ensino técnico organizam pautas de futuro, juventude, concursos, renda, requalificação e vocações profissionais.</p>
-            </div>
-            <div class="source">fontes: MEC, Inep, Enem, UnB, IESB e Universidade Católica de Brasília</div>
-          </article>
-          <article class="card">
-            <div>
-              <h3>10. cultura</h3>
-              <p>Música, cinema, festivais, quadrilhas, carnaval, gastronomia e economia criativa mostram circulação, identidade, renda e pertencimento nas RAs.</p>
-            </div>
-            <div class="source">fontes: Secult-DF, Ancine e Ministério da Cultura</div>
-          </article>
-          <article class="card">
-            <div>
-              <h3>11. turismo</h3>
-              <p>Visitantes, turismo cívico, gastronomia e eventos ajudam a separar Brasília como destino institucional do DF como experiência urbana e cultural.</p>
-            </div>
-            <div class="source">fontes: Setur-DF e Embratur</div>
-          </article>
-          <article class="card">
-            <div>
-              <h3>12. meio ambiente</h3>
-              <p>Qualidade do ar, seca, chuvas, Cerrado e incêndios conectam clima, saúde, escolas, parques, água, mobilidade e jornalismo de serviço.</p>
-            </div>
-            <div class="source">fontes: Inmet, MapBiomas, Ibram-DF e ANA</div>
-          </article>
-          <article class="card">
-            <div>
-              <h3>13. esporte</h3>
-              <p>Futebol, corridas, ciclismo, esportes urbanos e centros olímpicos podem revelar hábitos de saúde, juventude, ocupação de espaços públicos e eventos locais.</p>
-            </div>
-            <div class="source">fontes: Ministério do Esporte, GDF e CBF</div>
-          </article>
-          <article class="card">
-            <div>
-              <h3>14. pets</h3>
-              <p>Número de animais, gastos, clínicas e humanização dos pets devem ser cruzados com apartamentos, envelhecimento, solidão, renda e serviços de bairro.</p>
-            </div>
-            <div class="source">fontes: Abinpet, Instituto Pet Brasil e IPEDF/PDAD</div>
-          </article>
-          <article class="card">
-            <div>
-              <h3>15. tecnologia</h3>
-              <p>IA, internet, streaming, redes sociais e smart TVs mostram como o DF consome informação, entretenimento, educação, serviços públicos e trabalho remoto.</p>
-            </div>
-            <div class="source">fontes: Cetic.br, TIC Domicílios, CGI.br, DataReportal e CIIA-DF</div>
-          </article>
-          <article class="card">
-            <div>
-              <h3>16. consumo de mídia</h3>
-              <p>TV aberta, streaming, rádio, podcasts, YouTube, TikTok e credibilidade devem ser acompanhados como ecossistema único, não como canais isolados.</p>
-            </div>
-            <div class="source">fontes: Kantar Ibope Media, TGI, Inside Video e Globo Pesquisa</div>
-          </article>
-          <article class="card">
-            <div>
-              <h3>17. comportamento</h3>
-              <p>Felicidade, solidão, família, religião, masculinidades, geração Z, consumo, alimentação e relacionamentos ajudam a traduzir dados em linguagem cotidiana.</p>
-            </div>
-            <div class="source">fontes: Ipsos, DataSenado, Quaest, Opinion Box e AtlasIntel</div>
-          </article>
-          <article class="card">
-            <div>
-              <h3>18. política</h3>
-              <p>Perfil eleitoral, participação política e confiança nas instituições devem separar a Brasília institucional do DF vivido pelas regiões administrativas.</p>
-            </div>
-            <div class="source">fontes: TSE, Câmara Legislativa, Senado e DataSenado</div>
-          </article>
-          <article class="card">
-            <div>
-              <h3>19. conteúdo local</h3>
-              <p>Produção audiovisual, influenciadores do DF, podcasts locais, cinema brasiliense e música local ajudam a mapear narrativas, talentos e comunidades.</p>
-            </div>
-            <div class="source">fontes: Globo DF, Globoplay, Ancine, OCA e BRAVI</div>
-          </article>
-          <article class="card feature">
-            <div>
-              <h3>20. tendências</h3>
-              <span class="metric">mensal</span>
-              <p>Uma seção viva para monitorar o que viraliza no DF: novos comportamentos, expressões populares, eventos que movimentam a cidade, mudanças de hábito e tecnologias emergentes. Reddit e redes ajudam a captar sinais, mas todo achado precisa ser checado em fonte confiável antes de entrar no estudo.</p>
-            </div>
-            <div class="source">fontes: Google Trends, TikTok Creative Center, Meta, YouTube Culture & Trends, Pinterest Predicts, Think with Google e Reddit com checagem</div>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <section id="cultura">
       <div class="shell">
         <div class="section-head">
@@ -794,6 +774,14 @@
               <h3>informação passa primeiro pelas redes</h3>
               <span class="metric">46%</span>
               <p>Redes sociais aparecem como principal fonte de informação para brasilienses no estudo citado pelo documento-base. TV aberta e Google Notícias aparecem com 34%.</p>
+              <details class="expand">
+                <summary>ver leitura para mídia local</summary>
+                <ul>
+                  <li>O consumo de notícias é multiplataforma: TV, busca, redes e cortes convivem na mesma rotina.</li>
+                  <li>Credibilidade local segue como diferencial quando a pauta exige serviço, apuração e presença territorial.</li>
+                  <li>A estratégia editorial deve nascer pensando em TV aberta, redes sociais, Globoplay e distribuição por recortes.</li>
+                </ul>
+              </details>
             </div>
             <div class="source">fonte: Quanti DF, citado em DF no Espelho</div>
           </article>
@@ -822,8 +810,619 @@
             <div>
               <h3>festas populares</h3>
               <p>Festas juninas têm participação muito alta entre moradores de Brasília. Carnaval, festas religiosas, aniversários das RAs, Parada LGBTQIA+ e festivais de música completam o repertório.</p>
+              <details class="expand">
+                <summary>ver oportunidades de cobertura</summary>
+                <ul>
+                  <li>Mapear festas por RA, e não apenas por eventos centrais.</li>
+                  <li>Conectar festivais, quadrilhas, gastronomia e música local a personagens de comunidade.</li>
+                  <li>Usar calendário cultural como radar de deslocamento, consumo e identidade local.</li>
+                </ul>
+              </details>
             </div>
             <div class="source">fonte: Cultura nas Capitais 2024</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="homem-df">
+      <div class="shell">
+        <div class="section-head">
+          <h2>O homem do Distrito Federal</h2>
+          <p>Uma leitura inicial sobre masculinidades no DF, construída a partir do documento-base e do estudo em anexo. A premissa central é que não existe um “homem médio” brasiliense: há masculinidades atravessadas por território, geração, renda, religião, trabalho, raça, cultura, mobilidade e repertório de mídia.</p>
+        </div>
+        <div class="cards">
+          <article class="card feature">
+            <div>
+              <h3>masculinidades em disputa</h3>
+              <span class="metric">3 camadas</span>
+              <p>O estudo propõe uma leitura contra o “homem-padrão do Plano Piloto”. O DF reúne o homem institucional, o homem das grandes RAs periféricas e o homem do Entorno/rural. Esses perfis não são caixas fechadas: funcionam como hipóteses para orientar pesquisa, casting, pauta e representação.</p>
+              <details class="expand" open>
+                <summary>ver como usar esta leitura</summary>
+                <ul>
+                  <li>Separar fatos, evidências culturais e hipóteses antes de transformar o tema em narrativa.</li>
+                  <li>Evitar que Plano Piloto, Lago Sul, Lago Norte e Águas Claras representem sozinhos a masculinidade do DF.</li>
+                  <li>Buscar homens de diferentes RAs, idades, raças, religiões, trabalhos, orientações sexuais e estilos de vida.</li>
+                  <li>Tratar masculinidade como construção social, atravessada por renda, território, família, religião, trabalho, violência e mídia.</li>
+                  <li>Usar a própria lacuna de dados como pauta: perguntar “o que é ser homem aqui?” em territórios diferentes do DF e da Periferia Metropolitana de Brasília.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">base: DF no Espelho; anexo de briefing sobre masculinidade no DF</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>método de validação</h3>
+              <p>A seção deve operar com três níveis de segurança: dado objetivo, evidência cultural e hipótese. Isso evita transformar intuição editorial em verdade sobre o homem do DF e ajuda a diferenciar o que já está medido do que precisa ir a campo.</p>
+              <details class="expand" open>
+                <summary>ver matriz de validação</summary>
+                <ul>
+                  <li><b>Dado objetivo:</b> sexo, idade, renda, raça/cor, religião, escolaridade, ocupação, RA, tipo de domicílio e tempo de deslocamento.</li>
+                  <li><b>Evidência cultural:</b> festas, artistas, bares, igrejas, academias, futebol, motos, corrida, ciclismo, rock, rap, trap, pagode, creators locais e páginas de bairro.</li>
+                  <li><b>Hipótese:</b> estabilidade como valor masculino, paternidade ativa, masculinidade periférica comunitária, homem em requalificação e tensão entre provedor tradicional e novas famílias.</li>
+                  <li><b>Validação própria:</b> survey por RA e renda, grupos focais por perfil, microdados de Censo/PDAD e análise de conteúdo de mídia, música e redes sociais.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes a cruzar: IBGE, IPEDF/PDAD, PNAD, Kantar/TGI, DataSenado, Equimundo e estudos acadêmicos</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>homem institucional</h3>
+              <p>Mais associado a Plano Piloto, Lago Sul, Lago Norte, Sudoeste, Águas Claras e Guará. A hipótese envolve escolaridade, carreira pública, estabilidade, reconhecimento profissional e repertório político-institucional, mas também uma cultura urbana marcada por rock, universidade, concursos e debate público.</p>
+              <details class="expand">
+                <summary>ver pontos de validação</summary>
+                <ul>
+                  <li>Cruzar homens por RA, renda domiciliar, escolaridade, ocupação, vínculo público/privado e ensino superior completo.</li>
+                  <li>Comparar Plano Piloto, Sudoeste, Lago Norte, Lago Sul e Águas Claras com Ceilândia, Samambaia, Planaltina e Santa Maria.</li>
+                  <li>Investigar se estabilidade é valor masculino amplo ou marcador de classe, território e vínculo com o serviço público.</li>
+                  <li>Checar temas de conversa: concursos, política, investimentos, carreira, saúde, família, paternidade e tecnologia.</li>
+                  <li>Observar se o homem institucional se sente representado como “Brasília-poder” ou se também aparece como pai, vizinho, consumidor de cultura, esportista e trabalhador comum.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes a cruzar: IBGE, IPEDF, PNAD, DataSenado e Kantar</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>homem das grandes RAs</h3>
+              <p>Ceilândia, Samambaia, Taguatinga, Sol Nascente, Recanto das Emas, Santa Maria, Planaltina e São Sebastião pedem outra lente: família, ascensão social, trabalho informal, cultura periférica, música, igreja, esporte, comércio de bairro e comunidade.</p>
+              <details class="expand">
+                <summary>ver evidências culturais</summary>
+                <ul>
+                  <li>Rap, trap, funk, pagode, futebol local, bares, igrejas, academias, grupos de corrida, motos, eventos comunitários e comércio de bairro.</li>
+                  <li>A trajetória do rap/trap do DF, de denúncia territorial a narrativas de superação, consumo, família e autoestima, ajuda a mapear valores masculinos em mudança.</li>
+                  <li>Tribo da Periferia, Hungria Hip Hop, festas juninas, festivais e cenas locais ajudam a mapear repertórios masculinos sem reduzir o público a estereótipos.</li>
+                  <li>Validar se família, ascensão social, consumo aspiracional, empreendedorismo informal e comunidade aparecem de forma consistente nas pesquisas.</li>
+                  <li>Checar diferenças internas: Ceilândia não é Samambaia, Planaltina não é Sol Nascente e São Sebastião não é Recanto das Emas.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes a cruzar: IPEDF, estudos urbanos, Kantar, cultura local e pesquisas qualitativas</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>homem do entorno e rural</h3>
+              <p>Brazlândia, Paranoá, Fercal, áreas rurais e municípios goianos da Periferia Metropolitana de Brasília podem expressar masculinidades ligadas a religiosidade, patrimônio, autonomia, família, trabalho rural, mobilidade pendular e pertencimento regional.</p>
+              <details class="expand">
+                <summary>ver perguntas de pesquisa</summary>
+                <ul>
+                  <li>Como a relação com Goiás, campo e periferia altera valores e símbolos?</li>
+                  <li>Que papel têm igrejas, família, propriedade, carro, trabalho e redes comunitárias?</li>
+                  <li>Quais diferenças aparecem entre jovens, adultos e idosos?</li>
+                  <li>Como deslocamento pendular, trabalho informal, agricultura, comércio e religiosidade moldam autoridade, autonomia e responsabilidade familiar?</li>
+                  <li>Usar a PDAD-A e apuração de campo para evitar caricatura: o Entorno não deve ser tratado apenas como ausência, violência ou atraso.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes a cruzar: IBGE, IPEDF, PNAD, estudos rurais e antropologia urbana</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>gerações masculinas</h3>
+              <p>Adolescentes, jovens, adultos e idosos provavelmente vivem masculinidades diferentes. O estudo deve observar mudanças no papel de provedor, abertura à diversidade, saúde mental, paternidade, religião e relação com redes sociais.</p>
+              <details class="expand">
+                <summary>ver cruzamentos prioritários</summary>
+                <ul>
+                  <li><b>Adolescentes e jovens:</b> redes sociais, creators, esporte, música, estudo, primeiro emprego, identidade e pertencimento.</li>
+                  <li><b>Adultos:</b> carreira, renda, família, paternidade, moradia, carro, saúde, endividamento e pressão por estabilidade.</li>
+                  <li><b>Idosos:</b> aposentadoria, religiosidade, solidão, saúde, cuidado, convivência familiar e consumo de mídia tradicional.</li>
+                  <li>Comparar gerações por RA e classe social antes de falar em “mudança do homem brasiliense”.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes a cruzar: IBGE, PNAD, Vigitel, DataSenado, Kantar/TGI e estudos de masculinidade</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>religião, família e cuidado</h3>
+              <p>Religião e família são dimensões centrais para entender masculinidades no DF. Católicos, evangélicos, espíritas e pessoas sem religião podem expressar valores diferentes sobre provedor, autoridade, casamento, paternidade e diversidade.</p>
+              <details class="expand">
+                <summary>ver hipóteses a testar</summary>
+                <ul>
+                  <li>Religião pode fortalecer redes de apoio masculino, mas também tensionar gênero, sexualidade e modelos familiares.</li>
+                  <li>Paternidade ativa deve ser investigada como tema emergente, não presumida como comportamento consolidado.</li>
+                  <li>Estudos internacionais de masculinidade e cuidado, como os da Equimundo, ajudam a criar perguntas, mas precisam ser territorializados para o DF.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes a cruzar: Censo 2022, DataSenado, Equimundo, estudos religiosos e pesquisas qualitativas</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>segurança e vulnerabilidade masculina</h3>
+              <p>Homens aparecem tanto como vítimas quanto como autores em diferentes dinâmicas de violência. O estudo deve cruzar homicídios, violência doméstica, crimes digitais, LGBTfobia, raça, idade, território e sensação de segurança.</p>
+              <details class="expand">
+                <summary>ver cuidado editorial</summary>
+                <ul>
+                  <li>Evitar tratar violência como característica masculina natural. A leitura precisa considerar território, oportunidade, desigualdade e socialização.</li>
+                  <li>Usar Atlas da Violência, SSP-DF e Fórum Brasileiro de Segurança Pública para separar percepção, ocorrência e tendência.</li>
+                  <li>Incluir homens LGBTQIA+, homens negros e jovens periféricos como públicos com vulnerabilidades específicas.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes a cruzar: Ipea, Atlas da Violência, SSP-DF, FBSP, MPDFT, MDHC e ANTRA</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>masculinidade, diversidade e futuro</h3>
+              <p>Homens gays, bissexuais, trans, negros, jovens, idosos, pais solo e homens religiosos vivem modelos diferentes de masculinidade. Para 2031, IA, redes sociais, trabalho remoto, novas famílias e saúde mental devem reconfigurar o papel masculino no DF.</p>
+              <details class="expand">
+                <summary>ver cenário editorial</summary>
+                <ul>
+                  <li>Fatos: escolaridade, renda, religião, violência, trabalho e território.</li>
+                  <li>Evidências culturais: música, esporte, igrejas, creators, bares, festas e comunidades.</li>
+                  <li>Hipóteses: paternidade ativa, maior abertura à diversidade, tensão entre provedor tradicional e homem em requalificação.</li>
+                  <li>Oportunidade Globo DF: representar homens do DF em plural, com personagens de RA, classe, raça e geração diferentes.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes a cruzar: MDHC, ANTRA, Datafolha, Ipea, Atlas da Violência, PNAD e estudos de masculinidade</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>rock x rap: duas trilhas do masculino</h3>
+              <p>O estudo aponta a cultura como caminho privilegiado para entender masculinidades locais. O rock ligado ao Plano Piloto e o rap/trap ligado às RAs contam, em linguagens diferentes, a formação de identidade, território, frustração, desejo de reconhecimento e pertencimento masculino no DF.</p>
+              <details class="expand">
+                <summary>ver potencial editorial</summary>
+                <ul>
+                  <li><b>Rock:</b> juventude urbana, escola, universidade, política, tédio planejado, classe média e capital simbólico.</li>
+                  <li><b>Rap/trap:</b> periferia, denúncia, superação, dinheiro, família, consumo, autoestima e circulação digital.</li>
+                  <li><b>Pauta possível:</b> “Dois sons, uma cidade”, cruzando artistas, fãs, territórios, gerações e memórias afetivas masculinas.</li>
+                  <li><b>Validação:</b> análise de letras, audiência, eventos, playlists locais, entrevistas com artistas e grupos por idade/RA.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes a cruzar: Secult-DF, Ancine/OCA, imprensa local, arquivos Globo DF, plataformas digitais e entrevistas</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>mídia e representação</h3>
+              <p>A distância editorial mais sensível está entre o homem que aparece na TV e o homem que vive a rotina das RAs. O estudo alerta para dois clichês recorrentes: Brasília como poder e Brasília como violência, deixando pouco espaço para o homem comum, trabalhador, pai, jovem, religioso, criativo ou cuidador.</p>
+              <details class="expand">
+                <summary>ver perguntas para a Globo DF</summary>
+                <ul>
+                  <li>Quais homens aparecem em reportagens de serviço, cultura, esporte, economia e cotidiano?</li>
+                  <li>Quando homens periféricos aparecem, são protagonistas de vida cotidiana ou apenas personagens de conflito?</li>
+                  <li>Que linguagem aproxima sem caricaturar: humor, música, esporte, família, fé, trabalho, dinheiro ou saúde?</li>
+                  <li>Como representar o homem local sem importar automaticamente o “homem sudestino” da rede nacional?</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes a cruzar: Globo Pesquisa, Kantar Ibope Media, análise de conteúdo, grupos focais e escuta por RA</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>agenda própria de validação</h3>
+              <p>O anexo identifica uma lacuna: há bons dados sobre população, renda, religião, saúde, violência e trabalho, mas pouca pesquisa pública que pergunte diretamente o que é ser homem no DF. A oportunidade é transformar essa ausência em método contínuo de escuta.</p>
+              <details class="expand">
+                <summary>ver desenho recomendado</summary>
+                <ul>
+                  <li><b>Survey:</b> valores masculinos por RA, faixa de renda, idade, raça/cor, religião e escolaridade.</li>
+                  <li><b>Microdados:</b> Censo 2022 e PDAD-A para cruzar sexo, idade, religião, escolaridade, trabalho, renda, domicílio e território.</li>
+                  <li><b>Grupos focais:</b> institucional, periférico, Entorno/rural e jovem digital.</li>
+                  <li><b>Pesquisa cultural:</b> letras de rap/trap, memória do rock, páginas de bairro, podcasts, creators e eventos masculinos.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes a cruzar: IBGE, IPEDF/PDAD-A, Kantar/TGI, DataSenado, Datafolha, Equimundo e pesquisa própria</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="book-masculinidade">
+      <div class="shell">
+        <div class="section-head">
+          <h2>Book Masculinidade no DF</h2>
+          <p>Estudo de insumos editoriais para a TV Globo DF. Como ler este documento: cada card organiza a investiga&ccedil;&atilde;o em tr&ecirc;s n&iacute;veis de evid&ecirc;ncia. <b>[DADO]</b> indica informa&ccedil;&atilde;o objetiva, de fonte estat&iacute;stica prim&aacute;ria; <b>[CULTURA]</b> indica evid&ecirc;ncia cultural observ&aacute;vel; <b>[HIP&Oacute;TESE]</b> indica leitura interpretativa que ainda precisa de valida&ccedil;&atilde;o por survey pr&oacute;prio, grupos focais, microdados por RA e escuta territorial. Quando a informa&ccedil;&atilde;o for nacional, e n&atilde;o espec&iacute;fica do DF, isso est&aacute; sinalizado.</p>
+          <p>A distin&ccedil;&atilde;o &eacute; o principal achado: existe muita literatura sobre masculinidades no Brasil e muito dado sobre o DF, mas quase nenhum estudo que cruze diretamente os dois para investigar a masculinidade brasiliense. Essa lacuna &eacute;, em si, uma oportunidade editorial para a emissora.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div>
+              <h3>1. A ess&ecirc;ncia da masculinidade</h3>
+              <p>O ponto de partida &eacute; perguntar o que significa &ldquo;ser homem&rdquo; no DF hoje, sem presumir uma resposta &uacute;nica para Plano Piloto, RAs, Entorno, gera&ccedil;&otilde;es e classes sociais.</p>
+              <details class="expand" open>
+                <summary>ver n&iacute;veis de evid&ecirc;ncia</summary>
+                <ul>
+                  <li><b>[DADO]</b> Cruzar sexo, idade, renda, escolaridade, religi&atilde;o, ra&ccedil;a/cor, arranjo familiar e RA em IBGE, Censo 2022, PNAD e PDAD. O dado mostra a base social; n&atilde;o explica sozinho o significado de ser homem.</li>
+                  <li><b>[CULTURA]</b> A identidade candanga e migrante mistura refer&ecirc;ncias regionais brasileiras. M&uacute;sica, trabalho p&uacute;blico, vida perif&eacute;rica, igrejas, fam&iacute;lia e mobilidade comp&otilde;em repert&oacute;rios masculinos diferentes.</li>
+                  <li><b>[HIP&Oacute;TESE]</b> A masculinidade local parece oscilar entre estabilidade desejada, informalidade vivida, press&atilde;o por reconhecimento e revis&atilde;o do papel de provedor. Validar com entrevistas por gera&ccedil;&atilde;o e territ&oacute;rio.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes-base: IBGE, Censo 2022, PNAD, IPEDF/PDAD, estudos de masculinidades e pesquisa pr&oacute;pria</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>2. Elementos da identidade</h3>
+              <p>Identidade masculina no DF deve ser lida por s&iacute;mbolos: roupa, fala, corpo, f&eacute;, trabalho, carro, moto, concurso, m&uacute;sica, rede social, bairro e pertencimento.</p>
+              <details class="expand">
+                <summary>ver n&iacute;veis de evid&ecirc;ncia</summary>
+                <ul>
+                  <li><b>[DADO]</b> PDAD e Censo ajudam a localizar renda, escolaridade, trabalho, religi&atilde;o, domic&iacute;lio e deslocamento por RA, criando a moldura objetiva dos estilos de vida.</li>
+                  <li><b>[CULTURA]</b> Rock no centro, rap/trap nas RAs, p&aacute;ginas de bairro, academias, igrejas, motos e futebol local funcionam como marcadores vis&iacute;veis de pertencimento masculino.</li>
+                  <li><b>[HIP&Oacute;TESE]</b> O homem do DF constr&oacute;i identidade menos por tradi&ccedil;&atilde;o hist&oacute;rica &uacute;nica e mais por combina&ccedil;&atilde;o de territ&oacute;rio, consumo, f&eacute;, repert&oacute;rio digital e mem&oacute;ria migrante.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes-base: IPEDF/PDAD, Censo 2022, Secult-DF, Kantar/TGI, pesquisa qualitativa e observa&ccedil;&atilde;o cultural</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>3. Espa&ccedil;os de conviv&ecirc;ncia</h3>
+              <p>Os redutos masculinos precisam ser observados como espa&ccedil;os de sociabilidade, performance e disputa, n&atilde;o como ambientes automaticamente homog&ecirc;neos.</p>
+              <details class="expand">
+                <summary>ver n&iacute;veis de evid&ecirc;ncia</summary>
+                <ul>
+                  <li><b>[DADO]</b> H&aacute; dados de eventos, mobilidade, esporte, religi&atilde;o e lazer, mas pouca medi&ccedil;&atilde;o p&uacute;blica sobre frequ&ecirc;ncia masculina por espa&ccedil;o e RA. Essa lacuna pede pesquisa pr&oacute;pria.</li>
+                  <li><b>[CULTURA]</b> Bares, igrejas, academias, peladas, corridas, ciclismo, Capital Moto Week, Por&atilde;o do Rock e circuitos de rap/trap s&atilde;o pistas fortes de conviv&ecirc;ncia masculina.</li>
+                  <li><b>[HIP&Oacute;TESE]</b> Cada espa&ccedil;o refor&ccedil;a masculinidades distintas: provedor, atleta, religioso, festeiro, comunit&aacute;rio, intelectual, trabalhador ou digital. Validar se s&atilde;o redutos masculinos ou espa&ccedil;os j&aacute; mistos.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes-base: Secult-DF, Setur-DF, agenda de eventos, federa&ccedil;&otilde;es esportivas, igrejas, observa&ccedil;&atilde;o de campo e entrevistas</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>4. Gera&ccedil;&otilde;es de homens</h3>
+              <p>O estudo deve comparar adolescentes, jovens, adultos e maduros, porque as tens&otilde;es entre provedor, parceiro, cuidador e homem digital mudam por idade.</p>
+              <details class="expand">
+                <summary>ver n&iacute;veis de evid&ecirc;ncia</summary>
+                <ul>
+                  <li><b>[DADO]</b> Censo, PNAD, Vigitel, DataSenado e pesquisas nacionais permitem cruzar idade, trabalho, fam&iacute;lia, sa&uacute;de, religi&atilde;o, internet e escolaridade.</li>
+                  <li><b>[CULTURA]</b> Jovens se formam em redes, creators, m&uacute;sica e games; adultos em carreira, fam&iacute;lia e renda; idosos em aposentadoria, sa&uacute;de, f&eacute; e conviv&ecirc;ncia familiar.</li>
+                  <li><b>[HIP&Oacute;TESE]</b> A juventude pode combinar paternidade ativa e abertura &agrave; diversidade com conservadorismo de g&ecirc;nero, religi&atilde;o e manosfera. N&atilde;o tratar jovem como sin&ocirc;nimo autom&aacute;tico de progressista.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes-base: IBGE, PNAD, Vigitel, DataSenado, Datafolha, AtlasIntel, Cetic.br e grupos focais</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>5. Lideran&ccedil;as locais</h3>
+              <p>A pergunta editorial &eacute; quem orienta comportamento masculino no DF, separando visibilidade p&uacute;blica de influ&ecirc;ncia real nos bairros, igrejas, redes e fam&iacute;lias.</p>
+              <details class="expand">
+                <summary>ver n&iacute;veis de evid&ecirc;ncia</summary>
+                <ul>
+                  <li><b>[DADO]</b> Mapear autoridades eleitas, lideran&ccedil;as religiosas, empres&aacute;rios, atletas, artistas, creators e alcance digital com recortes por territ&oacute;rio e gera&ccedil;&atilde;o.</li>
+                  <li><b>[CULTURA]</b> Pastores, MCs, jogadores, treinadores, donos de com&eacute;rcio, produtores culturais, influenciadores de bairro e pais de refer&ecirc;ncia podem pesar mais que figuras formais.</li>
+                  <li><b>[HIP&Oacute;TESE]</b> H&aacute; lideran&ccedil;as masculinas silenciosas que a m&iacute;dia quase n&atilde;o enxerga. O estudo deve descobrir quem &ldquo;dita comportamento&rdquo; fora do circuito institucional.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes-base: redes sociais, TSE, CLDF, imprensa local, igrejas, esporte, cultura perif&eacute;rica e escuta comunit&aacute;ria</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>6. Diferencia&ccedil;&atilde;o regional</h3>
+              <p>O homem do DF n&atilde;o &eacute; apenas o homem de Bras&iacute;lia-poder, nem o homem perif&eacute;rico da p&aacute;gina policial. O desafio &eacute; representar a pluralidade local sem importar clich&ecirc;s do Sudeste.</p>
+              <details class="expand">
+                <summary>ver n&iacute;veis de evid&ecirc;ncia</summary>
+                <ul>
+                  <li><b>[DADO]</b> Dados por RA mostram desigualdade territorial, renda, escolaridade, moradia, trabalho e deslocamento. Esses recortes devem guiar casting e pauta.</li>
+                  <li><b>[CULTURA]</b> O contraste centro/periferia aparece em rock x rap, Estado x comunidade, concurso x informalidade, superquadra x quebrada, Plano Piloto x Entorno.</li>
+                  <li><b>[HIP&Oacute;TESE]</b> A representa&ccedil;&atilde;o em rede tende a simplificar o homem local. Validar se o p&uacute;blico se sente invis&iacute;vel, caricaturado ou reconhecido pela TV aberta.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes-base: IPEDF/PDAD, IBGE, Globo Pesquisa, Kantar Ibope Media, an&aacute;lise de conte&uacute;do e grupos focais</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>7. Temas de conversa</h3>
+              <p>As rodas masculinas devem ser analisadas em camadas: o que se fala em p&uacute;blico, o que circula no WhatsApp e o que s&oacute; aparece em conversas de confian&ccedil;a.</p>
+              <details class="expand">
+                <summary>ver n&iacute;veis de evid&ecirc;ncia</summary>
+                <ul>
+                  <li><b>[DADO]</b> Pesquisas de comportamento, consumo, sa&uacute;de mental, religi&atilde;o, trabalho, endividamento e m&iacute;dia ajudam a estimar temas relevantes, mas raramente desagregam masculinidade no DF.</li>
+                  <li><b>[CULTURA]</b> Futebol, pol&iacute;tica, dinheiro, concurso, igreja, carro, moto, trabalho, m&uacute;sica, fam&iacute;lia e relacionamento aparecem como repert&oacute;rios prov&aacute;veis de conversa masculina.</li>
+                  <li><b>[HIP&Oacute;TESE]</b> Medo, fracasso, terapia, sexualidade, cuidado, solid&atilde;o e endividamento podem ser assuntos evitados. A pauta est&aacute; tanto no que &eacute; dito quanto no que &eacute; silenciado.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes-base: Kantar/TGI, Ipsos, Opinion Box, DataSenado, Banco Central, Vigitel e entrevistas em profundidade</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>8. &Iacute;cones tradicionais</h3>
+              <p>O provedor, o servidor est&aacute;vel, o pastor, o empres&aacute;rio, o pol&iacute;tico e o homem de autoridade continuam relevantes, mas convivem com novos modelos de homem cuidador, criativo e digital.</p>
+              <details class="expand">
+                <summary>ver n&iacute;veis de evid&ecirc;ncia</summary>
+                <ul>
+                  <li><b>[DADO]</b> Religi&atilde;o, ocupa&ccedil;&atilde;o, renda, arranjo familiar e escolaridade ajudam a medir onde valores tradicionais podem estar mais presentes.</li>
+                  <li><b>[CULTURA]</b> Autoridade masculina aparece em igreja, pol&iacute;tica, fam&iacute;lia, com&eacute;rcio, esporte, m&uacute;sica, empreendedorismo e redes sociais.</li>
+                  <li><b>[HIP&Oacute;TESE]</b> Pode haver uma sensa&ccedil;&atilde;o de &ldquo;orfandade simb&oacute;lica&rdquo; entre homens jovens, que buscam &iacute;cones em creators, religi&atilde;o, esporte, m&uacute;sica ou discursos reativos.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes-base: Censo 2022, DataSenado, estudos religiosos, estudos de masculinidade, redes sociais e grupos por gera&ccedil;&atilde;o</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>9. Desafios de relev&acirc;ncia</h3>
+              <p>Manter relev&acirc;ncia social pode significar sustentar renda, performar sucesso, cuidar do corpo, responder &agrave;s novas pautas e lidar com instabilidade emocional e financeira.</p>
+              <details class="expand">
+                <summary>ver n&iacute;veis de evid&ecirc;ncia</summary>
+                <ul>
+                  <li><b>[DADO]</b> Renda, endividamento, informalidade, desemprego, infla&ccedil;&atilde;o, sa&uacute;de mental, suic&iacute;dio, obesidade e escolaridade devem ser cruzados por sexo, idade e territ&oacute;rio.</li>
+                  <li><b>[CULTURA]</b> Concurso, casa pr&oacute;pria, carro, academia, moto, consumo aspiracional, empreendedorismo e reputa&ccedil;&atilde;o digital aparecem como sinais de status masculino.</li>
+                  <li><b>[HIP&Oacute;TESE]</b> O homem do DF pode viver a contradi&ccedil;&atilde;o entre estabilidade como ideal e instabilidade como experi&ecirc;ncia cotidiana. Validar com homens de renda, RA e idade diferentes.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes-base: PNAD, Caged, Banco Central, Vigitel, Minist&eacute;rio da Sa&uacute;de, Ipea/Atlas da Viol&ecirc;ncia e pesquisa pr&oacute;pria</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>10. Provedor vs. parceiro</h3>
+              <p>O arqu&eacute;tipo do provedor ainda organiza muito do imagin&aacute;rio masculino, mas a rotina de fam&iacute;lias com dupla renda, m&atilde;es chefes de domic&iacute;lio e paternidade ativa tensiona esse modelo.</p>
+              <details class="expand">
+                <summary>ver n&iacute;veis de evid&ecirc;ncia</summary>
+                <ul>
+                  <li><b>[DADO]</b> IBGE, PNAD e PDAD permitem observar arranjos familiares, renda, trabalho feminino, pessoas vivendo sozinhas, domic&iacute;lios com crian&ccedil;as e composi&ccedil;&atilde;o familiar.</li>
+                  <li><b>[CULTURA]</b> Paternidade ativa, divis&atilde;o de contas, pai solo, pai gay, homem cuidador e casal com renda feminina maior j&aacute; aparecem como narrativas sociais, ainda que de forma desigual.</li>
+                  <li><b>[HIP&Oacute;TESE]</b> A passagem de provedor para parceiro pode estar mais avan&ccedil;ada no discurso do que na pr&aacute;tica dom&eacute;stica. Testar com homens e mulheres separadamente.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes-base: IBGE, PNAD, IPEDF/PDAD, Equimundo/Promundo, Datafolha e grupos focais</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>11. Rea&ccedil;&atilde;o ao feminino</h3>
+              <p>Conte&uacute;dos sobre mulheres em lideran&ccedil;a, feminejo, igualdade, viol&ecirc;ncia contra a mulher e mudan&ccedil;as familiares podem gerar apoio, sil&ecirc;ncio, desconforto ou rejei&ccedil;&atilde;o.</p>
+              <details class="expand">
+                <summary>ver n&iacute;veis de evid&ecirc;ncia</summary>
+                <ul>
+                  <li><b>[DADO]</b> Dados de viol&ecirc;ncia dom&eacute;stica, feminic&iacute;dio, renda, escolaridade, participa&ccedil;&atilde;o pol&iacute;tica e mercado de trabalho ajudam a dar materialidade &agrave;s mudan&ccedil;as de g&ecirc;nero.</li>
+                  <li><b>[CULTURA]</b> A rea&ccedil;&atilde;o pode variar conforme a pauta apare&ccedil;a como fam&iacute;lia, m&uacute;sica, trabalho, religi&atilde;o, seguran&ccedil;a p&uacute;blica, humor ou campanha institucional.</li>
+                  <li><b>[HIP&Oacute;TESE]</b> Parte dos homens apoia publicamente a igualdade, mas resiste quando a pauta mexe em poder, sexualidade, dinheiro ou autoridade familiar. Validar por gera&ccedil;&atilde;o, religi&atilde;o e RA.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes-base: SSP-DF, MPDFT, IBGE, DataSenado, Datafolha, Ipsos, Quaest e escuta qualitativa</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>12. Prefer&ecirc;ncia do feminino</h3>
+              <p>Entender o homem ideal para mulheres locais ajuda a revelar desencontros entre a autoimagem masculina e as expectativas femininas sobre cuidado, renda, respeito e parceria.</p>
+              <details class="expand">
+                <summary>ver n&iacute;veis de evid&ecirc;ncia</summary>
+                <ul>
+                  <li><b>[DADO]</b> Pesquisas nacionais sobre relacionamento e fam&iacute;lia podem orientar perguntas, mas devem ser sinalizadas como nacionais quando n&atilde;o forem espec&iacute;ficas do DF.</li>
+                  <li><b>[CULTURA]</b> O ideal masculino pode variar entre provedor, parceiro, religioso, sens&iacute;vel, ambicioso, fiel, presente, bem-humorado, trabalhador e cuidador.</li>
+                  <li><b>[HIP&Oacute;TESE]</b> Mulheres e homens podem valorizar atributos diferentes: ele performa for&ccedil;a e status; ela pode demandar presen&ccedil;a, escuta, cuidado e divis&atilde;o de responsabilidades.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes-base: Opinion Box, DataSenado, Ipsos, pesquisas nacionais sinalizadas e survey pr&oacute;prio por RA</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>13. Homem LGBT+</h3>
+              <p>Homens gays, bissexuais, trans e outras masculinidades dissidentes precisam entrar no estudo para que masculinidade n&atilde;o seja tratada como sin&ocirc;nimo de heterossexualidade.</p>
+              <details class="expand">
+                <summary>ver n&iacute;veis de evid&ecirc;ncia</summary>
+                <ul>
+                  <li><b>[DADO nacional]</b> Literatura e levantamentos nacionais indicam vulnerabilidades maiores em sa&uacute;de mental e viol&ecirc;ncia para popula&ccedil;&atilde;o sexo-diversa. Para o DF, faltam dados robustos por RA.</li>
+                  <li><b>[CULTURA]</b> Visibilidade LGBT+ pode ser maior no Plano Piloto, mas viv&ecirc;ncias em periferias e Entorno s&atilde;o negociadas com fam&iacute;lia, igreja, trabalho, seguran&ccedil;a e redes de apoio.</li>
+                  <li><b>[HIP&Oacute;TESE]</b> Jovens podem expressar maior aceita&ccedil;&atilde;o, mas estere&oacute;tipos tradicionais continuam fortes em alguns contextos. A pauta deve incluir afeto, fam&iacute;lia, trabalho e cultura, n&atilde;o s&oacute; viol&ecirc;ncia.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes-base: MDHC, ANTRA, ABGLT, MPDFT, Correio Braziliense, literatura nacional e escuta comunit&aacute;ria no DF</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>14. Na concorr&ecirc;ncia</h3>
+              <p>O estudo deve observar como emissoras, plataformas e creators locais disputam aten&ccedil;&atilde;o masculina por linguagem, territ&oacute;rio, humor, servi&ccedil;o, esporte, pol&iacute;cia, f&eacute; e cultura perif&eacute;rica.</p>
+              <details class="expand">
+                <summary>ver n&iacute;veis de evid&ecirc;ncia</summary>
+                <ul>
+                  <li><b>[DADO]</b> Audi&ecirc;ncia, alcance digital, consumo de m&iacute;dia, streaming, r&aacute;dio, YouTube, TikTok e podcasts ajudam a medir onde homens est&atilde;o consumindo conte&uacute;do.</li>
+                  <li><b>[CULTURA]</b> P&aacute;ginas de bairro, podcasts locais, canais de esporte, perfis policiais, creators religiosos, humor e m&uacute;sica podem falar a l&iacute;ngua masculina com proximidade territorial.</li>
+                  <li><b>[HIP&Oacute;TESE]</b> A Globo DF pode ocupar uma conversa mais qualificada: homem perif&eacute;rico fora da pol&iacute;cia, sa&uacute;de mental, paternidade, cultura local e servi&ccedil;o com rosto.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes-base: Kantar Ibope Media, TGI, Globo Pesquisa, YouTube, TikTok Creative Center, DataReportal e an&aacute;lise de conte&uacute;do</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>15. Futuro da masculinidade</h3>
+              <p>O homem do DF em cinco anos deve ser tratado como cen&aacute;rio em disputa: tradi&ccedil;&atilde;o, cuidado, religi&atilde;o, IA, redes sociais, trabalho flex&iacute;vel e instabilidade econ&ocirc;mica caminham juntos.</p>
+              <details class="expand">
+                <summary>ver n&iacute;veis de evid&ecirc;ncia</summary>
+                <ul>
+                  <li><b>[DADO]</b> Tend&ecirc;ncias de demografia, envelhecimento, trabalho, internet, sa&uacute;de mental, religi&atilde;o, renda e fam&iacute;lia indicam for&ccedil;as que reconfiguram o papel masculino.</li>
+                  <li><b>[CULTURA]</b> Rap/trap, creators, igrejas, academias, corrida, motos, podcasts, IA e economia informal j&aacute; sinalizam novas formas de reputa&ccedil;&atilde;o e pertencimento.</li>
+                  <li><b>[HIP&Oacute;TESE]</b> Tr&ecirc;s cen&aacute;rios devem ser acompanhados: tradicional reativo, cuidador em transi&ccedil;&atilde;o e digital perif&eacute;rico. O mais prov&aacute;vel &eacute; um homem h&iacute;brido, em disputa permanente.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes-base: IBGE, IPEDF, Cetic.br, DataReportal, Google Trends, YouTube Culture & Trends, estudos de masculinidade e pesquisa pr&oacute;pria</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="agenda">
+      <div class="shell">
+        <div class="section-head">
+          <h2>radar de atualização</h2>
+          <p>Uma pauta permanente de pesquisa para manter o retrato do DF vivo. A proposta é cruzar dados oficiais, estudos de comportamento e sinais de cultura digital para antecipar temas relevantes para programação, jornalismo, marketing e conteúdo local.</p>
+        </div>
+        <div class="cards">
+          <article class="card feature">
+            <div>
+              <h3>leitura integrada do DF</h3>
+              <span class="metric">20 eixos</span>
+              <p>O radar organiza temas por cadência: demografia, economia, trabalho e habitação pedem revisão anual ou trimestral; segurança, mobilidade, saúde e mídia pedem acompanhamento frequente; tendências digitais exigem leitura mensal, sempre com checagem em fonte confiável antes de virar pauta.</p>
+            </div>
+            <div class="source">uso editorial: pauta, programação, branded content, social, Globoplay e inteligência comercial</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>1. demografia</h3>
+              <p>Acompanhar crescimento populacional, novas RAs, envelhecimento, migração, densidade, arranjos familiares e pessoas vivendo sozinhas. O cruzamento com moradia e renda ajuda a revelar novos territórios de consumo e serviço.</p>
+            </div>
+            <div class="source">fontes: IBGE, IPEDF, PDAD e PNAD Contínua</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>2. economia</h3>
+              <p>Monitorar PIB, renda, inflação local, consumo, endividamento, crédito e empregos. O ponto avançado é separar a economia institucional de Brasília da economia cotidiana das RAs, do comércio local e dos serviços de bairro.</p>
+            </div>
+            <div class="source">fontes: IBGE, Banco Central, Fecomércio, Sebrae, CNC e CNI</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>3. trabalho</h3>
+              <p>Concursos seguem fortes, mas devem ser lidos junto com home office, informalidade, renda extra, IA e creator economy. O DF pode ser acompanhado como território de estabilidade e, ao mesmo tempo, de requalificação.</p>
+            </div>
+            <div class="source">fontes: Ministério do Trabalho, Caged, PNAD e Sebrae</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>4. habitação</h3>
+              <p>Aluguel, compra de imóveis, verticalização, novos bairros e apartamentos explicam rotina, pets, delivery, vizinhança, deslocamento e sensação de pertencimento. O dado de apartamentos deve entrar como chave de comportamento.</p>
+            </div>
+            <div class="source">fontes: Secovi, FipeZap, IPEDF e ADEMI</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>5. mobilidade</h3>
+              <p>Tempo médio de deslocamento, metrô, ônibus, bicicleta, aplicativos e congestionamentos devem ser tratados como experiência diária. O recorte por origem e destino entre RAs é mais útil do que a média geral.</p>
+            </div>
+            <div class="source">fontes: Detran-DF, Semob-DF, DER-DF, Waze e Google Mobility</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>6. saúde</h3>
+              <p>Saúde mental, ansiedade, depressão, obesidade, vacinação e expectativa de vida devem ser cruzadas com idade, alimentação, trabalho, deslocamento e acesso ao SUS. O tema rende serviço, prevenção e séries de utilidade pública.</p>
+            </div>
+            <div class="source">fontes: Ministério da Saúde, SES-DF, Fiocruz e Vigitel</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>7. diversidade</h3>
+              <p>Mulheres, pessoas negras, pessoas com deficiência, população LGBTQIA+, povos indígenas e imigrantes precisam aparecer como recortes de acesso, vulnerabilidade, representação e pertencimento. O alerta sobre LGBTfobia pede atualização contínua.</p>
+            </div>
+            <div class="source">fontes: IBGE, MDHC, MPDFT, Correio Braziliense, Antra e ABGLT</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>8. segurança</h3>
+              <p>Homicídios, violência doméstica, feminicídio, LGBTfobia, crimes digitais e sensação de segurança devem ser analisados em conjunto. Queda de homicídios não elimina medo, subnotificação ou desigualdade territorial.</p>
+            </div>
+            <div class="source">fontes: SSP-DF, Fórum Brasileiro de Segurança Pública e MPDFT</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>9. educação</h3>
+              <p>Escolaridade alta é ativo do DF, mas o radar deve acompanhar evasão, ensino técnico, Enem, universidades, comunicação social e requalificação. O ponto editorial é ligar formação a futuro, concursos e novas competências.</p>
+            </div>
+            <div class="source">fontes: MEC, Inep, Enem, UnB, IESB e Universidade Católica de Brasília</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>10. cultura</h3>
+              <p>Música, cinema, festivais, quadrilhas, carnaval, gastronomia e economia criativa devem ser mapeados por circulação e território. O foco é revelar produção local para além dos grandes equipamentos culturais.</p>
+            </div>
+            <div class="source">fontes: Secult-DF, Ancine e Ministério da Cultura</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>11. turismo</h3>
+              <p>Visitantes, turismo cívico, gastronomia e eventos ajudam a diferenciar Brasília como destino institucional do DF como experiência urbana. A agenda de eventos pode indicar picos de circulação e oportunidades comerciais.</p>
+            </div>
+            <div class="source">fontes: Setur-DF e Embratur</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>12. meio ambiente</h3>
+              <p>Qualidade do ar, seca, chuvas, Cerrado e incêndios conectam saúde, escolas, parques, água e mobilidade. A pauta deve antecipar baixa umidade, queimadas, crise hídrica e jornalismo de serviço.</p>
+            </div>
+            <div class="source">fontes: Inmet, MapBiomas, Ibram-DF e ANA</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>13. esporte</h3>
+              <p>Futebol, corridas, ciclismo, esportes urbanos e centros olímpicos revelam hábitos de saúde, juventude e ocupação do espaço público. Corridas de rua e eventos comunitários podem ser bons termômetros de cidade.</p>
+            </div>
+            <div class="source">fontes: Ministério do Esporte, GDF e CBF</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>14. pets</h3>
+              <p>Número de animais, gastos, clínicas e humanização dos pets devem ser conectados a apartamentos, envelhecimento, solidão e renda. É um tema de afeto, consumo, serviços e convivência em condomínio.</p>
+            </div>
+            <div class="source">fontes: Abinpet, Instituto Pet Brasil e IPEDF/PDAD</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>15. tecnologia</h3>
+              <p>Internet, IA, streaming, redes sociais e smart TVs mostram como o DF acessa serviço público, trabalho, educação e entretenimento. O CIIA-DF torna IA uma pauta institucional, não apenas tendência global.</p>
+            </div>
+            <div class="source">fontes: Cetic.br, TIC Domicílios, CGI.br, DataReportal e CIIA-DF</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>16. consumo de mídia</h3>
+              <p>TV aberta, streaming, rádio, podcasts, YouTube, TikTok e credibilidade devem ser lidos como ecossistema. A questão central é em qual momento da rotina cada tela ganha relevância e confiança.</p>
+            </div>
+            <div class="source">fontes: Kantar Ibope Media, TGI, Inside Video e Globo Pesquisa</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>17. comportamento</h3>
+              <p>Felicidade, solidão, família, religião, masculinidades, geração Z, consumo, alimentação e relacionamentos ajudam a traduzir números em vida real. O radar deve buscar tensões, não apenas preferências.</p>
+            </div>
+            <div class="source">fontes: Ipsos, DataSenado, Quaest, Opinion Box e AtlasIntel</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>18. política</h3>
+              <p>Perfil eleitoral, participação política e confiança nas instituições precisam separar Brasília institucional do DF cotidiano. O ideal é cruzar voto, território, religião, renda, escolaridade e consumo de mídia.</p>
+            </div>
+            <div class="source">fontes: TSE, Câmara Legislativa, Senado e DataSenado</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>19. conteúdo local</h3>
+              <p>Produção audiovisual, influenciadores, podcasts, cinema brasiliense e música local ajudam a mapear quem cria repertório sobre o DF. O próximo passo é montar um inventário próprio de creators e comunidades.</p>
+            </div>
+            <div class="source">fontes: Globo DF, Globoplay, Ancine, OCA e BRAVI</div>
+          </article>
+          <article class="card feature">
+            <div>
+              <h3>20. tendências</h3>
+              <span class="metric">mensal</span>
+              <p>Monitorar o que viraliza no DF: expressões, eventos, memes locais, mudanças de hábito, tecnologias emergentes e assuntos de bairro que sobem nas redes. Reddit, TikTok e buscas ajudam a captar sinais, mas a publicação final precisa sempre de checagem.</p>
+            </div>
+            <div class="source">fontes: Google Trends, TikTok Creative Center, Meta, YouTube Culture & Trends, Pinterest Predicts, Think with Google e Reddit com checagem</div>
           </article>
         </div>
       </div>
@@ -879,6 +1478,22 @@
           <a class="source-link" href="https://www12.senado.leg.br/institucional/datasenado" target="_blank" rel="noreferrer">
             <b>DataSenado</b>
             <span>opinião pública, política, sociedade, tecnologia e cidadania</span>
+          </a>
+          <a class="source-link" href="https://www.ipea.gov.br/" target="_blank" rel="noreferrer">
+            <b>Ipea</b>
+            <span>desigualdade, violência, trabalho, território e políticas públicas</span>
+          </a>
+          <a class="source-link" href="https://datafolha.folha.uol.com.br/" target="_blank" rel="noreferrer">
+            <b>Datafolha</b>
+            <span>opinião pública, comportamento, política, valores e sociedade</span>
+          </a>
+          <a class="source-link" href="https://kantaribopemedia.com/" target="_blank" rel="noreferrer">
+            <b>Kantar Ibope Media</b>
+            <span>audiência, consumo de mídia, TGI, perfis e hábitos de público</span>
+          </a>
+          <a class="source-link" href="https://www.equimundo.org/" target="_blank" rel="noreferrer">
+            <b>Equimundo / Promundo</b>
+            <span>masculinidades, cuidado, paternidade, gênero e prevenção de violência</span>
           </a>
           <a class="source-link" href="https://www.bcb.gov.br/" target="_blank" rel="noreferrer">
             <b>Banco Central</b>
@@ -1023,6 +1638,7 @@
 
   <footer>
     <div class="shell">
+      <img class="brand-footer-logo" src="tvglobo.png" alt="TV Globo">
       Estudo e página desenvolvidos pela área de Programação da TV Globo DF
     </div>
   </footer>
