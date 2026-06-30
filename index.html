@@ -52,6 +52,96 @@
       letter-spacing: 0;
     }
 
+    body.locked {
+      overflow: hidden;
+      background: #111;
+    }
+
+    body.locked > header,
+    body.locked > main,
+    body.locked > footer {
+      display: none;
+    }
+
+    .auth-gate {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      display: none;
+      place-items: center;
+      padding: 28px;
+      color: #fff;
+      background:
+        linear-gradient(90deg, rgba(17,17,17,.94), rgba(17,17,17,.78)),
+        url("df-hero.png") center / cover no-repeat;
+    }
+
+    body.locked .auth-gate {
+      display: grid;
+    }
+
+    .auth-panel {
+      width: min(420px, 100%);
+      padding: 28px;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 8px;
+      background: rgba(255,255,255,.96);
+      color: #111;
+      box-shadow: 0 24px 60px rgba(0,0,0,.32);
+    }
+
+    .auth-panel h2 {
+      font-size: 2rem;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .auth-panel h2::before {
+      display: none;
+    }
+
+    .auth-panel p {
+      margin: 0 0 20px;
+      color: #555;
+    }
+
+    .auth-form {
+      display: grid;
+      gap: 10px;
+    }
+
+    .auth-form label {
+      font-weight: 800;
+      font-size: .9rem;
+    }
+
+    .auth-form input {
+      width: 100%;
+      min-height: 46px;
+      border: 1px solid #cfcfcf;
+      border-radius: 8px;
+      padding: 10px 12px;
+      font: inherit;
+    }
+
+    .auth-form button {
+      min-height: 46px;
+      border: 0;
+      border-radius: 8px;
+      background: var(--blue-grad);
+      color: #fff;
+      font: inherit;
+      font-weight: 850;
+      cursor: pointer;
+    }
+
+    .auth-error {
+      min-height: 20px;
+      color: #b00020;
+      font-weight: 800;
+      font-size: .9rem;
+    }
+
     a {
       color: inherit;
       text-decoration-color: rgba(5, 166, 255, .55);
@@ -269,6 +359,34 @@
       color: #333;
       font-size: 1.08rem;
       max-width: 680px;
+    }
+
+    .section-callout {
+      width: 100vw;
+      margin: -10px calc(50% - 50vw) 38px;
+      padding: 64px max(20px, calc((100vw - 1180px) / 2));
+      border-radius: 0;
+      color: #fff;
+      background:
+        linear-gradient(135deg, rgba(var(--accent-rgb), .98), rgba(var(--accent-rgb), .72)),
+        #111;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.12), inset 0 -1px 0 rgba(0,0,0,.08);
+    }
+
+    .section-callout blockquote {
+      margin: 0;
+      max-width: 980px;
+      font-size: clamp(2rem, 5vw, 5.8rem);
+      line-height: .96;
+      font-weight: 850;
+      letter-spacing: 0;
+    }
+
+    .section-callout p {
+      margin: 14px 0 0;
+      max-width: 720px;
+      color: rgba(255,255,255,.84);
+      font-size: 1rem;
     }
 
     .cards {
@@ -568,10 +686,23 @@
       .bar-row { grid-template-columns: 1fr; gap: 8px; }
       .bar-row b { justify-self: start; }
       .quote-band { padding: 48px 0; }
+      .section-callout { padding-top: 48px; padding-bottom: 48px; }
     }
   </style>
 </head>
-<body>
+<body class="locked">
+  <div class="auth-gate" id="authGate" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <div class="auth-panel">
+      <h2 id="authTitle">Acesso restrito</h2>
+      <p>Digite a senha para acessar o estudo Distrito Federal no Espelho.</p>
+      <form class="auth-form" id="authForm">
+        <label for="authPassword">Senha</label>
+        <input id="authPassword" type="password" autocomplete="current-password" required>
+        <button type="submit">Entrar</button>
+        <div class="auth-error" id="authError" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
   <header class="hero">
     <div class="shell hero-grid">
       <nav aria-label="navega&#231;&#227;o principal">
@@ -844,6 +975,10 @@
           <h2>identidade candanga</h2>
           <p>Quem &#233; o brasiliense? A resposta mudou: o DF nasceu de migrantes, mas acaba de cruzar a virada em que os nascidos aqui se tornam maioria. A identidade local &#233; mistura, mem&#243;ria, pertencimento escolhido e disputa entre a Bras&#237;lia imaginada e a Bras&#237;lia vivida.</p>
         </div>
+        <div class="section-callout">
+          <blockquote>o candango que veio encontra o brasiliense que nasceu.</blockquote>
+          <p>A identidade local deixou de ser apenas mem&#243;ria migrante e virou origem para uma nova gera&#231;&#227;o que j&#225; nasceu no DF.</p>
+        </div>
         <div class="cards">
           <article class="card feature">
             <div>
@@ -1057,6 +1192,10 @@
           <h2>a metr&#243;pole real</h2>
           <p>Entorno, RIDE, moradia e mobilidade mostram que Bras&#237;lia ultrapassou o desenho do Plano Piloto. O DF real &#233; uma metr&#243;pole transestadual, perif&#233;rica, pendular e parcialmente informal.</p>
         </div>
+        <div class="section-callout">
+          <blockquote>a cidade real atravessa fronteiras.</blockquote>
+          <p>Trabalho, moradia, estudo e sa&#250;de j&#225; funcionam em escala metropolitana, mesmo sem uma autoridade que governe a cidade inteira.</p>
+        </div>
         <div class="cards">
           <article class="card feature">
             <div>
@@ -1206,6 +1345,10 @@
           <h2>vida cotidiana</h2>
           <p>Mobilidade, seguran&#231;a, trabalho, fam&#237;lia, pets e consumo digital aparecem como temas centrais para entender os h&#225;bitos de quem vive no DF.</p>
         </div>
+        <div class="section-callout">
+          <blockquote>o cotidiano &#233; onde os dados viram h&#225;bito, medo, tempo e escolha.</blockquote>
+          <p>Transporte, seguran&#231;a, trabalho, fam&#237;lia e consumo digital mostram como o DF &#233; vivido na pr&#225;tica, para al&#233;m dos indicadores gerais.</p>
+        </div>
         <div class="rail">
           <article class="tile">
             <span>carro como principal meio para ir ao trabalho</span>
@@ -1284,6 +1427,10 @@
           <h2>cultura e m&#237;dia</h2>
           <p>O DF combina alta conectividade, consumo de redes sociais, for&#231;a das not&#237;cias locais e uma agenda cultural que ainda depende muito de deslocamento para fora do bairro.</p>
         </div>
+        <div class="section-callout">
+          <blockquote>a audi&#234;ncia local tamb&#233;m se forma no feed, na rua e no repert&#243;rio afetivo.</blockquote>
+          <p>Cultura e m&#237;dia conectam pertencimento, informa&#231;&#227;o, lazer, sotaque, mem&#243;ria e disputa por aten&#231;&#227;o.</p>
+        </div>
         <div class="cards">
           <article class="card feature">
             <div>
@@ -1359,6 +1506,10 @@
         <div class="section-head">
           <h2>Cerrado, clima e &aacute;gua no Distrito Federal</h2>
           <p>Dossi&ecirc; de insumos editoriais para a TV Globo DF. A leitura usa a r&eacute;gua <b>[DADO]</b>, <b>[CULTURA]</b> e <b>[HIP&Oacute;TESE]</b>, mas aqui o eixo &eacute; servi&ccedil;o e identidade. O calend&aacute;rio do Cerrado se repete todo ano: seca, queimadas, baixa umidade e volta das chuvas. Isso transforma o tema em franquia recorrente de jornalismo de utilidade p&uacute;blica.</p>
+        </div>
+        <div class="section-callout">
+          <blockquote>no df, clima e servi&#231;o p&#250;blico andam juntos.</blockquote>
+          <p>Seca, chuva, fuma&#231;a, calor e &#225;gua n&#227;o s&#227;o apenas ambiente: s&#227;o rotina, sa&#250;de, mobilidade, escola, trabalho e presta&#231;&#227;o de servi&#231;o.</p>
         </div>
         <div class="cards">
           <article class="card feature">
@@ -1525,6 +1676,10 @@
         <div class="section-head">
           <h2>F&eacute; e religi&atilde;o no Distrito Federal</h2>
           <p>Dossi&ecirc; de insumos editoriais para a TV Globo DF. A leitura usa a mesma r&eacute;gua dos dossi&ecirc;s anteriores: <b>[DADO]</b> para fonte estat&iacute;stica prim&aacute;ria, <b>[CULTURA]</b> para evid&ecirc;ncia observ&aacute;vel e <b>[HIP&Oacute;TESE]</b> para leitura a validar. O diferencial do DF &eacute; a sobreposi&ccedil;&atilde;o entre a transi&ccedil;&atilde;o religiosa brasileira e uma camada local &uacute;nica: Bras&iacute;lia como capital do poder e capital m&iacute;stica.</p>
+        </div>
+        <div class="section-callout">
+          <blockquote>a f&#233; no df &#233; infraestrutura social, identidade e disputa de futuro.</blockquote>
+          <p>Igrejas, terreiros, comunidades e templos m&#237;sticos organizam rede de apoio, pertencimento, pol&#237;tica, cuidado e cultura local.</p>
         </div>
         <div class="cards">
           <article class="card feature">
@@ -1722,6 +1877,10 @@
           <h2>Juventude e Gera&ccedil;&atilde;o Z no Distrito Federal</h2>
           <p>Dossi&ecirc; de insumos editoriais para a TV Globo DF. A leitura segue a mesma r&eacute;gua metodol&oacute;gica: <b>[DADO]</b> para fonte estat&iacute;stica prim&aacute;ria, <b>[CULTURA]</b> para evid&ecirc;ncia observ&aacute;vel e <b>[HIP&Oacute;TESE]</b> para leitura a validar. Aten&ccedil;&atilde;o ao ano dos dados: boa parte dos n&uacute;meros distritais vem da PDAD 2021 e deve ser atualizada com a PDAD-A 2024.</p>
         </div>
+        <div class="section-callout">
+          <blockquote>o futuro da audi&#234;ncia &#233; perif&#233;rico, negro, digital e desigual.</blockquote>
+          <p>A juventude do DF concentra as tens&#245;es de escola, renda, trabalho, g&#234;nero, cultura digital e pertencimento territorial.</p>
+        </div>
         <div class="cards">
           <article class="card feature">
             <div>
@@ -1905,6 +2064,10 @@
           <h2>A terceira idade do Distrito Federal</h2>
           <p>Dossi&#234; de insumos editoriais para a TV Globo DF. Idoso aqui significa pessoa de 60 anos ou mais, conforme o Estatuto da Pessoa Idosa. A se&#231;&#227;o fecha o arco et&#225;rio aberto pela juventude e mostra um paradoxo local: o DF &#233; onde mais se vive, mas ainda n&#227;o se preparou para cuidar bem de quem envelhece.</p>
         </div>
+        <div class="section-callout">
+          <blockquote>a cidade onde mais se vive ainda aprende a cuidar de quem envelhece.</blockquote>
+          <p>Longevidade, renda, solid&#227;o, cuidado e consumo mostram uma terceira idade mais ativa e mais central do que os clich&#234;s costumam admitir.</p>
+        </div>
         <div class="cards">
           <article class="card feature">
             <div>
@@ -2068,6 +2231,10 @@
           <h2>A popula&#231;&#227;o negra do Distrito Federal</h2>
           <p>Dossi&#234; transversal de insumos editoriais para a TV Globo DF. Negro aqui segue a classifica&#231;&#227;o do IBGE: soma de pretos e pardos. A quest&#227;o racial atravessa territ&#243;rio, renda, juventude, f&#233;, viol&#234;ncia, trabalho, cultura, homem, mulher e identidade candanga.</p>
         </div>
+        <div class="section-callout">
+          <blockquote>a capital &#233; negra, mesmo quando sua imagem p&#250;blica insiste em ser branca.</blockquote>
+          <p>Ra&#231;a no DF n&#227;o &#233; tema lateral: &#233; mapa de renda, territ&#243;rio, juventude, viol&#234;ncia, cultura, f&#233; e origem da cidade.</p>
+        </div>
         <div class="cards">
           <article class="card feature">
             <div>
@@ -2223,6 +2390,10 @@
         <div class="section-head">
           <h2>A mulher do Distrito Federal</h2>
           <p>Dossi&ecirc; de insumos editoriais para a TV Globo DF. O m&eacute;todo segue a r&eacute;gua do estudo sobre masculinidades: <b>[DADO]</b> para fonte estat&iacute;stica prim&aacute;ria, <b>[CULTURA]</b> para evid&ecirc;ncia observ&aacute;vel e <b>[HIP&Oacute;TESE]</b> para leitura a validar. Aqui, a base estat&iacute;stica &eacute; farta; a lacuna principal n&atilde;o &eacute; de dado, mas de representa&ccedil;&atilde;o editorial.</p>
+        </div>
+        <div class="section-callout">
+          <blockquote>compet&#234;ncia feminina n&#227;o virou reconhecimento proporcional.</blockquote>
+          <p>As mulheres do DF estudam mais, sustentam mais redes de cuidado e ainda enfrentam renda menor, viol&#234;ncia e baixa representa&#231;&#227;o proporcional.</p>
         </div>
         <div class="cards">
           <article class="card feature">
@@ -2432,6 +2603,10 @@
         <div class="section-head">
           <h2>O homem do Distrito Federal</h2>
           <p>Uma leitura inicial sobre masculinidades no DF, constru&#237;da a partir do documento-base e do estudo em anexo. A premissa central &#233; que n&#227;o existe um &#8220;homem m&#233;dio&#8221; brasiliense: h&#225; masculinidades atravessadas por territ&#243;rio, gera&#231;&#227;o, renda, religi&#227;o, trabalho, ra&#231;a, cultura, mobilidade e repert&#243;rio de m&#237;dia.</p>
+        </div>
+        <div class="section-callout">
+          <blockquote>n&#227;o existe homem m&#233;dio brasiliense; existem masculinidades situadas.</blockquote>
+          <p>Classe, territ&#243;rio, ra&#231;a, religi&#227;o, trabalho, viol&#234;ncia, cultura e gera&#231;&#227;o mudam completamente o que significa ser homem no DF.</p>
         </div>
         <div class="cards">
           <article class="card feature">
@@ -3275,5 +3450,41 @@
       Estudo e p&#225;gina desenvolvidos pela &#225;rea de Programa&#231;&#227;o da TV Globo DF
     </div>
   </footer>
+  <script>
+    (function () {
+      var PASSWORD = "GloboDF#1245";
+      var KEY = "dfEspelhoAutorizado";
+      var body = document.body;
+      var form = document.getElementById("authForm");
+      var input = document.getElementById("authPassword");
+      var error = document.getElementById("authError");
+
+      function unlock() {
+        body.classList.remove("locked");
+      }
+
+      if (sessionStorage.getItem(KEY) === "sim") {
+        unlock();
+        return;
+      }
+
+      setTimeout(function () {
+        input.focus();
+      }, 0);
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        if (input.value === PASSWORD) {
+          sessionStorage.setItem(KEY, "sim");
+          unlock();
+          error.textContent = "";
+        } else {
+          error.textContent = "Senha incorreta.";
+          input.value = "";
+          input.focus();
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
