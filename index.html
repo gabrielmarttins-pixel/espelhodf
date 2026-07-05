@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Distrito Federal no espelho</title>
+  <title>Prisma DF</title>
   <style>
     @font-face {
       font-family: "Globotipo";
@@ -574,8 +574,35 @@
       margin-top: 6px;
     }
 
+    .evidence {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      max-width: 100%;
+      padding: 4px 9px;
+      margin: 0 6px 3px 0;
+      border-radius: 6px;
+      color: white;
+      font-size: .72rem;
+      line-height: 1.1;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      vertical-align: baseline;
+      box-shadow: 0 8px 18px rgba(0,0,0,.12);
+    }
+
+    .evidence-dado { background: linear-gradient(135deg, #0057ff, #05a6ff); }
+    .evidence-cultura { background: linear-gradient(135deg, #e2007a, #ff6ab7); }
+    .evidence-hipotese { background: linear-gradient(135deg, #5b1fd1, #8800f8); }
+    .evidence-dado-cultura { background: linear-gradient(135deg, #0057ff, #e2007a); }
+    .evidence-dado-hipotese { background: linear-gradient(135deg, #0057ff, #8800f8); }
+    .evidence-cultura-hipotese { background: linear-gradient(135deg, #e2007a, #8800f8); }
+    .evidence-misto { background: linear-gradient(135deg, #0057ff, #e2007a, #8800f8); }
+
     #panorama { --accent: #05a6ff; --accent-rgb: 5, 166, 255; }
     #indice-mestre { --accent: #214e7a; --accent-rgb: 33, 78, 122; }
+    #insights-prisma { --accent: #006b7f; --accent-rgb: 0, 107, 127; }
     #identidade-candanga { --accent: #00a878; --accent-rgb: 0, 168, 120; }
     #territorio { --accent: #306dff; --accent-rgb: 48, 109, 255; }
     #metropole-real { --accent: #6f6a8f; --accent-rgb: 111, 106, 143; }
@@ -694,7 +721,7 @@
   <div class="auth-gate" id="authGate" role="dialog" aria-modal="true" aria-labelledby="authTitle">
     <div class="auth-panel">
       <h2 id="authTitle">Acesso restrito</h2>
-      <p>Digite a senha para acessar o estudo Distrito Federal no Espelho.</p>
+      <p>Digite a senha para acessar o estudo Prisma DF.</p>
       <form class="auth-form" id="authForm">
         <label for="authPassword">Senha</label>
         <input id="authPassword" type="password" autocomplete="current-password" required>
@@ -706,7 +733,7 @@
   <header class="hero">
     <div class="shell hero-grid">
       <nav aria-label="navega&#231;&#227;o principal">
-        <div class="mark"><img class="mark-logo" src="plimplim.png" alt="" aria-hidden="true">Distrito Federal no espelho</div>
+        <div class="mark"><img class="mark-logo" src="plimplim.png" alt="" aria-hidden="true">Prisma DF</div>
         <div class="nav-links">
           <a href="#panorama">panorama</a>
           <a href="#indice-mestre">&#237;ndice-mestre</a>
@@ -723,14 +750,15 @@
           <a href="#mulher-df">mulher do df</a>
           <a href="#homem-df">homem do df</a>
           <a href="#book-masculinidade">book masculinidade</a>
+          <a href="#insights-prisma">insights Prisma</a>
           <a href="#agenda">radar</a>
           <a href="#fontes">fontes</a>
         </div>
       </nav>
       <div class="hero-copy">
-        <p class="eyebrow">leitura sint&#233;tica a partir do documento df no espelho</p>
-        <h1>Distrito Federal <span>em contexto</span></h1>
-        <p class="hero-lede">Um retrato do DF que combina dados demogr&#225;ficos, trabalho, mobilidade, seguran&#231;a, cultura e h&#225;bitos de m&#237;dia. A proposta &#233; mostrar o territ&#243;rio como ele funciona: capital pol&#237;tica, metr&#243;pole de servi&#231;os, cidade modernista e conjunto diverso de regi&#245;es administrativas.</p>
+        <p class="eyebrow">Panorama de Retratos, Identidade, Sociedade, Migra&#231;&#227;o e Arqu&#233;tipos</p>
+        <h1>Prisma DF <span>todas as faces</span></h1>
+        <p class="hero-lede">Uma cidade, todas as faces. Um retrato do DF que combina dados demogr&#225;ficos, trabalho, mobilidade, seguran&#231;a, cultura e h&#225;bitos de m&#237;dia para mostrar o territ&#243;rio como ele funciona: capital pol&#237;tica, metr&#243;pole de servi&#231;os, cidade modernista e conjunto diverso de regi&#245;es administrativas.</p>
       </div>
       <div class="hero-stats" aria-label="indicadores principais">
         <div class="hero-stat"><strong>2,82 mi</strong><small>habitantes no Censo 2022 (2.817.381)</small></div>
@@ -753,23 +781,23 @@
             <div>
               <h3>renda alta, desigualdade tamb&eacute;m</h3>
               <span class="metric">R$ 3.444</span>
-              <p>O valor de renda per capita citado no documento-base deve ser tratado como medida a confirmar antes de compara&ccedil;&atilde;o com o Pnud. O &Iacute;ndice de Gini citado, 0,584, refor&ccedil;a a leitura dupla: renda alta e concentra&ccedil;&atilde;o.</p>
+              <p>Rendimento domiciliar per capita nominal de 2024. O DF tem o maior valor do pa&#237;s, acima da m&#233;dia brasileira (R$ 2.069) e 3,2 vezes o Maranh&#227;o (R$ 1.077). O Gini citado, 0,584, refor&#231;a a leitura dupla: renda alta e concentra&#231;&#227;o.</p>
               <details class="expand" open>
                 <summary>nota de m&eacute;todo</summary>
                 <ul>
-                  <li>N&atilde;o comparar diretamente R$ 3.444 com a renda do Pnud 2024 sem checar conceito, ano, deflator e fonte prim&aacute;ria.</li>
-                  <li>A&ccedil;&atilde;o recomendada: rastrear se o valor vem de PDAD/IPEDF, PNAD ou outro recorte antes de consolidar o indicador.</li>
-                  <li>Enquanto a origem n&atilde;o estiver fechada, usar o dado como alerta editorial, n&atilde;o como s&eacute;rie comparativa.</li>
+                  <li>N&atilde;o comparar diretamente R$ 3.444 com a renda do Pnud 2024: s&atilde;o conceitos, anos e deflatores diferentes.</li>
+                  <li>Usar como s&eacute;rie anual da PNAD Cont&iacute;nua e manter o Pnud apenas para leitura de desenvolvimento humano.</li>
+                  <li>O Gini segue como dado a confirmar por fonte prim&aacute;ria e ano antes de virar s&eacute;rie comparativa.</li>
                 </ul>
               </details>
             </div>
-            <div class="source">fontes: DF no Espelho; fonte prim&aacute;ria/ano da renda e do Gini a confirmar</div>
+            <div class="source">fonte: IBGE - PNAD Cont&#237;nua, 2024; Gini citado em DF no Espelho, com fonte prim&#225;ria a confirmar</div>
           </article>
           <article class="card">
             <div>
               <h3>escolaridade como ativo</h3>
               <span class="metric blue">97,2%</span>
-              <p>Percentual de alfabetizados no recorte do documento. O DF tamb&#233;m aparece com 33,2% da popula&#231;&#227;o com superior completo.</p>
+              <p>Percentual de alfabetizados no recorte do documento. O DF tamb&#233;m aparece com 33,2% da popula&#231;&#227;o com superior completo (Censo 2022; a PDAD 2024 traz recortes maiores por sexo).</p>
             </div>
             <div class="source">fontes: DF no Espelho e Censo 2022</div>
           </article>
@@ -817,7 +845,7 @@
             <div>
               <h3>jovens no mercado</h3>
               <span class="metric blue">27,3%</span>
-              <p>Os jovens representam 27,3% da Popula&#231;&#227;o em Idade Ativa do DF. O documento-base aponta 20,2% de desemprego nesse grupo, um gancho direto para forma&#231;&#227;o, primeiro emprego, renda extra e concursos.</p>
+              <p>Os jovens representam 27,3% da Popula&#231;&#227;o em Idade Ativa do DF. O panorama usa 20,2% de desemprego jovem (IPEDF, 2024; a PDAD 2021 registrava 21,4%), um gancho direto para forma&#231;&#227;o, primeiro emprego, renda extra e concursos.</p>
             </div>
             <div class="source">fonte: IPEDF 2024, citado em DF no Espelho</div>
           </article>
@@ -835,13 +863,13 @@
           <article class="card feature">
             <div>
               <h3>a tese editorial</h3>
-              <p><b>[HIP&#211;TESE EDITORIAL]</b> A for&#231;a do projeto est&#225; em cobrir o DF real al&#233;m dos clich&#234;s de Bras&#237;lia-poder e Bras&#237;lia-viol&#234;ncia. O fio comum entre os dossi&#234;s &#233; mostrar como identidade, ra&#231;a, g&#234;nero, idade, f&#233;, clima, moradia e mobilidade se cruzam no cotidiano local.</p>
+              <p><span class="evidence evidence-hipotese">HIP&#211;TESE EDITORIAL</span> A for&#231;a do projeto est&#225; em cobrir o DF real al&#233;m dos clich&#234;s de Bras&#237;lia-poder e Bras&#237;lia-viol&#234;ncia. O fio comum entre os dossi&#234;s &#233; mostrar como identidade, ra&#231;a, g&#234;nero, idade, f&#233;, clima, moradia e mobilidade se cruzam no cotidiano local.</p>
               <details class="expand" open>
                 <summary>ver regra de leitura</summary>
                 <ul>
-                  <li><b>[DADO]</b> Informa&#231;&#227;o objetiva de fonte estat&#237;stica prim&#225;ria ou institucional.</li>
-                  <li><b>[CULTURA]</b> Evid&#234;ncia observ&#225;vel em comportamento, cena local, imprensa, eventos ou repert&#243;rio simb&#243;lico.</li>
-                  <li><b>[HIP&#211;TESE]</b> Leitura interpretativa que ainda pede survey, escuta, microdados ou apura&#231;&#227;o pr&#243;pria.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> Informa&#231;&#227;o objetiva de fonte estat&#237;stica prim&#225;ria ou institucional.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> Evid&#234;ncia observ&#225;vel em comportamento, cena local, imprensa, eventos ou repert&#243;rio simb&#243;lico.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&#211;TESE</span> Leitura interpretativa que ainda pede survey, escuta, microdados ou apura&#231;&#227;o pr&#243;pria.</li>
                 </ul>
               </details>
             </div>
@@ -913,7 +941,7 @@
           <article class="card feature">
             <div>
               <h3>os fios entre os dossi&#234;s</h3>
-              <p><b>[HIP&#211;TESE EDITORIAL]</b> A biblioteca ganha profundidade quando os dossi&#234;s s&#227;o lidos em conjunto. O mesmo dado muda de sentido quando cruza territ&#243;rio, ra&#231;a, g&#234;nero, gera&#231;&#227;o e renda.</p>
+              <p><span class="evidence evidence-hipotese">HIP&#211;TESE EDITORIAL</span> A biblioteca ganha profundidade quando os dossi&#234;s s&#227;o lidos em conjunto. O mesmo dado muda de sentido quando cruza territ&#243;rio, ra&#231;a, g&#234;nero, gera&#231;&#227;o e renda.</p>
               <details class="expand">
                 <summary>ver conex&#245;es principais</summary>
                 <ul>
@@ -932,7 +960,7 @@
           <article class="card">
             <div>
               <h3>radar e pr&#243;ximas frentes</h3>
-              <p><b>[HIP&#211;TESE EDITORIAL]</b> O radar funciona como incubadora: um eixo "gradua" quando ganha dados, &#226;ngulo e relev&#226;ncia suficientes para virar dossi&#234; pr&#243;prio.</p>
+              <p><span class="evidence evidence-hipotese">HIP&#211;TESE EDITORIAL</span> O radar funciona como incubadora: um eixo "gradua" quando ganha dados, &#226;ngulo e relev&#226;ncia suficientes para virar dossi&#234; pr&#243;prio.</p>
               <details class="expand">
                 <summary>ver candidatos</summary>
                 <ul>
@@ -951,6 +979,7 @@
       </div>
     </section>
 
+
     <section id="identidade-candanga">
       <div class="shell">
         <div class="section-head">
@@ -966,7 +995,7 @@
             <div>
               <h3>a virada hist&#243;rica</h3>
               <span class="metric">56,9%</span>
-              <p><b>[DADO]</b> Pela primeira vez, a maioria dos moradores do DF nasceu no pr&#243;prio DF: 56,9%, segundo a PDAD 2024. A virada ocorreu entre 2013 e 2018, quando os nascidos aqui passaram a superar os migrantes.</p>
+              <p><span class="evidence evidence-dado">DADO</span> Pela primeira vez, a maioria dos moradores do DF nasceu no pr&#243;prio DF: 56,9%, segundo a PDAD 2024. A virada ocorreu entre 2013 e 2018, quando os nascidos aqui passaram a superar os migrantes.</p>
               <details class="expand">
                 <summary>ver leitura editorial</summary>
                 <ul>
@@ -982,7 +1011,7 @@
           <article class="card">
             <div>
               <h3>capital sem passado anterior</h3>
-              <p><b>[CULTURA]</b> Bras&#237;lia &#233; uma rara metr&#243;pole brasileira sem cidade anterior. Nasceu em 1960, sem morador nativo, sotaque consolidado, santo padroeiro ou mem&#243;ria urbana pr&#243;pria. Sua identidade precisou ser constru&#237;da do zero.</p>
+              <p><span class="evidence evidence-cultura">CULTURA</span> Bras&#237;lia &#233; uma rara metr&#243;pole brasileira sem cidade anterior. Nasceu em 1960, sem morador nativo, sotaque consolidado, santo padroeiro ou mem&#243;ria urbana pr&#243;pria. Sua identidade precisou ser constru&#237;da do zero.</p>
               <details class="expand">
                 <summary>ver implica&#231;&#227;o</summary>
                 <p>A identidade brasiliense n&#227;o &#233; herdada como em cidades centen&#225;rias: ela &#233; montada por ades&#227;o, origem familiar, territ&#243;rio, trabalho, cultura e mem&#243;ria.</p>
@@ -994,7 +1023,7 @@
           <article class="card">
             <div>
               <h3>candango: de xingamento a honra</h3>
-              <p><b>[DADO + CULTURA]</b> "Candango" tem origem africana, ligada ao quimbundo, e chegou ao Brasil com sentido pejorativo. Em Bras&#237;lia, foi ressignificado para nomear os trabalhadores que ergueram a capital, especialmente migrantes nordestinos.</p>
+              <p><span class="evidence evidence-dado-cultura">DADO + CULTURA</span> "Candango" tem origem africana, ligada ao quimbundo, e chegou ao Brasil com sentido pejorativo. Em Bras&#237;lia, foi ressignificado para nomear os trabalhadores que ergueram a capital, especialmente migrantes nordestinos.</p>
               <details class="expand">
                 <summary>ver cuidado de linguagem</summary>
                 <p>Nem todo pioneiro gosta de ser chamado de candango. H&#225; hierarquias simb&#243;licas entre oper&#225;rios, pioneiros, servidores, moradores antigos e filhos da cidade. A pauta fica melhor quando escuta essas diferen&#231;as.</p>
@@ -1007,7 +1036,7 @@
             <div>
               <h3>caldeir&#227;o nordestino, mineiro e goiano</h3>
               <span class="metric">54,9%</span>
-              <p><b>[DADO]</b> Entre os migrantes do DF, o Nordeste &#233; a principal origem, com 54,9%, seguido pelo Sudeste, com 21,7%. Por estado, aparecem Minas Gerais, Bahia, Goi&#225;s, Maranh&#227;o e Piau&#237; entre os principais pontos de origem.</p>
+              <p><span class="evidence evidence-dado">DADO</span> Entre os migrantes do DF, o Nordeste &#233; a principal origem, com 54,9%, seguido pelo Sudeste, com 21,7%. Por estado, aparecem Minas Gerais, Bahia, Goi&#225;s, Maranh&#227;o e Piau&#237; entre os principais pontos de origem.</p>
               <details class="expand">
                 <summary>ver leitura cultural</summary>
                 <p>O DF &#233; menos uma identidade pura e mais um encontro de sotaques, religi&#245;es, comidas, mem&#243;rias rurais, repert&#243;rios nordestinos, mineiros e goianos, al&#233;m do imagin&#225;rio do servi&#231;o p&#250;blico.</p>
@@ -1020,10 +1049,10 @@
             <div>
               <h3>o DF agora transborda</h3>
               <span class="metric">-100 mil</span>
-              <p><b>[DADO]</b> Entre 2017 e 2022, o DF teve um dos maiores saldos migrat&#243;rios negativos do pa&#237;s, em torno de 100 mil pessoas. Entre os que saem, 48,5% t&#234;m Goi&#225;s como destino.</p>
+              <p><span class="evidence evidence-dado">DADO</span> Entre 2017 e 2022, o DF teve um dos maiores saldos migrat&#243;rios negativos do pa&#237;s, em torno de 100 mil pessoas. Entre os que saem, 48,5% t&#234;m Goi&#225;s como destino.</p>
               <details class="expand">
                 <summary>ver hip&#243;tese</summary>
-                <p><b>[HIP&#211;TESE]</b> A migra&#231;&#227;o n&#227;o parou; ela mudou de dire&#231;&#227;o. Antes, o Brasil vinha para o DF. Agora, parte do DF se desloca para o Entorno goiano por moradia mais barata, sem deixar a metr&#243;pole real.</p>
+                <p><span class="evidence evidence-hipotese">HIP&#211;TESE</span> A migra&#231;&#227;o n&#227;o parou; ela mudou de dire&#231;&#227;o. Antes, o Brasil vinha para o DF. Agora, parte do DF se desloca para o Entorno goiano por moradia mais barata, sem deixar a metr&#243;pole real.</p>
               </details>
             </div>
             <div class="source">fontes: IBGE, Censo 2022; IPEDF/Codeplan</div>
@@ -1032,7 +1061,7 @@
           <article class="card">
             <div>
               <h3>brasiliense nato</h3>
-              <p><b>[DADO + CULTURA]</b> Filhos, netos e bisnetos de candangos, nascidos em Ceil&#226;ndia, Taguatinga, Sobradinho, Gama e outras RAs, formam a nova maioria. Para eles, Bras&#237;lia n&#227;o &#233; destino: &#233; origem.</p>
+              <p><span class="evidence evidence-dado-cultura">DADO + CULTURA</span> Filhos, netos e bisnetos de candangos, nascidos em Ceil&#226;ndia, Taguatinga, Sobradinho, Gama e outras RAs, formam a nova maioria. Para eles, Bras&#237;lia n&#227;o &#233; destino: &#233; origem.</p>
               <details class="expand">
                 <summary>ver recorte de cor e idade</summary>
                 <p>Entre os nascidos no DF, a cor predominante &#233; parda, seguida de branca e preta. A popula&#231;&#227;o nata tamb&#233;m &#233; mais jovem, o que conecta esta pauta a juventude, escola, trabalho, cultura digital e pertencimento territorial.</p>
@@ -1044,7 +1073,7 @@
           <article class="card">
             <div>
               <h3>quatro naturalidades simb&#243;licas</h3>
-              <p><b>[CULTURA]</b> O dossi&#234; sugere quatro modos de pertencimento: o candango/pioneiro, o brasiliense nato, o forasteiro do poder e o novo candango que chega por concurso, trabalho ou oportunidade.</p>
+              <p><span class="evidence evidence-cultura">CULTURA</span> O dossi&#234; sugere quatro modos de pertencimento: o candango/pioneiro, o brasiliense nato, o forasteiro do poder e o novo candango que chega por concurso, trabalho ou oportunidade.</p>
               <details class="expand">
                 <summary>ver os arqu&#233;tipos</summary>
                 <ul>
@@ -1062,14 +1091,14 @@
             <div>
               <h3>o sotaque que nasceu</h3>
               <span class="metric">30 vozes</span>
-              <p><b>[DADO + CULTURA]</b> Pesquisa do Departamento de Lingu&#237;stica/Instituto de Letras da UnB, coordenada pelo professor Ronaldo Lima e divulgada em abril de 2026, gravou 30 brasilienses de segunda gera&#231;&#227;o, entre 18 e 40 anos, em cabines ac&#250;sticas e analisou a fala com o software Praat. A tese desmonta o senso comum de que o DF teria fala neutra: se h&#225; escolha consistente de consoantes e vogais, h&#225; sotaque.</p>
+              <p><span class="evidence evidence-dado-cultura">DADO + CULTURA</span> Pesquisa do Departamento de Lingu&#237;stica/Instituto de Letras da UnB, coordenada pelo professor Ronaldo Lima e divulgada em abril de 2026, gravou 30 brasilienses de segunda gera&#231;&#227;o, entre 18 e 40 anos, em cabines ac&#250;sticas e analisou a fala com o software Praat. A tese desmonta o senso comum de que o DF teria fala neutra: se h&#225; escolha consistente de consoantes e vogais, h&#225; sotaque.</p>
               <details class="expand">
                 <summary>ver marcas e gancho editorial</summary>
                 <ul>
-                  <li><b>[DADO]</b> As primeiras marcas apontadas s&#227;o o "R" levemente aspirado na garganta, diferente do "R" caipira, e o "S" sibilante.</li>
-                  <li><b>[CULTURA]</b> No vocabul&#225;rio cotidiano, o "v&#233;i" aparece como marca local compar&#225;vel ao "uai" mineiro ou ao "oxente" pernambucano.</li>
-                  <li><b>[CULTURA]</b> O document&#225;rio <i>Fala Bras&#237;lia</i>, de Nelson Pereira dos Santos, j&#225; registrava em 1966 a expectativa de uma fala pr&#243;pria da nova capital.</li>
-                  <li><b>[HIP&#211;TESE]</b> O apelido de sotaque "televisivo" cria um gancho de casa: a Globo DF pode contar a hist&#243;ria da fala que o Brasil associa &#224; TV e que nasceu de uma cidade migrante.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> As primeiras marcas apontadas s&#227;o o "R" levemente aspirado na garganta, diferente do "R" caipira, e o "S" sibilante.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> No vocabul&#225;rio cotidiano, o "v&#233;i" aparece como marca local compar&#225;vel ao "uai" mineiro ou ao "oxente" pernambucano.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> O document&#225;rio <i>Fala Bras&#237;lia</i>, de Nelson Pereira dos Santos, j&#225; registrava em 1966 a expectativa de uma fala pr&#243;pria da nova capital.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&#211;TESE</span> O apelido de sotaque "televisivo" cria um gancho de casa: a Globo DF pode contar a hist&#243;ria da fala que o Brasil associa &#224; TV e que nasceu de uma cidade migrante.</li>
                 </ul>
               </details>
             </div>
@@ -1079,7 +1108,7 @@
           <article class="card">
             <div>
               <h3>pertencimento escolhido</h3>
-              <p><b>[HIP&#211;TESE]</b> Em Bras&#237;lia, ser de Bras&#237;lia pode ser menos uma certid&#227;o e mais uma ades&#227;o afetiva. A ideia de "candango de cora&#231;&#227;o" permite que migrantes e descendentes reivindiquem a cidade de modos diferentes.</p>
+              <p><span class="evidence evidence-hipotese">HIP&#211;TESE</span> Em Bras&#237;lia, ser de Bras&#237;lia pode ser menos uma certid&#227;o e mais uma ades&#227;o afetiva. A ideia de "candango de cora&#231;&#227;o" permite que migrantes e descendentes reivindiquem a cidade de modos diferentes.</p>
               <details class="expand">
                 <summary>ver pergunta de pesquisa</summary>
                 <p>Como o morador se define: candango, brasiliense, pioneiro, morador do DF, morador do Entorno, goiano-brasiliense ou nenhum desses? O ideal &#233; cruzar resposta por idade, RA, origem familiar e tempo de moradia.</p>
@@ -1091,7 +1120,7 @@
           <article class="card">
             <div>
               <h3>agenda para a Globo DF</h3>
-              <p><b>[HIP&#211;TESE EDITORIAL]</b> A identidade candanga organiza os demais temas: homem, mulher, f&#233;, juventude, cultura, metr&#243;pole real, moradia e mobilidade s&#227;o cap&#237;tulos da mesma hist&#243;ria migrante.</p>
+              <p><span class="evidence evidence-hipotese">HIP&#211;TESE EDITORIAL</span> A identidade candanga organiza os demais temas: homem, mulher, f&#233;, juventude, cultura, metr&#243;pole real, moradia e mobilidade s&#227;o cap&#237;tulos da mesma hist&#243;ria migrante.</p>
               <details class="expand">
                 <summary>ver pautas poss&#237;veis</summary>
                 <ul>
@@ -1133,12 +1162,12 @@
                 <li>Guar&#225;: 121 mil</li>
                 <li>Santa Maria: 117 mil</li>
                 <li>Recanto das Emas: 116 mil</li>
-                <li>Riacho Fundo II: 105 mil</li>
+                <li>Riacho Fundo II: 70,2 mil (PDAD-A 2024)</li>
                 <li>Sol Nascente/P&#244;r do Sol: 102 mil</li>
                 <li>S&#227;o Sebasti&#227;o: 99 mil</li>
                 <li>Vicente Pires: 97 mil</li>
                 <li>Sobradinho II: 83 mil</li>
-                <li>Jardim Bot&#226;nico: 78 mil</li>
+                <li>Jardim Bot&#226;nico: 75,1 mil (PDAD-A 2024)</li>
                 <li>Sobradinho: 72 mil</li>
                 <li>Itapo&#227;: 65 mil</li>
                 <li>Parano&#225;: 64 mil</li>
@@ -1148,7 +1177,7 @@
               </ol>
             </details>
             <p class="source"><b>Nota de recorte:</b> Sol Nascente/P&ocirc;r do Sol tornou-se RA independente em 2019; por isso a Ceil&acirc;ndia atual aparece menor que em s&eacute;ries antigas. Somadas, equivalem &agrave; Ceil&acirc;ndia hist&oacute;rica.</p>
-            <div class="source">fonte: DF no Espelho, com dados do IBGE 2022</div>
+            <div class="source">fontes: DF no Espelho, IBGE 2022 e PDAD-A 2024 (IPEDF)</div>
           </div>
           <aside class="panel">
             <h3>o que muda a leitura</h3>
@@ -1183,7 +1212,7 @@
             <div>
               <h3>Bras&#237;lia n&#227;o cabe mais em Bras&#237;lia</h3>
               <span class="metric">4,8 mi</span>
-              <p><b>[DADO]</b> A RIDE do DF e Entorno soma cerca de 4,8 milh&#245;es de habitantes em uma &#225;rea de 94.570 km&#178;, maior que a Hungria. O DF concentra 66% dessa popula&#231;&#227;o; o restante vive em munic&#237;pios goianos e mineiros que dependem da capital para trabalho, estudo, sa&#250;de e servi&#231;os.</p>
+              <p><span class="evidence evidence-dado">DADO</span> A RIDE do DF e Entorno soma cerca de 4,8 milh&#245;es de habitantes em uma &#225;rea de 94.570 km&#178;, maior que a Hungria. O DF concentra 66% dessa popula&#231;&#227;o; o restante vive em munic&#237;pios goianos e mineiros que dependem da capital para trabalho, estudo, sa&#250;de e servi&#231;os.</p>
               <details class="expand">
                 <summary>ver leitura editorial</summary>
                 <ul>
@@ -1196,11 +1225,29 @@
             <div class="source">fontes: IBGE, estimativa 2025; IPEDF/Codeplan</div>
           </article>
 
+          <article class="card feature">
+            <div>
+              <h3>AMB total: a metr&#243;pole vivida</h3>
+              <span class="metric">4,25 mi</span>
+              <p><span class="evidence evidence-dado">DADO</span> A &#193;rea Metropolitana de Bras&#237;lia, somando o DF e a &#225;rea urbana de 12 munic&#237;pios goianos, re&#250;ne 4.255.225 moradores e 1.806.637 domic&#237;lios. O dado separa a metr&#243;pole vivida da RIDE mais ampla.</p>
+              <details class="expand">
+                <summary>ver recortes da AMB</summary>
+                <ul>
+                  <li>&#193;guas Lindas tem a popula&#231;&#227;o mais jovem do recorte, com idade m&#233;dia de 29,6 anos.</li>
+                  <li>Padre Bernardo tem 71,5% de popula&#231;&#227;o negra, refor&#231;ando que o mapa racial ultrapassa o DF.</li>
+                  <li>Formosa aparece como munic&#237;pio mais cat&#243;lico, com 64,3%.</li>
+                  <li>Planaltina de Goi&#225;s combina 22,1% de m&#227;es solo e 76,7% de domic&#237;lios pr&#243;prios.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fonte: IPEDF, PDAD-A 2024 - recorte AMB, divulgado em fev/2026</div>
+          </article>
+
           <article class="card">
             <div>
               <h3>&#225;rea metropolitana efetiva</h3>
               <span class="metric">1,27 mi</span>
-              <p><b>[DADO]</b> A &#193;rea Metropolitana de Bras&#237;lia delimitada pelo IPEDF re&#250;ne 12 munic&#237;pios goianos com rela&#231;&#227;o cotidiana direta com o DF, somando mais de 1,27 milh&#227;o de moradores e 571 mil domic&#237;lios urbanos.</p>
+              <p><span class="evidence evidence-dado">DADO</span> Quando observados isoladamente, os 12 munic&#237;pios goianos da &#193;rea Metropolitana de Bras&#237;lia somam mais de 1,27 milh&#227;o de moradores e 571 mil domic&#237;lios urbanos. Eles formam a borda cotidiana que depende do DF para trabalho, estudo, sa&#250;de e consumo.</p>
               <details class="expand">
                 <summary>ver munic&#237;pios-chave</summary>
                 <p>Valpara&#237;so, &#193;guas Lindas, Novo Gama, Cidade Ocidental, Luzi&#226;nia, Santo Ant&#244;nio do Descoberto, Planaltina de Goi&#225;s e Formosa aparecem como territ&#243;rios centrais para entender trabalho, consumo, sa&#250;de e mobilidade do DF ampliado.</p>
@@ -1212,7 +1259,7 @@
           <article class="card">
             <div>
               <h3>cidade dormit&#243;rio</h3>
-              <p><b>[DADO + HIP&#211;TESE]</b> A metropoliza&#231;&#227;o fragmentou o territ&#243;rio goiano: Luzi&#226;nia deu origem a munic&#237;pios puxados pela capital, como Santo Ant&#244;nio do Descoberto, Cidade Ocidental, Valpara&#237;so, Novo Gama e &#193;guas Lindas. A hip&#243;tese &#233; que parte desse crescimento se estruturou como moradia mais barata, com pouco emprego local.</p>
+              <p><span class="evidence evidence-dado-hipotese">DADO + HIP&#211;TESE</span> A metropoliza&#231;&#227;o fragmentou o territ&#243;rio goiano: Luzi&#226;nia deu origem a munic&#237;pios puxados pela capital, como Santo Ant&#244;nio do Descoberto, Cidade Ocidental, Valpara&#237;so, Novo Gama e &#193;guas Lindas. A hip&#243;tese &#233; que parte desse crescimento se estruturou como moradia mais barata, com pouco emprego local.</p>
               <details class="expand">
                 <summary>ver ponto de valida&#231;&#227;o</summary>
                 <p>Validar com dados de emprego por munic&#237;pio, origem-destino, renda, tempo de deslocamento e uso de servi&#231;os p&#250;blicos no DF por moradores do Entorno.</p>
@@ -1221,14 +1268,32 @@
             <div class="source">fontes: IBGE, IPEDF/Codeplan e PDAD-A 2024</div>
           </article>
 
+          <article class="card">
+            <div>
+              <h3>o rural dentro da capital</h3>
+              <span class="metric yellow">121,8 mil</span>
+              <p><span class="evidence evidence-dado">DADO</span> A &#225;rea rural do DF tem 121.759 moradores em 49.549 domic&#237;lios, com m&#233;dia de 2,46 moradores. O recorte mostra um DF menos vis&#237;vel, com 51,9% de homens, idade m&#233;dia de 32,6 anos e maioria parda.</p>
+              <details class="expand">
+                <summary>ver perfil rural</summary>
+                <ul>
+                  <li>57% se declaram pardos, 29,1% brancos e 11,6% pretos.</li>
+                  <li>Cat&#243;licos somam 48,5%; metade da popula&#231;&#227;o nasceu no DF.</li>
+                  <li>Entre migrantes, 60,8% v&#234;m do Nordeste, com Bahia e Maranh&#227;o &#224; frente.</li>
+                  <li>Uso editorial: rural, Entorno e periferia n&#227;o s&#227;o sin&#244;nimos, mas se cruzam em trabalho, moradia, f&#233; e identidade.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fonte: IPEDF, PDAD-A 2024 - recorte &#193;rea Rural, divulgado em fev/2026</div>
+          </article>
+
           <article class="card feature">
             <div>
               <h3>a maior favela do Brasil fica em Bras&#237;lia</h3>
               <span class="metric">36.283</span>
-              <p><b>[DADO]</b> O Sol Nascente/P&#244;r do Sol, ao lado de Ceil&#226;ndia, aparece no Censo 2022 como a maior favela do Brasil: 36.283 domic&#237;lios e cerca de 102 mil moradores, depois de crescer 1.299% em 20 anos.</p>
+              <p><span class="evidence evidence-dado">DADO</span> O Sol Nascente/P&#244;r do Sol, ao lado de Ceil&#226;ndia, aparece no Censo 2022 como a maior favela do Brasil: 36.283 domic&#237;lios e cerca de 102 mil moradores, depois de crescer 1.299% em 20 anos.</p>
               <details class="expand">
                 <summary>ver contexto hist&#243;rico</summary>
-                <p><b>[CULTURA]</b> A ironia editorial &#233; forte: Ceil&#226;ndia nasceu em 1971 a partir da Campanha de Erradica&#231;&#227;o das Invas&#245;es, criada para remover ocupa&#231;&#245;es. Ao seu lado, formou-se a maior favela do pa&#237;s.</p>
+                <p><span class="evidence evidence-cultura">CULTURA</span> A ironia editorial &#233; forte: Ceil&#226;ndia nasceu em 1971 a partir da Campanha de Erradica&#231;&#227;o das Invas&#245;es, criada para remover ocupa&#231;&#245;es. Ao seu lado, formou-se a maior favela do pa&#237;s.</p>
               </details>
             </div>
             <div class="source">fontes: IBGE, Censo 2022; IPEDF/Codeplan</div>
@@ -1238,10 +1303,10 @@
             <div>
               <h3>tempo como imposto invis&#237;vel</h3>
               <span class="metric">200 mil+</span>
-              <p><b>[DADO]</b> Mais de 200 mil moradores do Entorno entram no DF diariamente para trabalhar ou estudar e passam mais de 2 horas por dia no deslocamento. A jornada come&#231;a antes do expediente.</p>
+              <p><span class="evidence evidence-dado">DADO</span> Mais de 200 mil moradores do Entorno entram no DF diariamente para trabalhar ou estudar e passam mais de 2 horas por dia no deslocamento. A jornada come&#231;a antes do expediente.</p>
               <details class="expand">
                 <summary>ver personagem-s&#237;ntese</summary>
-                <p><b>[CULTURA + HIP&#211;TESE]</b> O personagem &#233; o trabalhador pendular que sai de &#193;guas Lindas ou Novo Gama ainda de madrugada. A validar: impacto do trajeto em sono, sa&#250;de mental, cuidado familiar, renda dispon&#237;vel e perman&#234;ncia em estudo.</p>
+                <p><span class="evidence evidence-cultura-hipotese">CULTURA + HIP&#211;TESE</span> O personagem &#233; o trabalhador pendular que sai de &#193;guas Lindas ou Novo Gama ainda de madrugada. A validar: impacto do trajeto em sono, sa&#250;de mental, cuidado familiar, renda dispon&#237;vel e perman&#234;ncia em estudo.</p>
               </details>
             </div>
             <div class="source">fonte: IPEDF/Codeplan, PDAD-A 2024</div>
@@ -1251,7 +1316,7 @@
             <div>
               <h3>linhas que atravessam fronteiras</h3>
               <span class="metric">89,8%</span>
-              <p><b>[DADO]</b> Das 473 linhas de transporte interestadual semiurbano do Brasil, 425 operam entre o DF e Goi&#225;s. O dado explicita a escala incomum da mobilidade pendular brasiliense.</p>
+              <p><span class="evidence evidence-dado">DADO</span> Das 473 linhas de transporte interestadual semiurbano do Brasil, 425 operam entre o DF e Goi&#225;s. O dado explicita a escala incomum da mobilidade pendular brasiliense.</p>
               <details class="expand">
                 <summary>ver implica&#231;&#227;o</summary>
                 <p>O metr&#244; n&#227;o chega ao Entorno e tamb&#233;m n&#227;o cobre boa parte da periferia do DF. Por isso, &#244;nibus, integra&#231;&#227;o tarif&#225;ria e tempo de espera viram temas de renda, sa&#250;de e desigualdade.</p>
@@ -1263,7 +1328,7 @@
           <article class="card">
             <div>
               <h3>tr&#234;s an&#233;is da cidade</h3>
-              <p><b>[CULTURA]</b> A leitura territorial pode ser organizada em tr&#234;s an&#233;is: o Plano Piloto, centro tombado e de maior renda; as RAs perif&#233;ricas, onde vive a maioria do DF; e o Entorno goiano, que usa a capital mas n&#227;o participa da mesma estrutura administrativa.</p>
+              <p><span class="evidence evidence-cultura">CULTURA</span> A leitura territorial pode ser organizada em tr&#234;s an&#233;is: o Plano Piloto, centro tombado e de maior renda; as RAs perif&#233;ricas, onde vive a maioria do DF; e o Entorno goiano, que usa a capital mas n&#227;o participa da mesma estrutura administrativa.</p>
               <details class="expand">
                 <summary>ver exemplos</summary>
                 <ul>
@@ -1280,7 +1345,7 @@
             <div>
               <h3>grilagem de gravata</h3>
               <span class="metric">10,5 km&#178;</span>
-              <p><b>[DADO + CULTURA]</b> A ocupa&#231;&#227;o irregular no DF n&#227;o &#233; apenas pobreza. A 26 de Setembro, em Vicente Pires, tem 10,5 km&#178; e exp&#245;e a informalidade de classe m&#233;dia: loteamento, condom&#237;nio irregular e disputa por regulariza&#231;&#227;o.</p>
+              <p><span class="evidence evidence-dado-cultura">DADO + CULTURA</span> A ocupa&#231;&#227;o irregular no DF n&#227;o &#233; apenas pobreza. A 26 de Setembro, em Vicente Pires, tem 10,5 km&#178; e exp&#245;e a informalidade de classe m&#233;dia: loteamento, condom&#237;nio irregular e disputa por regulariza&#231;&#227;o.</p>
               <details class="expand">
                 <summary>ver cuidado editorial</summary>
                 <p>H&#225; debate local sobre nomenclatura: parte dos especialistas diferencia favela, invas&#227;o e ocupa&#231;&#227;o irregular. A pauta ganha for&#231;a quando mostra os n&#237;veis de informalidade por renda, sem reduzir tudo a um s&#243; retrato.</p>
@@ -1292,7 +1357,7 @@
           <article class="card">
             <div>
               <h3>metr&#243;pole sem prefeito</h3>
-              <p><b>[DADO + HIP&#211;TESE]</b> A Regi&#227;o Metropolitana de Bras&#237;lia n&#227;o existe formalmente como autoridade &#250;nica. O tecido urbano cruza DF, Goi&#225;s e Minas, mas transporte, sa&#250;de, saneamento e seguran&#231;a seguem divididos entre governos.</p>
+              <p><span class="evidence evidence-dado-hipotese">DADO + HIP&#211;TESE</span> A Regi&#227;o Metropolitana de Bras&#237;lia n&#227;o existe formalmente como autoridade &#250;nica. O tecido urbano cruza DF, Goi&#225;s e Minas, mas transporte, sa&#250;de, saneamento e seguran&#231;a seguem divididos entre governos.</p>
               <details class="expand">
                 <summary>ver exemplo pr&#225;tico</summary>
                 <p>O morador do Novo Gama pode usar hospital, emprego e com&#233;rcio no Gama, mas vota e paga imposto em Goi&#225;s. Essa quebra institucional ajuda a explicar gargalos que aparecem como problemas de mobilidade, moradia e atendimento p&#250;blico.</p>
@@ -1304,7 +1369,7 @@
           <article class="card">
             <div>
               <h3>pautas acion&#225;veis</h3>
-              <p><b>[HIP&#211;TESE EDITORIAL]</b> O tema rende s&#233;ries e quadros com alto reconhecimento local: a cidade que acorda na madrugada, o imposto do tr&#226;nsito, a maior favela do Brasil, a grilagem de gravata e a metr&#243;pole sem prefeito.</p>
+              <p><span class="evidence evidence-hipotese">HIP&#211;TESE EDITORIAL</span> O tema rende s&#233;ries e quadros com alto reconhecimento local: a cidade que acorda na madrugada, o imposto do tr&#226;nsito, a maior favela do Brasil, a grilagem de gravata e a metr&#243;pole sem prefeito.</p>
               <details class="expand">
                 <summary>ver agenda de apura&#231;&#227;o</summary>
                 <ul>
@@ -1480,7 +1545,7 @@
       <div class="shell">
         <div class="section-head">
           <h2>Cerrado, clima e &aacute;gua no Distrito Federal</h2>
-          <p>Dossi&ecirc; de insumos editoriais para a TV Globo DF. A leitura usa a r&eacute;gua <b>[DADO]</b>, <b>[CULTURA]</b> e <b>[HIP&Oacute;TESE]</b>, mas aqui o eixo &eacute; servi&ccedil;o e identidade. O calend&aacute;rio do Cerrado se repete todo ano: seca, queimadas, baixa umidade e volta das chuvas. Isso transforma o tema em franquia recorrente de jornalismo de utilidade p&uacute;blica.</p>
+          <p>Dossi&ecirc; de insumos editoriais para a TV Globo DF. A leitura usa a r&eacute;gua <span class="evidence evidence-dado">DADO</span>, <span class="evidence evidence-cultura">CULTURA</span> e <span class="evidence evidence-hipotese">HIP&Oacute;TESE</span>, mas aqui o eixo &eacute; servi&ccedil;o e identidade. O calend&aacute;rio do Cerrado se repete todo ano: seca, queimadas, baixa umidade e volta das chuvas. Isso transforma o tema em franquia recorrente de jornalismo de utilidade p&uacute;blica.</p>
         </div>
         <div class="section-callout">
           <blockquote>no df, clima e servi&#231;o p&#250;blico andam juntos.</blockquote>
@@ -1491,13 +1556,13 @@
             <div>
               <h3>ber&ccedil;o das &aacute;guas que racionou &aacute;gua</h3>
               <span class="metric">513</span>
-              <p><b>[DADO]</b> O DF fica no Cerrado, o ber&ccedil;o das &aacute;guas do Brasil, mas viveu 513 dias de racionamento e rod&iacute;zio entre 16/01/2017 e 15/06/2018. O paradoxo &eacute; a hist&oacute;ria ambiental mais brasiliense: morar sobre nascentes e quase ficar sem &aacute;gua.</p>
+              <p><span class="evidence evidence-dado">DADO</span> O DF fica no Cerrado, o ber&ccedil;o das &aacute;guas do Brasil, mas viveu 513 dias de racionamento e rod&iacute;zio entre 16/01/2017 e 15/06/2018. O paradoxo &eacute; a hist&oacute;ria ambiental mais brasiliense: morar sobre nascentes e quase ficar sem &aacute;gua.</p>
               <details class="expand" open>
                 <summary>ver n&uacute;meros-&acirc;ncora</summary>
                 <ul>
-                  <li><b>[DADO]</b> O Cerrado guarda 19.864 nascentes, 23,6% de todas as nascentes do pa&iacute;s.</li>
-                  <li><b>[DADO]</b> O reservat&oacute;rio do Descoberto chegou a 5% do volume &uacute;til em novembro de 2016, obrigando uso do volume morto.</li>
-                  <li><b>[CULTURA]</b> &Aacute;guas Emendadas simboliza o DF como ponto onde &aacute;guas correm para duas grandes bacias: Platina e Tocantins/Amaz&ocirc;nica.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> O Cerrado guarda 19.864 nascentes, 23,6% de todas as nascentes do pa&iacute;s.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> O reservat&oacute;rio do Descoberto chegou a 5% do volume &uacute;til em novembro de 2016, obrigando uso do volume morto.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> &Aacute;guas Emendadas simboliza o DF como ponto onde &aacute;guas correm para duas grandes bacias: Platina e Tocantins/Amaz&ocirc;nica.</li>
                 </ul>
               </details>
             </div>
@@ -1506,13 +1571,13 @@
           <article class="card">
             <div>
               <h3>o clima mais sazonal do pa&iacute;s</h3>
-              <p><b>[DADO]</b> O DF tem dois climas em um: cerca de 90% da chuva cai entre setembro/outubro e mar&ccedil;o/abril; na esta&ccedil;&atilde;o seca, raramente chove mais que 9 mm no m&ecirc;s inteiro.</p>
+              <p><span class="evidence evidence-dado">DADO</span> O DF tem dois climas em um: cerca de 90% da chuva cai entre setembro/outubro e mar&ccedil;o/abril; na esta&ccedil;&atilde;o seca, raramente chove mais que 9 mm no m&ecirc;s inteiro.</p>
               <details class="expand">
                 <summary>ver leitura de servi&ccedil;o</summary>
                 <ul>
-                  <li><b>[DADO]</b> A chuva anual varia entre 1.100 e 1.600 mm.</li>
-                  <li><b>[DADO]</b> A umidade cai de 70% a 80% no per&iacute;odo chuvoso para 45% a 65% no seco, podendo ficar abaixo de 20%.</li>
-                  <li><b>[CULTURA]</b> O clima organiza a rotina: garrafa d'&aacute;gua, umidificador, soro, l&aacute;bios rachados, calor de dia e frio &agrave; noite.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> A chuva anual varia entre 1.100 e 1.600 mm.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> A umidade cai de 70% a 80% no per&iacute;odo chuvoso para 45% a 65% no seco, podendo ficar abaixo de 20%.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> O clima organiza a rotina: garrafa d'&aacute;gua, umidificador, soro, l&aacute;bios rachados, calor de dia e frio &agrave; noite.</li>
                 </ul>
               </details>
             </div>
@@ -1521,12 +1586,12 @@
           <article class="card">
             <div>
               <h3>estiagem recorde</h3>
-              <p><b>[DADO]</b> Em setembro de 2024, o DF chegou a 153 dias consecutivos sem chuva, o segundo maior per&iacute;odo da hist&oacute;ria, atr&aacute;s de 1963, quando foram 163 dias.</p>
+              <p><span class="evidence evidence-dado">DADO</span> Em setembro de 2024, o DF chegou a 153 dias consecutivos sem chuva, o segundo maior per&iacute;odo da hist&oacute;ria, atr&aacute;s de 1963, quando foram 163 dias.</p>
               <details class="expand">
                 <summary>ver pauta recorrente</summary>
                 <ul>
-                  <li><b>[DADO]</b> Em 2024, o Inmet emitiu alerta vermelho para umidade abaixo de 12%.</li>
-                  <li><b>[CULTURA]</b> A seca vira assunto cotidiano: escola, trabalho, esporte, sa&uacute;de, pets, casa e eventos ao ar livre.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> Em 2024, o Inmet emitiu alerta vermelho para umidade abaixo de 12%.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> A seca vira assunto cotidiano: escola, trabalho, esporte, sa&uacute;de, pets, casa e eventos ao ar livre.</li>
                   <li><b>Franquia:</b> criar contador anual de dias sem chuva, umidade, qualidade do ar e recomenda&ccedil;&otilde;es de sa&uacute;de.</li>
                 </ul>
               </details>
@@ -1536,13 +1601,13 @@
           <article class="card">
             <div>
               <h3>sa&uacute;de p&uacute;blica da seca</h3>
-              <p><b>[DADO]</b> Baixa umidade resseca vias a&eacute;reas e aumenta rinite, sinusite, asma, irrita&ccedil;&atilde;o de pele e olhos. A seca &eacute; pauta de sa&uacute;de, n&atilde;o s&oacute; de clima.</p>
+              <p><span class="evidence evidence-dado">DADO</span> Baixa umidade resseca vias a&eacute;reas e aumenta rinite, sinusite, asma, irrita&ccedil;&atilde;o de pele e olhos. A seca &eacute; pauta de sa&uacute;de, n&atilde;o s&oacute; de clima.</p>
               <details class="expand">
                 <summary>ver servi&ccedil;o</summary>
                 <ul>
                   <li>Hidrata&ccedil;&atilde;o, soro fisiol&oacute;gico, cuidado com crian&ccedil;as, idosos, pets e pr&aacute;tica esportiva.</li>
                   <li>Alertas por faixa de umidade e orienta&ccedil;&otilde;es de Defesa Civil e Secretaria de Sa&uacute;de.</li>
-                  <li><b>[CULTURA]</b> A cidade aprende a viver com bacias d'&aacute;gua, umidificador ligado e espera coletiva pela chuva.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> A cidade aprende a viver com bacias d'&aacute;gua, umidificador ligado e espera coletiva pela chuva.</li>
                 </ul>
               </details>
             </div>
@@ -1551,7 +1616,7 @@
           <article class="card">
             <div>
               <h3>fogo e fuma&ccedil;a</h3>
-              <p><b>[CULTURA]</b> A seca tamb&eacute;m &eacute; esta&ccedil;&atilde;o de fogo. Queimadas no DF e no Entorno enchem o ar de fuma&ccedil;a e transformam CBMDF, Defesa Civil e opera&ccedil;&otilde;es como Verde Vivo em personagens fixos da temporada.</p>
+              <p><span class="evidence evidence-cultura">CULTURA</span> A seca tamb&eacute;m &eacute; esta&ccedil;&atilde;o de fogo. Queimadas no DF e no Entorno enchem o ar de fuma&ccedil;a e transformam CBMDF, Defesa Civil e opera&ccedil;&otilde;es como Verde Vivo em personagens fixos da temporada.</p>
               <details class="expand">
                 <summary>ver abordagem</summary>
                 <ul>
@@ -1567,13 +1632,13 @@
             <div>
               <h3>seguran&ccedil;a h&iacute;drica em disputa</h3>
               <span class="metric">85%</span>
-              <p><b>[DADO]</b> As bacias do Parano&aacute; e do Descoberto respondem por cerca de 85% do abastecimento do DF. Depois da crise, obras ampliaram a seguran&ccedil;a h&iacute;drica, mas crescimento populacional, clima e Cerrado degradado mant&ecirc;m o risco no radar.</p>
+              <p><span class="evidence evidence-dado">DADO</span> As bacias do Parano&aacute; e do Descoberto respondem por cerca de 85% do abastecimento do DF. Depois da crise, obras ampliaram a seguran&ccedil;a h&iacute;drica, mas crescimento populacional, clima e Cerrado degradado mant&ecirc;m o risco no radar.</p>
               <details class="expand" open>
                 <summary>ver o que mudou desde 2017</summary>
                 <ul>
-                  <li><b>[DADO]</b> O sistema depende de grandes reservat&oacute;rios como Descoberto e Santa Maria.</li>
-                  <li><b>[DADO]</b> O consumo per capita do DF fica em torno de 140 litros por habitante/dia, acima dos 110 litros recomendados pela OMS.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> Uma nova crise pode ser evitada com re&uacute;so, capta&ccedil;&atilde;o pluvial, recupera&ccedil;&atilde;o de nascentes e uso racional.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> O sistema depende de grandes reservat&oacute;rios como Descoberto e Santa Maria.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> O consumo per capita do DF fica em torno de 140 litros por habitante/dia, acima dos 110 litros recomendados pela OMS.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> Uma nova crise pode ser evitada com re&uacute;so, capta&ccedil;&atilde;o pluvial, recupera&ccedil;&atilde;o de nascentes e uso racional.</li>
                 </ul>
               </details>
             </div>
@@ -1582,13 +1647,13 @@
           <article class="card">
             <div>
               <h3>o Cerrado como identidade</h3>
-              <p><b>[CULTURA]</b> O Cerrado &eacute; paisagem, comida e s&iacute;mbolo: pequi, buriti, ip&ecirc;s, cerrad&atilde;o, veredas e chuva chegando. Ainda &eacute; subaproveitado editorialmente, muitas vezes reduzido a mato seco.</p>
+              <p><span class="evidence evidence-cultura">CULTURA</span> O Cerrado &eacute; paisagem, comida e s&iacute;mbolo: pequi, buriti, ip&ecirc;s, cerrad&atilde;o, veredas e chuva chegando. Ainda &eacute; subaproveitado editorialmente, muitas vezes reduzido a mato seco.</p>
               <details class="expand">
                 <summary>ver oportunidades</summary>
                 <ul>
                   <li>Mostrar o bioma como riqueza visual, culin&aacute;ria, afetiva e econ&ocirc;mica.</li>
                   <li>Conectar cidade-parque, parques reais, trilhas, cachoeiras e turismo de natureza.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> H&aacute; p&uacute;blico de natureza e turismo ecol&oacute;gico no DF e Entorno, a validar com visita&ccedil;&atilde;o.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> H&aacute; p&uacute;blico de natureza e turismo ecol&oacute;gico no DF e Entorno, a validar com visita&ccedil;&atilde;o.</li>
                 </ul>
               </details>
             </div>
@@ -1597,12 +1662,12 @@
           <article class="card">
             <div>
               <h3>amea&ccedil;as conhecidas</h3>
-              <p><b>[DADO/HIP&Oacute;TESE]</b> Os inimigos do Cerrado no DF s&atilde;o conhecidos: desmatamento predat&oacute;rio, expans&atilde;o urbana irregular, impermeabiliza&ccedil;&atilde;o do solo e capta&ccedil;&atilde;o clandestina.</p>
+              <p><span class="evidence evidence-dado-hipotese">DADO + HIP&Oacute;TESE</span> Os inimigos do Cerrado no DF s&atilde;o conhecidos: desmatamento predat&oacute;rio, expans&atilde;o urbana irregular, impermeabiliza&ccedil;&atilde;o do solo e capta&ccedil;&atilde;o clandestina.</p>
               <details class="expand">
                 <summary>ver leitura</summary>
                 <ul>
                   <li>A crise de 2016/2017 combinou baixa pluviometria com fatores evit&aacute;veis.</li>
-                  <li><b>[CULTURA]</b> &Aacute;gua se planta: preservar Cerrado &eacute; produzir &aacute;gua futura.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> &Aacute;gua se planta: preservar Cerrado &eacute; produzir &aacute;gua futura.</li>
                   <li>Dar rosto a solu&ccedil;&otilde;es: recupera&ccedil;&atilde;o de nascentes, reflorestamento, pagamento por servi&ccedil;os ambientais e agricultores do Alto Descoberto.</li>
                 </ul>
               </details>
@@ -1612,7 +1677,7 @@
           <article class="card">
             <div>
               <h3>franquia da seca</h3>
-              <p><b>[CULTURA]</b> Todo ano, entre maio e outubro, a seca vira pauta garantida. Ela rende servi&ccedil;o, comportamento, sa&uacute;de, meio ambiente, casa, pets, esporte e branded content de baixo risco.</p>
+              <p><span class="evidence evidence-cultura">CULTURA</span> Todo ano, entre maio e outubro, a seca vira pauta garantida. Ela rende servi&ccedil;o, comportamento, sa&uacute;de, meio ambiente, casa, pets, esporte e branded content de baixo risco.</p>
               <details class="expand">
                 <summary>ver formatos poss&iacute;veis</summary>
                 <ul>
@@ -1650,7 +1715,7 @@
       <div class="shell">
         <div class="section-head">
           <h2>F&eacute; e religi&atilde;o no Distrito Federal</h2>
-          <p>Dossi&ecirc; de insumos editoriais para a TV Globo DF. A leitura usa a mesma r&eacute;gua dos dossi&ecirc;s anteriores: <b>[DADO]</b> para fonte estat&iacute;stica prim&aacute;ria, <b>[CULTURA]</b> para evid&ecirc;ncia observ&aacute;vel e <b>[HIP&Oacute;TESE]</b> para leitura a validar. O diferencial do DF &eacute; a sobreposi&ccedil;&atilde;o entre a transi&ccedil;&atilde;o religiosa brasileira e uma camada local &uacute;nica: Bras&iacute;lia como capital do poder e capital m&iacute;stica.</p>
+          <p>Dossi&ecirc; de insumos editoriais para a TV Globo DF. A leitura usa a mesma r&eacute;gua dos dossi&ecirc;s anteriores: <span class="evidence evidence-dado">DADO</span> para fonte estat&iacute;stica prim&aacute;ria, <span class="evidence evidence-cultura">CULTURA</span> para evid&ecirc;ncia observ&aacute;vel e <span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> para leitura a validar. O diferencial do DF &eacute; a sobreposi&ccedil;&atilde;o entre a transi&ccedil;&atilde;o religiosa brasileira e uma camada local &uacute;nica: Bras&iacute;lia como capital do poder e capital m&iacute;stica.</p>
         </div>
         <div class="section-callout">
           <blockquote>a f&#233; no df &#233; infraestrutura social, identidade e disputa de futuro.</blockquote>
@@ -1661,13 +1726,13 @@
             <div>
               <h3>a capital perdeu a maioria cat&oacute;lica</h3>
               <span class="metric">49,7%</span>
-              <p><b>[DADO]</b> O DF deixou de ser maioria cat&oacute;lica. No Censo 2022, cat&oacute;licos ca&iacute;ram de 57,2% em 2010 para 49,7%; a PDAD-A 2024 aponta 46,8%. A transi&ccedil;&atilde;o religiosa nacional chegou &agrave; capital.</p>
+              <p><span class="evidence evidence-dado">DADO</span> O DF deixou de ser maioria cat&oacute;lica. No Censo 2022, cat&oacute;licos ca&iacute;ram de 57,2% em 2010 para 49,7%; a PDAD-A 2024 aponta 46,8%. A transi&ccedil;&atilde;o religiosa nacional chegou &agrave; capital.</p>
               <details class="expand" open>
                 <summary>ver leitura editorial</summary>
                 <ul>
-                  <li><b>[DADO]</b> Evang&eacute;licos subiram de 26,1% para 29,2% no Censo 2022.</li>
-                  <li><b>[DADO]</b> Pessoas sem religi&atilde;o chegaram a 11,3% no Censo, sexta maior propor&ccedil;&atilde;o entre as UFs.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> A pauta n&atilde;o &eacute; apenas &ldquo;quem cresceu&rdquo;, mas o que muda em calend&aacute;rio, festas, fam&iacute;lia, pol&iacute;tica, territ&oacute;rio e consumo cultural.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> Evang&eacute;licos subiram de 26,1% para 29,2% no Censo 2022.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> Pessoas sem religi&atilde;o chegaram a 11,3% no Censo, sexta maior propor&ccedil;&atilde;o entre as UFs.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> A pauta n&atilde;o &eacute; apenas &ldquo;quem cresceu&rdquo;, mas o que muda em calend&aacute;rio, festas, fam&iacute;lia, pol&iacute;tica, territ&oacute;rio e consumo cultural.</li>
                 </ul>
               </details>
             </div>
@@ -1676,7 +1741,7 @@
           <article class="card">
             <div>
               <h3>nota de m&eacute;todo: Censo x PDAD</h3>
-              <p><b>[DADO]</b> Censo e PDAD n&atilde;o batem exatamente: no Censo, sem religi&atilde;o &eacute; 11,3%; na PDAD-A 2024, chega a 17,7%. S&atilde;o pesquisas, recortes et&aacute;rios e m&eacute;todos diferentes.</p>
+              <p><span class="evidence evidence-dado">DADO</span> Censo e PDAD n&atilde;o batem exatamente: no Censo, sem religi&atilde;o &eacute; 11,3%; na PDAD-A 2024, chega a 17,7%. S&atilde;o pesquisas, recortes et&aacute;rios e m&eacute;todos diferentes.</p>
               <details class="expand">
                 <summary>ver uso correto</summary>
                 <ul>
@@ -1691,13 +1756,13 @@
           <article class="card">
             <div>
               <h3>a f&eacute; tem CEP</h3>
-              <p><b>[DADO]</b> O mapa religioso acompanha renda e territ&oacute;rio. Catolicismo resiste no miolo tradicional e de renda alta; evangelicalismo avan&ccedil;a nas RAs populares; sem religi&atilde;o cresce nas duas pontas.</p>
+              <p><span class="evidence evidence-dado">DADO</span> O mapa religioso acompanha renda e territ&oacute;rio. Catolicismo resiste no miolo tradicional e de renda alta; evangelicalismo avan&ccedil;a nas RAs populares; sem religi&atilde;o cresce nas duas pontas.</p>
               <details class="expand">
                 <summary>ver mapa territorial</summary>
                 <ul>
-                  <li><b>[DADO]</b> Catolicismo resiste em Candangol&acirc;ndia (57,2%), Lago Sul (56,5%), Park Way (54,6%), Cruzeiro (54,3%) e Taguatinga (53,9%).</li>
-                  <li><b>[DADO]</b> No SCIA/Estrutural, evang&eacute;licos s&atilde;o 40,8% contra 35,4% de cat&oacute;licos; no Parano&aacute;, 35,2% x 34,9%.</li>
-                  <li><b>[DADO]</b> Sem religi&atilde;o se concentra em Varj&atilde;o (36,5%), Samambaia (35,5%), Fercal (25,6%), Arapoanga (24,2%) e Lago Norte (23,5%).</li>
+                  <li><span class="evidence evidence-dado">DADO</span> Catolicismo resiste em Candangol&acirc;ndia (57,2%), Lago Sul (56,5%), Park Way (54,6%), Cruzeiro (54,3%) e Taguatinga (53,9%).</li>
+                  <li><span class="evidence evidence-dado">DADO</span> No SCIA/Estrutural, evang&eacute;licos s&atilde;o 40,8% contra 35,4% de cat&oacute;licos; no Parano&aacute;, 35,2% x 34,9%.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> Sem religi&atilde;o se concentra em Varj&atilde;o (36,5%), Samambaia (35,5%), Fercal (25,6%), Arapoanga (24,2%) e Lago Norte (23,5%).</li>
                 </ul>
               </details>
             </div>
@@ -1706,12 +1771,12 @@
           <article class="card">
             <div>
               <h3>ra&ccedil;a, renda e evangelicalismo</h3>
-              <p><b>[DADO]</b> No Censo 2022, entre brancos do DF, 52,3% s&atilde;o cat&oacute;licos e 24,8% evang&eacute;licos. Entre pardos, 32,4% s&atilde;o evang&eacute;licos; entre pretos, 31,3%.</p>
+              <p><span class="evidence evidence-dado">DADO</span> No Censo 2022, entre brancos do DF, 52,3% s&atilde;o cat&oacute;licos e 24,8% evang&eacute;licos. Entre pardos, 32,4% s&atilde;o evang&eacute;licos; entre pretos, 31,3%.</p>
               <details class="expand">
                 <summary>ver leitura</summary>
                 <ul>
-                  <li><b>[DADO]</b> A f&eacute; evang&eacute;lica aparece mais forte entre popula&ccedil;&otilde;es pardas, pretas e perif&eacute;ricas.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> A religi&atilde;o pode funcionar como rede de pertencimento, disciplina, cuidado e ascens&atilde;o simb&oacute;lica onde Estado e mercado chegam menos.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> A f&eacute; evang&eacute;lica aparece mais forte entre popula&ccedil;&otilde;es pardas, pretas e perif&eacute;ricas.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> A religi&atilde;o pode funcionar como rede de pertencimento, disciplina, cuidado e ascens&atilde;o simb&oacute;lica onde Estado e mercado chegam menos.</li>
                   <li>Conectar com os dossi&ecirc;s de homem e mulher: provedor, cuidado, fam&iacute;lia e redes comunit&aacute;rias.</li>
                 </ul>
               </details>
@@ -1722,13 +1787,13 @@
             <div>
               <h3>Bras&iacute;lia, capital m&iacute;stica</h3>
               <span class="metric">700+</span>
-              <p><b>[DADO/CULTURA]</b> Bras&iacute;lia &eacute; reconhecida como capital do misticismo e do esoterismo no Brasil, com estimativa de mais de 700 organiza&ccedil;&otilde;es religiosas, esot&eacute;ricas e espirituais representadas.</p>
+              <p><span class="evidence evidence-dado-cultura">DADO + CULTURA</span> Bras&iacute;lia &eacute; reconhecida como capital do misticismo e do esoterismo no Brasil, com estimativa de mais de 700 organiza&ccedil;&otilde;es religiosas, esot&eacute;ricas e espirituais representadas.</p>
               <details class="expand" open>
                 <summary>ver diferencial competitivo</summary>
                 <ul>
-                  <li><b>[CULTURA]</b> A cidade nasce com funda&ccedil;&atilde;o ecum&ecirc;nica e mitos de origem, como a profecia de Dom Bosco.</li>
-                  <li><b>[CULTURA]</b> O paradoxo editorial &eacute; &uacute;nico: a capital da pol&iacute;tica tamb&eacute;m &eacute; capital do transe, da busca espiritual e do sincretismo.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> H&aacute; turismo religioso e espiritual subexplorado, combinando roteiro c&iacute;vico, m&iacute;stico e esot&eacute;rico.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> A cidade nasce com funda&ccedil;&atilde;o ecum&ecirc;nica e mitos de origem, como a profecia de Dom Bosco.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> O paradoxo editorial &eacute; &uacute;nico: a capital da pol&iacute;tica tamb&eacute;m &eacute; capital do transe, da busca espiritual e do sincretismo.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> H&aacute; turismo religioso e espiritual subexplorado, combinando roteiro c&iacute;vico, m&iacute;stico e esot&eacute;rico.</li>
                 </ul>
               </details>
             </div>
@@ -1737,13 +1802,13 @@
           <article class="card">
             <div>
               <h3>Vale do Amanhecer</h3>
-              <p><b>[CULTURA]</b> Fundado em 1969 por Tia Neiva, em Planaltina, o Vale do Amanhecer &eacute; uma das manifesta&ccedil;&otilde;es religiosas mais singulares nascidas com Bras&iacute;lia.</p>
+              <p><span class="evidence evidence-cultura">CULTURA</span> Fundado em 1969 por Tia Neiva, em Planaltina, o Vale do Amanhecer &eacute; uma das manifesta&ccedil;&otilde;es religiosas mais singulares nascidas com Bras&iacute;lia.</p>
               <details class="expand">
                 <summary>ver relev&acirc;ncia</summary>
                 <ul>
-                  <li><b>[CULTURA]</b> Re&uacute;ne sincretismo entre cristianismo, kardecismo, umbanda, candombl&eacute;, refer&ecirc;ncias maias e eg&iacute;pcias.</li>
-                  <li><b>[CULTURA]</b> Estima-se rede de 100 a 150 mil m&eacute;diuns e centenas de templos no Brasil e no exterior.</li>
-                  <li><b>[DADO/CULTURA]</b> &Eacute; patrim&ocirc;nio imaterial tombado pelo Iphan e atrai visitantes do Brasil e de fora.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> Re&uacute;ne sincretismo entre cristianismo, kardecismo, umbanda, candombl&eacute;, refer&ecirc;ncias maias e eg&iacute;pcias.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> Estima-se rede de 100 a 150 mil m&eacute;diuns e centenas de templos no Brasil e no exterior.</li>
+                  <li><span class="evidence evidence-dado-cultura">DADO + CULTURA</span> &Eacute; patrim&ocirc;nio imaterial tombado pelo Iphan e atrai visitantes do Brasil e de fora.</li>
                 </ul>
               </details>
             </div>
@@ -1752,7 +1817,7 @@
           <article class="card">
             <div>
               <h3>ecossistema m&iacute;stico</h3>
-              <p><b>[CULTURA]</b> Al&eacute;m do Vale, o DF e o entorno re&uacute;nem Templo da Boa Vontade, Cidade Ecl&eacute;tica, C&eacute;u do Planalto, Inri Cristo no Gama, Ermida de Dom Bosco e conex&otilde;es com Alto Para&iacute;so.</p>
+              <p><span class="evidence evidence-cultura">CULTURA</span> Al&eacute;m do Vale, o DF e o entorno re&uacute;nem Templo da Boa Vontade, Cidade Ecl&eacute;tica, C&eacute;u do Planalto, Inri Cristo no Gama, Ermida de Dom Bosco e conex&otilde;es com Alto Para&iacute;so.</p>
               <details class="expand">
                 <summary>ver pauta poss&iacute;vel</summary>
                 <ul>
@@ -1767,12 +1832,12 @@
           <article class="card">
             <div>
               <h3>igreja como infraestrutura</h3>
-              <p><b>[CULTURA]</b> Na periferia do DF, a igreja evang&eacute;lica &eacute; mais que culto: &eacute; rede de apoio social, acolhimento, recupera&ccedil;&atilde;o, ajuda material, pertencimento e ascens&atilde;o simb&oacute;lica.</p>
+              <p><span class="evidence evidence-cultura">CULTURA</span> Na periferia do DF, a igreja evang&eacute;lica &eacute; mais que culto: &eacute; rede de apoio social, acolhimento, recupera&ccedil;&atilde;o, ajuda material, pertencimento e ascens&atilde;o simb&oacute;lica.</p>
               <details class="expand">
                 <summary>ver conex&otilde;es editoriais</summary>
                 <ul>
-                  <li><b>[DADO]</b> O gospel &eacute; o 2&ordm; g&ecirc;nero musical do DF, atr&aacute;s do sertanejo.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> O avan&ccedil;o evang&eacute;lico nas RAs populares se conecta a provis&atilde;o, masculinidade provedora e disciplina familiar.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> O gospel &eacute; o 2&ordm; g&ecirc;nero musical do DF, atr&aacute;s do sertanejo.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> O avan&ccedil;o evang&eacute;lico nas RAs populares se conecta a provis&atilde;o, masculinidade provedora e disciplina familiar.</li>
                   <li>Conectar com seguran&ccedil;a, juventude, fam&iacute;lia, depend&ecirc;ncia qu&iacute;mica, trabalho e lideran&ccedil;a comunit&aacute;ria.</li>
                 </ul>
               </details>
@@ -1782,12 +1847,12 @@
           <article class="card">
             <div>
               <h3>g&ecirc;nero, gera&ccedil;&otilde;es e desfilia&ccedil;&atilde;o</h3>
-              <p><b>[DADO nacional]</b> Entre pessoas sem religi&atilde;o no pa&iacute;s, 56,2% s&atilde;o homens. No DF, o sem religi&atilde;o tem pico entre 20 e 24 anos, segundo o Censo 2022.</p>
+              <p><span class="evidence evidence-dado">DADO nacional</span> Entre pessoas sem religi&atilde;o no pa&iacute;s, 56,2% s&atilde;o homens. No DF, o sem religi&atilde;o tem pico entre 20 e 24 anos, segundo o Censo 2022.</p>
               <details class="expand">
                 <summary>ver hip&oacute;teses</summary>
                 <ul>
-                  <li><b>[HIP&Oacute;TESE]</b> A pr&aacute;tica religiosa ativa pode ser mais feminina, com a mulher como sustent&aacute;culo da f&eacute; dom&eacute;stica.</li>
-                  <li><b>[CULTURA]</b> O jovem pode se afastar da institui&ccedil;&atilde;o religiosa sem abandonar a espiritualidade.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> A pr&aacute;tica religiosa ativa pode ser mais feminina, com a mulher como sustent&aacute;culo da f&eacute; dom&eacute;stica.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> O jovem pode se afastar da institui&ccedil;&atilde;o religiosa sem abandonar a espiritualidade.</li>
                   <li>Em Bras&iacute;lia, buscar espiritualidade fora da igreja tem endere&ccedil;os concretos: Daime, hol&iacute;stico, esot&eacute;rico e Vale do Amanhecer.</li>
                 </ul>
               </details>
@@ -1797,12 +1862,12 @@
           <article class="card">
             <div>
               <h3>religi&atilde;o, pol&iacute;tica e laicidade</h3>
-              <p><b>[CULTURA/HIP&Oacute;TESE]</b> O avan&ccedil;o evang&eacute;lico no DF se associa &agrave; capital como palco da pol&iacute;tica evang&eacute;lica nacional, mas deve ser tratado como correla&ccedil;&atilde;o observada, n&atilde;o causa &uacute;nica.</p>
+              <p><span class="evidence evidence-cultura-hipotese">CULTURA + HIP&Oacute;TESE</span> O avan&ccedil;o evang&eacute;lico no DF se associa &agrave; capital como palco da pol&iacute;tica evang&eacute;lica nacional, mas deve ser tratado como correla&ccedil;&atilde;o observada, n&atilde;o causa &uacute;nica.</p>
               <details class="expand">
                 <summary>ver cuidado editorial</summary>
                 <ul>
-                  <li><b>[CULTURA]</b> Cultos de massa, bancada, agenda de costumes e Esplanada tornam a f&eacute; tamb&eacute;m uma pauta pol&iacute;tica.</li>
-                  <li><b>[CULTURA]</b> A laicidade &eacute; uma disputa simb&oacute;lica em uma cidade sede do Estado laico e tamb&eacute;m cheia de grupos espirituais.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> Cultos de massa, bancada, agenda de costumes e Esplanada tornam a f&eacute; tamb&eacute;m uma pauta pol&iacute;tica.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> A laicidade &eacute; uma disputa simb&oacute;lica em uma cidade sede do Estado laico e tamb&eacute;m cheia de grupos espirituais.</li>
                   <li>Evitar veredito simples: religi&atilde;o, voto, renda, territ&oacute;rio e gera&ccedil;&atilde;o precisam ser cruzados.</li>
                 </ul>
               </details>
@@ -1850,7 +1915,7 @@
       <div class="shell">
         <div class="section-head">
           <h2>Juventude e Gera&ccedil;&atilde;o Z no Distrito Federal</h2>
-          <p>Dossi&ecirc; de insumos editoriais para a TV Globo DF. A leitura segue a mesma r&eacute;gua metodol&oacute;gica: <b>[DADO]</b> para fonte estat&iacute;stica prim&aacute;ria, <b>[CULTURA]</b> para evid&ecirc;ncia observ&aacute;vel e <b>[HIP&Oacute;TESE]</b> para leitura a validar. Aten&ccedil;&atilde;o ao ano dos dados: boa parte dos n&uacute;meros distritais vem da PDAD 2021 e deve ser atualizada com a PDAD-A 2024.</p>
+          <p>Dossi&ecirc; de insumos editoriais para a TV Globo DF. A leitura segue a mesma r&eacute;gua metodol&oacute;gica: <span class="evidence evidence-dado">DADO</span> para fonte estat&iacute;stica prim&aacute;ria, <span class="evidence evidence-cultura">CULTURA</span> para evid&ecirc;ncia observ&aacute;vel e <span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> para leitura a validar. Aten&ccedil;&atilde;o ao ano dos dados: boa parte dos n&uacute;meros distritais vem da PDAD 2021 e deve ser atualizada com a PDAD-A 2024.</p>
         </div>
         <div class="section-callout">
           <blockquote>o futuro da audi&#234;ncia &#233; perif&#233;rico, negro, digital e desigual.</blockquote>
@@ -1861,13 +1926,13 @@
             <div>
               <h3>perif&eacute;rica, negra e digital</h3>
               <span class="metric">726 mil</span>
-              <p><b>[DADO]</b> O DF tinha cerca de 726 mil jovens de 15 a 29 anos em 2021, 24,1% da popula&ccedil;&atilde;o. A juventude brasiliense &eacute;, antes de tudo, perif&eacute;rica, negra e digital, e decide o futuro da audi&ecirc;ncia local.</p>
+              <p><span class="evidence evidence-dado">DADO</span> O DF tinha cerca de 726 mil jovens de 15 a 29 anos em 2021, 24,1% da popula&ccedil;&atilde;o. A juventude brasiliense &eacute;, antes de tudo, perif&eacute;rica, negra e digital, e decide o futuro da audi&ecirc;ncia local.</p>
               <details class="expand" open>
                 <summary>ver n&uacute;meros-&acirc;ncora</summary>
                 <ul>
-                  <li><b>[DADO]</b> O DF tem a for&ccedil;a de trabalho mais jovem do Brasil, concentrada na faixa de 18 a 24 anos.</li>
-                  <li><b>[DADO]</b> 59,6% dos jovens do DF se declaram negros, somando pretos e pardos.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> O jovem do DF vive dois mundos paralelos separados por CEP e renda, com repert&oacute;rios digitais compartilhados, mas oportunidades muito desiguais.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> O DF tem a for&ccedil;a de trabalho mais jovem do Brasil, concentrada na faixa de 18 a 24 anos.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> 59,6% dos jovens do DF se declaram negros, somando pretos e pardos.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> O jovem do DF vive dois mundos paralelos separados por CEP e renda, com repert&oacute;rios digitais compartilhados, mas oportunidades muito desiguais.</li>
                 </ul>
               </details>
             </div>
@@ -1876,13 +1941,13 @@
           <article class="card">
             <div>
               <h3>juventude tem territ&oacute;rio</h3>
-              <p><b>[DADO]</b> Ceil&acirc;ndia concentra o maior n&uacute;mero absoluto de jovens, cerca de 109 mil. As maiores propor&ccedil;&otilde;es est&atilde;o em Varj&atilde;o, Estrutural e Fercal; as menores, no Lago Sul, Park Way e Lago Norte.</p>
+              <p><span class="evidence evidence-dado">DADO</span> Ceil&acirc;ndia concentra o maior n&uacute;mero absoluto de jovens, cerca de 109 mil. As maiores propor&ccedil;&otilde;es est&atilde;o em Varj&atilde;o, Estrutural e Fercal; as menores, no Lago Sul, Park Way e Lago Norte.</p>
               <details class="expand">
                 <summary>ver leitura</summary>
                 <ul>
-                  <li><b>[DADO]</b> Varj&atilde;o chega a 34,5% de jovens; Estrutural e Fercal ficam perto de 30%.</li>
-                  <li><b>[DADO]</b> Lago Sul tem 16%, Park Way 19,3% e Lago Norte 19,7%.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> Quanto mais pobre a RA, mais jovem tende a ser a popula&ccedil;&atilde;o, e maior a press&atilde;o por servi&ccedil;o, emprego, cultura e mobilidade.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> Varj&atilde;o chega a 34,5% de jovens; Estrutural e Fercal ficam perto de 30%.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> Lago Sul tem 16%, Park Way 19,3% e Lago Norte 19,7%.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> Quanto mais pobre a RA, mais jovem tende a ser a popula&ccedil;&atilde;o, e maior a press&atilde;o por servi&ccedil;o, emprego, cultura e mobilidade.</li>
                 </ul>
               </details>
             </div>
@@ -1892,14 +1957,14 @@
             <div>
               <h3>nem-nem n&atilde;o &eacute; pregui&ccedil;a</h3>
               <span class="metric">151 mil</span>
-              <p><b>[DADO]</b> Em 2021, 20,8% dos jovens de 15 a 29 anos n&atilde;o trabalhavam nem estudavam, cerca de 151 mil pessoas. O n&uacute;mero esconde um abismo de classe.</p>
+              <p><span class="evidence evidence-dado">DADO</span> Em 2021, 20,8% dos jovens de 15 a 29 anos n&atilde;o trabalhavam nem estudavam, cerca de 151 mil pessoas. O n&uacute;mero esconde um abismo de classe.</p>
               <details class="expand" open>
                 <summary>ver abismo de renda</summary>
                 <ul>
-                  <li><b>[DADO]</b> Nas classes D/E, 30,9% dos jovens eram nem-nem; na classe A, 9%.</li>
-                  <li><b>[DADO]</b> O desemprego jovem era 21,4%, quase o dobro da popula&ccedil;&atilde;o geral.</li>
-                  <li><b>[DADO]</b> O desemprego variava de 1,6% no Sudoeste/Octogonal e 5% no Lago Sul a 36% ou 37% em Brazl&acirc;ndia e Recanto das Emas.</li>
-                  <li><b>[CULTURA]</b> A pauta precisa sair do clich&ecirc; do jovem desinteressado e mostrar barreiras de renda, escola, transporte, trabalho e rede de apoio.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> Nas classes D/E, 30,9% dos jovens eram nem-nem; na classe A, 9%.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> O desemprego jovem era 21,4%, quase o dobro da popula&ccedil;&atilde;o geral.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> O desemprego variava de 1,6% no Sudoeste/Octogonal e 5% no Lago Sul a 36% ou 37% em Brazl&acirc;ndia e Recanto das Emas.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> A pauta precisa sair do clich&ecirc; do jovem desinteressado e mostrar barreiras de renda, escola, transporte, trabalho e rede de apoio.</li>
                 </ul>
               </details>
             </div>
@@ -1908,12 +1973,12 @@
           <article class="card">
             <div>
               <h3>ensino superior e classe social</h3>
-              <p><b>[DADO]</b> O acesso ao ensino superior &eacute; quase um privil&eacute;gio de renda. Entre jovens das classes D/E que estudavam, 12,6% estavam no superior; na classe A, eram 54,2%.</p>
+              <p><span class="evidence evidence-dado">DADO</span> O acesso ao ensino superior &eacute; quase um privil&eacute;gio de renda. Entre jovens das classes D/E que estudavam, 12,6% estavam no superior; na classe A, eram 54,2%.</p>
               <details class="expand">
                 <summary>ver leitura editorial</summary>
                 <ul>
-                  <li><b>[HIP&Oacute;TESE]</b> A mesma cidade produz o jovem com futuro mapeado e o jovem que precisa escolher entre estudar, trabalhar e circular.</li>
-                  <li><b>[CULTURA]</b> Concurso, Enem, cursinho, renda extra, transporte e internet entram no mesmo pacote de ascens&atilde;o.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> A mesma cidade produz o jovem com futuro mapeado e o jovem que precisa escolher entre estudar, trabalhar e circular.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> Concurso, Enem, cursinho, renda extra, transporte e internet entram no mesmo pacote de ascens&atilde;o.</li>
                   <li><b>Valida&ccedil;&atilde;o:</b> atualizar com PDAD-A 2024 e cruzar por RA, renda, ra&ccedil;a/cor e sexo.</li>
                 </ul>
               </details>
@@ -1923,13 +1988,13 @@
           <article class="card">
             <div>
               <h3>racha de g&ecirc;nero</h3>
-              <p><b>[DADO nacional]</b> Pesquisas recentes indicam mulheres jovens mais progressistas e homens jovens mais conservadores. Esse eixo conecta juventude, masculinidades, mulher do DF e pol&iacute;tica.</p>
+              <p><span class="evidence evidence-dado">DADO nacional</span> Pesquisas recentes indicam mulheres jovens mais progressistas e homens jovens mais conservadores. Esse eixo conecta juventude, masculinidades, mulher do DF e pol&iacute;tica.</p>
               <details class="expand">
                 <summary>ver leitura</summary>
                 <ul>
-                  <li><b>[DADO nacional]</b> Na FES Brasil 2025, 20% das mulheres jovens se identificam com a esquerda, contra 16% dos homens.</li>
-                  <li><b>[DADO nacional]</b> Quaest/More in Common aponta alta autodeclara&ccedil;&atilde;o conservadora entre homens de 16 a 24 anos.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> O conservadorismo jovem deve ser tratado como dado a explicar, n&atilde;o senten&ccedil;a. O mesmo jovem pode defender Estado ativo, democracia e solu&ccedil;&otilde;es para pobreza e desemprego.</li>
+                  <li><span class="evidence evidence-dado">DADO nacional</span> Na FES Brasil 2025, 20% das mulheres jovens se identificam com a esquerda, contra 16% dos homens.</li>
+                  <li><span class="evidence evidence-dado">DADO nacional</span> Quaest/More in Common aponta alta autodeclara&ccedil;&atilde;o conservadora entre homens de 16 a 24 anos.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> O conservadorismo jovem deve ser tratado como dado a explicar, n&atilde;o senten&ccedil;a. O mesmo jovem pode defender Estado ativo, democracia e solu&ccedil;&otilde;es para pobreza e desemprego.</li>
                 </ul>
               </details>
             </div>
@@ -1938,12 +2003,12 @@
           <article class="card">
             <div>
               <h3>concurso ou perfil</h3>
-              <p><b>[CULTURA]</b> Bras&iacute;lia respira concurso p&uacute;blico. Para muitas gera&ccedil;&otilde;es, passar em concurso foi projeto de vida, status e seguran&ccedil;a. A Gera&ccedil;&atilde;o Z tensiona esse sonho com creator economy, freela digital e empreendedorismo informal.</p>
+              <p><span class="evidence evidence-cultura">CULTURA</span> Bras&iacute;lia respira concurso p&uacute;blico. Para muitas gera&ccedil;&otilde;es, passar em concurso foi projeto de vida, status e seguran&ccedil;a. A Gera&ccedil;&atilde;o Z tensiona esse sonho com creator economy, freela digital e empreendedorismo informal.</p>
               <details class="expand">
                 <summary>ver tens&atilde;o brasiliense</summary>
                 <ul>
-                  <li><b>[DADO]</b> O DF tem 96,2% de internet domiciliar, maior percentual do pa&iacute;s.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> A periferia ainda pode ver no Estado a via de ascens&atilde;o mais segura, enquanto o digital oferece promessa de autonomia e visibilidade.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> O DF tem 96,2% de internet domiciliar, maior percentual do pa&iacute;s.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> A periferia ainda pode ver no Estado a via de ascens&atilde;o mais segura, enquanto o digital oferece promessa de autonomia e visibilidade.</li>
                   <li><b>Pauta:</b> o sonho do concurso e o sonho do perfil, duas formas de imaginar futuro no DF.</li>
                 </ul>
               </details>
@@ -1953,12 +2018,12 @@
           <article class="card">
             <div>
               <h3>jovem digital e audi&ecirc;ncia</h3>
-              <p><b>[DADO]</b> Com internet domiciliar em 96,2%, o jovem do DF &eacute; nativo de TikTok, Reels, streaming, Globoplay e cortes. A rela&ccedil;&atilde;o com a Globo se ganha ou se perde no digital.</p>
+              <p><span class="evidence evidence-dado">DADO</span> Com internet domiciliar em 96,2%, o jovem do DF &eacute; nativo de TikTok, Reels, streaming, Globoplay e cortes. A rela&ccedil;&atilde;o com a Globo se ganha ou se perde no digital.</p>
               <details class="expand">
                 <summary>ver ponte editorial</summary>
                 <ul>
-                  <li><b>[CULTURA]</b> O jovem n&atilde;o consome TV linear da mesma forma; chega por creator local, recorte, meme, servi&ccedil;o e identifica&ccedil;&atilde;o.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> H&aacute; um ecossistema de creators do DF em humor, lifestyle, m&uacute;sica, esporte e gastronomia ainda subaproveitado.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> O jovem n&atilde;o consome TV linear da mesma forma; chega por creator local, recorte, meme, servi&ccedil;o e identifica&ccedil;&atilde;o.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> H&aacute; um ecossistema de creators do DF em humor, lifestyle, m&uacute;sica, esporte e gastronomia ainda subaproveitado.</li>
                   <li><b>Valida&ccedil;&atilde;o:</b> mapa de creators locais por nicho, alcance, territ&oacute;rio e conex&atilde;o com TV/Globoplay.</li>
                 </ul>
               </details>
@@ -1968,7 +2033,7 @@
           <article class="card">
             <div>
               <h3>sa&uacute;de mental e bem-estar</h3>
-              <p><b>[HIP&Oacute;TESE]</b> Ansiedade, press&atilde;o por desempenho, vestibular, concurso, mercado, solid&atilde;o conectada e impacto das redes s&atilde;o marcas reconhecidas da Gen Z, mas h&aacute; pouco dado distrital consolidado.</p>
+              <p><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> Ansiedade, press&atilde;o por desempenho, vestibular, concurso, mercado, solid&atilde;o conectada e impacto das redes s&atilde;o marcas reconhecidas da Gen Z, mas h&aacute; pouco dado distrital consolidado.</p>
               <details class="expand">
                 <summary>ver cuidado editorial</summary>
                 <ul>
@@ -1983,12 +2048,12 @@
           <article class="card">
             <div>
               <h3>religi&atilde;o e juventude</h3>
-              <p><b>[DADO]</b> No DF, o grupo sem religi&atilde;o tem pico entre 20 e 24 anos, 16,7%, segundo o Censo 2022. O jovem se afasta da institui&ccedil;&atilde;o religiosa, mas n&atilde;o necessariamente da espiritualidade.</p>
+              <p><span class="evidence evidence-dado">DADO</span> No DF, o grupo sem religi&atilde;o tem pico entre 20 e 24 anos, 16,7%, segundo o Censo 2022. O jovem se afasta da institui&ccedil;&atilde;o religiosa, mas n&atilde;o necessariamente da espiritualidade.</p>
               <details class="expand">
                 <summary>ver conex&atilde;o com f&eacute;</summary>
                 <ul>
-                  <li><b>[HIP&Oacute;TESE]</b> Em Bras&iacute;lia, buscar espiritualidade fora da igreja tem endere&ccedil;os concretos, do hol&iacute;stico ao Vale do Amanhecer.</li>
-                  <li><b>[CULTURA]</b> A juventude pode trocar institui&ccedil;&atilde;o por busca, rito, experi&ecirc;ncia, comunidade e identidade.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> Em Bras&iacute;lia, buscar espiritualidade fora da igreja tem endere&ccedil;os concretos, do hol&iacute;stico ao Vale do Amanhecer.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> A juventude pode trocar institui&ccedil;&atilde;o por busca, rito, experi&ecirc;ncia, comunidade e identidade.</li>
                   <li>Conecta diretamente com a se&ccedil;&atilde;o de f&eacute; e religi&atilde;o.</li>
                 </ul>
               </details>
@@ -2031,7 +2096,7 @@
             <div>
               <h3>a cidade onde mais se vive</h3>
               <span class="metric">79,75</span>
-              <p><b>[DADO]</b> O DF tem a maior expectativa de vida do pa&#237;s: 79,75 anos, segundo o Pnud 2024. Ao mesmo tempo, envelhece rapidamente: a popula&#231;&#227;o de 60+ deve passar de 11,3% em 2020 para 16,6% em 2030, chegando a cerca de 565 mil idosos.</p>
+              <p><span class="evidence evidence-dado">DADO</span> O DF tem a maior expectativa de vida do pa&#237;s: 79,75 anos, segundo o Pnud 2024. Ao mesmo tempo, envelhece rapidamente: a popula&#231;&#227;o de 60+ deve passar de 11,3% em 2020 para 16,6% em 2030, chegando a cerca de 565 mil idosos.</p>
               <details class="expand">
                 <summary>ver leitura editorial</summary>
                 <ul>
@@ -2048,7 +2113,7 @@
             <div>
               <h3>o idoso mais rico do Brasil</h3>
               <span class="metric">R$ 5.037</span>
-              <p><b>[DADO]</b> O rendimento m&#233;dio do trabalho da pessoa idosa no DF chegou a R$ 5.037 em 2024, o maior entre todas as UFs, acima de S&#227;o Paulo. O dado abre uma camada de consumo, autonomia e potencial comercial pouco explorada.</p>
+              <p><span class="evidence evidence-dado">DADO</span> O rendimento m&#233;dio do trabalho da pessoa idosa no DF chegou a R$ 5.037 em 2024, o maior entre todas as UFs, acima de S&#227;o Paulo. O dado abre uma camada de consumo, autonomia e potencial comercial pouco explorada.</p>
               <details class="expand">
                 <summary>ver cuidado de leitura</summary>
                 <p>A m&#233;dia alta n&#227;o deve esconder desigualdade por RA. O idoso servidor do Plano Piloto envelhece em condi&#231;&#245;es muito diferentes do idoso perif&#233;rico dependente de aposentadoria, BPC e SUS.</p>
@@ -2061,7 +2126,7 @@
             <div>
               <h3>longevidade alta, cuidado baixo</h3>
               <span class="metric">60%</span>
-              <p><b>[DADO]</b> Estudo ObservaDF/UnB aponta que a sa&#250;de p&#250;blica &#233; o servi&#231;o pior avaliado pelos idosos do DF. Cerca de 60% desconhecem atividades de promo&#231;&#227;o de sa&#250;de da UBS mais pr&#243;xima, e o atendimento domiciliar aparece como inexistente ou desconhecido para muitos.</p>
+              <p><span class="evidence evidence-dado">DADO</span> Estudo ObservaDF/UnB aponta que a sa&#250;de p&#250;blica &#233; o servi&#231;o pior avaliado pelos idosos do DF. Cerca de 60% desconhecem atividades de promo&#231;&#227;o de sa&#250;de da UBS mais pr&#243;xima, e o atendimento domiciliar aparece como inexistente ou desconhecido para muitos.</p>
               <details class="expand">
                 <summary>ver pauta de servi&#231;o</summary>
                 <p>O paradoxo editorial &#233; forte: a cidade onde se vive mais ainda n&#227;o oferece, de forma conhecida e acess&#237;vel, uma rede de cuidado compat&#237;vel com o envelhecimento. Isso abre pautas de UBS, cuidador, atendimento domiciliar, ILPIs, cal&#231;adas e mobilidade.</p>
@@ -2074,7 +2139,7 @@
             <div>
               <h3>envelhecimento acelerado</h3>
               <span class="metric">5% ao ano</span>
-              <p><b>[DADO]</b> A faixa 60+ cresce mais de 5% ao ano no DF, enquanto a popula&#231;&#227;o total quase estagna, com crescimento inferior a 1% ao ano. A maioria ainda &#233; "jovem-idosa": 59,7% t&#234;m de 60 a 69 anos.</p>
+              <p><span class="evidence evidence-dado">DADO</span> A faixa 60+ cresce mais de 5% ao ano no DF, enquanto a popula&#231;&#227;o total quase estagna, com crescimento inferior a 1% ao ano. A maioria ainda &#233; "jovem-idosa": 59,7% t&#234;m de 60 a 69 anos.</p>
               <details class="expand">
                 <summary>ver implica&#231;&#227;o</summary>
                 <p>A maior parte desse p&#250;blico ainda &#233; ativa, consome, trabalha, cuida, sustenta fam&#237;lia e participa da vida social. A comunica&#231;&#227;o n&#227;o deve trat&#225;-lo apenas como fragilidade.</p>
@@ -2086,7 +2151,7 @@
           <article class="card">
             <div>
               <h3>a velhice &#233; mulher</h3>
-              <p><b>[DADO + HIP&#211;TESE]</b> A velhice no DF &#233; majoritariamente feminina: mulheres vivem mais, e a raz&#227;o de sexo do DF j&#225; &#233; de 91,1 homens para cada 100 mulheres, com desequil&#237;brio maior nas idades avan&#231;adas.</p>
+              <p><span class="evidence evidence-dado-hipotese">DADO + HIP&#211;TESE</span> A velhice no DF &#233; majoritariamente feminina: mulheres vivem mais, e a raz&#227;o de sexo do DF j&#225; &#233; de 91,1 homens para cada 100 mulheres, com desequil&#237;brio maior nas idades avan&#231;adas.</p>
               <details class="expand">
                 <summary>ver ponto de valida&#231;&#227;o</summary>
                 <p>A hip&#243;tese &#233; que o DF tenha muitas idosas sozinhas, vi&#250;vas ou em domic&#237;lios unipessoais, com risco maior de solid&#227;o e demanda de cuidado. Validar com arranjos domiciliares por sexo, idade e RA.</p>
@@ -2098,7 +2163,7 @@
           <article class="card">
             <div>
               <h3>o territ&#243;rio da velhice</h3>
-              <p><b>[DADO]</b> A RA proporcionalmente mais envelhecida &#233; a regi&#227;o central e de alta renda, especialmente o Plano Piloto. Mas, em volume absoluto, as RAs com mais idosos incluem Ceil&#226;ndia, Taguatinga, Plano Piloto, Samambaia, Planaltina e Guar&#225;.</p>
+              <p><span class="evidence evidence-dado">DADO</span> A RA proporcionalmente mais envelhecida &#233; a regi&#227;o central e de alta renda, especialmente o Plano Piloto. Mas, em volume absoluto, as RAs com mais idosos incluem Ceil&#226;ndia, Taguatinga, Plano Piloto, Samambaia, Planaltina e Guar&#225;.</p>
               <details class="expand">
                 <summary>ver leitura territorial</summary>
                 <p>O idoso "proporcional" est&#225; no Plano; o idoso "de massa" est&#225; tamb&#233;m na periferia. Isso muda a pauta: n&#227;o basta falar de longevidade premium, &#233; preciso falar de SUS, transporte, cal&#231;ada, cuidado familiar e renda.</p>
@@ -2110,10 +2175,10 @@
           <article class="card feature">
             <div>
               <h3>quem sustenta a casa tem 70 anos</h3>
-              <p><b>[DADO + CULTURA]</b> Em muitas fam&#237;lias, a renda do idoso, via aposentadoria, pens&#227;o ou BPC, funciona como pilar financeiro do domic&#237;lio. Na periferia, esse benef&#237;cio pode sustentar tr&#234;s gera&#231;&#245;es.</p>
+              <p><span class="evidence evidence-dado-cultura">DADO + CULTURA</span> Em muitas fam&#237;lias, a renda do idoso, via aposentadoria, pens&#227;o ou BPC, funciona como pilar financeiro do domic&#237;lio. Na periferia, esse benef&#237;cio pode sustentar tr&#234;s gera&#231;&#245;es.</p>
               <details class="expand">
                 <summary>ver hip&#243;tese</summary>
-                <p><b>[HIP&#211;TESE]</b> O clich&#234; da depend&#234;ncia se inverte: em muitas casas do DF, quem sustenta &#233; o idoso. Validar com composi&#231;&#227;o da renda domiciliar por gera&#231;&#227;o, RA e tipo de benef&#237;cio.</p>
+                <p><span class="evidence evidence-hipotese">HIP&#211;TESE</span> O clich&#234; da depend&#234;ncia se inverte: em muitas casas do DF, quem sustenta &#233; o idoso. Validar com composi&#231;&#227;o da renda domiciliar por gera&#231;&#227;o, RA e tipo de benef&#237;cio.</p>
               </details>
             </div>
             <div class="source">fontes: IBGE; IPEDF/Codeplan; valida&#231;&#227;o recomendada com renda domiciliar por gera&#231;&#227;o</div>
@@ -2122,7 +2187,7 @@
           <article class="card">
             <div>
               <h3>sa&#250;de, solid&#227;o e cuidado</h3>
-              <p><b>[HIP&#211;TESE + CULTURA]</b> Com mais idosas sozinhas e mais pessoas 80+, cresce a demanda por cuidado formal e informal. Esse cuidado costuma recair sobre mulheres da fam&#237;lia, conectando velhice, g&#234;nero, trabalho n&#227;o pago e sa&#250;de mental.</p>
+              <p><span class="evidence evidence-cultura-hipotese">HIP&#211;TESE + CULTURA</span> Com mais idosas sozinhas e mais pessoas 80+, cresce a demanda por cuidado formal e informal. Esse cuidado costuma recair sobre mulheres da fam&#237;lia, conectando velhice, g&#234;nero, trabalho n&#227;o pago e sa&#250;de mental.</p>
               <details class="expand">
                 <summary>ver agenda de apura&#231;&#227;o</summary>
                 <ul>
@@ -2140,7 +2205,7 @@
             <div>
               <h3>o idoso que n&#227;o para</h3>
               <span class="metric">24,4%</span>
-              <p><b>[DADO nacional]</b> Em 2024, um em cada quatro idosos brasileiros trabalhava: 24,4%, sendo 34,2% dos homens e 16,7% das mulheres. O trabalho na velhice cresce com longevidade, informalidade, reforma da Previd&#234;ncia e necessidade de renda.</p>
+              <p><span class="evidence evidence-dado">DADO nacional</span> Em 2024, um em cada quatro idosos brasileiros trabalhava: 24,4%, sendo 34,2% dos homens e 16,7% das mulheres. O trabalho na velhice cresce com longevidade, informalidade, reforma da Previd&#234;ncia e necessidade de renda.</p>
               <details class="expand">
                 <summary>ver hip&#243;tese para o DF</summary>
                 <p>No DF, com renda e escolaridade altas, deve haver uma camada de idosos empreendedores, consultores, servidores aposentados que seguem ativos e pessoas que recome&#231;am no digital. Validar com ocupa&#231;&#227;o por idade e RA.</p>
@@ -2152,7 +2217,7 @@
           <article class="card">
             <div>
               <h3>m&#237;dia, consumo e representa&#231;&#227;o</h3>
-              <p><b>[CULTURA + HIP&#211;TESE]</b> A terceira idade &#233; p&#250;blico forte da TV aberta e consumidor relevante de sa&#250;de, farm&#225;cia, turismo, servi&#231;os financeiros, moradia e bem-estar. No DF, ainda soma renda elevada e fidelidade ao v&#237;deo.</p>
+              <p><span class="evidence evidence-cultura-hipotese">CULTURA + HIP&#211;TESE</span> A terceira idade &#233; p&#250;blico forte da TV aberta e consumidor relevante de sa&#250;de, farm&#225;cia, turismo, servi&#231;os financeiros, moradia e bem-estar. No DF, ainda soma renda elevada e fidelidade ao v&#237;deo.</p>
               <details class="expand">
                 <summary>ver oportunidade</summary>
                 <p>Oportunidade editorial: falar com o idoso, n&#227;o apenas sobre ele. Fugir das molduras gastas do idoso fr&#225;gil ou v&#237;tima de golpe e mostrar protagonismo, autonomia, humor, consumo, desejo, trabalho, afeto e recome&#231;o.</p>
@@ -2164,7 +2229,7 @@
           <article class="card">
             <div>
               <h3>agenda para a Globo DF</h3>
-              <p><b>[HIP&#211;TESE EDITORIAL]</b> A terceira idade junta relev&#226;ncia social e valor comercial: &#233; numerosa, crescente, feminina, economicamente central e ainda mal servida por pol&#237;ticas de cuidado.</p>
+              <p><span class="evidence evidence-hipotese">HIP&#211;TESE EDITORIAL</span> A terceira idade junta relev&#226;ncia social e valor comercial: &#233; numerosa, crescente, feminina, economicamente central e ainda mal servida por pol&#237;ticas de cuidado.</p>
               <details class="expand">
                 <summary>ver pautas acion&#225;veis</summary>
                 <ul>
@@ -2198,12 +2263,12 @@
             <div>
               <h3>a capital &#233; negra</h3>
               <span class="metric">57,4%</span>
-              <p><b>[DADO]</b> 57,4% dos moradores do DF se declaram negros, soma de pretos e pardos, contra 40,9% brancos, 1,4% amarelos e 0,3% ind&#237;genas. O dado contrasta com a imagem nacional de uma Bras&#237;lia branca, associada ao Plano Piloto, ao poder e aos Lagos.</p>
+              <p><span class="evidence evidence-dado">DADO</span> 57,4% dos moradores do DF se declaram negros, soma de pretos e pardos, contra 40,9% brancos, 1,4% amarelos e 0,3% ind&#237;genas. O dado contrasta com a imagem nacional de uma Bras&#237;lia branca, associada ao Plano Piloto, ao poder e aos Lagos.</p>
               <details class="expand">
                 <summary>ver leitura editorial</summary>
                 <ul>
-                  <li><b>[CULTURA]</b> A capital foi inaugurada 72 anos depois da Lei &#193;urea e reproduziu exclus&#245;es: pessoas negras ajudaram a erguer a cidade, mas foram empurradas para longe do centro simb&#243;lico.</li>
-                  <li><b>[HIP&#211;TESE]</b> A cobertura local pode reposicionar Bras&#237;lia como cidade majoritariamente negra, n&#227;o apenas como vitrine institucional branca.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> A capital foi inaugurada 72 anos depois da Lei &#193;urea e reproduziu exclus&#245;es: pessoas negras ajudaram a erguer a cidade, mas foram empurradas para longe do centro simb&#243;lico.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&#211;TESE</span> A cobertura local pode reposicionar Bras&#237;lia como cidade majoritariamente negra, n&#227;o apenas como vitrine institucional branca.</li>
                 </ul>
               </details>
             </div>
@@ -2213,7 +2278,7 @@
           <article class="card">
             <div>
               <h3>composi&#231;&#227;o e autodeclara&#231;&#227;o</h3>
-              <p><b>[DADO]</b> O perfil do DF acompanha um Brasil em mudan&#231;a: no Censo 2022, o pa&#237;s soma 45,3% de pardos e 10,2% de pretos. Nacionalmente, a popula&#231;&#227;o negra cresceu 42,3% desde 2010, por natalidade e por maior reconhecimento de identidade racial.</p>
+              <p><span class="evidence evidence-dado">DADO</span> O perfil do DF acompanha um Brasil em mudan&#231;a: no Censo 2022, o pa&#237;s soma 45,3% de pardos e 10,2% de pretos. Nacionalmente, a popula&#231;&#227;o negra cresceu 42,3% desde 2010, por natalidade e por maior reconhecimento de identidade racial.</p>
               <details class="expand">
                 <summary>ver implica&#231;&#227;o</summary>
                 <p>A pauta n&#227;o deve tratar cor ou ra&#231;a como dado lateral. Ela ajuda a explicar como o DF se enxerga, como se distribui no territ&#243;rio e como acessa renda, escola, sa&#250;de, seguran&#231;a e poder.</p>
@@ -2226,7 +2291,7 @@
             <div>
               <h3>o mapa racial &#233; o mapa da renda</h3>
               <span class="metric">75% x 33%</span>
-              <p><b>[DADO]</b> A popula&#231;&#227;o negra &#233; maioria em grandes RAs perif&#233;ricas, como Estrutural (75%), S&#227;o Sebasti&#227;o (74%), Parano&#225; (71%), Sol Nascente/P&#244;r do Sol (68%), Santa Maria (65%), Planaltina (63%), Samambaia (61%), Ceil&#226;ndia (60%), Gama (57%) e Taguatinga (56%). &#201; minoria em &#193;guas Claras (44%), Plano Piloto (37%) e Lago Sul (33%).</p>
+              <p><span class="evidence evidence-dado">DADO</span> A popula&#231;&#227;o negra &#233; maioria em grandes RAs perif&#233;ricas, como Estrutural (75%), S&#227;o Sebasti&#227;o (74%), Parano&#225; (71%), Sol Nascente/P&#244;r do Sol (68%), Santa Maria (65%), Planaltina (63%), Samambaia (61%), Ceil&#226;ndia (60%), Gama (57%) e Taguatinga (56%). &#201; minoria em &#193;guas Claras (44%), Plano Piloto (37%) e Lago Sul (33%).</p>
               <details class="expand">
                 <summary>ver contraste-s&#237;ntese</summary>
                 <p>A Estrutural concentra o maior percentual de popula&#231;&#227;o negra e aparece com menor IDH e menor renda per capita. O Lago Sul opera como espelho invertido: menor propor&#231;&#227;o negra, maior renda e maior IDH. Falar de ra&#231;a no DF &#233; falar de territ&#243;rio.</p>
@@ -2239,10 +2304,10 @@
             <div>
               <h3>hiato racial de renda</h3>
               <span class="metric">R$ 1.987 x R$ 1.128</span>
-              <p><b>[DADO]</b> Segundo o Pnud 2024, a renda m&#233;dia da pessoa branca no DF &#233; de R$ 1.987, contra R$ 1.128 da pessoa negra. O indicador sintetiza a desigualdade racial de renda e refor&#231;a a liga&#231;&#227;o entre cor, territ&#243;rio e acesso a oportunidades.</p>
+              <p><span class="evidence evidence-dado">DADO</span> Segundo o Pnud 2024, a renda m&#233;dia da pessoa branca no DF &#233; de R$ 1.987, contra R$ 1.128 da pessoa negra. O indicador sintetiza a desigualdade racial de renda e refor&#231;a a liga&#231;&#227;o entre cor, territ&#243;rio e acesso a oportunidades.</p>
               <details class="expand">
                 <summary>ver valida&#231;&#227;o necess&#225;ria</summary>
-                <p><b>[HIP&#211;TESE]</b> A desigualdade tamb&#233;m deve aparecer no acesso a cargos de lideran&#231;a, informalidade e teto de carreira. Validar com PDAD, RAIS e bases de ocupa&#231;&#227;o por cor/ra&#231;a.</p>
+                <p><span class="evidence evidence-hipotese">HIP&#211;TESE</span> A desigualdade tamb&#233;m deve aparecer no acesso a cargos de lideran&#231;a, informalidade e teto de carreira. Validar com PDAD, RAIS e bases de ocupa&#231;&#227;o por cor/ra&#231;a.</p>
               </details>
             </div>
             <div class="source">fonte: Pnud, 2024; valida&#231;&#227;o recomendada com PDAD e RAIS</div>
@@ -2252,10 +2317,10 @@
             <div>
               <h3>viol&#234;ncia: ferida e avan&#231;o</h3>
               <span class="metric">75%</span>
-              <p><b>[DADO]</b> No DF, pessoas negras s&#227;o cerca de 75% das v&#237;timas de homic&#237;dio, segundo registros da SES-DF citados no dossi&#234;: 260 de 345 mortes em 2022 e 169 de 229 em 2023. No acumulado de 2012 a 2022, o Atlas da Viol&#234;ncia/Ipea aponta que o n&#250;mero de homic&#237;dios contra negros foi 384% maior que contra n&#227;o negros.</p>
+              <p><span class="evidence evidence-dado">DADO</span> No DF, pessoas negras s&#227;o cerca de 75% das v&#237;timas de homic&#237;dio, segundo registros da SES-DF citados no dossi&#234;: 260 de 345 mortes em 2022 e 169 de 229 em 2023. No acumulado de 2012 a 2022, o Atlas da Viol&#234;ncia/Ipea aponta que o n&#250;mero de homic&#237;dios contra negros foi 384% maior que contra n&#227;o negros.</p>
               <details class="expand">
                 <summary>ver o dado de avan&#231;o</summary>
-                <p><b>[DADO]</b> Ao mesmo tempo, o DF teve a maior redu&#231;&#227;o de mortalidade violenta do pa&#237;s entre 2012 e 2022, de -67,4%, e a maior queda no risco relativo de vitimiza&#231;&#227;o racial: a chance de uma pessoa negra ser morta caiu de 7,6 vezes a de uma n&#227;o negra em 2013 para 2,3 vezes em 2023. Ainda &#233; desigualdade grave, mas &#233; avan&#231;o real.</p>
+                <p><span class="evidence evidence-dado">DADO</span> Ao mesmo tempo, o DF teve a maior redu&#231;&#227;o de mortalidade violenta do pa&#237;s entre 2012 e 2022, de -67,4%, e a maior queda no risco relativo de vitimiza&#231;&#227;o racial: a chance de uma pessoa negra ser morta caiu de 7,6 vezes a de uma n&#227;o negra em 2013 para 2,3 vezes em 2023. Ainda &#233; desigualdade grave, mas &#233; avan&#231;o real.</p>
               </details>
             </div>
             <div class="source">fontes: SES-DF; Ipea/FBSP, Atlas da Viol&#234;ncia 2024 e 2025</div>
@@ -2265,7 +2330,7 @@
             <div>
               <h3>juventude negra</h3>
               <span class="metric">59,6%</span>
-              <p><b>[DADO]</b> 59,6% dos jovens do DF s&#227;o negros. Isso faz da juventude negra uma chave obrigat&#243;ria para falar de escola, trabalho, primeiro emprego, cultura digital, mobilidade, lazer, seguran&#231;a e sa&#250;de mental.</p>
+              <p><span class="evidence evidence-dado">DADO</span> 59,6% dos jovens do DF s&#227;o negros. Isso faz da juventude negra uma chave obrigat&#243;ria para falar de escola, trabalho, primeiro emprego, cultura digital, mobilidade, lazer, seguran&#231;a e sa&#250;de mental.</p>
               <details class="expand">
                 <summary>ver conex&#227;o com outros blocos</summary>
                 <p>O dado conversa diretamente com os dossi&#234;s de juventude, homem do DF e metr&#243;pole real: o perfil mais vulner&#225;vel &#224; viol&#234;ncia letal no per&#237;odo analisado &#233; homem, jovem, negro e territorialmente perif&#233;rico.</p>
@@ -2277,7 +2342,7 @@
           <article class="card">
             <div>
               <h3>concurso, cotas e ascens&#227;o</h3>
-              <p><b>[DADO + HIP&#211;TESE]</b> O DF &#233; a capital simb&#243;lica do concurso p&#250;blico, e as cotas raciais tornam o funcionalismo uma via importante de ascens&#227;o negra. A Lei 12.990/2014 reserva 20% das vagas federais para pessoas negras, com constitucionalidade confirmada pelo STF em 2017.</p>
+              <p><span class="evidence evidence-dado-hipotese">DADO + HIP&#211;TESE</span> O DF &#233; a capital simb&#243;lica do concurso p&#250;blico, e as cotas raciais tornam o funcionalismo uma via importante de ascens&#227;o negra. A Lei 12.990/2014 reserva 20% das vagas federais para pessoas negras, com constitucionalidade confirmada pelo STF em 2017.</p>
               <details class="expand">
                 <summary>ver pauta original</summary>
                 <p>Quantificar o impacto das cotas no DF pode render uma pauta forte: quem entrou, em quais carreiras, com que trajet&#243;ria familiar e como isso altera renda, moradia, consumo, identidade e refer&#234;ncias de sucesso.</p>
@@ -2289,7 +2354,7 @@
           <article class="card">
             <div>
               <h3>cultura e protagonismo negro</h3>
-              <p><b>[CULTURA]</b> O dossi&#234; aponta uma lacuna editorial: a cultura negra do DF costuma aparecer menos fora das molduras de pobreza e viol&#234;ncia. Rap, trap, capoeira, tambor, blocos, movimento negro, terreiros e religi&#245;es de matriz africana comp&#245;em um campo de protagonismo ainda subdocumentado.</p>
+              <p><span class="evidence evidence-cultura">CULTURA</span> O dossi&#234; aponta uma lacuna editorial: a cultura negra do DF costuma aparecer menos fora das molduras de pobreza e viol&#234;ncia. Rap, trap, capoeira, tambor, blocos, movimento negro, terreiros e religi&#245;es de matriz africana comp&#245;em um campo de protagonismo ainda subdocumentado.</p>
               <details class="expand">
                 <summary>ver caminhos de apura&#231;&#227;o</summary>
                 <ul>
@@ -2306,7 +2371,7 @@
           <article class="card">
             <div>
               <h3>agenda para a Globo DF</h3>
-              <p><b>[HIP&#211;TESE EDITORIAL]</b> O tema pede equil&#237;brio: denunciar desigualdade sem reduzir a popula&#231;&#227;o negra &#224; vitimiza&#231;&#227;o, e mostrar protagonismo sem apagar a ferida estrutural.</p>
+              <p><span class="evidence evidence-hipotese">HIP&#211;TESE EDITORIAL</span> O tema pede equil&#237;brio: denunciar desigualdade sem reduzir a popula&#231;&#227;o negra &#224; vitimiza&#231;&#227;o, e mostrar protagonismo sem apagar a ferida estrutural.</p>
               <details class="expand">
                 <summary>ver pautas acion&#225;veis</summary>
                 <ul>
@@ -2329,7 +2394,7 @@
       <div class="shell">
         <div class="section-head">
           <h2>A mulher do Distrito Federal</h2>
-          <p>Dossi&ecirc; de insumos editoriais para a TV Globo DF. O m&eacute;todo segue a r&eacute;gua do estudo sobre masculinidades: <b>[DADO]</b> para fonte estat&iacute;stica prim&aacute;ria, <b>[CULTURA]</b> para evid&ecirc;ncia observ&aacute;vel e <b>[HIP&Oacute;TESE]</b> para leitura a validar. Aqui, a base estat&iacute;stica &eacute; farta; a lacuna principal n&atilde;o &eacute; de dado, mas de representa&ccedil;&atilde;o editorial.</p>
+          <p>Dossi&ecirc; de insumos editoriais para a TV Globo DF. O m&eacute;todo segue a r&eacute;gua do estudo sobre masculinidades: <span class="evidence evidence-dado">DADO</span> para fonte estat&iacute;stica prim&aacute;ria, <span class="evidence evidence-cultura">CULTURA</span> para evid&ecirc;ncia observ&aacute;vel e <span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> para leitura a validar. Aqui, a base estat&iacute;stica &eacute; farta; a lacuna principal n&atilde;o &eacute; de dado, mas de representa&ccedil;&atilde;o editorial.</p>
         </div>
         <div class="section-callout">
           <blockquote>compet&#234;ncia feminina n&#227;o virou reconhecimento proporcional.</blockquote>
@@ -2340,13 +2405,13 @@
             <div>
               <h3>o paradoxo brasiliense</h3>
               <span class="metric">52%</span>
-              <p><b>[DADO]</b> Mulheres s&atilde;o maioria da popula&ccedil;&atilde;o do DF, t&ecirc;m mais escolaridade e, ainda assim, ganham menos que os homens. O fio editorial n&atilde;o &eacute; v&iacute;tima nem vencedora: &eacute; compet&ecirc;ncia sem reconhecimento proporcional.</p>
+              <p><span class="evidence evidence-dado">DADO</span> Mulheres s&atilde;o maioria da popula&ccedil;&atilde;o do DF, t&ecirc;m mais escolaridade e, ainda assim, ganham menos que os homens. O fio editorial n&atilde;o &eacute; v&iacute;tima nem vencedora: &eacute; compet&ecirc;ncia sem reconhecimento proporcional.</p>
               <details class="expand" open>
                 <summary>ver n&uacute;meros-&acirc;ncora</summary>
                 <ul>
-                  <li><b>[DADO]</b> Mulheres s&atilde;o cerca de 52% da popula&ccedil;&atilde;o e maioria em todas as faixas et&aacute;rias a partir dos 25 anos.</li>
-                  <li><b>[DADO]</b> 38,4% t&ecirc;m superior completo, contra 34,8% dos homens, segundo PDAD 2024.</li>
-                  <li><b>[DADO]</b> Mesmo com mais escolaridade, ganham cerca de 20% menos; em 2018, o hiato controlado era de -14,2% e chegava a -37,6% no Lago Sul.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> Mulheres s&atilde;o cerca de 52% da popula&ccedil;&atilde;o e maioria em todas as faixas et&aacute;rias a partir dos 25 anos.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> 38,4% t&ecirc;m superior completo, contra 34,8% dos homens, segundo PDAD 2024.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> Mesmo com mais escolaridade, ganham cerca de 20% menos; em 2018, o hiato controlado era de -14,2% e chegava a -37,6% no Lago Sul.</li>
                 </ul>
               </details>
             </div>
@@ -2355,13 +2420,13 @@
           <article class="card">
             <div>
               <h3>educa&ccedil;&atilde;o, renda e teto de vidro</h3>
-              <p><b>[DADO]</b> O DF &eacute; uma pra&ccedil;a altamente escolarizada, e as mulheres lideram esse indicador. A contradi&ccedil;&atilde;o aparece quando a escolaridade n&atilde;o se converte em renda e reconhecimento na mesma propor&ccedil;&atilde;o.</p>
+              <p><span class="evidence evidence-dado">DADO</span> O DF &eacute; uma pra&ccedil;a altamente escolarizada, e as mulheres lideram esse indicador. A contradi&ccedil;&atilde;o aparece quando a escolaridade n&atilde;o se converte em renda e reconhecimento na mesma propor&ccedil;&atilde;o.</p>
               <details class="expand">
                 <summary>ver leitura editorial</summary>
                 <ul>
-                  <li><b>[DADO]</b> Mulheres de renda alta t&ecirc;m mais participa&ccedil;&atilde;o no mercado, mas o teto de vidro &eacute; mais vis&iacute;vel nas RAs ricas.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> Carreira, autonomia financeira, maternidade adiada e terceiriza&ccedil;&atilde;o do cuidado formam a tens&atilde;o central da mulher de renda alta.</li>
-                  <li><b>[CULTURA]</b> A personagem editorial n&atilde;o &eacute; apenas a servidora do Plano Piloto, mas a profissional que negocia ascens&atilde;o, fam&iacute;lia, tempo e reconhecimento.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> Mulheres de renda alta t&ecirc;m mais participa&ccedil;&atilde;o no mercado, mas o teto de vidro &eacute; mais vis&iacute;vel nas RAs ricas.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> Carreira, autonomia financeira, maternidade adiada e terceiriza&ccedil;&atilde;o do cuidado formam a tens&atilde;o central da mulher de renda alta.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> A personagem editorial n&atilde;o &eacute; apenas a servidora do Plano Piloto, mas a profissional que negocia ascens&atilde;o, fam&iacute;lia, tempo e reconhecimento.</li>
                 </ul>
               </details>
             </div>
@@ -2370,13 +2435,13 @@
           <article class="card">
             <div>
               <h3>trabalho, renda e segrega&ccedil;&atilde;o setorial</h3>
-              <p><b>[DADO]</b> 46,1% das mulheres de 14 anos ou mais trabalham, contra 62,9% dos homens. A participa&ccedil;&atilde;o varia por territ&oacute;rio, de Sudoeste/Octogonal e &Aacute;guas Claras no topo a Fercal e SCIA/Estrutural na base.</p>
+              <p><span class="evidence evidence-dado">DADO</span> 46,1% das mulheres de 14 anos ou mais trabalham, contra 62,9% dos homens. A participa&ccedil;&atilde;o varia por territ&oacute;rio, de Sudoeste/Octogonal e &Aacute;guas Claras no topo a Fercal e SCIA/Estrutural na base.</p>
               <details class="expand">
                 <summary>ver recortes</summary>
                 <ul>
-                  <li><b>[DADO]</b> 36,6% das mulheres ganham de 1 a 2 sal&aacute;rios m&iacute;nimos e 26,5% at&eacute; 1,5 sal&aacute;rio m&iacute;nimo.</li>
-                  <li><b>[DADO]</b> Mulheres s&atilde;o 96% dos servi&ccedil;os dom&eacute;sticos e maioria em alojamento, alimenta&ccedil;&atilde;o, sa&uacute;de e educa&ccedil;&atilde;o.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> A economia do DF opera com setores de mulher e setores de homem, o que ajuda a explicar renda, prest&iacute;gio e vulnerabilidade.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> 36,6% das mulheres ganham de 1 a 2 sal&aacute;rios m&iacute;nimos e 26,5% at&eacute; 1,5 sal&aacute;rio m&iacute;nimo.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> Mulheres s&atilde;o 96% dos servi&ccedil;os dom&eacute;sticos e maioria em alojamento, alimenta&ccedil;&atilde;o, sa&uacute;de e educa&ccedil;&atilde;o.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> A economia do DF opera com setores de mulher e setores de homem, o que ajuda a explicar renda, prest&iacute;gio e vulnerabilidade.</li>
                 </ul>
               </details>
             </div>
@@ -2385,13 +2450,13 @@
           <article class="card">
             <div>
               <h3>cuidado tem CEP</h3>
-              <p><b>[DADO]</b> 91,8% das mulheres realizam afazeres dom&eacute;sticos, contra 73,1% dos homens. O fosso aumenta na baixa renda, onde 94,8% das mulheres fazem afazeres dom&eacute;sticos.</p>
+              <p><span class="evidence evidence-dado">DADO</span> 91,8% das mulheres realizam afazeres dom&eacute;sticos, contra 73,1% dos homens. O fosso aumenta na baixa renda, onde 94,8% das mulheres fazem afazeres dom&eacute;sticos.</p>
               <details class="expand">
                 <summary>ver hip&oacute;tese editorial</summary>
                 <ul>
-                  <li><b>[DADO]</b> Em preparar alimentos ou lavar lou&ccedil;a, a diferen&ccedil;a &eacute; de 93,9% das mulheres contra 67,2% dos homens.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> A mulher perif&eacute;rica acumula trabalho remunerado prec&aacute;rio, chefia do lar e cuidado: a tripla jornada.</li>
-                  <li><b>[CULTURA]</b> A mulher de renda alta terceiriza parte do cuidado, frequentemente para outra mulher, perif&eacute;rica e de menor renda.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> Em preparar alimentos ou lavar lou&ccedil;a, a diferen&ccedil;a &eacute; de 93,9% das mulheres contra 67,2% dos homens.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> A mulher perif&eacute;rica acumula trabalho remunerado prec&aacute;rio, chefia do lar e cuidado: a tripla jornada.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> A mulher de renda alta terceiriza parte do cuidado, frequentemente para outra mulher, perif&eacute;rica e de menor renda.</li>
                 </ul>
               </details>
             </div>
@@ -2400,13 +2465,13 @@
           <article class="card">
             <div>
               <h3>quem segura a casa</h3>
-              <p><b>[DADO]</b> Pelo Censo 2022, mulheres respondem por cerca de 49,5% dos domic&iacute;lios do DF. Nas RAs de baixa renda, elas comandam 51,1% das casas.</p>
+              <p><span class="evidence evidence-dado">DADO</span> Pelo Censo 2022, mulheres respondem por cerca de 49,5% dos domic&iacute;lios do DF. Nas RAs de baixa renda, elas comandam 51,1% das casas.</p>
               <details class="expand">
                 <summary>ver territ&oacute;rios</summary>
                 <ul>
-                  <li><b>[DADO]</b> Parano&aacute; chega a 56,5% de chefia feminina, Varj&atilde;o a 54,8% e Taguatinga a 54,6%.</li>
-                  <li><b>[DADO]</b> No grupo de alta renda, a chefia feminina &eacute; menor: 42,7%.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> Quanto mais pobre o territ&oacute;rio, mais a casa depende da mulher, e menos recursos ela tem para sustent&aacute;-la.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> Parano&aacute; chega a 56,5% de chefia feminina, Varj&atilde;o a 54,8% e Taguatinga a 54,6%.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> No grupo de alta renda, a chefia feminina &eacute; menor: 42,7%.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> Quanto mais pobre o territ&oacute;rio, mais a casa depende da mulher, e menos recursos ela tem para sustent&aacute;-la.</li>
                 </ul>
               </details>
             </div>
@@ -2419,9 +2484,9 @@
               <details class="expand">
                 <summary>ver arqu&eacute;tipos</summary>
                 <ul>
-                  <li><b>[DADO]</b> Nas RAs ricas, maior escolaridade e participa&ccedil;&atilde;o no mercado convivem com hiato salarial mais alto.</li>
-                  <li><b>[CULTURA]</b> Na periferia, aparecem a provedora, a religiosa, a empreendedora informal e a &acirc;ncora da fam&iacute;lia.</li>
-                  <li><b>[DADO/lacuna]</b> A mulher do Entorno/rural ainda tem menos dados p&uacute;blicos e deve ser tratada como frente de reportagem.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> Nas RAs ricas, maior escolaridade e participa&ccedil;&atilde;o no mercado convivem com hiato salarial mais alto.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> Na periferia, aparecem a provedora, a religiosa, a empreendedora informal e a &acirc;ncora da fam&iacute;lia.</li>
+                  <li><span class="evidence evidence-dado">DADO + LACUNA</span> A mulher do Entorno/rural ainda tem menos dados p&uacute;blicos e deve ser tratada como frente de reportagem.</li>
                 </ul>
               </details>
             </div>
@@ -2431,28 +2496,29 @@
             <div>
               <h3>viol&ecirc;ncia: a curva que n&atilde;o caiu</h3>
               <span class="metric">28</span>
-              <p><b>[DADO]</b> O feminic&iacute;dio subiu na contram&atilde;o da queda geral de homic&iacute;dios do DF: 28 v&iacute;timas em 2025, alta de 27% sobre 2024. A pauta editorial &eacute; direta: a cidade ficou mais segura para quem.</p>
+              <p><span class="evidence evidence-dado">DADO</span> O feminic&iacute;dio subiu na contram&atilde;o da queda geral de homic&iacute;dios do DF: 28 v&iacute;timas em 2025, alta de 27% sobre 2024. A pauta editorial &eacute; direta: a cidade ficou mais segura para quem.</p>
               <details class="expand" open>
                 <summary>ver dados de prote&ccedil;&atilde;o</summary>
                 <ul>
-                  <li><b>[DADO]</b> A taxa de 1,8 por 100 mil ficou acima da m&eacute;dia nacional de 1,43 e foi a 8&ordf; pior do pa&iacute;s.</li>
-                  <li><b>[DADO]</b> Em 2025, houve uma mulher morta por raz&atilde;o de g&ecirc;nero a cada 13 dias e 131 tentativas no ano.</li>
-                  <li><b>[DADO]</b> 62,2% dos casos ocorreram em locais privados; 78,3% das v&iacute;timas nunca registraram BO.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> A taxa de 1,8 por 100 mil ficou acima da m&eacute;dia nacional de 1,43 e foi a 8&ordf; pior do pa&iacute;s.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> Em 2025, houve uma mulher morta por raz&atilde;o de g&ecirc;nero a cada 13 dias e 131 tentativas no ano.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> 62,2% dos casos ocorreram em locais privados; 78,3% das v&iacute;timas nunca registraram BO.</li>
+                  <li><span class="evidence evidence-dado">DADO nacional</span> O Atlas da Viol&ecirc;ncia 2026 mostra que a queda dos homic&iacute;dios de mulheres foi puxada por mortes fora de casa; dentro de casa, a taxa ficou praticamente est&aacute;vel em dez anos.</li>
                   <li><b>Cuidado editorial:</b> tratar como sa&uacute;de p&uacute;blica e rede de prote&ccedil;&atilde;o, n&atilde;o como crime isolado ou sensacionalista.</li>
                 </ul>
               </details>
             </div>
-            <div class="source">fontes: SSP-DF; 2&ordm; Anu&aacute;rio de Seguran&ccedil;a P&uacute;blica do DF; MPDFT</div>
+            <div class="source">fontes: SSP-DF; 2&ordm; Anu&aacute;rio de Seguran&ccedil;a P&uacute;blica do DF; MPDFT; IPEDF, Panorama da Viol&ecirc;ncia contra a Mulher; Ipea/FBSP, Atlas da Viol&ecirc;ncia 2026</div>
           </article>
           <article class="card">
             <div>
               <h3>viol&ecirc;ncia dom&eacute;stica territorializada</h3>
-              <p><b>[DADO]</b> Viol&ecirc;ncia dom&eacute;stica teve 7.273 den&uacute;ncias em 2024, alta de 21,3%, e mais de 19 mil inqu&eacute;ritos. Ceil&acirc;ndia concentra o maior n&uacute;mero, seguida de Plano Piloto e Parano&aacute;.</p>
+              <p><span class="evidence evidence-dado">DADO</span> Viol&ecirc;ncia dom&eacute;stica teve 7.273 den&uacute;ncias em 2024, alta de 21,3%, e mais de 19 mil inqu&eacute;ritos. Ceil&acirc;ndia concentra o maior n&uacute;mero, seguida de Plano Piloto e Parano&aacute;.</p>
               <details class="expand">
                 <summary>ver implica&ccedil;&otilde;es</summary>
                 <ul>
-                  <li><b>[DADO]</b> 79,7% das v&iacute;timas t&ecirc;m de 18 a 49 anos.</li>
-                  <li><b>[CULTURA]</b> A viol&ecirc;ncia &eacute; dom&eacute;stica, territorializada e frequentemente invis&iacute;vel at&eacute; chegar ao extremo.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> 79,7% das v&iacute;timas t&ecirc;m de 18 a 49 anos.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> A viol&ecirc;ncia &eacute; dom&eacute;stica, territorializada e frequentemente invis&iacute;vel at&eacute; chegar ao extremo.</li>
                   <li><b>Servi&ccedil;o:</b> sempre apontar rede de prote&ccedil;&atilde;o: Casa da Mulher Brasileira, DEAM, Ligue 180 e Secretaria da Mulher.</li>
                 </ul>
               </details>
@@ -2462,12 +2528,12 @@
           <article class="card">
             <div>
               <h3>cultura e identidade feminina</h3>
-              <p><b>[CULTURA]</b> Feminejo e gospel s&atilde;o trilhas femininas de massa no DF: sertanejo &eacute; o g&ecirc;nero n&uacute;mero 1 da pra&ccedil;a e gospel aparece em 2&ordm;. S&atilde;o repert&oacute;rios onde muitas mulheres perif&eacute;ricas se reconhecem.</p>
+              <p><span class="evidence evidence-cultura">CULTURA</span> Feminejo e gospel s&atilde;o trilhas femininas de massa no DF: sertanejo &eacute; o g&ecirc;nero n&uacute;mero 1 da pra&ccedil;a e gospel aparece em 2&ordm;. S&atilde;o repert&oacute;rios onde muitas mulheres perif&eacute;ricas se reconhecem.</p>
               <details class="expand">
                 <summary>ver frentes culturais</summary>
                 <ul>
-                  <li><b>[CULTURA]</b> Mulheres na cena do rap/trap DF furam uma cena historicamente masculina e devem ser tratadas como autoras, n&atilde;o exce&ccedil;&otilde;es decorativas.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> A identidade da mulher brasiliense tamb&eacute;m &eacute; migrante e constru&iacute;da, com a camada extra de sustentar casa e rede longe da fam&iacute;lia de origem.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> Mulheres na cena do rap/trap DF furam uma cena historicamente masculina e devem ser tratadas como autoras, n&atilde;o exce&ccedil;&otilde;es decorativas.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> A identidade da mulher brasiliense tamb&eacute;m &eacute; migrante e constru&iacute;da, com a camada extra de sustentar casa e rede longe da fam&iacute;lia de origem.</li>
                   <li><b>Oportunidade:</b> documentar mulheres no reduto masculino: rap/trap, motociclismo, pol&iacute;tica, funcionalismo e lideran&ccedil;a comunit&aacute;ria.</li>
                 </ul>
               </details>
@@ -2477,12 +2543,12 @@
           <article class="card">
             <div>
               <h3>gera&ccedil;&otilde;es e pol&iacute;tica</h3>
-              <p><b>[DADO nacional]</b> Mulheres jovens tendem a ser mais progressistas que homens jovens, segundo FES Brasil 2025. Mas o dossi&ecirc; alerta para o contrafluxo: antifeminismo tamb&eacute;m pode atrair parte das jovens para pol&iacute;tica conservadora e espa&ccedil;os religiosos.</p>
+              <p><span class="evidence evidence-dado">DADO nacional</span> Mulheres jovens tendem a ser mais progressistas que homens jovens, segundo FES Brasil 2025. Mas o dossi&ecirc; alerta para o contrafluxo: antifeminismo tamb&eacute;m pode atrair parte das jovens para pol&iacute;tica conservadora e espa&ccedil;os religiosos.</p>
               <details class="expand">
                 <summary>ver hip&oacute;teses</summary>
                 <ul>
-                  <li><b>[HIP&Oacute;TESE]</b> Maternidade adiada, autonomia financeira e novas configura&ccedil;&otilde;es familiares crescem em ritmos diferentes por renda e RA.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> A tens&atilde;o geracional mulheres jovens progressistas x homens jovens conservadores conversa diretamente com o dossi&ecirc; de masculinidade.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> Maternidade adiada, autonomia financeira e novas configura&ccedil;&otilde;es familiares crescem em ritmos diferentes por renda e RA.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> A tens&atilde;o geracional mulheres jovens progressistas x homens jovens conservadores conversa diretamente com o dossi&ecirc; de masculinidade.</li>
                   <li><b>Valida&ccedil;&atilde;o:</b> survey por idade, renda, religi&atilde;o, RA, maternidade e consumo de m&iacute;dia.</li>
                 </ul>
               </details>
@@ -2492,11 +2558,11 @@
           <article class="card">
             <div>
               <h3>mulher LGBT+ e diversidade</h3>
-              <p><b>[DADO/CULTURA]</b> Mulheres l&eacute;sbicas, bissexuais, trans e travestis precisam entrar para que mulher n&atilde;o seja sin&ocirc;nimo de heterossexual/cisg&ecirc;nero. A PDAD passou a registrar mulheres trans e travestis que reivindicam a identidade feminina.</p>
+              <p><span class="evidence evidence-dado-cultura">DADO + CULTURA</span> Mulheres l&eacute;sbicas, bissexuais, trans e travestis precisam entrar para que mulher n&atilde;o seja sin&ocirc;nimo de heterossexual/cisg&ecirc;nero. A PDAD passou a registrar mulheres trans e travestis que reivindicam a identidade feminina.</p>
               <details class="expand">
                 <summary>ver lacuna de apura&ccedil;&atilde;o</summary>
                 <ul>
-                  <li><b>[HIP&Oacute;TESE]</b> A viv&ecirc;ncia deve variar entre Plano Piloto, periferias e Entorno, especialmente na negocia&ccedil;&atilde;o com fam&iacute;lia, igreja e trabalho.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> A viv&ecirc;ncia deve variar entre Plano Piloto, periferias e Entorno, especialmente na negocia&ccedil;&atilde;o com fam&iacute;lia, igreja e trabalho.</li>
                   <li><b>Lacuna real:</b> assim como no recorte masculino, falta leitura p&uacute;blica robusta por RA.</li>
                   <li><b>Pauta:</b> incluir afeto, trabalho, fam&iacute;lia, seguran&ccedil;a, cultura e rede de apoio, n&atilde;o apenas viol&ecirc;ncia.</li>
                 </ul>
@@ -2507,7 +2573,7 @@
           <article class="card">
             <div>
               <h3>m&iacute;dia e representa&ccedil;&atilde;o</h3>
-              <p><b>[HIP&Oacute;TESE]</b> A mulher do DF aparece na TV em tr&ecirc;s molduras gastas: v&iacute;tima, m&atilde;e-coragem e servidora/profissional do Plano Piloto. Falta a mulher comum em registro de protagonismo cotidiano.</p>
+              <p><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> A mulher do DF aparece na TV em tr&ecirc;s molduras gastas: v&iacute;tima, m&atilde;e-coragem e servidora/profissional do Plano Piloto. Falta a mulher comum em registro de protagonismo cotidiano.</p>
               <details class="expand">
                 <summary>ver oportunidade Globo DF</summary>
                 <ul>
@@ -2653,12 +2719,12 @@
           <article class="card">
             <div>
               <h3>religi&atilde;o, fam&iacute;lia e cuidado</h3>
-              <p><b>[DADO]</b> O Censo 2022 mostra mudan&ccedil;a no perfil religioso do DF: cat&oacute;licos abaixo de 50% e evang&eacute;licos em alta. <b>[DADO nacional]</b> No pa&iacute;s, entre as pessoas que se declaram sem religi&atilde;o, 56,2% s&atilde;o homens, e o grupo &eacute; mais jovem, com pico entre 20 e 24 anos. Esse perfil masculino e jovem da desfilia&ccedil;&atilde;o religiosa deve ser lido junto com fam&iacute;lia, paternidade, cuidado e redes comunit&aacute;rias.</p>
+              <p><span class="evidence evidence-dado">DADO</span> O Censo 2022 mostra mudan&ccedil;a no perfil religioso do DF: cat&oacute;licos abaixo de 50% e evang&eacute;licos em alta. <span class="evidence evidence-dado">DADO nacional</span> No pa&iacute;s, entre as pessoas que se declaram sem religi&atilde;o, 56,2% s&atilde;o homens, e o grupo &eacute; mais jovem, com pico entre 20 e 24 anos. Esse perfil masculino e jovem da desfilia&ccedil;&atilde;o religiosa deve ser lido junto com fam&iacute;lia, paternidade, cuidado e redes comunit&aacute;rias.</p>
               <details class="expand">
                 <summary>ver leitura consolidada</summary>
                 <ul>
-                  <li><b>[CULTURA]</b> Igrejas, sobretudo em territ&oacute;rios perif&eacute;ricos, podem organizar disciplina, rede de apoio, recupera&ccedil;&atilde;o, fam&iacute;lia e modelo de provedor.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> O homem evang&eacute;lico perif&eacute;rico, o cat&oacute;lico cultural, o esp&iacute;rita de classe m&eacute;dia e o jovem urbano sem religi&atilde;o podem expressar masculinidades distintas.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> Igrejas, sobretudo em territ&oacute;rios perif&eacute;ricos, podem organizar disciplina, rede de apoio, recupera&ccedil;&atilde;o, fam&iacute;lia e modelo de provedor.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> O homem evang&eacute;lico perif&eacute;rico, o cat&oacute;lico cultural, o esp&iacute;rita de classe m&eacute;dia e o jovem urbano sem religi&atilde;o podem expressar masculinidades distintas.</li>
                   <li>Paternidade ativa deve ser investigada como tema emergente, n&atilde;o presumida como comportamento consolidado.</li>
                   <li>Validar por RA, idade, ra&ccedil;a/cor, renda e estrutura familiar antes de transformar religi&atilde;o em explica&ccedil;&atilde;o &uacute;nica.</li>
                 </ul>
@@ -2669,13 +2735,14 @@
           <article class="card">
             <div>
               <h3>mortalidade e sa&uacute;de do homem</h3>
-              <p><b>[DADO]</b> Homens concentram a vitimiza&ccedil;&atilde;o letal: no Brasil, 94% das v&iacute;timas jovens de homic&iacute;dio s&atilde;o homens (Atlas da Viol&ecirc;ncia). No DF, a taxa caiu para 6,8 homic&iacute;dios por 100 mil habitantes em 2024, a menor desde 1977. Foram 203 v&iacute;timas, o menor n&uacute;mero absoluto em quatro d&eacute;cadas, e a queda de homic&iacute;dio juvenil entre 2012 e 2022 foi a maior do pa&iacute;s. A leitura editorial: pra&ccedil;a segura na m&eacute;dia, perigosa na ponta perif&eacute;rica.</p>
+              <p><span class="evidence evidence-dado">DADO</span> Homens concentram a vitimiza&ccedil;&atilde;o letal: no Brasil, 94% das v&iacute;timas jovens de homic&iacute;dio s&atilde;o homens (Atlas da Viol&ecirc;ncia). No DF, a taxa caiu para 6,8 homic&iacute;dios por 100 mil habitantes em 2024, a menor desde 1977. Foram 203 v&iacute;timas, o menor n&uacute;mero absoluto em quatro d&eacute;cadas, e a queda de homic&iacute;dio juvenil entre 2012 e 2022 foi a maior do pa&iacute;s. A leitura editorial: pra&ccedil;a segura na m&eacute;dia, perigosa na ponta perif&eacute;rica.</p>
               <details class="expand">
                 <summary>ver leitura editorial</summary>
                 <ul>
-                  <li><b>[DADO nacional]</b> Suic&iacute;dio masculino costuma ser cerca de 3,5 a 4 vezes maior que o feminino, respondendo por aproximadamente 75% a 80% das mortes.</li>
-                  <li><b>[CULTURA]</b> A roda masculina fala de futebol, dinheiro, trabalho e pol&iacute;tica, mas muitas vezes silencia medo, fracasso, terapia e cuidado.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> O DF combina longevidade alta com vulnerabilidade concentrada: o homem jovem perif&eacute;rico pode ser o ponto de maior tens&atilde;o entre sa&uacute;de, viol&ecirc;ncia e pertencimento.</li>
+                  <li><span class="evidence evidence-dado">DADO nacional</span> Suic&iacute;dio masculino costuma ser cerca de 3,5 a 4 vezes maior que o feminino, respondendo por aproximadamente 75% a 80% das mortes.</li>
+                  <li><b>Nota de m&eacute;todo:</b> pela base do Minist&eacute;rio da Sa&uacute;de (SIM), usada no Atlas da Viol&ecirc;ncia 2026, a taxa do DF em 2024 &eacute; 10,9 por 100 mil. As bases SSP-DF e SIM t&ecirc;m m&eacute;todos distintos e n&atilde;o devem ser comparadas entre si. Em ambas, o DF est&aacute; entre as menores taxas do pa&iacute;s.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> A roda masculina fala de futebol, dinheiro, trabalho e pol&iacute;tica, mas muitas vezes silencia medo, fracasso, terapia e cuidado.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> O DF combina longevidade alta com vulnerabilidade concentrada: o homem jovem perif&eacute;rico pode ser o ponto de maior tens&atilde;o entre sa&uacute;de, viol&ecirc;ncia e pertencimento.</li>
                 </ul>
               </details>
             </div>
@@ -2684,13 +2751,13 @@
           <article class="card">
             <div>
               <h3>migra&ccedil;&atilde;o e identidade candanga</h3>
-              <p><b>[DADO + HIP&Oacute;TESE]</b> A masculinidade brasiliense deve ser lida como encontro de masculinidades regionais. O Censo 2022 permite aterrissar essa hip&oacute;tese com dados de local de nascimento, migra&ccedil;&atilde;o e composi&ccedil;&atilde;o territorial.</p>
+              <p><span class="evidence evidence-dado-hipotese">DADO + HIP&Oacute;TESE</span> A masculinidade brasiliense deve ser lida como encontro de masculinidades regionais. O Censo 2022 permite aterrissar essa hip&oacute;tese com dados de local de nascimento, migra&ccedil;&atilde;o e composi&ccedil;&atilde;o territorial.</p>
               <details class="expand">
                 <summary>ver pr&oacute;ximo passo de pesquisa</summary>
                 <ul>
-                  <li><b>[DADO]</b> Cruzar origem migrat&oacute;ria, idade, sexo, RA, escolaridade, ocupa&ccedil;&atilde;o e renda nos microdados do Censo 2022.</li>
-                  <li><b>[CULTURA]</b> O DF mistura repert&oacute;rios nordestinos, goianos, mineiros, cariocas, paulistas e amaz&ocirc;nicos, al&eacute;m da identidade candanga local.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> A falta de tradi&ccedil;&atilde;o masculina &uacute;nica abre espa&ccedil;o para identidades constru&iacute;das por territ&oacute;rio, m&uacute;sica, trabalho, religi&atilde;o e redes.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> Cruzar origem migrat&oacute;ria, idade, sexo, RA, escolaridade, ocupa&ccedil;&atilde;o e renda nos microdados do Censo 2022.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> O DF mistura repert&oacute;rios nordestinos, goianos, mineiros, cariocas, paulistas e amaz&ocirc;nicos, al&eacute;m da identidade candanga local.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> A falta de tradi&ccedil;&atilde;o masculina &uacute;nica abre espa&ccedil;o para identidades constru&iacute;das por territ&oacute;rio, m&uacute;sica, trabalho, religi&atilde;o e redes.</li>
                 </ul>
               </details>
             </div>
@@ -2783,7 +2850,7 @@
       <div class="shell">
         <div class="section-head">
           <h2>Book Masculinidade no DF</h2>
-          <p>Estudo de insumos editoriais para a TV Globo DF. Como ler este documento: cada card organiza a investiga&ccedil;&atilde;o em tr&ecirc;s n&iacute;veis de evid&ecirc;ncia. <b>[DADO]</b> indica informa&ccedil;&atilde;o objetiva, de fonte estat&iacute;stica prim&aacute;ria; <b>[CULTURA]</b> indica evid&ecirc;ncia cultural observ&aacute;vel; <b>[HIP&Oacute;TESE]</b> indica leitura interpretativa que ainda precisa de valida&ccedil;&atilde;o por survey pr&oacute;prio, grupos focais, microdados por RA e escuta territorial. Quando a informa&ccedil;&atilde;o for nacional, e n&atilde;o espec&iacute;fica do DF, isso est&aacute; sinalizado.</p>
+          <p>Estudo de insumos editoriais para a TV Globo DF. Como ler este documento: cada card organiza a investiga&ccedil;&atilde;o em tr&ecirc;s n&iacute;veis de evid&ecirc;ncia. <span class="evidence evidence-dado">DADO</span> indica informa&ccedil;&atilde;o objetiva, de fonte estat&iacute;stica prim&aacute;ria; <span class="evidence evidence-cultura">CULTURA</span> indica evid&ecirc;ncia cultural observ&aacute;vel; <span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> indica leitura interpretativa que ainda precisa de valida&ccedil;&atilde;o por survey pr&oacute;prio, grupos focais, microdados por RA e escuta territorial. Quando a informa&ccedil;&atilde;o for nacional, e n&atilde;o espec&iacute;fica do DF, isso est&aacute; sinalizado.</p>
           <p>A distin&ccedil;&atilde;o &eacute; o principal achado: existe muita literatura sobre masculinidades no Brasil e muito dado sobre o DF, mas quase nenhum estudo que cruze diretamente os dois para investigar a masculinidade brasiliense. Essa lacuna &eacute;, em si, uma oportunidade editorial para a emissora.</p>
         </div>
         <div class="cards">
@@ -2794,9 +2861,9 @@
               <details class="expand" open>
                 <summary>ver n&iacute;veis de evid&ecirc;ncia</summary>
                 <ul>
-                  <li><b>[DADO]</b> Cruzar sexo, idade, renda, escolaridade, religi&atilde;o, ra&ccedil;a/cor, arranjo familiar e RA em IBGE, Censo 2022, PNAD e PDAD. O dado mostra a base social; n&atilde;o explica sozinho o significado de ser homem.</li>
-                  <li><b>[CULTURA]</b> A identidade candanga e migrante mistura refer&ecirc;ncias regionais brasileiras. M&uacute;sica, trabalho p&uacute;blico, vida perif&eacute;rica, igrejas, fam&iacute;lia e mobilidade comp&otilde;em repert&oacute;rios masculinos diferentes.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> A masculinidade local parece oscilar entre estabilidade desejada, informalidade vivida, press&atilde;o por reconhecimento e revis&atilde;o do papel de provedor. Validar com entrevistas por gera&ccedil;&atilde;o e territ&oacute;rio.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> Cruzar sexo, idade, renda, escolaridade, religi&atilde;o, ra&ccedil;a/cor, arranjo familiar e RA em IBGE, Censo 2022, PNAD e PDAD. O dado mostra a base social; n&atilde;o explica sozinho o significado de ser homem.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> A identidade candanga e migrante mistura refer&ecirc;ncias regionais brasileiras. M&uacute;sica, trabalho p&uacute;blico, vida perif&eacute;rica, igrejas, fam&iacute;lia e mobilidade comp&otilde;em repert&oacute;rios masculinos diferentes.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> A masculinidade local parece oscilar entre estabilidade desejada, informalidade vivida, press&atilde;o por reconhecimento e revis&atilde;o do papel de provedor. Validar com entrevistas por gera&ccedil;&atilde;o e territ&oacute;rio.</li>
                 </ul>
               </details>
             </div>
@@ -2809,9 +2876,9 @@
               <details class="expand">
                 <summary>ver n&iacute;veis de evid&ecirc;ncia</summary>
                 <ul>
-                  <li><b>[DADO]</b> PDAD e Censo ajudam a localizar renda, escolaridade, trabalho, religi&atilde;o, domic&iacute;lio e deslocamento por RA, criando a moldura objetiva dos estilos de vida.</li>
-                  <li><b>[CULTURA]</b> Rock no centro, rap/trap nas RAs, p&aacute;ginas de bairro, academias, igrejas, motos e futebol local funcionam como marcadores vis&iacute;veis de pertencimento masculino.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> O homem do DF constr&oacute;i identidade menos por tradi&ccedil;&atilde;o hist&oacute;rica &uacute;nica e mais por combina&ccedil;&atilde;o de territ&oacute;rio, consumo, f&eacute;, repert&oacute;rio digital e mem&oacute;ria migrante.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> PDAD e Censo ajudam a localizar renda, escolaridade, trabalho, religi&atilde;o, domic&iacute;lio e deslocamento por RA, criando a moldura objetiva dos estilos de vida.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> Rock no centro, rap/trap nas RAs, p&aacute;ginas de bairro, academias, igrejas, motos e futebol local funcionam como marcadores vis&iacute;veis de pertencimento masculino.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> O homem do DF constr&oacute;i identidade menos por tradi&ccedil;&atilde;o hist&oacute;rica &uacute;nica e mais por combina&ccedil;&atilde;o de territ&oacute;rio, consumo, f&eacute;, repert&oacute;rio digital e mem&oacute;ria migrante.</li>
                 </ul>
               </details>
             </div>
@@ -2824,9 +2891,9 @@
               <details class="expand">
                 <summary>ver n&iacute;veis de evid&ecirc;ncia</summary>
                 <ul>
-                  <li><b>[DADO]</b> H&aacute; dados de eventos, mobilidade, esporte, religi&atilde;o e lazer, mas pouca medi&ccedil;&atilde;o p&uacute;blica sobre frequ&ecirc;ncia masculina por espa&ccedil;o e RA. Essa lacuna pede pesquisa pr&oacute;pria.</li>
-                  <li><b>[CULTURA]</b> Bares, igrejas, academias, peladas, corridas, ciclismo, Capital Moto Week, Por&atilde;o do Rock e circuitos de rap/trap s&atilde;o pistas fortes de conviv&ecirc;ncia masculina.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> Cada espa&ccedil;o refor&ccedil;a masculinidades distintas: provedor, atleta, religioso, festeiro, comunit&aacute;rio, intelectual, trabalhador ou digital. Validar se s&atilde;o redutos masculinos ou espa&ccedil;os j&aacute; mistos.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> H&aacute; dados de eventos, mobilidade, esporte, religi&atilde;o e lazer, mas pouca medi&ccedil;&atilde;o p&uacute;blica sobre frequ&ecirc;ncia masculina por espa&ccedil;o e RA. Essa lacuna pede pesquisa pr&oacute;pria.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> Bares, igrejas, academias, peladas, corridas, ciclismo, Capital Moto Week, Por&atilde;o do Rock e circuitos de rap/trap s&atilde;o pistas fortes de conviv&ecirc;ncia masculina.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> Cada espa&ccedil;o refor&ccedil;a masculinidades distintas: provedor, atleta, religioso, festeiro, comunit&aacute;rio, intelectual, trabalhador ou digital. Validar se s&atilde;o redutos masculinos ou espa&ccedil;os j&aacute; mistos.</li>
                 </ul>
               </details>
             </div>
@@ -2839,9 +2906,9 @@
               <details class="expand">
                 <summary>ver n&iacute;veis de evid&ecirc;ncia</summary>
                 <ul>
-                  <li><b>[DADO]</b> Censo, PNAD, Vigitel, DataSenado e pesquisas nacionais permitem cruzar idade, trabalho, fam&iacute;lia, sa&uacute;de, religi&atilde;o, internet e escolaridade.</li>
-                  <li><b>[CULTURA]</b> Jovens se formam em redes, creators, m&uacute;sica e games; adultos em carreira, fam&iacute;lia e renda; idosos em aposentadoria, sa&uacute;de, f&eacute; e conviv&ecirc;ncia familiar.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> A juventude pode combinar paternidade ativa e abertura &agrave; diversidade com conservadorismo de g&ecirc;nero, religi&atilde;o e manosfera. N&atilde;o tratar jovem como sin&ocirc;nimo autom&aacute;tico de progressista.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> Censo, PNAD, Vigitel, DataSenado e pesquisas nacionais permitem cruzar idade, trabalho, fam&iacute;lia, sa&uacute;de, religi&atilde;o, internet e escolaridade.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> Jovens se formam em redes, creators, m&uacute;sica e games; adultos em carreira, fam&iacute;lia e renda; idosos em aposentadoria, sa&uacute;de, f&eacute; e conviv&ecirc;ncia familiar.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> A juventude pode combinar paternidade ativa e abertura &agrave; diversidade com conservadorismo de g&ecirc;nero, religi&atilde;o e manosfera. N&atilde;o tratar jovem como sin&ocirc;nimo autom&aacute;tico de progressista.</li>
                 </ul>
               </details>
             </div>
@@ -2854,9 +2921,9 @@
               <details class="expand">
                 <summary>ver n&iacute;veis de evid&ecirc;ncia</summary>
                 <ul>
-                  <li><b>[DADO]</b> Mapear autoridades eleitas, lideran&ccedil;as religiosas, empres&aacute;rios, atletas, artistas, creators e alcance digital com recortes por territ&oacute;rio e gera&ccedil;&atilde;o.</li>
-                  <li><b>[CULTURA]</b> Pastores, MCs, jogadores, treinadores, donos de com&eacute;rcio, produtores culturais, influenciadores de bairro e pais de refer&ecirc;ncia podem pesar mais que figuras formais.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> H&aacute; lideran&ccedil;as masculinas silenciosas que a m&iacute;dia quase n&atilde;o enxerga. O estudo deve descobrir quem &ldquo;dita comportamento&rdquo; fora do circuito institucional.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> Mapear autoridades eleitas, lideran&ccedil;as religiosas, empres&aacute;rios, atletas, artistas, creators e alcance digital com recortes por territ&oacute;rio e gera&ccedil;&atilde;o.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> Pastores, MCs, jogadores, treinadores, donos de com&eacute;rcio, produtores culturais, influenciadores de bairro e pais de refer&ecirc;ncia podem pesar mais que figuras formais.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> H&aacute; lideran&ccedil;as masculinas silenciosas que a m&iacute;dia quase n&atilde;o enxerga. O estudo deve descobrir quem &ldquo;dita comportamento&rdquo; fora do circuito institucional.</li>
                 </ul>
               </details>
             </div>
@@ -2869,9 +2936,9 @@
               <details class="expand">
                 <summary>ver n&iacute;veis de evid&ecirc;ncia</summary>
                 <ul>
-                  <li><b>[DADO]</b> Dados por RA mostram desigualdade territorial, renda, escolaridade, moradia, trabalho e deslocamento. Esses recortes devem guiar casting e pauta.</li>
-                  <li><b>[CULTURA]</b> O contraste centro/periferia aparece em rock x rap, Estado x comunidade, concurso x informalidade, superquadra x quebrada, Plano Piloto x Entorno.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> A representa&ccedil;&atilde;o em rede tende a simplificar o homem local. Validar se o p&uacute;blico se sente invis&iacute;vel, caricaturado ou reconhecido pela TV aberta.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> Dados por RA mostram desigualdade territorial, renda, escolaridade, moradia, trabalho e deslocamento. Esses recortes devem guiar casting e pauta.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> O contraste centro/periferia aparece em rock x rap, Estado x comunidade, concurso x informalidade, superquadra x quebrada, Plano Piloto x Entorno.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> A representa&ccedil;&atilde;o em rede tende a simplificar o homem local. Validar se o p&uacute;blico se sente invis&iacute;vel, caricaturado ou reconhecido pela TV aberta.</li>
                 </ul>
               </details>
             </div>
@@ -2884,9 +2951,9 @@
               <details class="expand">
                 <summary>ver n&iacute;veis de evid&ecirc;ncia</summary>
                 <ul>
-                  <li><b>[DADO]</b> Pesquisas de comportamento, consumo, sa&uacute;de mental, religi&atilde;o, trabalho, endividamento e m&iacute;dia ajudam a estimar temas relevantes, mas raramente desagregam masculinidade no DF.</li>
-                  <li><b>[CULTURA]</b> Futebol, pol&iacute;tica, dinheiro, concurso, igreja, carro, moto, trabalho, m&uacute;sica, fam&iacute;lia e relacionamento aparecem como repert&oacute;rios prov&aacute;veis de conversa masculina.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> Medo, fracasso, terapia, sexualidade, cuidado, solid&atilde;o e endividamento podem ser assuntos evitados. A pauta est&aacute; tanto no que &eacute; dito quanto no que &eacute; silenciado.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> Pesquisas de comportamento, consumo, sa&uacute;de mental, religi&atilde;o, trabalho, endividamento e m&iacute;dia ajudam a estimar temas relevantes, mas raramente desagregam masculinidade no DF.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> Futebol, pol&iacute;tica, dinheiro, concurso, igreja, carro, moto, trabalho, m&uacute;sica, fam&iacute;lia e relacionamento aparecem como repert&oacute;rios prov&aacute;veis de conversa masculina.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> Medo, fracasso, terapia, sexualidade, cuidado, solid&atilde;o e endividamento podem ser assuntos evitados. A pauta est&aacute; tanto no que &eacute; dito quanto no que &eacute; silenciado.</li>
                 </ul>
               </details>
             </div>
@@ -2899,9 +2966,9 @@
               <details class="expand">
                 <summary>ver n&iacute;veis de evid&ecirc;ncia</summary>
                 <ul>
-                  <li><b>[DADO]</b> Religi&atilde;o, ocupa&ccedil;&atilde;o, renda, arranjo familiar e escolaridade ajudam a medir onde valores tradicionais podem estar mais presentes.</li>
-                  <li><b>[CULTURA]</b> Autoridade masculina aparece em igreja, pol&iacute;tica, fam&iacute;lia, com&eacute;rcio, esporte, m&uacute;sica, empreendedorismo e redes sociais.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> Pode haver uma sensa&ccedil;&atilde;o de &ldquo;orfandade simb&oacute;lica&rdquo; entre homens jovens, que buscam &iacute;cones em creators, religi&atilde;o, esporte, m&uacute;sica ou discursos reativos.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> Religi&atilde;o, ocupa&ccedil;&atilde;o, renda, arranjo familiar e escolaridade ajudam a medir onde valores tradicionais podem estar mais presentes.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> Autoridade masculina aparece em igreja, pol&iacute;tica, fam&iacute;lia, com&eacute;rcio, esporte, m&uacute;sica, empreendedorismo e redes sociais.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> Pode haver uma sensa&ccedil;&atilde;o de &ldquo;orfandade simb&oacute;lica&rdquo; entre homens jovens, que buscam &iacute;cones em creators, religi&atilde;o, esporte, m&uacute;sica ou discursos reativos.</li>
                 </ul>
               </details>
             </div>
@@ -2914,9 +2981,9 @@
               <details class="expand">
                 <summary>ver n&iacute;veis de evid&ecirc;ncia</summary>
                 <ul>
-                  <li><b>[DADO]</b> Renda, endividamento, informalidade, desemprego, infla&ccedil;&atilde;o, sa&uacute;de mental, suic&iacute;dio, obesidade e escolaridade devem ser cruzados por sexo, idade e territ&oacute;rio.</li>
-                  <li><b>[CULTURA]</b> Concurso, casa pr&oacute;pria, carro, academia, moto, consumo aspiracional, empreendedorismo e reputa&ccedil;&atilde;o digital aparecem como sinais de status masculino.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> O homem do DF pode viver a contradi&ccedil;&atilde;o entre estabilidade como ideal e instabilidade como experi&ecirc;ncia cotidiana. Validar com homens de renda, RA e idade diferentes.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> Renda, endividamento, informalidade, desemprego, infla&ccedil;&atilde;o, sa&uacute;de mental, suic&iacute;dio, obesidade e escolaridade devem ser cruzados por sexo, idade e territ&oacute;rio.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> Concurso, casa pr&oacute;pria, carro, academia, moto, consumo aspiracional, empreendedorismo e reputa&ccedil;&atilde;o digital aparecem como sinais de status masculino.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> O homem do DF pode viver a contradi&ccedil;&atilde;o entre estabilidade como ideal e instabilidade como experi&ecirc;ncia cotidiana. Validar com homens de renda, RA e idade diferentes.</li>
                 </ul>
               </details>
             </div>
@@ -2929,9 +2996,9 @@
               <details class="expand">
                 <summary>ver n&iacute;veis de evid&ecirc;ncia</summary>
                 <ul>
-                  <li><b>[DADO]</b> IBGE, PNAD e PDAD permitem observar arranjos familiares, renda, trabalho feminino, pessoas vivendo sozinhas, domic&iacute;lios com crian&ccedil;as e composi&ccedil;&atilde;o familiar.</li>
-                  <li><b>[CULTURA]</b> Paternidade ativa, divis&atilde;o de contas, pai solo, pai gay, homem cuidador e casal com renda feminina maior j&aacute; aparecem como narrativas sociais, ainda que de forma desigual.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> A passagem de provedor para parceiro pode estar mais avan&ccedil;ada no discurso do que na pr&aacute;tica dom&eacute;stica. Testar com homens e mulheres separadamente.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> IBGE, PNAD e PDAD permitem observar arranjos familiares, renda, trabalho feminino, pessoas vivendo sozinhas, domic&iacute;lios com crian&ccedil;as e composi&ccedil;&atilde;o familiar.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> Paternidade ativa, divis&atilde;o de contas, pai solo, pai gay, homem cuidador e casal com renda feminina maior j&aacute; aparecem como narrativas sociais, ainda que de forma desigual.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> A passagem de provedor para parceiro pode estar mais avan&ccedil;ada no discurso do que na pr&aacute;tica dom&eacute;stica. Testar com homens e mulheres separadamente.</li>
                 </ul>
               </details>
             </div>
@@ -2944,9 +3011,9 @@
               <details class="expand">
                 <summary>ver n&iacute;veis de evid&ecirc;ncia</summary>
                 <ul>
-                  <li><b>[DADO]</b> Dados de viol&ecirc;ncia dom&eacute;stica, feminic&iacute;dio, renda, escolaridade, participa&ccedil;&atilde;o pol&iacute;tica e mercado de trabalho ajudam a dar materialidade &agrave;s mudan&ccedil;as de g&ecirc;nero.</li>
-                  <li><b>[CULTURA]</b> A rea&ccedil;&atilde;o pode variar conforme a pauta apare&ccedil;a como fam&iacute;lia, m&uacute;sica, trabalho, religi&atilde;o, seguran&ccedil;a p&uacute;blica, humor ou campanha institucional.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> Parte dos homens apoia publicamente a igualdade, mas resiste quando a pauta mexe em poder, sexualidade, dinheiro ou autoridade familiar. Validar por gera&ccedil;&atilde;o, religi&atilde;o e RA.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> Dados de viol&ecirc;ncia dom&eacute;stica, feminic&iacute;dio, renda, escolaridade, participa&ccedil;&atilde;o pol&iacute;tica e mercado de trabalho ajudam a dar materialidade &agrave;s mudan&ccedil;as de g&ecirc;nero.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> A rea&ccedil;&atilde;o pode variar conforme a pauta apare&ccedil;a como fam&iacute;lia, m&uacute;sica, trabalho, religi&atilde;o, seguran&ccedil;a p&uacute;blica, humor ou campanha institucional.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> Parte dos homens apoia publicamente a igualdade, mas resiste quando a pauta mexe em poder, sexualidade, dinheiro ou autoridade familiar. Validar por gera&ccedil;&atilde;o, religi&atilde;o e RA.</li>
                 </ul>
               </details>
             </div>
@@ -2959,9 +3026,9 @@
               <details class="expand">
                 <summary>ver n&iacute;veis de evid&ecirc;ncia</summary>
                 <ul>
-                  <li><b>[DADO]</b> Pesquisas nacionais sobre relacionamento e fam&iacute;lia podem orientar perguntas, mas devem ser sinalizadas como nacionais quando n&atilde;o forem espec&iacute;ficas do DF.</li>
-                  <li><b>[CULTURA]</b> O ideal masculino pode variar entre provedor, parceiro, religioso, sens&iacute;vel, ambicioso, fiel, presente, bem-humorado, trabalhador e cuidador.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> Mulheres e homens podem valorizar atributos diferentes: ele performa for&ccedil;a e status; ela pode demandar presen&ccedil;a, escuta, cuidado e divis&atilde;o de responsabilidades.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> Pesquisas nacionais sobre relacionamento e fam&iacute;lia podem orientar perguntas, mas devem ser sinalizadas como nacionais quando n&atilde;o forem espec&iacute;ficas do DF.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> O ideal masculino pode variar entre provedor, parceiro, religioso, sens&iacute;vel, ambicioso, fiel, presente, bem-humorado, trabalhador e cuidador.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> Mulheres e homens podem valorizar atributos diferentes: ele performa for&ccedil;a e status; ela pode demandar presen&ccedil;a, escuta, cuidado e divis&atilde;o de responsabilidades.</li>
                 </ul>
               </details>
             </div>
@@ -2974,9 +3041,9 @@
               <details class="expand">
                 <summary>ver n&iacute;veis de evid&ecirc;ncia</summary>
                 <ul>
-                  <li><b>[DADO nacional]</b> Literatura e levantamentos nacionais indicam vulnerabilidades maiores em sa&uacute;de mental e viol&ecirc;ncia para popula&ccedil;&atilde;o sexo-diversa. Para o DF, faltam dados robustos por RA.</li>
-                  <li><b>[CULTURA]</b> Visibilidade LGBT+ pode ser maior no Plano Piloto, mas viv&ecirc;ncias em periferias e Entorno s&atilde;o negociadas com fam&iacute;lia, igreja, trabalho, seguran&ccedil;a e redes de apoio.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> Jovens podem expressar maior aceita&ccedil;&atilde;o, mas estere&oacute;tipos tradicionais continuam fortes em alguns contextos. A pauta deve incluir afeto, fam&iacute;lia, trabalho e cultura, n&atilde;o s&oacute; viol&ecirc;ncia.</li>
+                  <li><span class="evidence evidence-dado">DADO nacional</span> Literatura e levantamentos nacionais indicam vulnerabilidades maiores em sa&uacute;de mental e viol&ecirc;ncia para popula&ccedil;&atilde;o sexo-diversa. Para o DF, faltam dados robustos por RA.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> Visibilidade LGBT+ pode ser maior no Plano Piloto, mas viv&ecirc;ncias em periferias e Entorno s&atilde;o negociadas com fam&iacute;lia, igreja, trabalho, seguran&ccedil;a e redes de apoio.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> Jovens podem expressar maior aceita&ccedil;&atilde;o, mas estere&oacute;tipos tradicionais continuam fortes em alguns contextos. A pauta deve incluir afeto, fam&iacute;lia, trabalho e cultura, n&atilde;o s&oacute; viol&ecirc;ncia.</li>
                 </ul>
               </details>
             </div>
@@ -2989,9 +3056,9 @@
               <details class="expand">
                 <summary>ver n&iacute;veis de evid&ecirc;ncia</summary>
                 <ul>
-                  <li><b>[DADO]</b> Audi&ecirc;ncia, alcance digital, consumo de m&iacute;dia, streaming, r&aacute;dio, YouTube, TikTok e podcasts ajudam a medir onde homens est&atilde;o consumindo conte&uacute;do.</li>
-                  <li><b>[CULTURA]</b> P&aacute;ginas de bairro, podcasts locais, canais de esporte, perfis policiais, creators religiosos, humor e m&uacute;sica podem falar a l&iacute;ngua masculina com proximidade territorial.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> A Globo DF pode ocupar uma conversa mais qualificada: homem perif&eacute;rico fora da pol&iacute;cia, sa&uacute;de mental, paternidade, cultura local e servi&ccedil;o com rosto.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> Audi&ecirc;ncia, alcance digital, consumo de m&iacute;dia, streaming, r&aacute;dio, YouTube, TikTok e podcasts ajudam a medir onde homens est&atilde;o consumindo conte&uacute;do.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> P&aacute;ginas de bairro, podcasts locais, canais de esporte, perfis policiais, creators religiosos, humor e m&uacute;sica podem falar a l&iacute;ngua masculina com proximidade territorial.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> A Globo DF pode ocupar uma conversa mais qualificada: homem perif&eacute;rico fora da pol&iacute;cia, sa&uacute;de mental, paternidade, cultura local e servi&ccedil;o com rosto.</li>
                 </ul>
               </details>
             </div>
@@ -3004,9 +3071,9 @@
               <details class="expand">
                 <summary>ver n&iacute;veis de evid&ecirc;ncia</summary>
                 <ul>
-                  <li><b>[DADO]</b> Tend&ecirc;ncias de demografia, envelhecimento, trabalho, internet, sa&uacute;de mental, religi&atilde;o, renda e fam&iacute;lia indicam for&ccedil;as que reconfiguram o papel masculino.</li>
-                  <li><b>[CULTURA]</b> Rap/trap, creators, igrejas, academias, corrida, motos, podcasts, IA e economia informal j&aacute; sinalizam novas formas de reputa&ccedil;&atilde;o e pertencimento.</li>
-                  <li><b>[HIP&Oacute;TESE]</b> Tr&ecirc;s cen&aacute;rios devem ser acompanhados: tradicional reativo, cuidador em transi&ccedil;&atilde;o e digital perif&eacute;rico. O mais prov&aacute;vel &eacute; um homem h&iacute;brido, em disputa permanente.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> Tend&ecirc;ncias de demografia, envelhecimento, trabalho, internet, sa&uacute;de mental, religi&atilde;o, renda e fam&iacute;lia indicam for&ccedil;as que reconfiguram o papel masculino.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> Rap/trap, creators, igrejas, academias, corrida, motos, podcasts, IA e economia informal j&aacute; sinalizam novas formas de reputa&ccedil;&atilde;o e pertencimento.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> Tr&ecirc;s cen&aacute;rios devem ser acompanhados: tradicional reativo, cuidador em transi&ccedil;&atilde;o e digital perif&eacute;rico. O mais prov&aacute;vel &eacute; um homem h&iacute;brido, em disputa permanente.</li>
                 </ul>
               </details>
             </div>
@@ -3015,6 +3082,163 @@
         </div>
       </div>
     </section>
+
+    <section id="insights-prisma">
+      <div class="shell">
+        <div class="section-head">
+          <h2>Prisma DF - insights estrat&#233;gicos</h2>
+          <p>Prisma DF apresenta a camada de interpreta&#231;&#227;o dos dossi&#234;s: os dados descrevem o DF; os insights mostram o que isso muda para jornalismo, programa&#231;&#227;o, digital, comercial e intelig&#234;ncia local.</p>
+        </div>
+        <div class="section-callout">
+          <blockquote>o centro de gravidade do DF mudou, e a cobertura precisa mudar junto.</blockquote>
+          <p>A maioria da pra&#231;a &#233; nata, negra, perif&#233;rica e hiperconectada, numa metr&#243;pole que atravessa a fronteira de Goi&#225;s. O desafio estrat&#233;gico &#233; tratar a cidade real como centro e o cart&#227;o-postal como exce&#231;&#227;o.</p>
+        </div>
+        <div class="cards">
+          <article class="card feature">
+            <div>
+              <h3>s&#237;ntese executiva</h3>
+              <p><span class="evidence evidence-dado-hipotese">DADO + HIP&#211;TESE EDITORIAL</span> O DF atual &#233; majoritariamente nascido aqui (56,9%), negro (57,4%), perif&#233;rico e hiperconectado (96,2% de internet domiciliar). A AMB soma 4,25 milh&#245;es de moradores e mostra que a pra&#231;a real n&#227;o termina no limite do DF.</p>
+              <details class="expand" open>
+                <summary>ver implica&#231;&#227;o para a Globo DF</summary>
+                <ul>
+                  <li>O padr&#227;o de cobertura precisa partir das RAs e do Entorno, n&#227;o apenas do Plano Piloto e do poder.</li>
+                  <li>Territ&#243;rio, renda, ra&#231;a, idade, mobilidade e repert&#243;rio cultural devem ser vari&#225;veis fixas na leitura dos dados.</li>
+                  <li>O Prisma DF pode virar selo de intelig&#234;ncia local, com m&#233;todo, fontes e agenda pr&#243;pria de valida&#231;&#227;o.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fonte: Prisma DF - leitura integrada dos dossi&#234;s; IBGE, IPEDF e Censo 2022</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>1. default editorial no lugar errado</h3>
+              <p><span class="evidence evidence-dado">DADO</span> O Plano Piloto &#233; minoria demogr&#225;fica. A maioria do DF vive em RAs perif&#233;ricas, &#233; negra e j&#225; nasceu no pr&#243;prio DF.</p>
+              <details class="expand">
+                <summary>movimento recomendado</summary>
+                <p>A pauta nasce na RA e visita o Plano, n&#227;o o contr&#225;rio. Meta poss&#237;vel: medir semanalmente de onde saem as reportagens e equilibrar presen&#231;a territorial.</p>
+              </details>
+            </div>
+            <div class="source">uso: jornalismo, pauta e planejamento territorial</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>2. CEP como vari&#225;vel-mestra</h3>
+              <p><span class="evidence evidence-dado">DADO</span> Renda, ra&#231;a, f&#233;, viol&#234;ncia, juventude, velhice e mobilidade repetem o mesmo padr&#227;o: o mapa social do DF &#233; o mapa da renda por RA.</p>
+              <details class="expand">
+                <summary>movimento recomendado</summary>
+                <p>Territorializar tudo: dado, personagem, servi&#231;o e linguagem. O mesmo tema pode ter tr&#234;s leituras: Plano/Lagos, Ceil&#226;ndia-Samambaia e Entorno.</p>
+              </details>
+            </div>
+            <div class="source">uso: jornalismo de servi&#231;o, produtos locais e comercial</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>3. dado x percep&#231;&#227;o</h3>
+              <p><span class="evidence evidence-dado">DADO</span> Homic&#237;dios caem para m&#237;nimas hist&#243;ricas, mas a sensa&#231;&#227;o de inseguran&#231;a segue alta e o feminic&#237;dio sobe na contram&#227;o.</p>
+              <details class="expand">
+                <summary>movimento recomendado</summary>
+                <p>Todo n&#250;mero forte deve ir ao ar com fonte, base, m&#233;todo, o que mede e o que n&#227;o mede. O padr&#227;o SSP x SIM vira r&#233;gua de tela.</p>
+              </details>
+            </div>
+            <div class="source">uso: jornalismo de contexto e credibilidade</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>4. racha de g&#234;nero geracional</h3>
+              <p><span class="evidence evidence-hipotese">HIP&#211;TESE</span> Homens jovens mais conservadores, mulheres jovens mais progressistas, desfilia&#231;&#227;o religiosa jovem e tens&#245;es sobre cuidado formam uma s&#233;rie transversal.</p>
+              <details class="expand">
+                <summary>movimento recomendado</summary>
+                <p>Transformar homem, mulher e juventude em trilogia editorial com escuta sim&#233;trica: "Ela &#224; esquerda, ele &#224; direita" como pergunta, n&#227;o senten&#231;a.</p>
+              </details>
+            </div>
+            <div class="source">uso: programa&#231;&#227;o, digital-first e pesquisa qualitativa</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>5. quem sustenta a casa</h3>
+              <p><span class="evidence evidence-dado">DADO</span> Mulheres chefiam muitos lares nas RAs pobres e idosos t&#234;m renda alta no DF, frequentemente sustentando fam&#237;lias inteiras.</p>
+              <details class="expand">
+                <summary>movimento recomendado</summary>
+                <p>Trocar a moldura da fragilidade pela de protagonismo econ&#244;mico: "Quem segura a casa" e "Quem sustenta a casa tem 70 anos".</p>
+              </details>
+            </div>
+            <div class="source">uso: jornalismo, branded content e intelig&#234;ncia comercial</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>6. f&#233; como infraestrutura social</h3>
+              <p><span class="evidence evidence-dado-cultura">DADO + CULTURA</span> Cat&#243;licos ficam abaixo de 50%, evang&#233;licos avan&#231;am nas RAs populares e a igreja funciona como rede de pertencimento, cuidado e cultura.</p>
+              <details class="expand">
+                <summary>movimento recomendado</summary>
+                <p>Cobrir f&#233; como cotidiano e cultura, n&#227;o apenas como pol&#237;tica. A Bras&#237;lia m&#237;stica e o gospel local s&#227;o diferenciais de identidade e turismo.</p>
+              </details>
+            </div>
+            <div class="source">uso: cultura, turismo, comunidade e agenda local</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>7. identidade brasiliense em forma&#231;&#227;o</h3>
+              <p><span class="evidence evidence-dado-cultura">DADO + CULTURA</span> A maioria j&#225; nasceu no DF, a mem&#243;ria dos pioneiros envelhece e a UnB identificou marcas de sotaque brasiliense.</p>
+              <details class="expand">
+                <summary>movimento recomendado</summary>
+                <p>A Globo DF pode ser o arquivo afetivo dessa virada: "Quem &#233; o brasiliense?", mem&#243;ria oral dos pioneiros e o sotaque televisivo contado pela pr&#243;pria TV.</p>
+              </details>
+            </div>
+            <div class="source">uso: identidade, anivers&#225;rio da cidade e especiais locais</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>8. calend&#225;rio natural da pra&#231;a</h3>
+              <p><span class="evidence evidence-dado-cultura">DADO + CULTURA</span> Seca, ip&#234;s, queimadas, corridas, festivais, Restaurant Week, Mundial de Marcha 2026 e Copa Feminina 2027 criam sazonalidade previs&#237;vel.</p>
+              <details class="expand">
+                <summary>movimento recomendado</summary>
+                <p>Planejar franquias anuais: "Di&#225;rio da Seca", "A Capital Corre", "Migra&#231;&#227;o no Prato" e especiais de anivers&#225;rio sob o selo Prisma DF.</p>
+              </details>
+            </div>
+            <div class="source">uso: grade, patroc&#237;nio, servi&#231;o e entretenimento</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>9. p&#250;blico futuro &#233; digital</h3>
+              <p><span class="evidence evidence-dado">DADO</span> O DF tem 96,2% de acesso domiciliar &#224; internet, o maior percentual do pa&#237;s. O jovem perif&#233;rico consome cortes, creators, streaming e redes.</p>
+              <details class="expand">
+                <summary>movimento recomendado</summary>
+                <p>Mapear creators por nicho e territ&#243;rio, criar colabs e testar s&#233;ries digital-first antes de levar os melhores formatos para a TV.</p>
+              </details>
+            </div>
+            <div class="source">uso: digital, Globoplay, social e linguagem jovem</div>
+          </article>
+
+          <article class="card feature">
+            <div>
+              <h3>10. Prisma como ativo</h3>
+              <p><span class="evidence evidence-hipotese">HIP&#211;TESE ESTRAT&#201;GICA</span> A Globo DF pode deixar de ser apenas consumidora de estat&#237;stica e virar produtora de intelig&#234;ncia social sobre a pra&#231;a.</p>
+              <details class="expand">
+                <summary>primeiros 90 dias</summary>
+                <ol>
+                  <li>Medir o baseline territorial da cobertura atual.</li>
+                  <li>Lan&#231;ar uma franquia de baixo risco, como "Di&#225;rio da Seca" ou especial do sotaque.</li>
+                  <li>Encomendar survey por RA sobre valores, h&#225;bitos e m&#237;dia.</li>
+                  <li>Mapear creators do DF por nicho e territ&#243;rio.</li>
+                  <li>Estrear a trilogia de g&#234;nero como s&#233;rie digital-first.</li>
+                </ol>
+              </details>
+            </div>
+            <div class="source">frentes: jornalismo, programa&#231;&#227;o, digital, comercial e institucional</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
 
     <section id="agenda">
       <div class="shell">
@@ -3030,6 +3254,33 @@
               <p>O radar organiza temas por cad&#234;ncia: demografia, economia, trabalho e habita&#231;&#227;o pedem revis&#227;o anual ou trimestral; seguran&#231;a, mobilidade, sa&#250;de e m&#237;dia pedem acompanhamento frequente; tend&#234;ncias digitais exigem leitura mensal, sempre com checagem em fonte confi&#225;vel antes de virar pauta.</p>
             </div>
             <div class="source">uso editorial: pauta, programa&#231;&#227;o, branded content, social, Globoplay e intelig&#234;ncia comercial</div>
+          </article>
+          <article class="card feature">
+            <div>
+              <h3>novos estudos IPEDF</h3>
+              <span class="metric">2026</span>
+              <p>O radar passa a acompanhar estudos rec&#233;m-publicados como Perfil dos Apostadores no DF, Panorama da Viol&#234;ncia contra a Mulher e Felicidade no Distrito Federal. Eles abrem frentes de dinheiro, juventude, comportamento, seguran&#231;a e bem-estar.</p>
+              <details class="expand">
+                <summary>ver uso editorial</summary>
+                <ul>
+                  <li><b>Apostadores:</b> conectar bets, renda extra, endividamento jovem, trabalho informal e sa&#250;de mental.</li>
+                  <li><b>Viol&ecirc;ncia contra a mulher:</b> atualizar a se&#231;&#227;o mulher e orientar servi&#231;o, prote&#231;&#227;o e jornalismo de contexto.</li>
+                  <li><b>Felicidade no DF:</b> alimentar comportamento, solid&#227;o, fam&#237;lia, religi&#227;o, territ&#243;rio e qualidade de vida.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fonte: IPEDF, divulga&#231;&#245;es 2025-2026</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>tr&#226;nsito como viol&#234;ncia letal</h3>
+              <p><span class="evidence evidence-dado">DADO nacional</span> O Atlas da Viol&#234;ncia 2026 aponta 37.150 mortes no tr&#226;nsito no Brasil em 2024; motocicletas respondem por 41,6% dos &#243;bitos vi&#225;rios. A pauta conecta mobilidade, trabalho prec&#225;rio, economia de aplicativos e seguran&#231;a.</p>
+              <details class="expand">
+                <summary>ver ponte editorial</summary>
+                <p>Motoboys e entregadores permitem cruzar tempo, renda, risco, plataforma, periferia e cuidado familiar. No DF, o pr&#243;ximo passo &#233; abrir o recorte local por tipo de v&#237;tima, territ&#243;rio, hor&#225;rio e rela&#231;&#227;o com trabalho.</p>
+              </details>
+            </div>
+            <div class="source">fonte: Ipea/FBSP, Atlas da Viol&#234;ncia 2026; cruzar com Detran-DF, DER-DF e Semob-DF</div>
           </article>
           <article class="card">
             <div>
@@ -3387,7 +3638,7 @@
   <footer>
     <div class="shell">
       <img class="brand-footer-logo" src="tvglobo.png" alt="TV Globo">
-      Estudo e p&#225;gina desenvolvidos pela &#225;rea de Programa&#231;&#227;o da TV Globo DF
+      Prisma DF: estudo e p&#225;gina desenvolvidos pela &#225;rea de Programa&#231;&#227;o da TV Globo DF
     </div>
   </footer>
   <script>
