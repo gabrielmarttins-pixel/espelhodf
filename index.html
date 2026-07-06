@@ -574,6 +574,78 @@
       margin-top: 6px;
     }
 
+    .matrix-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin-top: 16px;
+      border: 1px solid rgba(0,0,0,.09);
+      border-radius: 8px;
+      background: white;
+      box-shadow: 0 14px 32px rgba(0,0,0,.06);
+    }
+
+    .matrix-table {
+      width: 100%;
+      min-width: 1420px;
+      border-collapse: collapse;
+      font-size: .86rem;
+      line-height: 1.35;
+      color: #202124;
+    }
+
+    .matrix-table th,
+    .matrix-table td {
+      padding: 14px 13px;
+      border-bottom: 1px solid rgba(0,0,0,.08);
+      vertical-align: top;
+      text-align: left;
+      color: #202124;
+    }
+
+    .matrix-table th {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      color: white;
+      background: linear-gradient(135deg, #007f63, #16b98f);
+      font-size: .76rem;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
+    .matrix-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .matrix-table td:first-child {
+      font-weight: 850;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    .matrix-table .evidence {
+      margin: 2px 4px 2px 0;
+      box-shadow: none;
+    }
+
+    .matrix-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+      color: #444;
+      font-size: .88rem;
+    }
+
+    .matrix-card {
+      grid-column: 1 / -1;
+    }
+
+    .matrix-card > div {
+      width: 100%;
+    }
+
     .evidence {
       display: inline-flex;
       align-items: center;
@@ -598,6 +670,8 @@
     .evidence-dado-cultura { background: linear-gradient(135deg, #0057ff, #e2007a); }
     .evidence-dado-hipotese { background: linear-gradient(135deg, #0057ff, #8800f8); }
     .evidence-cultura-hipotese { background: linear-gradient(135deg, #e2007a, #8800f8); }
+    .evidence-inferencia { background: linear-gradient(135deg, #008c8c, #00b894); }
+    .evidence-dado-inferencia { background: linear-gradient(135deg, #0057ff, #00b894); }
     .evidence-misto { background: linear-gradient(135deg, #0057ff, #e2007a, #8800f8); }
 
     #panorama { --accent: #05a6ff; --accent-rgb: 5, 166, 255; }
@@ -615,6 +689,8 @@
     #populacao-negra { --accent: #8f4f2a; --accent-rgb: 143, 79, 42; }
     #mulher-df { --accent: #e2007a; --accent-rgb: 226, 0, 122; }
     #homem-df { --accent: #111111; --accent-rgb: 17, 17, 17; }
+    #musica-homem-df { --accent: #8800f8; --accent-rgb: 136, 0, 248; }
+    #matriz-musical { --accent: #00a878; --accent-rgb: 0, 168, 120; }
     #book-masculinidade { --accent: #ff5a00; --accent-rgb: 255, 90, 0; }
     #agenda { --accent: #6a4cff; --accent-rgb: 106, 76, 255; }
     #fontes { --accent: #666666; --accent-rgb: 102, 102, 102; }
@@ -749,6 +825,8 @@
           <a href="#populacao-negra">popula&#231;&#227;o negra</a>
           <a href="#mulher-df">mulher do df</a>
           <a href="#homem-df">homem do df</a>
+          <a href="#musica-homem-df">m&#250;sica e homem</a>
+          <a href="#matriz-musical">matriz musical</a>
           <a href="#book-masculinidade">book masculinidade</a>
           <a href="#insights-prisma">insights Prisma</a>
           <a href="#agenda">radar</a>
@@ -2861,6 +2939,414 @@
               </details>
             </div>
             <div class="source">fontes a cruzar: IBGE, IPEDF/PDAD-A, Kantar/TGI, DataSenado, Datafolha, Equimundo e pesquisa pr&#243;pria</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="musica-homem-df">
+      <div class="shell">
+        <div class="section-head">
+          <h2>A trilha sonora do homem do DF</h2>
+          <p>Prisma DF apresenta um estudo aprofundado sobre m&#250;sica e masculinidades no Distrito Federal. A tese: numa cidade sem mem&#243;ria urbana longa, a m&#250;sica funciona como arquivo p&#250;blico das masculinidades. Cada g&#234;nero ensinou um jeito de ser homem, e cada escola tem CEP.</p>
+        </div>
+        <div class="section-callout">
+          <blockquote>o homem do DF tem cinco escolas de sentimento.</blockquote>
+          <p>A raiva do rock, o orgulho do rap, o afeto da roda, a sofr&#234;ncia do boteco e a restaura&#231;&#227;o do culto cabem na mesma cidade.</p>
+        </div>
+        <div class="cards">
+          <article class="card feature">
+            <div>
+              <h3>o mapa sonoro real</h3>
+              <span class="metric">5 cenas</span>
+              <p><span class="evidence evidence-dado-cultura">DADO + CULTURA</span> A capital do rock virou, no ouvido de 2026, uma capital de sertanejo, gospel, rap e pagode. O sertanejo aparece como g&#234;nero preferido da pra&#231;a, o gospel como segundo, o rap domina recortes de streaming e o pagode brasiliense alcan&#231;ou recordes nacionais no YouTube, Spotify e Billboard Brasil.</p>
+              <details class="expand" open>
+                <summary>ver tese editorial</summary>
+                <ul>
+                  <li>O DF tomou de assalto dois g&#234;neros associados a outros lugares: o rock nos anos 80 e o pagode nos anos 2020.</li>
+                  <li>O rap do DF construiu pioneirismos nacionais e deu primeira pessoa ao homem perif&#233;rico.</li>
+                  <li>Forr&#243;, sertanejo e gospel sustentam a trilha da maioria, mesmo com menos holofote institucional.</li>
+                  <li>A troca de trilha sonora revela a pr&#243;pria hist&#243;ria social do homem do DF.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes: Cultura nas Capitais; Ecad; plataformas digitais; PESO 061; Billboard Brasil; Correio Braziliense; Metr&#243;poles</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>rock do Plano</h3>
+              <p><span class="evidence evidence-dado-cultura">DADO + CULTURA</span> O rock brasiliense nasceu com endere&#231;o: Colina da UnB e 104 Sul. Aborto El&#233;trico, Legi&#227;o Urbana, Capital Inicial e Plebe Rude produziram a masculinidade letrada da contesta&#231;&#227;o, ligada ao t&#233;dio da cidade planejada, universidade, pol&#237;tica e classe m&#233;dia.</p>
+              <details class="expand">
+                <summary>ver contraponto</summary>
+                <ul>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> Renato Russo, maior &#237;dolo masculino da hist&#243;ria musical da cidade, quebrou o script da masculinidade hegem&#244;nica ao assumir publicamente a bissexualidade em 1988.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> A can&#231;&#227;o-monumento do rock brasiliense narra homem migrante, nordestino, pobre, Ceil&#226;ndia, crime e morte: o rock do Plano contou em terceira pessoa uma biografia que o rap narraria em primeira.</li>
+                  <li><b>Cuidado editorial:</b> tratar artistas como fontes e autores, n&#227;o apenas como personagens de tese.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes: Rota do Rock; Ag&#234;ncia Brasil; document&#225;rio Rock Bras&#237;lia; mem&#243;ria da Turma da Colina; biografia de Renato Russo</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>rap da quebrada</h3>
+              <p><span class="evidence evidence-cultura">CULTURA</span> O rap do DF transformou vergonha territorial em orgulho territorial. C&#226;mbio Negro, GOG, Cirurgia Moral, Viela 17, Tribo da Periferia, Hungria e batalhas de rima formam a escola p&#250;blica da masculinidade perif&#233;rica.</p>
+              <details class="expand">
+                <summary>ver pioneirismos</summary>
+                <ul>
+                  <li><span class="evidence evidence-dado">DADO</span> PESO 061 documenta pioneirismos do DF no rap brasileiro: primeira pessoa crua, selo pr&#243;prio de GOG e a Discovery como grande gravadora independente do rap nos anos 90.</li>
+                  <li><span class="evidence evidence-dado-cultura">DADO + CULTURA</span> Duckjay, da Tribo da Periferia, aparece associado aos primeiros traps do Brasil; Hungria, da Cidade Ocidental, levou a est&#233;tica de conquista a bilh&#245;es de views.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> A cena tamb&#233;m alarga o molde: o DF tem batalha de rima LGBTQIA+ em Taguatinga.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes: PESO 061; Brasil de Fato; Revista Darcy/UnB; Correio Braziliense; Jornal do Rap; Acha Bras&#237;lia</div>
+          </article>
+
+          <article class="card feature">
+            <div>
+              <h3>pagode: a resenha como escola</h3>
+              <span class="metric">1 bi+</span>
+              <p><span class="evidence evidence-dado">DADO</span> Menos &#201; Mais nasceu em 2016, no Gama, ganhou palco fixo no Taguaparque e estourou com o projeto O Churrasquinho, que passou de 1 bilh&#227;o de views. A cena inclui Di Prop&#243;sito, Doze por Oito, 7 na Roda e herdeiros de grupos veteranos.</p>
+              <details class="expand">
+                <summary>ver leitura de masculinidade</summary>
+                <ul>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> A roda de samba e o churrasco funcionam como espa&#231;o em que homens cantam sentimento em grupo, sem agressividade do est&#225;dio nem formalidade do culto.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> O pagode &#233; m&#250;sica negra e perif&#233;rica cantando amor, reca&#237;da e saudade: onde o rap processa o luto, o pagode processa o afeto.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> O pagode fez pela autoestima musical do DF dos anos 2020 o que o C&#226;mbio Negro fez pela Ceil&#226;ndia em 1993: tornou plaus&#237;vel sonhar viver de m&#250;sica e de Bras&#237;lia.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes: Billboard Brasil; Metr&#243;poles; Correio Braziliense; Forbes; UniCEUB; plataformas digitais</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>sertanejo e agro candango</h3>
+              <p><span class="evidence evidence-dado-cultura">DADO + CULTURA</span> Sertanejo &#233; o g&#234;nero n&#250;mero 1 da pra&#231;a e atravessa churrasco, boteco, pared&#227;o e megashows. Brazl&#226;ndia aparece como polo agro da capital, com Pra&#231;a do La&#231;o, rodeio e Festa do Morango.</p>
+              <details class="expand">
+                <summary>ver hip&#243;tese</summary>
+                <p><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> A sofr&#234;ncia &#233; a licen&#231;a emocional p&#250;blica do homem que n&#227;o fala de sentimento: ele canta desabafo alheio no volume m&#225;ximo. Boteco sertanejo e resenha de pagode cumprem fun&#231;&#245;es parecidas em c&#243;digos diferentes.</p>
+              </details>
+            </div>
+            <div class="source">fontes: Cultura nas Capitais; agenda local de eventos; Funn Festival; Pavilh&#227;o do Parque da Cidade; recorte rural do Prisma DF</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>forr&#243; e Casa do Cantador</h3>
+              <p><span class="evidence evidence-cultura">CULTURA</span> Ceil&#226;ndia &#233; grande reduto nordestino do DF, e sua trilha original passa pelo forr&#243; p&#233; de serra, pelo S&#227;o Jo&#227;o e pela Casa do Cantador, o pal&#225;cio da poesia popular projetado por Niemeyer.</p>
+              <details class="expand">
+                <summary>ver achado geracional</summary>
+                <p><span class="evidence evidence-cultura">CULTURA</span> O duelo de repentistas, dois homens improvisando versos em disputa, &#233; ancestral direto da batalha de rima. A mesma RA guarda o templo do duelo de viola e o ber&#231;o do rap do DF.</p>
+              </details>
+            </div>
+            <div class="source">fontes: Casa do Cantador; Secec-DF; guias da cena de forr&#243;; dossi&#234; de identidade candanga</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>gospel: o homem restaurado</h3>
+              <p><span class="evidence evidence-dado-cultura">DADO + CULTURA</span> Gospel &#233; o segundo g&#234;nero em execu&#231;&#227;o no DF e tem ponte biogr&#225;fica com o rap: DJ Jamaika, pioneiro do hip-hop de Ceil&#226;ndia, converteu-se em 2002 e migrou para a m&#250;sica gospel.</p>
+              <details class="expand">
+                <summary>ver hip&#243;tese</summary>
+                <p><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> O culto pode ser, para muitos homens perif&#233;ricos, o espa&#231;o p&#250;blico onde chorar &#233; permitido e celebrado. A narrativa do homem restaurado conversa diretamente com igreja, disciplina, recupera&#231;&#227;o e provedor.</p>
+              </details>
+            </div>
+            <div class="source">fontes: Cultura nas Capitais; dossi&#234; de f&#233; e religi&#227;o; trajet&#243;ria de DJ Jamaika; escuta comunit&#225;ria a validar</div>
+          </article>
+
+          <article class="card feature">
+            <div>
+              <h3>panorama: cinco escolas de sentimento</h3>
+              <span class="metric">rock, rap, roda, boteco e culto</span>
+              <p><span class="evidence evidence-dado-hipotese">DADO + HIP&Oacute;TESE</span> A m&#250;sica revela como o homem do DF administra morte, emo&#231;&#227;o, pertencimento, trabalho e territ&#243;rio. Onde o servi&#231;o p&#250;blico nem sempre chega, a roda, o ensaio, a batalha, o festival e o culto organizam redes de apoio semanais.</p>
+              <details class="expand" open>
+                <summary>ver cruzamentos</summary>
+                <ul>
+                  <li>A morte jovem aparece no rock e no rap como luto p&#250;blico: de personagens perif&#233;ricos a narrativas de sobreviv&#234;ncia das quebradas.</li>
+                  <li>O ideal de provedor atravessa tr&#234;s gera&#231;&#245;es: o selo de GOG, o carro de Hungria e a empresa do Menos &#201; Mais.</li>
+                  <li>A emo&#231;&#227;o silenciada encontra v&#225;lvulas p&#250;blicas: sofr&#234;ncia sertaneja, reca&#237;da do pagode, rap rom&#226;ntico e louvor.</li>
+                  <li>A identidade brasiliense ganha trilha por gera&#231;&#227;o: a cidade sem passado longo criou mem&#243;ria em som, palco e CEP.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes: Prisma DF; dossi&#234; O homem do DF; SES-DF; IBGE; Atlas da Viol&#234;ncia; Cultura nas Capitais</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>Capital Moto Week: fraternidade sobre rodas</h3>
+              <p><span class="evidence evidence-dado-cultura">DADO + CULTURA</span> Criado em 2004, o Capital Moto Week &#233; apresentado como o maior festival de motos e rock da Am&#233;rica Latina e o terceiro do mundo. Em 2025, reuniu 856 mil pessoas, 370 mil motos e 1,8 mil motoclubes em dez dias.</p>
+              <details class="expand">
+                <summary>ver leitura editorial</summary>
+                <ul>
+                  <li>O festival materializa uma fraternidade masculina codificada: colete, bras&#227;o, estrada, hierarquia e pertencimento.</li>
+                  <li>O clich&#234; do reduto masculino precisa ser revisto: a apura&#231;&#227;o citada indica p&#250;blico feminino expressivo e produ&#231;&#227;o com forte presen&#231;a de mulheres.</li>
+                  <li><span class="evidence evidence-dado-hipotese">DADO + HIP&Oacute;TESE</span> A moto celebrada no lazer tamb&#233;m aparece como objeto de risco no tr&#226;nsito e no trabalho por aplicativo. O contraste rende pauta de comportamento, mobilidade e seguran&#231;a.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes: Capital Moto Week; Correio Braziliense; Jornal de Bras&#237;lia; Setur-DF; Atlas 2026</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>Na Praia e MESKLA: vitrine e ocupa&#231;&#227;o</h3>
+              <p><span class="evidence evidence-dado-cultura">DADO + CULTURA</span> O Na Praia inventa o litoral social de Bras&#237;lia e mistura sertanejo, pagode, rap, futebol e lazer de fam&#237;lia. O MESKLA leva rap, trap e funk para a Arena BRB Man&#233; Garrincha, deslocando a juventude perif&#233;rica para o equipamento-s&#237;mbolo do Plano.</p>
+              <details class="expand">
+                <summary>ver ganchos</summary>
+                <ul>
+                  <li><b>Na Praia:</b> evento de temporada, com p&#250;blico de centenas de milhares e repert&#243;rio que cruza o boteco, a resenha e o show de grande escala.</li>
+                  <li><b>MESKLA:</b> simboliza a passagem do rap criminalizado para o centro da programa&#231;&#227;o jovem e urbana do DF.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> Um fala do homem em modo vitrine social; o outro, do jovem em disputa por reconhecimento cultural.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes: Grupo R2; Instituto Gl&#243;ria; Metr&#243;poles; Visite Bras&#237;lia; programa&#231;&#245;es dos festivais</div>
+          </article>
+
+          <article class="card feature">
+            <div>
+              <h3>Ceil&#226;ndia: do repente ao hip-hop</h3>
+              <span class="metric">oralidade, dan&#231;a e improviso</span>
+              <p><span class="evidence evidence-cultura">CULTURA</span> O Maior S&#227;o Jo&#227;o do Cerrado, a Casa do Cantador, o Elemento em Movimento e as batalhas de rima formam uma linha cont&#237;nua: o duelo verbal masculino atravessa gera&#231;&#245;es na mesma cidade.</p>
+              <details class="expand" open>
+                <summary>ver festivais</summary>
+                <ul>
+                  <li><b>O Maior S&#227;o Jo&#227;o do Cerrado:</b> festa junina fora de &#233;poca em Ceil&#226;ndia, com forr&#243;, pertencimento nordestino e grande p&#250;blico popular.</li>
+                  <li><b>Elemento em Movimento:</b> hip-hop como pol&#237;tica de juventude, com forma&#231;&#227;o, feira, batalha, produ&#231;&#227;o e gera&#231;&#227;o de renda.</li>
+                  <li><b>Favela Sounds:</b> cultura de favela ocupando o centro do poder, na Pra&#231;a do Museu Nacional, com periferias do Brasil e do mundo.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> O caminho do cantador ao MC talvez seja uma das pautas mais originais do Prisma DF.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes: O Maior S&#227;o Jo&#227;o do Cerrado; Jovem de Express&#227;o; Brasil de Fato; Billboard Brasil; Favela Sounds; MinC; Funarte</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>calend&#225;rio da masculinidade brasiliense</h3>
+              <p><span class="evidence evidence-dado-cultura">DADO + CULTURA</span> Os festivais desenham uma grade anual de comportamento masculino: Na Praia entre junho e setembro, Capital Moto Week e Favela Sounds em julho/agosto, S&#227;o Jo&#227;o do Cerrado em agosto, Elemento em Movimento em setembro.</p>
+              <details class="expand">
+                <summary>ver uso para programa&#231;&#227;o</summary>
+                <ul>
+                  <li>O calend&#225;rio permite planejar cobertura de cultura, comportamento, mobilidade, seguran&#231;a e economia criativa com anteced&#234;ncia.</li>
+                  <li>As pautas podem ser seriadas por territ&#243;rio: Granja do Torto, Orla do Lago, Man&#233; Garrincha, Ceil&#226;ndia e Esplanada.</li>
+                  <li>A cada evento, o foco editorial muda: fraternidade, vitrine social, juventude, nordestinidade, favela, trabalho cultural e pertencimento.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes: calend&#225;rios oficiais dos eventos; Setur-DF; Secec-DF; organizadores e cobertura local</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>agenda de valida&#231;&#227;o pr&#243;pria</h3>
+              <p><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> A lacuna de pesquisa &#233; a oportunidade: ainda falta medir diretamente como g&#234;nero musical, territ&#243;rio, idade, ra&#231;a, religi&#227;o e masculinidade se cruzam no DF.</p>
+              <details class="expand">
+                <summary>ver pr&#243;ximas apura&#231;&#245;es</summary>
+                <ul>
+                  <li>An&#225;lise de letras por tema: morte, pai, trabalho, amor, f&#233;, conquista, orgulho territorial e cuidado.</li>
+                  <li>Mapa de streaming por RA, com peso real de pagode, sertanejo, gospel, rap, rock e forr&#243;.</li>
+                  <li>Escuta com artistas, curadores e cenas: GOG, X, Jap&#227;o, Duckjay, Jamaika, Menos &#201; Mais, Di Prop&#243;sito, repentistas e MCs.</li>
+                  <li>Perfil de p&#250;blico das rodas, cultos, batalhas, festivais, casas de forr&#243; e eventos de moto por sexo, idade e RA.</li>
+                  <li>Levantamento espec&#237;fico de Brazl&#226;ndia agro: rodeio, la&#231;o, festa, economia e c&#243;digos masculinos rurais.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes a acionar: plataformas digitais; curadores; artistas; organizadores de eventos; pesquisas pr&#243;prias Globo DF</div>
+          </article>
+
+          <article class="card feature">
+            <div>
+              <h3>oportunidades editoriais</h3>
+              <p>O estudo musical amplia a pauta do homem do DF porque transforma cultura em mapa de comportamento: onde homens sentem, disputam, pertencem, empreendem, envelhecem e se reconhecem.</p>
+              <details class="expand" open>
+                <summary>ver pautas</summary>
+                <ul>
+                  <li><b>O mapa sonoro do homem do DF:</b> rock, rap, pagode, sertanejo, forr&#243; e gospel, cada um com territ&#243;rio e modo de ser homem.</li>
+                  <li><b>A capital que rouba g&#234;neros:</b> do rock dos anos 80 ao pagode dos anos 2020.</li>
+                  <li><b>Do repente &#224; batalha de rima:</b> Casa do Cantador, duelo verbal e MCs.</li>
+                  <li><b>Faroeste Caboclo faz 40 anos em 2027:</b> revisitar a epopeia do homem perif&#233;rico com o lado de quem viveu a Ceil&#226;ndia cantada.</li>
+                  <li><b>Do lote 14 ao bilh&#227;o de views:</b> do personagem fict&#237;cio aos fen&#244;menos reais da periferia autoral.</li>
+                  <li><b>Onde homem chora:</b> culto, sofr&#234;ncia, reca&#237;da, louvor e roda como espa&#231;os p&#250;blicos de emo&#231;&#227;o masculina.</li>
+                  <li><b>Rota do rap e da roda:</b> servi&#231;o, cultura e repara&#231;&#227;o simb&#243;lica, inspirada na Rota do Rock.</li>
+                  <li><b>Da manchete de gangue ao Museu da Rep&#250;blica:</b> arco de 30 anos da masculinidade perif&#233;rica, da criminaliza&#231;&#227;o ao reconhecimento cultural.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes: PESO 061; Rota do Rock; Cultura nas Capitais; Ecad; plataformas digitais; Prisma DF</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="matriz-musical">
+      <div class="shell">
+        <div class="section-head">
+          <h2>Matriz musical, territ&#243;rio e masculinidade</h2>
+          <p>Cruzamento inferencial do Prisma DF sobre g&#234;nero musical, territ&#243;rio, idade, ra&#231;a, religi&#227;o e masculinidade. A matriz n&#227;o mede audi&#234;ncia individual; ela triangula dados territoriais, hist&#243;ria das cenas e consumo musical agregado para orientar pauta, pesquisa e valida&#231;&#227;o.</p>
+        </div>
+        <div class="section-callout">
+          <blockquote>triangular n&#227;o &#233; adivinhar: &#233; cercar a lacuna com m&#233;todo.</blockquote>
+          <p>A for&#231;a da matriz est&#225; em separar o que j&#225; &#233; dado, o que &#233; infer&#234;ncia territorial defens&#225;vel e o que ainda precisa de survey.</p>
+        </div>
+        <div class="cards">
+          <article class="card feature">
+            <div>
+              <h3>a matriz que j&#225; d&#225; para montar</h3>
+              <span class="metric">triangula&#231;&#227;o, n&#227;o medi&#231;&#227;o</span>
+              <p><span class="evidence evidence-dado-inferencia">DADO + INFER&Ecirc;NCIA</span> O Prisma j&#225; consegue cruzar g&#234;nero musical, territ&#243;rio, idade, ra&#231;a, religi&#227;o e masculinidade como leitura territorial. O cuidado metodol&#243;gico &#233; central: d&#225; para dizer onde uma cena nasceu, vive e se apresenta; ainda n&#227;o d&#225; para afirmar quem, individualmente, ouve cada g&#234;nero.</p>
+              <details class="expand" open>
+                <summary>ver regras de leitura</summary>
+                <ul>
+                  <li><span class="evidence evidence-inferencia">INFER&Ecirc;NCIA</span> Ceil&#226;ndia ser majoritariamente negra e ber&#231;o do rap n&#227;o prova que todo ouvinte de rap seja negro; sustenta uma afirma&#231;&#227;o territorial, n&#227;o individual.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> A cena musical tem endere&#231;o documentado: Colina/104 Sul no rock, Ceil&#226;ndia e Planaltina no rap, Gama e Taguaparque no pagode, Brazl&#226;ndia no agro, Ceil&#226;ndia nordestina no forr&#243; e RAs evang&#233;licas no gospel.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> O elo que falta &#233; o consumo individual por RA, idade, cor/ra&#231;a, religi&#227;o e sexo. Esse elo s&#243; vem com survey, dados de plataforma ou contagem de p&#250;blico em campo.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes: PDAD-A 2024; Censo 2022; Cultura nas Capitais; Ecad; plataformas digitais; PESO 061; festivais mapeados</div>
+          </article>
+
+          <article class="card matrix-card">
+            <div>
+              <h3>mapa inferencial das cenas</h3>
+              <p><span class="evidence evidence-inferencia">INFER&Ecirc;NCIA</span> A matriz organiza cada escola musical por territ&#243;rio-&#226;ncora, classe, idade prov&#225;vel, leitura racial territorial, leitura religiosa e c&#243;digo masculino. Ela n&#227;o substitui pesquisa de audi&#234;ncia, mas j&#225; orienta pauta, casting e apura&#231;&#227;o.</p>
+              <div class="matrix-legend">
+                <span><span class="evidence evidence-dado">D</span> dado com fonte</span>
+                <span><span class="evidence evidence-inferencia">I</span> infer&#234;ncia territorial defens&#225;vel</span>
+                <span><span class="evidence evidence-hipotese">H</span> hip&#243;tese a validar</span>
+              </div>
+              <div class="matrix-table-wrap" role="region" aria-label="Matriz musical do Distrito Federal">
+                <table class="matrix-table">
+                  <thead>
+                    <tr>
+                      <th>Escola</th>
+                      <th>Territ&#243;rio-&#226;ncora</th>
+                      <th>Classe</th>
+                      <th>Idade prov&#225;vel do n&#250;cleo</th>
+                      <th>Ra&#231;a (leitura territorial)</th>
+                      <th>Religi&#227;o (leitura territorial)</th>
+                      <th>C&#243;digo masculino</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Rock</td>
+                      <td>Plano Piloto/Colina, origem <span class="evidence evidence-dado">D</span>; hoje, Granja do Torto/Capital Moto Week <span class="evidence evidence-dado">D</span></td>
+                      <td>M&#233;dia/alta <span class="evidence evidence-dado">D</span> origem documentada</td>
+                      <td>40+; mem&#243;ria geracional e perda de centralidade nas r&#225;dios, segundo Ecad <span class="evidence evidence-inferencia">I</span></td>
+                      <td>Branco-majorit&#225;ria; Plano Piloto com 37% de pessoas negras <span class="evidence evidence-inferencia">I</span></td>
+                      <td>Cat&#243;lica tradicional + sem religi&#227;o de classe m&#233;dia; Lago Norte com 23,5% sem religi&#227;o <span class="evidence evidence-inferencia">I</span></td>
+                      <td>Contesta&#231;&#227;o letrada; nostalgia da rebeldia <span class="evidence evidence-dado-cultura">DADO + CULTURA</span></td>
+                    </tr>
+                    <tr>
+                      <td>Rap/Trap</td>
+                      <td>Ceil&#226;ndia, Planaltina e periferias como ber&#231;o e cena <span class="evidence evidence-dado">D</span>; MESKLA no Man&#233;, Elemento e Favela Sounds <span class="evidence evidence-dado">D</span></td>
+                      <td>Popular <span class="evidence evidence-dado">D</span></td>
+                      <td>15-34; domina recortes de streaming e dialoga com juventude negra, 59,6% dos jovens <span class="evidence evidence-dado-inferencia">DADO + INFER&Ecirc;NCIA</span></td>
+                      <td>Negra-majorit&#225;ria; RAs-ber&#231;o com 60% a 75% de pessoas negras <span class="evidence evidence-inferencia">I</span>; cena declaradamente negra <span class="evidence evidence-dado">D</span></td>
+                      <td>Desfilia&#231;&#227;o jovem, com pico sem religi&#227;o entre 20 e 24 anos <span class="evidence evidence-dado">D</span>, em tens&#227;o com convers&#227;o evang&#233;lica, como a rota Jamaika <span class="evidence evidence-dado">D</span></td>
+                      <td>Orgulho territorial, sobreviv&#234;ncia, conquista <span class="evidence evidence-dado-cultura">DADO + CULTURA</span></td>
+                    </tr>
+                    <tr>
+                      <td>Pagode</td>
+                      <td>Gama, Taguatinga e depois cidade toda <span class="evidence evidence-dado">D</span> origem documentada</td>
+                      <td>Popular para m&#233;dia, em trajet&#243;ria de ascens&#227;o <span class="evidence evidence-dado">D</span></td>
+                      <td>20-35; cena e p&#250;blico de casas noturnas <span class="evidence evidence-inferencia">I</span></td>
+                      <td>Negra/parda-majorit&#225;ria; m&#250;sica negra e territ&#243;rios de origem <span class="evidence evidence-inferencia">I</span></td>
+                      <td>Secular-popular com matriz africana na base; Ramon/umbanda <span class="evidence evidence-dado">D</span></td>
+                      <td>Afeto em grupo, resenha, provedor-empreendedor <span class="evidence evidence-dado-cultura">DADO + CULTURA</span></td>
+                    </tr>
+                    <tr>
+                      <td>Sertanejo</td>
+                      <td>Transversal <span class="evidence evidence-dado">D</span> g&#234;nero n&#250;mero 1; polo simb&#243;lico em Brazl&#226;ndia, Pra&#231;a do La&#231;o <span class="evidence evidence-dado">D</span></td>
+                      <td>Todas <span class="evidence evidence-dado">D</span></td>
+                      <td>Todas, com n&#250;cleo prov&#225;vel de 25-45 <span class="evidence evidence-hipotese">H</span></td>
+                      <td>Transversal <span class="evidence evidence-dado">D</span> por defini&#231;&#227;o</td>
+                      <td>Cat&#243;lica + evang&#233;lica, as duas maiorias <span class="evidence evidence-inferencia">I</span></td>
+                      <td>Sofr&#234;ncia como licen&#231;a emocional; provedor rom&#226;ntico <span class="evidence evidence-cultura-hipotese">CULTURA + HIP&Oacute;TESE</span></td>
+                    </tr>
+                    <tr>
+                      <td>Forr&#243;</td>
+                      <td>Ceil&#226;ndia nordestina: casas de p&#233; de serra, Casa do Cantador e S&#227;o Jo&#227;o do Cerrado <span class="evidence evidence-dado">D</span></td>
+                      <td>Popular <span class="evidence evidence-dado">D</span></td>
+                      <td>Bimodal: 50+ no p&#233; de serra e baile da melhor idade <span class="evidence evidence-dado">D</span> + revival jovem <span class="evidence evidence-hipotese">H</span></td>
+                      <td>Parda-majorit&#225;ria; heran&#231;a nordestina e rural com 57% de pardos <span class="evidence evidence-dado">D</span></td>
+                      <td>Cat&#243;lica popular; cat&#243;licos s&#227;o 48,5% no rural <span class="evidence evidence-dado-inferencia">DADO + INFER&Ecirc;NCIA</span></td>
+                      <td>Cortejo, mem&#243;ria migrante, duelo verbal/repente <span class="evidence evidence-dado-cultura">DADO + CULTURA</span></td>
+                    </tr>
+                    <tr>
+                      <td>Gospel</td>
+                      <td>Periferias evang&#233;licas: Estrutural, &#193;gua Quente e Recanto, com evang&#233;licos entre 36% e 41% <span class="evidence evidence-dado">D</span></td>
+                      <td>Popular <span class="evidence evidence-dado">D</span></td>
+                      <td>Todas; igreja multigeracional <span class="evidence evidence-dado">D</span></td>
+                      <td>Parda/preta-majorit&#225;ria; evang&#233;licos s&#227;o 32,4% dos pardos e 31,3% dos pretos, contra 24,8% dos brancos <span class="evidence evidence-dado">D</span></td>
+                      <td>Evang&#233;lica <span class="evidence evidence-dado">D</span> por defini&#231;&#227;o</td>
+                      <td>Restaura&#231;&#227;o, disciplina, provedor convertido <span class="evidence evidence-cultura">CULTURA</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="source">fontes: PDAD-A 2024; Censo 2022; PESO 061; Rota do Rock; Cultura nas Capitais; agendas e hist&#243;ricos dos festivais</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>o que j&#225; pode ser afirmado</h3>
+              <p><span class="evidence evidence-dado-inferencia">DADO + INFER&Ecirc;NCIA</span> A matriz permite afirma&#231;&#245;es defens&#225;veis para reportagem e planejamento: o mapa das cenas coincide com o mapa social, mas a leitura precisa ficar no n&#237;vel territorial.</p>
+              <details class="expand">
+                <summary>ver achados utiliz&#225;veis</summary>
+                <ul>
+                  <li>Rap e gospel disputam pertencimento nos mesmos territ&#243;rios populares: de um lado, cena e desfilia&#231;&#227;o jovem; de outro, convers&#227;o, disciplina e igreja como rede.</li>
+                  <li>Forr&#243; e rap podem ser lidos como o mesmo territ&#243;rio em gera&#231;&#245;es opostas: p&#233; de serra dos pais, batalha dos filhos e improviso como heran&#231;a comum.</li>
+                  <li>O rock envelheceu com o territ&#243;rio que o criou: saiu do centro das r&#225;dios e sobrevive como mem&#243;ria e rito anual.</li>
+                  <li>O pagode &#233; ponte et&#225;ria e territorial, com baixo atrito de fronteira entre periferia consolidada, classe m&#233;dia e circuito nacional.</li>
+                  <li>O sertanejo &#233; o denominador comum da pra&#231;a: fala com quase todos os grupos e por isso n&#227;o deve ser tratado como marcador de um perfil espec&#237;fico.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes: Cultura nas Capitais; Ecad; PDAD-A 2024; Censo 2022; Prisma DF</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>o que n&#227;o pode ser afirmado ainda</h3>
+              <p><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> O principal risco &#233; transformar dado territorial em perfil individual de audi&#234;ncia. A matriz protege o projeto justamente por deixar vis&#237;vel onde termina a fonte e onde come&#231;a a leitura.</p>
+              <details class="expand">
+                <summary>ver limites</summary>
+                <ul>
+                  <li>N&#227;o afirmar que "o ouvinte de X no DF &#233;" de determinada ra&#231;a, idade ou religi&#227;o sem pesquisa individual.</li>
+                  <li>N&#227;o criar percentuais como "N% dos jovens negros ouvem trap" sem base local desagregada.</li>
+                  <li>N&#227;o sugerir causalidade entre m&#250;sica e religi&#227;o, como se o rap levasse &#224; igreja ou a igreja afastasse do rap. A matriz mostra conviv&#234;ncia, n&#227;o causa.</li>
+                  <li>N&#227;o usar sertanejo como marcador de grupo espec&#237;fico: ele &#233; a l&#237;ngua franca musical da pra&#231;a.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">nota de m&#233;todo: evitar fal&#225;cia ecol&#243;gica e separar produ&#231;&#227;o, cena e consumo</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>survey m&#237;nimo para virar dado</h3>
+              <p><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> Com cinco perguntas, a Globo DF pode transformar a matriz inferencial em base propriet&#225;ria de intelig&#234;ncia sobre masculinidade, m&#250;sica e territ&#243;rio.</p>
+              <details class="expand">
+                <summary>ver perguntas essenciais</summary>
+                <ul>
+                  <li>Quais tr&#234;s g&#234;neros musicais voc&#234; mais ouve?</li>
+                  <li>Qual sua RA de moradia, idade, cor/ra&#231;a, religi&#227;o e sexo?</li>
+                  <li>Onde voc&#234; ouve ou vive m&#250;sica: culto, roda, resenha, batalha, festival, pared&#227;o, fone?</li>
+                  <li>Qual artista do DF mais te representa?</li>
+                  <li>Para homens: com quem voc&#234; fala de sentimento, e a m&#250;sica aparece nesse momento?</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes a acionar: survey pr&#243;prio; plataformas de streaming; campo em festivais; escuta de cenas locais</div>
           </article>
         </div>
       </div>
