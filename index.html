@@ -680,7 +680,11 @@
     #identidade-candanga { --accent: #00a878; --accent-rgb: 0, 168, 120; }
     #territorio { --accent: #306dff; --accent-rgb: 48, 109, 255; }
     #metropole-real { --accent: #6f6a8f; --accent-rgb: 111, 106, 143; }
+    #onde-df-se-encontra { --accent: #008c8c; --accent-rgb: 0, 140, 140; }
+    #seguranca-medo { --accent: #c13b54; --accent-rgb: 193, 59, 84; }
+    #brasilia-sem-endereco { --accent: #b6402d; --accent-rgb: 182, 64, 45; }
     #vida { --accent: #ff0c1f; --accent-rgb: 255, 12, 31; }
+    #trabalho-dinheiro { --accent: #007566; --accent-rgb: 0, 117, 102; }
     #cultura { --accent: #8800f8; --accent-rgb: 136, 0, 248; }
     #cerrado-clima { --accent: #0a8f5a; --accent-rgb: 10, 143, 90; }
     #fe-religiao { --accent: #db9800; --accent-rgb: 219, 152, 0; }
@@ -817,7 +821,11 @@
           <a href="#identidade-candanga">identidade candanga</a>
           <a href="#territorio">territ&#243;rio</a>
           <a href="#metropole-real">metr&#243;pole real</a>
+          <a href="#onde-df-se-encontra">onde o DF se encontra</a>
+          <a href="#seguranca-medo">seguran&#231;a e medo</a>
+          <a href="#brasilia-sem-endereco">sem endere&#231;o</a>
           <a href="#vida">vida cotidiana</a>
+          <a href="#trabalho-dinheiro">trabalho e dinheiro</a>
           <a href="#cultura">cultura</a>
           <a href="#cerrado-clima">cerrado e clima</a>
           <a href="#fe-religiao">f&eacute; e religi&atilde;o</a>
@@ -860,18 +868,34 @@
           <article class="card feature">
             <div>
               <h3>renda alta, desigualdade tamb&eacute;m</h3>
-              <span class="metric">R$ 4.538</span>
-              <p>Rendimento domiciliar per capita mensal em 2025. O DF segue com a maior renda do pa&#237;s, acima da m&#233;dia brasileira e refor&#231;ando a leitura dupla: prosperidade concentrada e desigualdade territorial persistente.</p>
+              <span class="metric">R$ 4.401</span>
+              <p>Rendimento domiciliar per capita m&eacute;dio real em 2025, o maior entre as UFs e 27,7% acima de 2024, quando foi de R$ 3.447. O resultado refor&ccedil;a a leitura dupla do DF: prosperidade agregada e desigualdade territorial persistente.</p>
               <details class="expand" open>
                 <summary>nota de m&eacute;todo</summary>
                 <ul>
-                  <li>N&atilde;o tratar a varia&ccedil;&atilde;o nominal como ganho real sem deflator e sem separar infla&ccedil;&atilde;o, base amostral e efeito renda.</li>
-                  <li>Usar como s&eacute;rie anual da PNAD Cont&iacute;nua e manter indicadores de desenvolvimento humano em bloco pr&oacute;prio, com tabela e ano-base identificados.</li>
-                  <li>O Gini segue como dado a confirmar por fonte prim&aacute;ria e ano antes de virar s&eacute;rie comparativa.</li>
+                  <li>Este &eacute; o rendimento domiciliar per capita m&eacute;dio real da PNAD Cont&iacute;nua, adequado para acompanhar varia&ccedil;&atilde;o no tempo.</li>
+                  <li>O valor nominal de R$ 4.538, divulgado em fevereiro de 2026, serve a compara&ccedil;&otilde;es anuais entre UFs e ao c&aacute;lculo do FPE, mas n&atilde;o deve substituir a s&eacute;rie real.</li>
+                  <li>A massa de rendimento domiciliar per capita chegou a R$ 13,18 bilh&otilde;es, alta real de 28,2% em rela&ccedil;&atilde;o a 2024.</li>
                 </ul>
               </details>
             </div>
-            <div class="source">fonte: IBGE - PNAD Cont&#237;nua, 2025; Gini citado em DF no Espelho, com fonte prim&#225;ria a confirmar</div>
+            <div class="source">fonte: IBGE, PNAD Cont&iacute;nua - Rendimento de Todas as Fontes 2025, divulgada em 08/05/2026</div>
+          </article>
+          <article class="card feature">
+            <div>
+              <h3>maior renda, maior desigualdade</h3>
+              <span class="metric red">0,570</span>
+              <p>O &iacute;ndice de Gini do rendimento domiciliar per capita do DF foi o maior entre as UFs em 2025 e aumentou pelo terceiro ano consecutivo. Quanto mais perto de 1, maior a desigualdade: o crescimento da renda n&atilde;o foi distribu&iacute;do de forma homog&ecirc;nea.</p>
+              <details class="expand">
+                <summary>como ler a s&eacute;rie</summary>
+                <ul>
+                  <li>Usar 0,570 apenas como Gini do rendimento domiciliar per capita da PNAD Cont&iacute;nua 2025.</li>
+                  <li>N&atilde;o misturar com 0,547, da S&iacute;ntese de Indicadores Sociais 2024, nem com 0,584, calculado a partir do Censo 2022.</li>
+                  <li>A pauta central n&atilde;o &eacute; apenas quanto o DF ganhou, mas quem capturou o avan&ccedil;o e em quais territ&oacute;rios.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fonte: IBGE, PNAD Cont&iacute;nua - Rendimento de Todas as Fontes 2025, divulgada em 08/05/2026</div>
           </article>
           <article class="card">
             <div>
@@ -887,19 +911,39 @@
           </article>
           <article class="card">
             <div>
-              <h3>escolaridade como ativo</h3>
-              <span class="metric blue">em valida&ccedil;&atilde;o</span>
-              <p>Taxa de alfabetiza&ccedil;&atilde;o de pessoas de 15 anos ou mais no Censo 2022: o valor de refer&ecirc;ncia &eacute; 97,2%, a confirmar na tabela prim&aacute;ria antes de qualquer arte ou exibi&ccedil;&atilde;o. O IBGE tamb&eacute;m divulga taxas para 5+ e 10+, com valores distintos. O DF tamb&eacute;m aparece com 33,2% da popula&ccedil;&atilde;o com superior completo; a PDAD 2024 traz recortes maiores por sexo.</p>
+              <h3>maior IDHM do pa&iacute;s</h3>
+              <span class="metric blue">0,866</span>
+              <p>O DF lidera o ranking das UFs no IDHM 2024, acima do resultado brasileiro de 0,805. A nova s&eacute;rie combina dados da PNAD Cont&iacute;nua de 2022 a 2024 e exige identifica&ccedil;&atilde;o clara da metodologia: IDHM e IDSC medem dimens&otilde;es diferentes.</p>
+              <details class="expand">
+                <summary>pr&oacute;xima pergunta</summary>
+                <p>O resultado agregado deve ser confrontado com o IDHM ajustado &agrave; desigualdade, quando o recorte distrital estiver identificado, e com indicadores por territ&oacute;rio, ra&ccedil;a e sexo.</p>
+              </details>
             </div>
-            <div class="source">fontes: IBGE, Censo 2022; universo da taxa de alfabetiza&ccedil;&atilde;o a conferir na tabela</div>
+            <div class="source">fonte: Pnud, IBGE e Funda&ccedil;&atilde;o Jo&atilde;o Pinheiro - Radar IDHM 2012-2024</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>escolaridade como ativo</h3>
+              <span class="metric blue">1,8%</span>
+              <p>Taxa de analfabetismo entre pessoas de 15 anos ou mais em 2024, a menor do pa&iacute;s; a m&eacute;dia brasileira foi de 5,3%. O indicador equivale a 98,2% de alfabetiza&ccedil;&atilde;o nessa faixa et&aacute;ria e deve ser separado do resultado censit&aacute;rio.</p>
+              <details class="expand">
+                <summary>nota de m&eacute;todo</summary>
+                <p>O Censo 2022 registrou alfabetiza&ccedil;&atilde;o de 97,2% entre pessoas de 15 anos ou mais. Os dois n&uacute;meros s&atilde;o v&aacute;lidos, mas pertencem a pesquisas e anos diferentes; para atualiza&ccedil;&atilde;o anual, o painel adota a PNAD 2024.</p>
+              </details>
+            </div>
+            <div class="source">fonte: IBGE, PNAD Cont&iacute;nua 2024 / S&iacute;ntese de Indicadores Sociais 2025, divulgada em 03/12/2025</div>
           </article>
           <article class="card">
             <div>
               <h3>economia de servi&#231;os</h3>
-              <span class="metric violet">setor l&iacute;der</span>
-              <p>O setor de servi&#231;os domina a economia local, refor&#231;ado pela administra&#231;&#227;o p&#250;blica, educa&#231;&#227;o, sa&#250;de, comunica&#231;&#227;o, com&#233;rcio e atividades profissionais. O percentual exato deve ser usado apenas quando a vari&aacute;vel estiver nomeada: VAB, empregos, estabelecimentos ou ocupa&ccedil;&otilde;es.</p>
+              <span class="metric violet">95,4% do VAB</span>
+              <p>Os servi&#231;os responderam por 95,4% do valor adicionado bruto do DF em 2023. O PIB distrital somou R$ 365,7 bilh&#245;es e cresceu 3,3% em volume, no terceiro ano consecutivo de expans&#227;o.</p>
+              <details class="expand">
+                <summary>nota de m&#233;todo</summary>
+                <p>Administra&#231;&#227;o, defesa, educa&#231;&#227;o e sa&#250;de p&#250;blicas integram o setor de servi&#231;os nas Contas Regionais. Portanto, 95,4% n&#227;o representa economia privada. A decomposi&#231;&#227;o entre servi&#231;os p&#250;blicos e privados continua pendente.</p>
+              </details>
             </div>
-            <div class="source">fontes: IPEDF/Codeplan e IBGE; percentual espec&iacute;fico em valida&ccedil;&atilde;o metodol&oacute;gica</div>
+            <div class="source">fonte: IPEDF Codeplan e IBGE, Contas Regionais 2023, divulga&#231;&#227;o em nov/2025</div>
           </article>
           <article class="card">
             <div>
@@ -921,17 +965,45 @@
             <div>
               <h3>expectativa de vida elevada</h3>
               <span class="metric violet">79,7</span>
-              <p>Expectativa de vida ao nascer na T&aacute;bua de Mortalidade 2024. O dado fortalece o contraste editorial: vive-se muito no DF, mas homens jovens perif&eacute;ricos seguem mais expostos a mortes violentas e evit&aacute;veis.</p>
+              <p>Expectativa de vida ao nascer em 2024, acima da m&eacute;dia nacional de 76,6 anos. Nas Proje&ccedil;&otilde;es da Popula&ccedil;&atilde;o do IBGE, o DF aparece em 4&ordm; lugar entre as UFs, atr&aacute;s de Santa Catarina, Esp&iacute;rito Santo e S&atilde;o Paulo.</p>
+              <details class="expand">
+                <summary>nota de m&eacute;todo</summary>
+                <ul>
+                  <li>A T&aacute;bua Completa de Mortalidade anual produz o resultado do Brasil, n&atilde;o um ranking por UF.</li>
+                  <li>A compara&ccedil;&atilde;o entre UFs vem das Proje&ccedil;&otilde;es da Popula&ccedil;&atilde;o.</li>
+                  <li>A mortalidade infantil no DF foi de 10,6 por mil nascidos vivos em 2024.</li>
+                </ul>
+              </details>
             </div>
-            <div class="source">fonte: IBGE, T&aacute;bua de Mortalidade 2024, divulgada em novembro de 2025</div>
+            <div class="source">fonte: IBGE, Proje&ccedil;&otilde;es da Popula&ccedil;&atilde;o, dados de 2024; T&aacute;bua Completa de Mortalidade para a m&eacute;dia nacional</div>
           </article>
           <article class="card">
             <div>
               <h3>hiato racial de renda</h3>
-              <span class="metric red">em valida&ccedil;&atilde;o</span>
-              <p>A desigualdade racial de renda no DF &eacute; sustentada por diferentes bases, mas os valores espec&iacute;ficos antes usados no painel dependem de tabela, conceito de renda, universo e ano-base. At&eacute; essa identifica&ccedil;&atilde;o, o card fica como ponto de auditoria, n&atilde;o como n&uacute;mero fechado.</p>
+              <span class="metric red">+80%</span>
+              <p>Em 2024, pessoas brancas no DF recebiam, em m&eacute;dia, 80% mais que pessoas negras. O dado transforma a desigualdade racial em dimens&atilde;o estrutural do retrato de renda e precisa ser cruzado com territ&oacute;rio, ocupa&ccedil;&atilde;o e escolaridade.</p>
+              <details class="expand">
+                <summary>cruzamentos complementares</summary>
+                <ul>
+                  <li>Homens receberam 31% mais que mulheres em 2024.</li>
+                  <li>No recorte interseccional da S&iacute;ntese de Indicadores Sociais, pessoas brancas tinham rendimento m&eacute;dio de R$ 7.757, ante R$ 3.170 entre mulheres pretas ou pardas.</li>
+                  <li>Esse segundo contraste combina ra&ccedil;a e g&ecirc;nero; n&atilde;o deve ser apresentado como hiato exclusivamente racial.</li>
+                </ul>
+              </details>
             </div>
-            <div class="source">fontes a validar: Pnud, PDAD/IPEDF, PNAD Cont&iacute;nua e RAIS</div>
+            <div class="source">fontes: IBGE, PNAD Cont&iacute;nua 2024 e S&iacute;ntese de Indicadores Sociais 2025</div>
+          </article>
+          <article class="card">
+            <div>
+              <h3>riqueza n&atilde;o elimina pobreza</h3>
+              <span class="metric yellow">15,3%</span>
+              <p>Parcela da popula&ccedil;&atilde;o do DF abaixo da linha de pobreza no recorte de 2024. Outros 4,7% viviam com renda domiciliar per capita de at&eacute; um quarto do sal&aacute;rio m&iacute;nimo.</p>
+              <details class="expand">
+                <summary>leitura editorial</summary>
+                <p>A combina&ccedil;&atilde;o entre maior renda m&eacute;dia, maior Gini e pobreza persistente &eacute; uma das chaves do Prisma DF: a m&eacute;dia da capital encobre experi&ecirc;ncias econ&ocirc;micas radicalmente diferentes.</p>
+              </details>
+            </div>
+            <div class="source">fonte: IBGE, S&iacute;ntese de Indicadores Sociais 2025, com base em 2024</div>
           </article>
           <article class="card">
             <div>
@@ -949,13 +1021,13 @@
       <div class="shell">
         <div class="section-head">
           <h2>&#237;ndice-mestre dos dossi&#234;s</h2>
-          <p>Mapa de navega&#231;&#227;o editorial da biblioteca sobre o DF. A tese comum: o Distrito Federal real n&#227;o &#233; s&#243; a maquete modernista do poder; &#233; um sistema urbano que ultrapassa os limites do DF, majoritariamente negro, formado historicamente por migra&#231;&#245;es e hoje com maioria nascida no pr&#243;prio DF, desigual por CEP, que inventou a pr&#243;pria identidade em 66 anos.</p>
+          <p>Mapa de navega&#231;&#227;o dos 14 dossi&#234;s, organizados em sete trilhas editoriais. A tese comum: o Distrito Federal real n&#227;o &#233; s&#243; a maquete modernista do poder; &#233; um sistema urbano que ultrapassa os limites do DF, majoritariamente negro, formado historicamente por migra&#231;&#245;es e hoje com maioria nascida no pr&#243;prio DF, desigual por CEP, que inventou a pr&#243;pria identidade em 66 anos.</p>
         </div>
         <div class="cards">
           <article class="card feature">
             <div>
               <h3>a tese editorial</h3>
-              <p><span class="evidence evidence-hipotese">HIP&#211;TESE EDITORIAL</span> A for&#231;a do projeto est&#225; em cobrir o DF real al&#233;m dos clich&#234;s de Bras&#237;lia-poder e Bras&#237;lia-viol&#234;ncia. O fio comum entre os dossi&#234;s &#233; mostrar como identidade, ra&#231;a, g&#234;nero, idade, f&#233;, clima, moradia e mobilidade se cruzam no cotidiano local.</p>
+              <p><span class="evidence evidence-dado-hipotese">DADO + HIP&#211;TESE</span> O DF combina a maior renda domiciliar per capita e o maior Gini entre as UFs em 2025. A for&#231;a editorial do projeto est&#225; em explicar essa contradi&#231;&#227;o para al&#233;m dos clich&#234;s de Bras&#237;lia-poder e Bras&#237;lia-viol&#234;ncia, cruzando identidade, ra&#231;a, g&#234;nero, idade, f&#233;, clima, moradia, trabalho e mobilidade.</p>
               <details class="expand" open>
                 <summary>ver regra de leitura</summary>
                 <ul>
@@ -997,7 +1069,7 @@
                 </ul>
               </details>
             </div>
-            <div class="source">eixos: g&#234;nero, gera&#231;&#227;o, renda, cuidado, trabalho e m&#237;dia</div>
+            <div class="source">eixos: g&#234;nero, gera&#231;&#227;o, renda, cuidado e m&#237;dia</div>
           </article>
 
           <article class="card">
@@ -1009,11 +1081,39 @@
                 <ul>
                   <li><a href="#metropole-real">A metr&#243;pole real</a>: Entorno, RIDE, moradia e mobilidade de uma cidade que ultrapassou o DF formal.</li>
                   <li><a href="#cerrado-clima">Cerrado, clima e &#225;gua</a>: ber&#231;o das &#225;guas, seca, calor, inc&#234;ndios e racionamento.</li>
-                  <li><a href="#territorio">Territ&#243;rio polic&#234;ntrico</a>: RAs, centralidades, densidade e verticaliza&#231;&#227;o.</li>
+                  <li><a href="#brasilia-sem-endereco">Bras&#237;lia sem endere&#231;o</a>: a desigualdade extrema no centro, nas RAs e na trajet&#243;ria do novo candango.</li>
                 </ul>
               </details>
             </div>
             <div class="source">dado-&#226;ncora: RIDE com cerca de 4,8 milh&#245;es; 153 dias sem chuva em 2024</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>do que vivemos</h3>
+              <p>Trilha de trabalho, renda e seguran&#231;a financeira: como a economia mais rica do pa&#237;s distribui oportunidades e riscos.</p>
+              <details class="expand">
+                <summary>abrir dossi&#234;</summary>
+                <ul>
+                  <li><a href="#trabalho-dinheiro">Trabalho, concurso e dinheiro</a>: mercado aquecido, cultura do concurso, renda elevada, endividamento e distribui&#231;&#227;o profundamente desigual.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">dados-&#226;ncora: desocupa&#231;&#227;o de 6,5%; Gini de 0,570; 51,2% das fam&#237;lias endividadas com contas em atraso</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>como nos divertimos</h3>
+              <p>Trilha de cultura e lazer: m&#250;sica, festas, esporte, gastronomia, produ&#231;&#227;o audiovisual e repert&#243;rios criados pela migra&#231;&#227;o.</p>
+              <details class="expand">
+                <summary>abrir dossi&#234;</summary>
+                <ul>
+                  <li><a href="#cultura">Cultura e lazer</a>: rock, rap, pagode, sertanejo, gospel, festivais, esporte, gastronomia e m&#237;dia local.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">eixos: cena musical, calend&#225;rio cultural, corpo, comida, audiovisual e territ&#243;rio</div>
           </article>
 
           <article class="card">
@@ -1030,6 +1130,21 @@
             <div class="source">eixos: comunidade, cuidado, periferia, juventude, ra&#231;a e identidade</div>
           </article>
 
+          <article class="card">
+            <div>
+              <h3>como nos movemos</h3>
+              <p>Trilha de circula&#231;&#227;o, encontro e medo: o que acontece entre os territ&#243;rios e como trajetos, servi&#231;os e percep&#231;&#245;es reorganizam a vida cotidiana.</p>
+              <details class="expand">
+                <summary>abrir dossi&#234;s</summary>
+                <ul>
+                  <li><a href="#onde-df-se-encontra">Onde o DF se encontra</a>: segrega&#231;&#227;o na escala do quarteir&#227;o, centraliza&#231;&#227;o do emprego e destinos compartilhados.</li>
+                  <li><a href="#seguranca-medo">Seguran&#231;a e medo</a>: queda da letalidade, medo medido e mudan&#231;as de rotina.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">dados-&#226;ncora: segrega&#231;&#227;o de 0,282 para 0,545 conforme a escala; 94,3% mudaram alguma rotina por medo</div>
+          </article>
+
           <article class="card feature">
             <div>
               <h3>os fios entre os dossi&#234;s</h3>
@@ -1043,6 +1158,9 @@
                   <li><b>CEP:</b> metr&#243;pole real explica mortalidade masculina, mapa racial da renda, f&#233; por RA e mobilidade.</li>
                   <li><b>Migra&#231;&#227;o:</b> identidade candanga &#233; raiz de cultura, religi&#227;o, sotaque, moradia e Entorno.</li>
                   <li><b>Ra&#231;a:</b> popula&#231;&#227;o negra &#233; lente para renda, juventude, viol&#234;ncia, f&#233; e funda&#231;&#227;o da capital.</li>
+                  <li><b>Medo e circula&#231;&#227;o:</b> seguran&#231;a, encontro, metr&#243;pole, mulher e Cerrado mostram como risco percebido, infraestrutura e trajetos regulam quem circula, quando e por onde.</li>
+                  <li><b>Escala:</b> a leitura por RA aponta a dire&#231;&#227;o, mas o quarteir&#227;o e o percurso revelam desigualdades maiores.</li>
+                  <li><b>Renda e desigualdade:</b> trabalho, rua, mulher, popula&#231;&#227;o negra, juventude e terceira idade se conectam pelo Gini de 0,570 e pela diferen&#231;a entre renda m&#233;dia e capacidade real de pagar.</li>
                 </ul>
               </details>
             </div>
@@ -1056,11 +1174,9 @@
               <details class="expand">
                 <summary>ver candidatos</summary>
                 <ul>
-                  <li><b>Seguran&#231;a x medo:</b> descompasso entre queda de homic&#237;dios e sensa&#231;&#227;o de inseguran&#231;a.</li>
-                  <li><b>Trabalho, concurso e dinheiro:</b> servidor, renda extra, IA, empreendedorismo e cr&#233;dito.</li>
+                  <li><b>Graduados em outubro de 2026:</b> Seguran&#231;a e medo e Onde o DF se encontra agora integram a biblioteca como dossi&#234;s 13 e 14.</li>
                   <li><b>Viver ao lado do poder:</b> cotidiano de quem mora perto do centro pol&#237;tico nacional.</li>
                   <li><b>Economia al&#233;m do servidor:</b> servi&#231;os, creators, pequenos neg&#243;cios e consumo local.</li>
-                  <li><b>Franquias de entretenimento:</b> m&#250;sica, cena, esporte, corpo e gastronomia migrante.</li>
                 </ul>
               </details>
             </div>
@@ -1357,6 +1473,7 @@
                 <summary>ver paradoxo 2026</summary>
                 <ul>
                   <li><span class="evidence evidence-dado">DADO</span> O DF &#233; a UF com maior propor&#231;&#227;o de territ&#243;rio urbanizado: 11,5% em 2022, contra 10,3% em 2019.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> Somados os vazios intraurbanos, as fei&#231;&#245;es urbanizadas chegam a 670,40 km&#178;; 575,82 km&#178; s&#227;o &#225;reas densas, cerca de 86% do total.</li>
                   <li><span class="evidence evidence-dado">DADO</span> A estimativa populacional do IBGE aponta 3.009.996 habitantes em 1&#186;/jul/2026. Bras&#237;lia cruzou a marca de 3 milh&#245;es pela primeira vez e aparece como a 3&ordf; maior entre os munic&iacute;pios e equivalentes do pa&iacute;s; o DF n&atilde;o &eacute; munic&iacute;pio, mas o IBGE o trata como equivalente nas estat&iacute;sticas municipais.</li>
                   <li><span class="evidence evidence-dado">DADO</span> Em rela&#231;&#227;o ao Censo 2022, de 2.817.381 habitantes, s&#227;o +192,6 mil pessoas, alta de 6,8% em quatro anos.</li>
                   <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> A mancha urbana cresceu em ritmo superior ao da popula&#231;&#227;o. A hip&#243;tese editorial &#233; que Bras&#237;lia est&#225; crescendo mais r&#225;pido que sua gente; validar com cruzamento de &#225;rea, popula&#231;&#227;o, RA e Entorno.</li>
@@ -1365,6 +1482,25 @@
               </details>
             </div>
             <div class="source">fontes: IBGE, &#193;reas Urbanizadas do Brasil 2022, divulgado em 18/08/2026; IBGE, Estimativas da Popula&#231;&#227;o 2026, DOU de 28/08/2026</div>
+          </article>
+
+          <article class="card feature">
+            <div>
+              <h3>a periferia est&#225; subindo</h3>
+              <span class="metric">28,7%</span>
+              <p><span class="evidence evidence-dado-cultura">DADO + CULTURA</span> O DF tem a maior propor&#231;&#227;o de moradores em apartamentos entre as UFs: 28,7% em 2022, ante 17,6% em 2000 e 20,3% em 2010. A verticaliza&#231;&#227;o deixou de ser imagem exclusiva do Plano Piloto e de &#193;guas Claras e avan&#231;a sobre Taguatinga, Ceil&#226;ndia, Samambaia e Guar&#225;.</p>
+              <details class="expand" open>
+                <summary>ver territ&#243;rio, ranking e leitura</summary>
+                <ul>
+                  <li><span class="evidence evidence-dado">DADO</span> A casa ainda predomina: 66,14% da popula&#231;&#227;o, cerca de 1,8 milh&#227;o de pessoas, vivem em casas. &#201; a menor propor&#231;&#227;o entre as UFs.</li>
+                  <li><span class="evidence evidence-dado">DADO</span> No ranking nacional de moradores em apartamentos, o Plano Piloto lidera com 173.252 residentes e &#193;guas Claras aparece em 3&#186;, com 127.025; no DF, seguem Taguatinga, com mais de 77 mil, e Guar&#225;, com pouco mais de 63 mil.</li>
+                  <li><span class="evidence evidence-cultura">CULTURA</span> A verticaliza&#231;&#227;o estava na escala residencial de L&#250;cio Costa; &#193;guas Claras foi concebida como cidade densa, vertical e articulada ao metr&#244;.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> Tombamento, legisla&#231;&#227;o, pre&#231;o, financiamento e oferta imobili&#225;ria podem estar deslocando a verticaliza&#231;&#227;o para novas RAs. Validar com lan&#231;amentos, pre&#231;os e prefer&#234;ncias de moradia.</li>
+                  <li><span class="evidence evidence-dado-hipotese">DADO + HIP&Oacute;TESE</span> Renninger identifica &#225;reas de uso misto e m&#233;dia altura entre os morfotipos menos segregados. A pergunta original do Prisma &#233; se a nova densidade perif&#233;rica vem acompanhada de com&#233;rcio, servi&#231;o e transporte ou apenas concentra mais moradores.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes: IBGE, Censo 2000, 2010 e 2022 - Caracter&#237;sticas dos domic&#237;lios; UnB; mercado imobili&#225;rio local; Renninger/CASA-UCL, 2026</div>
           </article>
 
           <article class="card">
@@ -1507,10 +1643,465 @@
                   <li>Mapear grilagem e regulariza&#231;&#227;o com DF Legal, Terracap, Seduh e MPDFT.</li>
                   <li>Ouvir Ipea e especialistas sobre governan&#231;a metropolitana da RIDE.</li>
                   <li>Cruzar a expans&#227;o urbana de +72,08 km&#178; com RAs, Entorno, crescimento populacional e &#225;reas de recarga do Cerrado.</li>
+                  <li>Mapear a verticaliza&#231;&#227;o de Taguatinga, Ceil&#226;ndia, Samambaia e Guar&#225; junto com emprego, com&#233;rcio, servi&#231;os, metr&#244; e linhas de &#244;nibus.</li>
                 </ul>
               </details>
             </div>
             <div class="source">fontes-base: IBGE, IPEDF, Semob, Metr&#244;-DF, Ipea, DF Legal, MPDFT e IBGE &#193;reas Urbanizadas 2022</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="onde-df-se-encontra">
+      <div class="shell">
+        <div class="section-head">
+          <h2>Onde o DF se encontra</h2>
+          <p>Dossi&#234; de circula&#231;&#227;o e conviv&#234;ncia. Em vez de olhar apenas onde as pessoas moram, acompanha os percursos, os destinos compartilhados e a escala em que a desigualdade realmente aparece.</p>
+        </div>
+        <div class="section-callout">
+          <blockquote>o df parece misturado na foto a&#233;rea e continua segregado no encontro cotidiano.</blockquote>
+          <p>A Lente 1 substitui o endere&#231;o pelo percurso: quem cruza com quem, onde isso acontece e quais espa&#231;os ainda produzem conviv&#234;ncia real?</p>
+        </div>
+        <div class="cards">
+          <article class="card feature">
+            <div>
+              <h3>a escala muda o diagn&#243;stico</h3>
+              <span class="metric">0,282 &rarr; 0,545</span>
+              <p><span class="evidence evidence-dado">DADO</span> A segrega&#231;&#227;o medida no estudo de Andrew Renninger sobe de 0,282 no n&#237;vel de distrito para 0,545 na escala de quarteir&#227;o. A leitura por RA aponta a dire&#231;&#227;o, mas pode subestimar a magnitude da desigualdade.</p>
+              <details class="expand" open>
+                <summary>ver ressalvas obrigat&#243;rias</summary>
+                <ul>
+                  <li>O estudo &#233; um preprint de 2026, ainda sem revis&#227;o por pares.</li>
+                  <li>A base usa rastros digitais de mobilidade e representa quem tem smartphone e circula, n&#227;o toda a popula&#231;&#227;o.</li>
+                  <li>Esse vi&#233;s pode subestimar a imobilidade de pessoas mais pobres e mais velhas.</li>
+                  <li>Onde houver dado infra-RA, o Prisma deve us&#225;-lo; onde n&#227;o houver, a m&#233;dia por RA deve ser apresentada como piso.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fonte: Andrew Renninger, CASA/UCL, arXiv:2603.10657, 2026; territ&#243;rio: Bras&#237;lia e regi&#227;o metropolitana</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>o pobre circula; o rico seleciona</h3>
+              <p><span class="evidence evidence-dado">DADO</span> A mobilidade suaviza a segrega&#231;&#227;o residencial para a maioria, mas de forma assim&#233;trica: grupos mais pobres percorrem dist&#226;ncias maiores, enquanto os mais ricos preservam encontros seletivos.</p>
+              <details class="expand">
+                <summary>ver leitura territorial</summary>
+                <p>N&#250;cleos c&#237;vicos e &#225;reas de uso misto de m&#233;dia altura aparecem entre os morfotipos menos segregados. Amenidades e conex&#245;es porosas favorecem integra&#231;&#227;o; barreiras e interiores residenciais fechados a reduzem.</p>
+              </details>
+            </div>
+            <div class="source">fonte: Renninger, CASA/UCL, 2026; resultado de preprint</div>
+          </article>
+
+          <article class="card feature">
+            <div>
+              <h3>resid&#234;ncia descentralizada, oportunidade centralizada</h3>
+              <span class="metric">25 de 30 RAs</span>
+              <p><span class="evidence evidence-dado">DADO de 2011</span> Apenas cinco das 30 RAs analisadas tinham saldo positivo entre postos de trabalho gerados e moradores ocupados. O Plano Piloto concentrava 47,72% dos postos; Ceil&#226;ndia tinha raz&#227;o de 0,45 emprego por ocupado residente.</p>
+              <details class="expand" open>
+                <summary>como usar o dado</summary>
+                <ul>
+                  <li>O estudo foi publicado em 2013 com base na PDAD/DF de 2011.</li>
+                  <li>Serve como estrutura e ordem de grandeza, n&#227;o como fotografia corrente.</li>
+                  <li>A atualiza&#231;&#227;o da distribui&#231;&#227;o de empregos por RA est&#225; entre os pedidos formais priorit&#225;rios ao IPEDF.</li>
+                  <li>O mecanismo permanece editorialmente central: quando o emprego n&#227;o mora perto, o deslocamento deixa de ser escolha.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fonte: Codeplan, estudo de J&#250;lio Miragaya, abril de 2013, base PDAD/DF-2011</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>o encontro tem endere&#231;o</h3>
+              <p><span class="evidence evidence-cultura">CULTURA</span> Rodovi&#225;ria do Plano Piloto, Parque da Cidade, feiras, est&#225;dios, festas populares, parques e equipamentos culturais funcionam como destinos compartilhados. Muitos s&#227;o sazonais, gratuitos ou ligados ao transporte.</p>
+              <details class="expand">
+                <summary>ponto de valida&#231;&#227;o</summary>
+                <p>A cifra de cerca de 600 mil passageiros di&#225;rios na Rodovi&#225;ria circula sem fonte prim&#225;ria reproduz&#237;vel. O Prisma pediu &#224; Semob o fluxo medido, o m&#233;todo e o ano de refer&#234;ncia antes de publicar o superlativo.</p>
+              </details>
+            </div>
+            <div class="source">fontes-base: Semob-DF, Metr&#244;-DF, Iphan, Secult-DF e agenda local; fluxo da Rodovi&#225;ria em valida&#231;&#227;o</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>a infraestrutura do encontro encolhe</h3>
+              <span class="metric">41,55 mi</span>
+              <p><span class="evidence evidence-dado-hipotese">DADO + HIP&#211;TESE</span> O Metr&#244;-DF transportou 41,55 milh&#245;es de passageiros em 2025, abaixo dos 42,8 milh&#245;es de 2019, enquanto a frota de ve&#237;culos cresceu 142,8 mil unidades apenas em 2025.</p>
+              <details class="expand">
+                <summary>hip&#243;tese a testar</summary>
+                <p>A m&#233;dia est&#225;vel em dias &#250;teis sugere que o deslocamento obrigat&#243;rio resistiu e o n&#227;o pendular recuou. A confirma&#231;&#227;o depende da s&#233;rie de passageiros por dia da semana e faixa hor&#225;ria.</p>
+              </details>
+            </div>
+            <div class="source">fontes: Metr&#244;-DF, relat&#243;rios de passageiros 2019-2025; Detran-DF; detalhamento temporal solicitado</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>mais densa e mais espalhada</h3>
+              <p><span class="evidence evidence-dado">DADO</span> O DF combina a maior propor&#231;&#227;o de moradores em apartamentos entre as UFs, 28,7%, com a maior expans&#227;o absoluta de &#225;rea urbanizada do pa&#237;s entre 2019 e 2022, mais 72,08 km&#178;.</p>
+              <details class="expand">
+                <summary>leitura da lente</summary>
+                <p>Mais densidade, mais extens&#227;o urbana e mais autom&#243;veis n&#227;o significam mais conviv&#234;ncia. A pergunta &#233; se novos bairros trazem emprego, servi&#231;o e destinos compartilhados ou apenas concentram moradores.</p>
+              </details>
+            </div>
+            <div class="source">fontes: IBGE, Censo 2022 e &#193;reas Urbanizadas do Brasil 2022; Detran-DF</div>
+          </article>
+
+          <article class="card feature">
+            <div>
+              <h3>agenda de achado pr&#243;prio</h3>
+              <p><span class="evidence evidence-hipotese">HIP&#211;TESE EDITORIAL</span> O Prisma pode transformar circula&#231;&#227;o em intelig&#234;ncia local ao medir destinos, diversidade de encontros, viagens opcionais e barreiras de acesso.</p>
+              <details class="expand" open>
+                <summary>frentes priorit&#225;rias</summary>
+                <ul>
+                  <li>Atualizar a raz&#227;o empregos gerados por moradores ocupados em cada RA.</li>
+                  <li>Obter fluxo da Rodovi&#225;ria e passageiros do metr&#244; por dia e hor&#225;rio.</li>
+                  <li>Mapear origem dos frequentadores de destinos compartilhados.</li>
+                  <li>Aplicar no survey o m&#243;dulo Encontros: RAs visitadas, destinos recorrentes e diversidade percebida.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes a acionar: IPEDF, Semob-DF, Metr&#244;-DF, Seduh, Andrew Renninger e pesquisa pr&#243;pria</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="seguranca-medo">
+      <div class="shell">
+        <div class="section-head">
+          <h2>Seguran&#231;a e medo no Distrito Federal</h2>
+          <p>Dossi&#234; sobre a diferen&#231;a entre viol&#234;ncia registrada, percep&#231;&#227;o de risco e comportamento. No DF, o medo &#233; dado mensur&#225;vel, mas a principal pesquisa local dispon&#237;vel ainda &#233; de 2015.</p>
+        </div>
+        <div class="section-callout">
+          <blockquote>o df reduziu a viol&#234;ncia que mata e ainda n&#227;o resolveu a viol&#234;ncia que assusta.</blockquote>
+          <p>Crime e medo n&#227;o s&#227;o o mesmo fen&#244;meno. A cobertura ganha precis&#227;o quando separa s&#233;rie policial, sistema de sa&#250;de, vitimiza&#231;&#227;o declarada e mudan&#231;a de rotina.</p>
+        </div>
+        <div class="cards">
+          <article class="card feature">
+            <div>
+              <h3>a d&#233;cada que mudou a letalidade</h3>
+              <span class="metric">-66%</span>
+              <p><span class="evidence evidence-dado">DADO</span> Pelo Atlas da Viol&#234;ncia, a taxa de homic&#237;dios caiu de 30,5 para 10,3 por 100 mil habitantes entre 2014 e 2024, de 843 para 308 &#243;bitos. Foi a maior queda do pa&#237;s na d&#233;cada.</p>
+              <details class="expand" open>
+                <summary>ver onde a queda foi maior</summary>
+                <ul>
+                  <li>Entre jovens de 15 a 29 anos: menos 80%, de 453 para 89 casos.</li>
+                  <li>Entre pessoas negras: menos 64,5%, de 710 para 252.</li>
+                  <li>Homic&#237;dios por arma de fogo: menos 80,3%, de 633 para 125.</li>
+                  <li>Em 2024, o DF foi a terceira UF menos violenta nessa base, atr&#225;s de S&#227;o Paulo e Santa Catarina.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fonte: Ipea/FBSP, Atlas da Viol&#234;ncia 2026, base SIM/Minist&#233;rio da Sa&#250;de</div>
+          </article>
+
+          <article class="card feature">
+            <div>
+              <h3>qual &#233; o n&#250;mero? depende de quem conta</h3>
+              <span class="metric">203 | 270 | 308</span>
+              <p><span class="evidence evidence-dado">DADO</span> Para 2024, a SSP-DF registrou 203 v&#237;timas de homic&#237;dio doloso; o FBSP contou 270 Mortes Violentas Intencionais; e o Atlas registrou 308 &#243;bitos por agress&#227;o no sistema de sa&#250;de.</p>
+              <details class="expand" open>
+                <summary>ver conceitos</summary>
+                <ul>
+                  <li><b>SSP-DF:</b> homic&#237;dio doloso registrado pela pol&#237;cia, taxa de 6,8 por 100 mil.</li>
+                  <li><b>FBSP:</b> MVI soma homic&#237;dio doloso, latroc&#237;nio, les&#227;o seguida de morte e interven&#231;&#227;o policial, taxa de 9,1.</li>
+                  <li><b>Atlas/SIM:</b> &#243;bito por agress&#227;o declarado no atestado de &#243;bito, taxa de 10,3.</li>
+                  <li>Regra: nunca comparar a s&#233;rie de uma fonte com o valor de outra.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes: SSP-DF; Anu&#225;rio FBSP 2026; Atlas da Viol&#234;ncia 2026</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>2025 interrompeu a queda</h3>
+              <span class="metric">+5,8%</span>
+              <p><span class="evidence evidence-dado">DADO</span> As MVI subiram de 270 v&#237;timas em 2024 para 287 em 2025, taxa de 9,6 por 100 mil. O movimento interrompeu doze anos de redu&#231;&#227;o cont&#237;nua nessa s&#233;rie.</p>
+              <details class="expand">
+                <summary>ver sinais internos</summary>
+                <ul>
+                  <li>Homic&#237;dio doloso: 253 v&#237;timas, alta de 8,1%.</li>
+                  <li>Latroc&#237;nio: de 8 para 13 v&#237;timas.</li>
+                  <li>Feminic&#237;dio: de 22 para 29 no Anu&#225;rio FBSP; a diverg&#234;ncia com a SSP deve permanecer identificada.</li>
+                  <li>No primeiro trimestre de 2026, homic&#237;dios voltaram a cair, enquanto estelionato cresceu 35%.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes: Anu&#225;rio FBSP 2026; SSP-DF, 1&#186; trimestre de 2026</div>
+          </article>
+
+          <article class="card feature">
+            <div>
+              <h3>o medo j&#225; reorganizou a rotina</h3>
+              <span class="metric">94,3%</span>
+              <p><span class="evidence evidence-dado">DADO de 2015</span> Na Pesquisa Distrital de Vitimiza&#231;&#227;o, 94,3% dos moradores disseram ter mudado alguma rotina por causa da viol&#234;ncia; 21,8% abandonaram todas as oito atividades pesquisadas.</p>
+              <details class="expand" open>
+                <summary>o que deixou de ser feito</summary>
+                <ul>
+                  <li>86,9% evitavam sair com dinheiro ou objetos de valor.</li>
+                  <li>85,6% evitavam locais desertos.</li>
+                  <li>83,9% sentiam inseguran&#231;a em pelo menos uma das sete situa&#231;&#245;es avaliadas.</li>
+                  <li>A correla&#231;&#227;o entre ter sido v&#237;tima e sentir medo foi de apenas 0,10.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fonte: SSP-DF, Pesquisa Distrital de Vitimiza&#231;&#227;o, out/2015, 19.537 moradores de 16+, representativa para 31 RAs; data da onda a confirmar institucionalmente</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>medo noturno tem g&#234;nero</h3>
+              <span class="metric">70,1% x 59,7%</span>
+              <p><span class="evidence evidence-dado">DADO de 2015</span> No pr&#243;prio bairro, &#224; noite, 70,1% das mulheres e 59,7% dos homens se sentiam inseguros. O recorte local substitui a refer&#234;ncia nacional antes usada no Prisma.</p>
+              <details class="expand">
+                <summary>ver outras situa&#231;&#245;es</summary>
+                <ul>
+                  <li>Sozinho em casa: 31,4% das mulheres e 19% dos homens.</li>
+                  <li>No pr&#243;prio bairro de dia: 46,1% das mulheres e 34,6% dos homens.</li>
+                  <li>Em outros bairros &#224; noite: 83,9% das mulheres e 76,4% dos homens.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fonte: SSP-DF, PVD 2015; territ&#243;rio da amostra: Distrito Federal</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>o privil&#233;gio &#233; poder n&#227;o sair</h3>
+              <span class="metric">31,2% x 10,2%</span>
+              <p><span class="evidence evidence-dado-hipotese">DADO + HIP&#211;TESE</span> Sozinho em casa, o medo entre moradores de lares com at&#233; dois sal&#225;rios m&#237;nimos era tr&#234;s vezes o dos que tinham mais de 15. Em outros bairros &#224; noite, a diferen&#231;a praticamente desaparecia.</p>
+              <details class="expand">
+                <summary>leitura editorial</summary>
+                <p>Fora do territ&#243;rio conhecido, quase todas as classes relatavam medo semelhante. A diferen&#231;a pode estar menos em sentir medo e mais na possibilidade de evitar o deslocamento. A interpreta&#231;&#227;o pede atualiza&#231;&#227;o e escuta qualitativa.</p>
+              </details>
+            </div>
+            <div class="source">fonte: SSP-DF, PVD 2015; leitura editorial a validar</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>medo tamb&#233;m &#233; infraestrutura</h3>
+              <p><span class="evidence evidence-dado-hipotese">DADO + HIP&#211;TESE</span> Estudos acad&#234;micos baseados na PVD encontraram associa&#231;&#227;o mais forte do medo com desordem f&#237;sica, desordem social e qualidade dos servi&#231;os p&#250;blicos do que com a experi&#234;ncia direta de vitimiza&#231;&#227;o.</p>
+              <details class="expand">
+                <summary>o que cruzar</summary>
+                <p>Ilumina&#231;&#227;o, mato alto, terreno baldio, parada de &#244;nibus, cal&#231;ada, lixo e arboriza&#231;&#227;o devem ser cruzados com medo por RA. A hip&#243;tese &#233; que reduzir a sensa&#231;&#227;o de risco tamb&#233;m seja pauta de urbanismo e servi&#231;o p&#250;blico.</p>
+              </details>
+            </div>
+            <div class="source">fonte: Trindade e Durante, Sociedade e Estado, 2021; base PVD 2015</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>a m&#237;dia n&#227;o explica tudo</h3>
+              <span class="metric">41,1% x 39,2%</span>
+              <p><span class="evidence evidence-dado">DADO</span> As fontes de informa&#231;&#227;o sobre seguran&#231;a se dividiam entre m&#237;dia tradicional, 41,1%, e viv&#234;ncia na vizinhan&#231;a, 39,2%, sem diferen&#231;a estat&#237;stica significativa. Perfil socioecon&#244;mico pesava mais na constru&#231;&#227;o do medo.</p>
+              <details class="expand">
+                <summary>credibilidade em disputa</summary>
+                <p>Sobre o notici&#225;rio de seguran&#231;a, 39,1% diziam que a m&#237;dia exagerava, 34,4% que noticiava fielmente e 26,5% que os fatos eram piores do que o mostrado.</p>
+              </details>
+            </div>
+            <div class="source">fonte: Costa e Durante, Opini&#227;o P&#250;blica, 2022, base PVD com 19.897 respondentes; confirmar onda e data com SSP-DF</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>a viol&#234;ncia mudou de lugar</h3>
+              <p><span class="evidence evidence-dado-hipotese">DADO + HIP&#211;TESE</span> Feminic&#237;dio, viol&#234;ncia contra idosos e golpe digital crescem enquanto a letalidade geral cai. O elo interpretativo &#233; a viol&#234;ncia de rela&#231;&#227;o e confian&#231;a: parceiro, familiar, telefone e aplicativo.</p>
+              <details class="expand">
+                <summary>ver indicadores</summary>
+                <ul>
+                  <li>18.572 estelionatos virtuais no DF em 2024, um a cada 28 minutos.</li>
+                  <li>Notifica&#231;&#245;es de viol&#234;ncia contra idosos passaram de 93 para 220 casos na s&#233;rie do Atlas.</li>
+                  <li>13.432 estelionatos contra pessoas idosas entre jan/2025 e mai/2026; 53% pela internet.</li>
+                  <li>Na PVD, fraude j&#225; era o tipo mais frequente de vitimiza&#231;&#227;o declarada, 15,2%.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes: Anu&#225;rio FBSP 2026; Atlas da Viol&#234;ncia 2026; PCDF; SSP-DF/PVD</div>
+          </article>
+
+          <article class="card feature">
+            <div>
+              <h3>a compara&#231;&#227;o que falta</h3>
+              <p><span class="evidence evidence-hipotese">HIP&#211;TESE EDITORIAL</span> O achado pr&#243;prio ser&#225; comparar o mapa do crime com o mapa do medo. A literatura local sugere que eles n&#227;o coincidem, mas o cruzamento depende de dados por RA.</p>
+              <details class="expand" open>
+                <summary>agenda priorit&#225;ria</summary>
+                <ul>
+                  <li>Confirmar ondas, question&#225;rio, plano amostral e microdados da PVD.</li>
+                  <li>Acompanhar a nova pesquisa domiciliar de seguran&#231;a de 2026, prevista para mais de 19 mil moradores e todas as RAs.</li>
+                  <li>Obter a s&#233;rie mensal de CVLI por RA com o conceito declarado.</li>
+                  <li>Cruzar medo com ilumina&#231;&#227;o, arboriza&#231;&#227;o, cal&#231;ada, coleta e demais servi&#231;os.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes a acionar: SSP-DF, PCDF, FBSP, Ipea, Arthur Trindade, Marcelo Durante e pesquisa pr&#243;pria</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="brasilia-sem-endereco">
+      <div class="shell">
+        <div class="section-head">
+          <h2>Bras&#237;lia sem endere&#231;o</h2>
+          <p>Popula&#231;&#227;o em situa&#231;&#227;o de rua no Distrito Federal. O dossi&#234; cruza territ&#243;rio, trabalho, ra&#231;a, g&#234;nero, migra&#231;&#227;o e pol&#237;tica p&#250;blica sem reduzir pessoas a paisagem urbana, problema de seguran&#231;a ou estat&#237;stica de ocupa&#231;&#227;o do espa&#231;o.</p>
+        </div>
+        <div class="section-callout">
+          <blockquote>a epopeia candanga tamb&#233;m tem um desfecho sem teto.</blockquote>
+          <p>A maioria &#233; masculina, negra e migrante. Tem trajet&#243;ria, trabalho, v&#237;nculos e projetos; quase sempre quer sair da rua, mas encontra barreiras que o n&#250;mero agregado n&#227;o explica.</p>
+        </div>
+        <div class="cards">
+          <article class="card feature">
+            <div>
+              <h3>onde a desigualdade termina</h3>
+              <span class="metric">3.521</span>
+              <p><span class="evidence evidence-dado">DADO</span> O 2&ordm; Censo Distrital identificou 3.521 pessoas em situa&#231;&#227;o de rua em 2025, alta de 19,4% sobre as 2.938 registradas em 2022. A coleta percorreu as 35 RAs e incluiu rua, acolhimento e comunidades terap&#234;uticas.</p>
+              <details class="expand" open>
+                <summary>ver perfil</summary>
+                <ul>
+                  <li>82% s&#227;o homens; 81% s&#227;o pretos ou pardos.</li>
+                  <li>52% t&#234;m de 31 a 49 anos; 63% nasceram fora do DF.</li>
+                  <li>Na noite da pesquisa, 69% dormiram na rua, 21% em acolhimento e 6% em comunidades terap&#234;uticas.</li>
+                  <li>Entre os migrantes, 42,9% vieram procurar emprego, repetindo a rota hist&#243;rica do candango sob outra condi&#231;&#227;o.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fonte: IPEDF/Sedes-DF, 2&ordm; Censo Distrital da Popula&#231;&#227;o em Situa&#231;&#227;o de Rua, coleta jan-fev/2025</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>a pobreza est&#225; no cart&#227;o-postal</h3>
+              <span class="metric">25,4%</span>
+              <p><span class="evidence evidence-dado-cultura">DADO + CULTURA</span> O Plano Piloto concentra 897 pessoas, a maior parcela do DF. A popula&#231;&#227;o em situa&#231;&#227;o de rua se aproxima de servi&#231;os, fluxo, com&#233;rcio e acolhimento; por isso, n&#227;o reproduz simplesmente o mapa residencial da periferia.</p>
+              <details class="expand">
+                <summary>ver movimentos territoriais</summary>
+                <ul>
+                  <li>Ceil&#226;ndia cresceu 94,3%, de 370 para 719 pessoas.</li>
+                  <li>Taguatinga caiu 12,5% e S&#227;o Sebasti&#227;o, 33,7%.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> O salto de Ceil&#226;ndia pode combinar crescimento real, mudan&#231;a de m&#233;todo ou deslocamento territorial; validar com o IPEDF.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fonte: IPEDF, painel comparativo dos Censos Distritais 2022 e 2025</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>ningu&#233;m vai para a rua por um motivo s&#243;</h3>
+              <span class="metric">35,6% + 32,6%</span>
+              <p><span class="evidence evidence-dado">DADO</span> No 1&ordm; Censo, os principais motivos declarados foram conflitos familiares ou separa&#231;&#227;o conjugal (35,6%) e desemprego, demiss&#227;o ou falta de renda (32,6%). Ruptura afetiva e perda econ&#244;mica se acumulam.</p>
+              <details class="expand">
+                <summary>ver perman&#234;ncia e prote&#231;&#227;o</summary>
+                <ul>
+                  <li>28% est&#227;o em situa&#231;&#227;o de rua h&#225; dez anos ou mais.</li>
+                  <li>45,3% recebiam algum benef&#237;cio, sobretudo Bolsa Fam&#237;lia: a transfer&#234;ncia existe, mas n&#227;o basta.</li>
+                  <li>61,9% dos que n&#227;o estudavam manifestaram interesse em voltar &#224; escola.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fonte: IPEDF/Codeplan, 1&ordm; Censo Distrital da Popula&#231;&#227;o em Situa&#231;&#227;o de Rua, 2022</div>
+          </article>
+
+          <article class="card feature">
+            <div>
+              <h3>duas bases, dois retratos</h3>
+              <span class="metric">3.521 x 7.924</span>
+              <p><span class="evidence evidence-dado">DADO</span> O censo presencial do IPEDF registrou 3.521 pessoas; o MDHC encontrou 7.924 em cadastro administrativo. A diferen&#231;a n&#227;o &#233; erro: uma base fotografa noites de coleta, a outra acompanha registros acumulados de pessoas que entram e saem dessa condi&#231;&#227;o.</p>
+              <details class="expand" open>
+                <summary>regra de uso</summary>
+                <ul>
+                  <li>Usar 3.521 como retrato local detalhado do DF.</li>
+                  <li>O superlativo de quase tr&#234;s pessoas por mil habitantes deriva da base do MDHC, n&#227;o do censo distrital.</li>
+                  <li>Com 3.521 pessoas, a propor&#231;&#227;o seria de aproximadamente 1,2 por mil.</li>
+                  <li>Nunca combinar o n&#250;mero de uma fonte com o ranking produzido pela outra.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes: IPEDF/Sedes-DF, 2025; MDHC, Relat&#243;rio da Popula&#231;&#227;o em Situa&#231;&#227;o de Rua</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>um avan&#231;o que precisa ser contado</h3>
+              <span class="metric">-50%</span>
+              <p><span class="evidence evidence-dado">DADO</span> O n&#250;mero de crian&#231;as e adolescentes caiu de 244 em 2022 para 121 em 2025. O resultado mostra que pol&#237;tica p&#250;blica pode alterar a trajet&#243;ria do indicador e impede uma narrativa apenas fatalista.</p>
+              <details class="expand">
+                <summary>ver desdobramento</summary>
+                <p>Em doze meses, 225 crian&#231;as e adolescentes foram encaminhados pelo Conselho Tutelar para matr&#237;cula ou remanejamento escolar ap&#243;s abordagem. A pauta &#233; descobrir quais a&#231;&#245;es funcionaram, por quanto tempo e com que continuidade.</p>
+              </details>
+            </div>
+            <div class="source">fontes: IPEDF/Sedes-DF, Censos Distritais 2022 e 2025; Conselho Tutelar</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>acolhimento virou pol&#237;tica integral</h3>
+              <span class="metric">Lei 7.923</span>
+              <p><span class="evidence evidence-dado">DADO</span> Em vigor desde 17/07/2026, a lei distrital estabelece acolhimento volunt&#225;rio, pro&#237;be recolhimento for&#231;ado indiscriminado e articula sa&#250;de, assist&#234;ncia, moradia, v&#237;nculos e reinser&#231;&#227;o social.</p>
+              <details class="expand">
+                <summary>ver estrutura prevista</summary>
+                <ul>
+                  <li>A Aten&#231;&#227;o Prim&#225;ria passa a ser porta preferencial do SUS, com Consult&#243;rio na Rua e equipes de Sa&#250;de da Fam&#237;lia.</li>
+                  <li>A norma prev&#234; alas exclusivas para mulheres e atendimento jur&#237;dico especializado.</li>
+                  <li>A rede informada soma 1.291 vagas de acolhimento, com cerca de 900 pessoas acolhidas.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fonte: CLDF, Lei n&ordm; 7.923/2026; Sedes-DF</div>
+          </article>
+
+          <article class="card feature">
+            <div>
+              <h3>por que 96% dizem n&#227;o?</h3>
+              <span class="metric">44 de 1.260</span>
+              <p><span class="evidence evidence-dado-hipotese">DADO + HIP&Oacute;TESE</span> Desde 2024, 1.260 pessoas foram abordadas em opera&#231;&#245;es e apenas 44 aceitaram acolhimento institucional, menos de 4%. A recusa &#233; o dado; as raz&#245;es exigem escuta direta.</p>
+              <details class="expand" open>
+                <summary>perguntas para apura&#231;&#227;o</summary>
+                <ul>
+                  <li>Regras, hor&#225;rios e experi&#234;ncias anteriores afastam?</li>
+                  <li>Casais, animais e pertences conseguem permanecer juntos?</li>
+                  <li>Qual &#233; a trajet&#243;ria de quem aceita o acolhimento?</li>
+                  <li>Como pessoas que j&#225; viveram na rua avaliam a rede atual?</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes: Sedes-DF e Casa Civil; motivos de recusa ainda dependem de pesquisa qualitativa</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>trabalho como porta de sa&#237;da</h3>
+              <span class="metric">2%</span>
+              <p><span class="evidence evidence-dado">DADO</span> Contratos distritais de servi&#231;os e obras reservam ao menos 2% das vagas a pessoas em situa&#231;&#227;o de rua; o RenovaDF pode destinar at&#233; 10% de cada ciclo a encaminhados por &#243;rg&#227;os parceiros.</p>
+              <details class="expand">
+                <summary>o que falta medir</summary>
+                <p>Quantas pessoas foram contratadas, permaneceram no trabalho e conseguiram acessar moradia? A exist&#234;ncia da porta n&#227;o comprova que a travessia ocorreu.</p>
+              </details>
+            </div>
+            <div class="source">fontes: Sedet-DF, RenovaDF e normas distritais de contrata&#231;&#227;o</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>agenda editorial e de valida&#231;&#227;o</h3>
+              <p><span class="evidence evidence-hipotese">HIP&Oacute;TESE EDITORIAL</span> A cobertura precisa combinar trajet&#243;ria, pol&#237;tica p&#250;blica, trabalho, territ&#243;rio e autonomia, sempre falando com as pessoas e n&#227;o apenas sobre elas.</p>
+              <details class="expand">
+                <summary>ver pautas priorit&#225;rias</summary>
+                <ul>
+                  <li>O candango sem endere&#231;o: migra&#231;&#227;o em busca de trabalho sem o desfecho da epopeia.</li>
+                  <li>Por que 96% dizem n&#227;o: a recusa ao acolhimento contada por quem recusa.</li>
+                  <li>A pobreza mora no cart&#227;o-postal: por que o Plano Piloto concentra a maior parcela.</li>
+                  <li>Ceil&#226;ndia dobrou: apurar o salto de 94,3%.</li>
+                  <li>Tem benef&#237;cio e n&#227;o basta: a dist&#226;ncia entre transfer&#234;ncia de renda e sa&#237;da da rua.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes a acionar: IPEDF, Sedes-DF, MDHC, Consult&#243;rio na Rua, TCDF, Sedet-DF e escuta qualificada</div>
           </article>
         </div>
       </div>
@@ -1593,6 +2184,261 @@
               <p>Apenas 7% dizem confiar na maioria das pessoas. Esse dado &#233; importante para comunica&#231;&#227;o p&#250;blica, jornalismo local e desenho de servi&#231;os.</p>
             </div>
             <div class="source">fonte: Brasil no Espelho 2024, citado no documento-base</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="trabalho-dinheiro">
+      <div class="shell">
+        <div class="section-head">
+          <h2>trabalho, concurso e dinheiro</h2>
+          <p>O mercado de trabalho mais est&#225;vel do pa&#237;s convive com a maior desigualdade de renda. O dossi&#234; acompanha quem trabalha, quem ganha, quem estuda para entrar no servi&#231;o p&#250;blico e por que a conta n&#227;o fecha para tantas fam&#237;lias.</p>
+        </div>
+        <div class="section-callout">
+          <blockquote>a m&#225;quina funciona; a distribui&#231;&#227;o n&#227;o.</blockquote>
+          <p>Desemprego baixo, informalidade contida e renda elevada s&#227;o fatos. Gini recorde, hiatos salariais e inadimpl&#234;ncia tamb&#233;m. A for&#231;a editorial est&#225; em sustentar as duas metades ao mesmo tempo.</p>
+        </div>
+        <div class="cards">
+          <article class="card feature">
+            <div>
+              <h3>mercado aquecido, renda concentrada</h3>
+              <span class="metric">6,5% x 0,570</span>
+              <p><span class="evidence evidence-dado">DADO</span> No 2&ordm; trimestre de 2026, a desocupa&#231;&#227;o pela PNAD Cont&#237;nua caiu a 6,5%, com 1,57 milh&#227;o de ocupados. Em 2025, o Gini do rendimento domiciliar per capita chegou a 0,570, o maior entre as UFs e em alta pelo terceiro ano consecutivo.</p>
+              <details class="expand" open>
+                <summary>ver os superlativos</summary>
+                <ul>
+                  <li>Informalidade de 28,7%: segunda menor do pa&#237;s, com cerca de 450 mil trabalhadores.</li>
+                  <li>Rendimento m&#233;dio mensal do trabalho de R$ 6.171 no 2&ordm; trimestre de 2026, o maior entre as UFs.</li>
+                  <li>Renda domiciliar per capita m&#233;dia real de R$ 4.401 em 2025, tamb&#233;m a maior do pa&#237;s.</li>
+                  <li>O indicador-chave n&#227;o &#233; apenas quanto a cidade gera, mas para quem a renda chega.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes: IBGE, PNAD Cont&#237;nua Trimestral 2&ordm; tri/2026 e Rendimento de Todas as Fontes 2025</div>
+          </article>
+
+          <article class="card feature">
+            <div>
+              <h3>95,4% de servi&#231;os, com o Estado dentro</h3>
+              <span class="metric">R$ 365,7 bi</span>
+              <p><span class="evidence evidence-dado">DADO</span> Em 2023, os servi&#231;os responderam por 95,4% do valor adicionado bruto do DF e cresceram 3,2%. O PIB chegou a R$ 365,7 bilh&#245;es em valores correntes, com alta de 3,3% em volume pelo terceiro ano seguido.</p>
+              <details class="expand" open>
+                <summary>evitar duas armadilhas</summary>
+                <ul>
+                  <li>O setor p&#250;blico est&#225; inclu&#237;do nos 95,4%; o percentual n&#227;o descreve apenas servi&#231;os privados.</li>
+                  <li>A participa&#231;&#227;o de 42,1% atribu&#237;da ao setor p&#250;blico vem de fonte secund&#225;ria sem ano declarado e n&#227;o deve ser publicada.</li>
+                  <li>Os 53,3% de servi&#231;os privados seriam resultado de subtra&#231;&#227;o, n&#227;o valor lido em tabela; permanecem suspensos.</li>
+                  <li>A tabela oficial de VAB por atividade foi inclu&#237;da entre os pedidos formais ao IPEDF.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fonte: IPEDF Codeplan, com base nas Contas Regionais do IBGE, ano de refer&#234;ncia 2023, divulgado em nov/2025</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>PIB per capita n&#227;o &#233; renda</h3>
+              <span class="metric">R$ 129.790,44</span>
+              <p><span class="evidence evidence-dado">DADO</span> O PIB per capita anual do DF em 2023 foi cerca de 2,4 vezes a m&#233;dia nacional. Ele mede valor produzido por habitante, n&#227;o dinheiro recebido pelo morador.</p>
+              <details class="expand">
+                <summary>como comparar corretamente</summary>
+                <p>A renda do morador &#233; outra medida: rendimento domiciliar per capita m&#233;dio real de R$ 4.401 por m&#234;s em 2025. Os dois indicadores podem coexistir, desde que ano, periodicidade e conceito apare&#231;am com clareza.</p>
+              </details>
+            </div>
+            <div class="source">fontes: IPEDF/IBGE, Contas Regionais 2023; IBGE, PNAD Cont&#237;nua - Rendimento de Todas as Fontes 2025</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>onde o crescimento privado aparece</h3>
+              <p><span class="evidence evidence-dado">DADO</span> Em 2023, atividades financeiras, seguros e servi&#231;os relacionados cresceram 13,2% e passaram de 19,9% para 20,8% do VAB. Informa&#231;&#227;o e comunica&#231;&#227;o avan&#231;aram 5,4%; agropecu&#225;ria, 9,3%; constru&#231;&#227;o recuou 1,5%.</p>
+              <details class="expand">
+                <summary>ver cuidados e tend&#234;ncias</summary>
+                <ul>
+                  <li>A constru&#231;&#227;o, com VAB de R$ 7,099 bilh&#245;es, respondeu por 52,7% do VAB industrial do DF.</li>
+                  <li>A alta de 10% para informa&#231;&#227;o e comunica&#231;&#227;o na Pesquisa Mensal de Servi&#231;os mede conceito diferente dos 5,4% das Contas Regionais; identificar a fonte.</li>
+                  <li>Dados experimentais da FGV para o 2&ordm; trimestre de 2026 apontam alta anual de 2,9% no DF, ante 1,6% no Centro-Oeste.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes: IPEDF/IBGE, Contas Regionais 2023; FGV IBRE, dados experimentais do 2&ordm; tri/2026</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>o DF n&#227;o tem onde crescer?</h3>
+              <p><span class="evidence evidence-hipotese">HIP&#211;TESE</span> Custo da terra, inseguran&#231;a jur&#237;dica da regulariza&#231;&#227;o, modelo de concess&#227;o de lotes e qualifica&#231;&#227;o da m&#227;o de obra podem limitar a expans&#227;o privada, mesmo em uma pra&#231;a de renda e demanda elevadas.</p>
+              <details class="expand">
+                <summary>o que validar</summary>
+                <ul>
+                  <li>Oferta, pre&#231;o, fila e estoque de lotes industriais e comerciais da Terracap.</li>
+                  <li>Tempo e risco da regulariza&#231;&#227;o fundi&#225;ria.</li>
+                  <li>Vagas, conclus&#245;es e demanda empresarial por forma&#231;&#227;o t&#233;cnica.</li>
+                  <li>Impacto territorial sobre emprego, deslocamento e novas centralidades.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes: dossi&#234; Trabalho, concurso e dinheiro; Renan Silva/Ibmec Bras&#237;lia; Andrea Felippe Cabello/UnB; dados a solicitar &#224; Terracap</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>o Estado &#233; a espinha dorsal</h3>
+              <span class="metric">21,6%</span>
+              <p><span class="evidence evidence-dado">DADO</span> O setor p&#250;blico empregava 338 mil pessoas, mais de uma em cada cinco ocupadas. O grupamento que re&#250;ne administra&#231;&#227;o p&#250;blica, defesa, seguridade, educa&#231;&#227;o, sa&#250;de e servi&#231;os sociais alcan&#231;ava 448 mil trabalhadores.</p>
+              <details class="expand">
+                <summary>ver estrutura ocupacional</summary>
+                <ul>
+                  <li>Quase tr&#234;s em cada dez ocupados estavam nesse grande grupamento.</li>
+                  <li>Trabalhadores por conta pr&#243;pria somavam 282 mil, ou 18% dos ocupados.</li>
+                  <li>A mesma categoria re&#250;ne realidades opostas: consultoria de alta renda, feira, sal&#227;o de bairro, aplicativo e com&#233;rcio informal.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fonte: IBGE, PNAD Cont&#237;nua Trimestral, 2&ordm; trimestre de 2026</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>a informalidade tem endere&#231;o e ocupa&#231;&#227;o</h3>
+              <span class="metric">62 mil</span>
+              <p><span class="evidence evidence-dado">DADO</span> Dos 93 mil trabalhadores dom&#233;sticos no 1&ordm; trimestre de 2026, 62 mil estavam sem carteira, 66,7% da categoria. Em um ano, esse contingente cresceu 34,2%.</p>
+              <details class="expand">
+                <summary>ver escala metropolitana</summary>
+                <ul>
+                  <li>Na &#193;rea Metropolitana de Bras&#237;lia, o emprego dom&#233;stico era 6,2% das ocupa&#231;&#245;es em 2024.</li>
+                  <li>A remunera&#231;&#227;o m&#233;dia era R$ 1.587 para jornada de 33 horas semanais.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> A baixa informalidade agregada encobre bols&#245;es de precariedade concentrados por g&#234;nero, ra&#231;a e territ&#243;rio.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes: IBGE, PNAD Cont&#237;nua 1&ordm; tri/2026; IPEDF/Dieese, emprego dom&#233;stico na AMB, 2024</div>
+          </article>
+
+          <article class="card feature">
+            <div>
+              <h3>o desemprego depende de quem conta</h3>
+              <span class="metric">6,5% x ~15%</span>
+              <p><span class="evidence evidence-dado">DADO</span> A PNAD Cont&#237;nua mede desocupa&#231;&#227;o pelo padr&#227;o internacional; a PED-DF mede desemprego total e inclui trabalho prec&#225;rio e desalento. Os resultados respondem a perguntas diferentes e n&#227;o formam uma s&#233;rie compar&#225;vel.</p>
+              <details class="expand" open>
+                <summary>nota de m&#233;todo obrigat&#243;ria</summary>
+                <ul>
+                  <li>PNAD/IBGE: 6,5% no 2&ordm; trimestre de 2026 para quem n&#227;o trabalhou e procurou trabalho no per&#237;odo de refer&#234;ncia.</li>
+                  <li>PED/IPEDF-Dieese: aproximadamente 15% nas leituras recentes, usando conceito mais amplo de desemprego total.</li>
+                  <li>A diferen&#231;a entre os n&#250;meros revela pessoas fora do trabalho formal que a defini&#231;&#227;o restrita n&#227;o alcan&#231;a.</li>
+                  <li>Nunca comparar varia&#231;&#245;es entre as duas bases.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes: IBGE, PNAD Cont&#237;nua; IPEDF/Dieese, PED-DF e PED-AMB</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>a desigualdade dentro do contracheque</h3>
+              <span class="metric">+80% / +31%</span>
+              <p><span class="evidence evidence-dado">DADO</span> Em 2024, pessoas brancas ganhavam 80% mais que pessoas negras, e homens recebiam 31% mais que mulheres. Em 2025, o rendimento m&#233;dio masculino foi de R$ 6.981, ante R$ 5.560 entre mulheres.</p>
+              <details class="expand">
+                <summary>ver recorte interseccional</summary>
+                <ul>
+                  <li>Pessoas brancas tinham rendimento m&#233;dio de R$ 7.757.</li>
+                  <li>Mulheres pretas ou pardas recebiam R$ 3.170: diferen&#231;a de 2,4 vezes.</li>
+                  <li>Esse contraste combina ra&#231;a e g&#234;nero e deve ser rotulado como interseccional.</li>
+                  <li>15,3% da popula&#231;&#227;o estava abaixo da linha de pobreza; 4,7%, com at&#233; um quarto do sal&#225;rio m&#237;nimo per capita.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes: IBGE, PNAD Cont&#237;nua 2024-2025 e S&#237;ntese de Indicadores Sociais 2025</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>a fila do contracheque</h3>
+              <p><span class="evidence evidence-dado-cultura">DADO + CULTURA</span> Concurso &#233; projeto de ascens&#227;o, estabilidade e status no DF. Em torno dele existe uma ind&#250;stria de cursinhos, professores, editoras, canais, coworkings e rotinas de estudo sustentada pela presen&#231;a excepcional do setor p&#250;blico.</p>
+              <details class="expand">
+                <summary>ver as duas faces</summary>
+                <ul>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> Cotas e sele&#231;&#227;o p&#250;blica podem funcionar como escada de mobilidade para a periferia; validar origem territorial e ingresso.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> Anos sem renda, depend&#234;ncia familiar e press&#227;o de desempenho formam um custo invis&#237;vel.</li>
+                  <li>O concurseiro profissional n&#227;o aparece com nitidez como desempregado nem como ocupado.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes-base: IBGE, PNAD, IPEDF/Dieese, legisla&#231;&#227;o de cotas e pesquisa qualitativa a produzir</div>
+          </article>
+
+          <article class="card feature">
+            <div>
+              <h3>deve menos, paga pior</h3>
+              <span class="metric">51,2%</span>
+              <p><span class="evidence evidence-dado">DADO</span> Em julho de 2026, 79,9% das fam&#237;lias do DF estavam endividadas, abaixo dos 82% nacionais. Mas 51,2% tinham contas atrasadas, ante 29,8% no pa&#237;s. O problema local aparece menos no acesso &#224; d&#237;vida e mais na capacidade de pagamento.</p>
+              <details class="expand" open>
+                <summary>ver o extrato da desigualdade</summary>
+                <ul>
+                  <li>844.359 fam&#237;lias tinham alguma d&#237;vida.</li>
+                  <li>219.519 declaravam n&#227;o conseguir quitar as contas no m&#234;s seguinte.</li>
+                  <li>50,2% das fam&#237;lias inadimplentes tinham contas vencidas h&#225; mais de 90 dias.</li>
+                  <li>O tempo m&#233;dio de comprometimento era de 8,1 meses; o cart&#227;o aparecia em 86,6% das fam&#237;lias endividadas.</li>
+                  <li>Mesmo acima de dez sal&#225;rios m&#237;nimos, 67,1% das fam&#237;lias estavam endividadas.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fonte: CNC/Fecom&#233;rcio-DF, Peic-DF, julho de 2026</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>a aposta entrou no or&#231;amento</h3>
+              <span class="metric">35%</span>
+              <p><span class="evidence evidence-dado">DADO</span> Mais de um ter&#231;o da popula&#231;&#227;o adulta pesquisada apostou nos doze meses anteriores. Entre apostadores, 61,9% eram homens e 85,5% apontaram expectativa de retorno financeiro como motiva&#231;&#227;o.</p>
+              <details class="expand">
+                <summary>ver perfil e hip&#243;tese</summary>
+                <ul>
+                  <li>O grupo de renda m&#233;dia-baixa reunia 32,5% dos apostadores.</li>
+                  <li>Nos cassinos online, 51,7% estavam entre 30 e 49 anos.</li>
+                  <li><span class="evidence evidence-hipotese">HIP&Oacute;TESE</span> A aposta pode estar deixando de ser lazer eventual para virar estrat&#233;gia financeira; cruzar gasto, frequ&#234;ncia, d&#237;vida e atraso.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fonte: IPEDF/Secretaria da Fam&#237;lia, Apostadores no Distrito Federal, coleta set/2025, publica&#231;&#227;o 2026</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>quatro personagens econ&#244;micos</h3>
+              <p><span class="evidence evidence-dado-inferencia">DADO + INFER&#202;NCIA</span> A m&#233;dia econ&#244;mica do DF esconde trajet&#243;rias muito diferentes. Servidor, concurseiro, trabalhador informal perif&#233;rico e conta pr&#243;pria formam um elenco mais fiel que o brasiliense m&#233;dio.</p>
+              <details class="expand">
+                <summary>ver os arqu&#233;tipos</summary>
+                <ul>
+                  <li><b>Servidor:</b> estabilidade, cr&#233;dito e poder de compra que elevam a m&#233;dia.</li>
+                  <li><b>Concurseiro:</b> estudo sustentado por poupan&#231;a, fam&#237;lia ou trabalho intermitente.</li>
+                  <li><b>Informal perif&#233;rico:</b> renda baixa, pouca prote&#231;&#227;o e maior risco de a d&#237;vida virar atraso.</li>
+                  <li><b>Conta pr&#243;pria:</b> 282 mil pessoas em realidades que v&#227;o da consultoria ao aplicativo e ao com&#233;rcio de bairro.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes: IBGE, PNAD Cont&#237;nua; IPEDF/Dieese; leitura territorial do Prisma DF</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>agenda editorial e de valida&#231;&#227;o</h3>
+              <p><span class="evidence evidence-hipotese">HIP&Oacute;TESE EDITORIAL</span> O dossi&#234; deve explicar por que a cidade mais rica e mais formalizada distribui t&#227;o mal renda e seguran&#231;a financeira.</p>
+              <details class="expand">
+                <summary>ver pautas e dados a buscar</summary>
+                <ul>
+                  <li>A mais rica e a mais desigual: por que o Gini sobe quando o nacional cai?</li>
+                  <li>Deve menos, paga pior: abrir a Peic por renda e territ&#243;rio.</li>
+                  <li>A fila do contracheque: custo, dura&#231;&#227;o e destino de quem n&#227;o passa.</li>
+                  <li>Quem limpa a casa da cidade mais rica: emprego dom&#233;stico, carteira e deslocamento.</li>
+                  <li>A aposta entrou no or&#231;amento: cruzar bets, d&#237;vida, masculinidade e sa&#250;de mental.</li>
+                  <li>Obter a tabela oficial do VAB por atividade para separar administra&#231;&#227;o p&#250;blica e servi&#231;os privados sem recorrer a subtra&#231;&#227;o.</li>
+                  <li>Testar a pauta "o DF n&#227;o tem onde crescer" com oferta, pre&#231;o e fila de lotes da Terracap e dados de forma&#231;&#227;o t&#233;cnica.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fontes a acionar: IBGE, IPEDF/Dieese, CNC/Fecom&#233;rcio-DF, Terracap, &#243;rg&#227;os de concurso e pesquisa propriet&#225;ria</div>
           </article>
         </div>
       </div>
@@ -2316,30 +3162,36 @@
             <div>
               <h3>longevidade alta, cuidado em disputa</h3>
               <span class="metric">79,7</span>
-              <p><span class="evidence evidence-dado">DADO</span> O DF est&aacute; entre as UFs de maior esperan&ccedil;a de vida do pa&iacute;s: 79,7 anos ao nascer, segundo a T&aacute;bua Completa de Mortalidade 2024 do IBGE, divulgada em novembro de 2025. Ao mesmo tempo, envelhece rapidamente: a popula&#231;&#227;o de 60+ deve passar de 11,3% em 2020 para 16,6% em 2030, chegando a cerca de 565 mil idosos.</p>
+              <p><span class="evidence evidence-dado">DADO</span> O DF tem esperan&ccedil;a de vida de 79,7 anos ao nascer, acima da m&eacute;dia nacional de 76,6. Nas Proje&ccedil;&otilde;es da Popula&ccedil;&atilde;o do IBGE, ocupa o 4&ordm; lugar entre as UFs, atr&aacute;s de Santa Catarina, Esp&iacute;rito Santo e S&atilde;o Paulo. Ao mesmo tempo, a popula&#231;&atilde;o de 60+ deve passar de 11,3% em 2020 para 16,6% em 2030, chegando a cerca de 565 mil idosos.</p>
               <details class="expand">
                 <summary>ver leitura editorial</summary>
                 <ul>
-                  <li>N&atilde;o usar "maior do pa&iacute;s" nem "campe&atilde; de longevidade" at&eacute; conferir a tabela prim&aacute;ria por UF.</li>
+                  <li>Superlativo encerrado: n&atilde;o usar "maior do pa&iacute;s", "campe&atilde; de longevidade" ou "a cidade onde mais se vive".</li>
+                  <li>A compara&ccedil;&atilde;o por UF vem das Proje&ccedil;&otilde;es da Popula&ccedil;&atilde;o; a T&aacute;bua Completa de Mortalidade anual mede o Brasil.</li>
+                  <li>Em 2024, a mortalidade infantil no DF foi de 10,6 por mil nascidos vivos; entre 20 e 24 anos, a sobremortalidade masculina foi de 3,7 vezes.</li>
                   <li>Em 2030, aproximadamente um em cada seis moradores do DF ter&#225; 60 anos ou mais.</li>
                   <li>O tema combina relev&#226;ncia social e valor comercial, porque o idoso segue forte no consumo de TV aberta.</li>
                 </ul>
               </details>
             </div>
-            <div class="source">fontes: IBGE, T&aacute;bua de Mortalidade 2024, divulgada em novembro de 2025; IPEDF/Codeplan, proje&#231;&#245;es 2020-2030</div>
+            <div class="source">fontes: IBGE, Proje&ccedil;&otilde;es da Popula&ccedil;&atilde;o, dados de 2024; IPEDF/Codeplan, proje&#231;&#245;es 2020-2030</div>
           </article>
 
           <article class="card">
             <div>
-              <h3>idoso entre os de maior renda</h3>
+              <h3>o idoso que trabalha tem a maior renda</h3>
               <span class="metric">R$ 5.037</span>
-              <p><span class="evidence evidence-dado">DADO</span> O rendimento m&eacute;dio do trabalho da pessoa idosa no DF chegou a R$ 5.037 em 2024, colocando o idoso brasiliense entre os de maior renda do pa&iacute;s. O superlativo de 1&ordm; lugar deve ser usado apenas depois de conferida a tabela completa do IBGE/S&iacute;ntese de Indicadores Sociais.</p>
+              <p><span class="evidence evidence-dado">DADO</span> O DF lidera entre as UFs no rendimento m&eacute;dio real habitual do trabalho principal das pessoas ocupadas de 60 anos ou mais: R$ 5.037 em 2024, contra R$ 3.884 em S&atilde;o Paulo e R$ 2.051 no Maranh&atilde;o.</p>
               <details class="expand">
                 <summary>ver cuidado de leitura</summary>
-                <p>A m&#233;dia alta n&#227;o deve esconder desigualdade por RA. O idoso servidor do Plano Piloto envelhece em condi&#231;&#245;es muito diferentes do idoso perif&#233;rico dependente de aposentadoria, BPC e SUS.</p>
+                <ul>
+                  <li>O universo inclui apenas pessoas idosas ocupadas, aproximadamente uma em cada quatro no contexto nacional; n&atilde;o mede aposentadoria, renda total nem toda a popula&#231;&#227;o idosa.</li>
+                  <li>Formula&#231;&#227;o autorizada: "o idoso que trabalha no DF tem o maior rendimento do trabalho do pa&iacute;s".</li>
+                  <li>A m&eacute;dia alta n&#227;o deve esconder desigualdade por RA. O idoso servidor do Plano Piloto envelhece em condi&#231;&#245;es muito diferentes do idoso perif&#233;rico dependente de aposentadoria, BPC e SUS.</li>
+                </ul>
               </details>
             </div>
-            <div class="source">fonte: IBGE, S&iacute;ntese de Indicadores Sociais 2025, dados de 2024; superlativo a validar na tabela completa por UF</div>
+            <div class="source">fonte: IBGE, S&iacute;ntese de Indicadores Sociais 2025, base 2024; universo: pessoas ocupadas de 60 anos ou mais</div>
           </article>
 
           <article class="card feature">
@@ -2349,7 +3201,7 @@
               <p><span class="evidence evidence-dado">DADO</span> Estudo ObservaDF/UnB aponta que a sa&#250;de p&#250;blica &#233; o servi&#231;o pior avaliado pelos idosos do DF. Cerca de 60% desconhecem atividades de promo&#231;&#227;o de sa&#250;de da UBS mais pr&#243;xima, e o atendimento domiciliar aparece como inexistente ou desconhecido para muitos.</p>
               <details class="expand">
                 <summary>ver pauta de servi&#231;o</summary>
-                <p>O paradoxo editorial &#233; forte: a cidade onde se vive mais ainda n&#227;o oferece, de forma conhecida e acess&#237;vel, uma rede de cuidado compat&#237;vel com o envelhecimento. Isso abre pautas de UBS, cuidador, atendimento domiciliar, ILPIs, cal&#231;adas e mobilidade.</p>
+                <p>O paradoxo editorial &#233; forte: uma cidade com longevidade acima da m&#233;dia nacional ainda n&#227;o oferece, de forma conhecida e acess&#237;vel, uma rede de cuidado compat&#237;vel com o envelhecimento. Isso abre pautas de UBS, cuidador, atendimento domiciliar, ILPIs, cal&#231;adas e mobilidade.</p>
               </details>
             </div>
             <div class="source">fonte: ObservaDF/UnB, Percep&#231;&#245;es dos idosos sobre viver no DF</div>
@@ -2454,17 +3306,18 @@
             <div>
               <h3>idoso entre os mais conectados</h3>
               <span class="metric">88,3%</span>
-              <p><span class="evidence evidence-dado">DADO</span> O idoso do DF est&aacute; entre os mais conectados do pa&iacute;s: 88,3% das pessoas de 60 anos ou mais usam internet, segundo a PNAD Cont&iacute;nua TIC 2025. O superlativo nacional deve ser usado apenas depois de conferida a tabela completa por UF. O DF tamb&eacute;m aparece em patamar alto no acesso geral, com 98,2% dos domic&iacute;lios com internet e 96,8% das pessoas de 10 anos ou mais conectadas.</p>
+              <p><span class="evidence evidence-dado">DADO</span> No DF, 88,3% das pessoas de 60 anos ou mais usam internet, patamar muito acima da m&eacute;dia nacional de 74,5% em 2025. O ranking completo por UF continua fora da divulga&#231;&#227;o p&#250;blica; por isso, ainda n&#227;o se deve afirmar que o DF lidera.</p>
               <details class="expand">
                 <summary>ver leitura editorial</summary>
                 <ul>
                   <li>O idoso anal&#243;gico &#233; um retrato vencido; no DF, mais ainda.</li>
                   <li><span class="evidence evidence-dado nacional">DADO nacional</span> No Brasil, idosos conectados passaram de 44,9% em 2019 para 74,5% em 2025, a maior expans&#227;o entre todas as idades.</li>
+                  <li><span class="evidence evidence-dado nacional">DADO nacional</span> Em 2025, 80,3% dos idosos tinham celular pr&oacute;prio e 52,7% dos conectados compravam pela internet.</li>
                   <li>Esse dado permite falar de protagonismo digital, WhatsApp, servi&#231;os, bancos, telemedicina, v&#237;deo, redes e autonomia.</li>
                 </ul>
               </details>
             </div>
-            <div class="source">fonte: IBGE, PNAD Cont&iacute;nua TIC 2025, divulgada em 02/07/2026; superlativo a validar na tabela completa por UF</div>
+            <div class="source">fonte: IBGE, PNAD Cont&iacute;nua TIC 2025, divulgada em 02/07/2026; ranking por UF ainda pendente de extra&#231;&#227;o no plano tabular/SIDRA</div>
           </article>
 
           <article class="card feature">
@@ -2475,7 +3328,7 @@
               <details class="expand" open>
                 <summary>ver cuidado editorial</summary>
                 <ul>
-                  <li>O enquadramento n&#227;o deve ser "idoso ing&#234;nuo": o DF tem o idoso mais digital do pa&#237;s; o ponto &#233; que a criminalidade se especializou nele.</li>
+                  <li>O enquadramento n&#227;o deve ser "idoso ing&#234;nuo": o DF tem uma das popula&#231;&#245;es idosas mais conectadas do pa&#237;s; o ponto &#233; que a criminalidade se especializou nela.</li>
                   <li><span class="evidence evidence-dado">DADO</span> O DF teve 18.572 estelionatos virtuais em 2024, um a cada 28 minutos, ficando entre as UFs com maior incid&#234;ncia no Anu&#225;rio do FBSP.</li>
                   <li>Servi&#231;o permanente: como reconhecer golpe, como denunciar pela Delegacia Eletr&#244;nica/DRCC, que condutas cobrar de bancos e familiares.</li>
                   <li><b>Nota de rigor:</b> o dado de internet dos idosos &#233; do IBGE/PNAD TIC; a PCDF &#233; fonte do dado de estelionato. Os recortes informados somam 13.430, dois casos a menos que o total; checar categoria residual com a PCDF antes de arte final.</li>
@@ -2576,14 +3429,14 @@
           <article class="card">
             <div>
               <h3>hiato racial de renda</h3>
-              <span class="metric">R$ 1.987 x R$ 1.128</span>
-              <p><span class="evidence evidence-dado">DADO</span> O hiato racial de renda no DF aparece com for&ccedil;a no recorte Pnud 2024: renda m&eacute;dia de R$ 1.987 para pessoas brancas e R$ 1.128 para pessoas negras. O n&uacute;mero deve ser usado com etiqueta de fonte, ano e conceito, sem misturar com PNAD, PDAD ou renda domiciliar per capita.</p>
+              <span class="metric">+80%</span>
+              <p><span class="evidence evidence-dado">DADO</span> Em 2024, pessoas brancas no DF recebiam, em m&eacute;dia, 80% mais que pessoas negras. A desigualdade racial de renda deve ser lida junto com segrega&ccedil;&atilde;o territorial, ocupa&ccedil;&atilde;o e escolaridade.</p>
               <details class="expand">
                 <summary>ver valida&#231;&#227;o necess&#225;ria</summary>
-                <p><span class="evidence evidence-hipotese">HIP&#211;TESE</span> A desigualdade tamb&#233;m deve aparecer no acesso a cargos de lideran&#231;a, informalidade e teto de carreira. Validar com PDAD, RAIS e bases de ocupa&#231;&#227;o por cor/ra&#231;a.</p>
+                <p><span class="evidence evidence-hipotese">HIP&#211;TESE</span> A desigualdade tamb&#233;m deve aparecer no acesso a cargos de lideran&#231;a, informalidade e teto de carreira. O pr&oacute;ximo passo &eacute; cruzar PNAD com PDAD, RAIS e bases de ocupa&#231;&#227;o por cor/ra&#231;a.</p>
               </details>
             </div>
-            <div class="source">fonte: Pnud, 2024; complementos a validar com PDAD/IPEDF, PNAD Cont&iacute;nua e RAIS</div>
+            <div class="source">fonte: IBGE, PNAD Cont&iacute;nua 2024; complementos territoriais a desenvolver com PDAD/IPEDF e RAIS</div>
           </article>
 
           <article class="card feature">
@@ -4004,7 +4857,7 @@
       <div class="shell">
         <div class="section-head">
           <h2>novas lentes para o presente e 2030</h2>
-          <p>Atualiza&ccedil;&atilde;o estrat&eacute;gica do Prisma DF: o endere&ccedil;o continua sendo vari&aacute;vel central, mas passa a ser lido junto com circula&ccedil;&atilde;o, tempo, cuidado, acesso real, noite, clima e experi&ecirc;ncia cotidiana.</p>
+          <p>Atualiza&ccedil;&atilde;o estrat&eacute;gica do Prisma DF: tr&ecirc;s lentes transversais reorganizam a biblioteca existente — Circula&ccedil;&atilde;o, Tempo e Cuidado e Acesso Real. Dossi&#234;s e frentes novas aparecem separadamente, sem inflar a quantidade de lentes.</p>
         </div>
         <div class="section-callout">
           <blockquote>medimos a desigualdade do DF na escala em que ela aparece menor.</blockquote>
@@ -4085,16 +4938,17 @@
 
           <article class="card feature">
             <div>
-              <h3>bras&iacute;lia sem endere&ccedil;o</h3>
+              <h3>dossi&#234; conectado: exclus&atilde;o sem endere&ccedil;o</h3>
               <span class="metric">3.521 pessoas</span>
               <p><span class="evidence evidence-dado">DADO</span> O 2&ordm; Censo Distrital da Popula&ccedil;&atilde;o em Situa&ccedil;&atilde;o de Rua registrou 3.521 pessoas no DF em 2025, alta de 19,4% sobre 2022. O perfil &eacute; majoritariamente masculino (82%), negro ou pardo (81%) e migrante de outra UF (63%).</p>
               <details class="expand" open>
-                <summary>por que merece dossi&ecirc; pr&oacute;prio</summary>
+                <summary>ver conex&atilde;o com o dossi&ecirc;</summary>
                 <ul>
                   <li>Plano Piloto concentra 25,4% da popula&ccedil;&atilde;o em situa&ccedil;&atilde;o de rua, ou 897 pessoas: a vulnerabilidade est&aacute; no cart&atilde;o-postal.</li>
                   <li>Ceil&acirc;ndia saltou 94,3%, de 370 para 719 pessoas; Taguatinga caiu 12,5% e S&atilde;o Sebasti&atilde;o, 33,7%.</li>
                   <li>28% est&atilde;o na rua h&aacute; dez anos ou mais.</li>
                   <li>Leitura editorial: &eacute; o "campe&atilde; para quem?" na forma mais dura, diante de uma pra&ccedil;a que lidera renda, IDSC-BR e conectividade.</li>
+                  <li><a href="#brasilia-sem-endereco">Abrir a categoria Bras&iacute;lia sem endere&ccedil;o</a>, com m&eacute;todo, pol&iacute;tica p&uacute;blica, diverg&ecirc;ncia de bases e agenda de escuta.</li>
                 </ul>
               </details>
             </div>
@@ -4121,19 +4975,19 @@
           <article class="card">
             <div>
               <h3>a noite do DF</h3>
-              <span class="metric">fonte local a produzir</span>
-              <p><span class="evidence evidence-dado">DADO nacional</span> Pesquisa Datafolha/FBSP de maio de 2026 aponta que 56,8% das mulheres temem circular &agrave; noite perto de casa, contra 37,7% dos homens; 40,9% delas deixaram de sair &agrave; noite nos &uacute;ltimos 12 meses.</p>
+              <span class="metric">70,1% x 59,7%</span>
+              <p><span class="evidence evidence-dado">DADO local de 2015</span> Na Pesquisa Distrital de Vitimiza&ccedil;&atilde;o, 70,1% das mulheres e 59,7% dos homens se sentiam inseguros no pr&oacute;prio bairro &agrave; noite. O DF agora tem refer&ecirc;ncia local, mas ainda precisa atualizar a fotografia.</p>
               <details class="expand">
                 <summary>como usar sem escorregar</summary>
                 <ul>
-                  <li>O dado Datafolha/FBSP &eacute; nacional: serve como refer&ecirc;ncia, n&atilde;o como medida local do DF.</li>
-                  <li>N&atilde;o usar a pesquisa Patr&iacute;cia Galv&atilde;o/Locomotiva como dado local do DF; ela &eacute; nacional e tem apoio da Uber.</li>
-                  <li>A fonte local a acompanhar &eacute; o MIIS, de Inesc, Instituto P&oacute;lis, Instituto Peregum e SOS Corpo, com pesquisa participativa no DF, SP e Recife.</li>
+                  <li>A PVD ouviu 19.537 moradores de 16 anos ou mais e foi representativa para as 31 RAs existentes na onda.</li>
+                  <li>A data da onda, o recorte por RA e a compara&ccedil;&atilde;o com a segunda pesquisa precisam ser confirmados com a SSP-DF.</li>
+                  <li>A pesquisa Datafolha/FBSP de 2026 continua &uacute;til como refer&ecirc;ncia nacional, nunca como medida local.</li>
                   <li>Formato: m&oacute;dulo "Noite" no survey pr&oacute;prio, cruzando g&ecirc;nero, ra&ccedil;a, idade, RA, transporte e medo.</li>
                 </ul>
               </details>
             </div>
-            <div class="source">fontes: Datafolha/FBSP, Medo do Crime e Elei&ccedil;&otilde;es 2026; MIIS/Inesc em produ&ccedil;&atilde;o</div>
+            <div class="source">fonte: SSP-DF, Pesquisa Distrital de Vitimiza&ccedil;&atilde;o, out/2015; atualiza&ccedil;&atilde;o de 2026 em acompanhamento</div>
           </article>
 
           <article class="card">
@@ -4183,10 +5037,10 @@
               <details class="expand">
                 <summary>fases de execu&ccedil;&atilde;o</summary>
                 <ol>
-                  <li>0-30 dias: fechar tabelas pendentes e pedidos formais a IPEDF, ANTT e IBGE.</li>
-                  <li>30-90 dias: instalar a Lente 1 com o dossi&ecirc; "Onde o DF se encontra".</li>
+                  <li>0-30 dias: extrair no SIDRA o ranking de internet 60+ e a s&eacute;rie de domic&iacute;lios; protocolar os pedidos priorit&aacute;rios a IPEDF, ANTT, LaSUS/FAU-UnB, Sedes-DF, MDHC e SES-DF.</li>
+                  <li>30-90 dias: aprofundar a Lente 1, agora instalada com o dossi&ecirc; "Onde o DF se encontra", e atualizar os dados de emprego e transporte.</li>
                   <li>60-150 dias: desenhar, aplicar e publicar a primeira onda do survey; subir "Clima no corpo" como camada da fase 2, por causa do gancho jornal&iacute;stico e da conex&atilde;o com mobilidade.</li>
-                  <li>90-120 dias: publicar "Bras&iacute;lia sem endere&ccedil;o", com base j&aacute; verificada.</li>
+                  <li>90-120 dias: atualizar o dossi&#234; "Seguran&#231;a e medo" com a nova pesquisa da SSP-DF e o cruzamento por RA.</li>
                   <li>6-12 meses: aplicar Tempo e Cuidado e Acesso Real aos dossi&ecirc;s existentes.</li>
                 </ol>
               </details>
@@ -4229,6 +5083,66 @@
             </div>
             <div class="source">fonte: IPEDF, divulga&#231;&#245;es 2025-2026</div>
           </article>
+
+          <article class="card feature">
+            <div>
+              <h3>fase 0: dados que bloqueiam publica&#231;&#227;o</h3>
+              <span class="metric red">14 pedidos</span>
+              <p><span class="evidence evidence-dado-hipotese">DADO + HIP&Oacute;TESE</span> A agenda formal identifica lacunas de conceito, universo, per&#237;odo, territ&#243;rio ou tabela prim&#225;ria que ainda impedem transformar afirma&#231;&#245;es em indicadores fechados. A contagem foi refeita item a item; esperan&#231;a de vida, alfabetiza&#231;&#227;o e renda do idoso seguem resolvidas em fonte p&#250;blica.</p>
+              <details class="expand" open>
+                <summary>ver pedidos priorit&#225;rios</summary>
+                <ul>
+                  <li><b>IPEDF:</b> deslocamento pendular; percentual de pets; tabela do VAB por atividade; microdados do censo da popula&#231;&#227;o em situa&#231;&#227;o de rua; distribui&#231;&#227;o atualizada de postos de trabalho por RA.</li>
+                  <li><b>ANTT:</b> linhas semiurbanas interestaduais entre DF e Goi&aacute;s.</li>
+                  <li><b>LaSUS/FAU-UnB:</b> metodologia e cen&aacute;rio da s&eacute;rie t&eacute;rmica e da proje&#231;&#227;o para 2070.</li>
+                  <li><b>Sedes-DF:</b> ocupa&#231;&#227;o das vagas, motivos de recusa e trajet&oacute;ria de quem aceitou acolhimento.</li>
+                  <li><b>MDHC + IPEDF:</b> concilia&#231;&#227;o entre 3.521 pessoas no censo presencial e 7.924 nos registros administrativos.</li>
+                  <li><b>SES-DF/DIVEP:</b> s&eacute;rie recente de suic&iacute;dio por sexo, idade e RA.</li>
+                  <li><b>SSP-DF:</b> relat&#243;rios e microdados da PVD; desenho da pesquisa de 2026; s&#233;rie de CVLI por RA.</li>
+                  <li><b>Semob-DF:</b> fluxo di&#225;rio medido da Rodovi&#225;ria do Plano Piloto, com m&#233;todo e ano.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fonte: Prisma DF, Pedidos formais de dados, vers&atilde;o atualizada em outubro de 2026</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>dados que melhoram os dossi&#234;s</h3>
+              <span class="metric yellow">14 pedidos</span>
+              <p>As solicita&#231;&#245;es desta faixa n&#227;o impedem a leitura atual, mas territorializam resultados e fecham superlativos ainda rebaixados.</p>
+              <details class="expand">
+                <summary>ver agenda</summary>
+                <ul>
+                  <li>Reconciliar Censo e PDAD-A em religi&#227;o e obter desemprego PED por RA.</li>
+                  <li>Completar a s&eacute;rie hist&#243;rica de casas e extrair o ranking de internet entre idosos no plano tabular/SIDRA.</li>
+                  <li>Medir portas de trabalho para pessoas em situa&#231;&#227;o de rua e arboriza&#231;&#227;o por RA.</li>
+                  <li>Abrir golpes contra idosos, mortalidade masculina, aten&#231;&#227;o prim&#225;ria, divis&#227;o modal e inadimpl&#234;ncia por renda ou territ&#243;rio.</li>
+                  <li>Formalizar a diverg&#234;ncia SSP/FBSP/SIM e abrir metr&#244; por dia e hor&#225;rio e novas centralidades do PDOT.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">interlocutores: IPEDF, IBGE, Sedes-DF, Novacap, PCDF, SES-DF, Semob e Fecom&eacute;rcio-DF</div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>dados e parcerias que abrem pautas</h3>
+              <span class="metric blue">6 + 6</span>
+              <p>S&atilde;o seis pedidos de dados que abrem pautas e seis parcerias editoriais mapeadas. Juntos, podem produzir informa&#231;&#227;o in&#233;dita sobre apostas, concentra&#231;&#227;o de renda, desigualdade ajustada, preju&iacute;zo de golpes, risco de motociclistas, terra produtiva, mobilidade, medo, cultura e clima urbano.</p>
+              <details class="expand">
+                <summary>ver oportunidades</summary>
+                <ul>
+                  <li>Microdados de apostadores; renda do 1% mais rico; IDHM ajustado &agrave; desigualdade.</li>
+                  <li>Preju&iacute;zo financeiro de idosos e mortes no tr&acirc;nsito com recorte de motos e trabalho por aplicativo.</li>
+                  <li>Oferta, pre&#231;o e estoque de lotes industriais e comerciais da Terracap, para testar a pauta sobre o custo de crescer no DF.</li>
+                  <li>Parcerias com Inesc/MIIS, Andrew Renninger/CASA-UCL, Arthur Trindade/UnB, Marcelo Durante/UFV, JLeiva/Datafolha, Departamento de Estat&iacute;stica da UnB e LaSUS/FAU-UnB.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="source">fonte: Prisma DF, Pedidos formais de dados, outubro de 2026</div>
+          </article>
+
           <article class="card">
             <div>
               <h3>tr&#226;nsito como viol&#234;ncia letal</h3>
@@ -4404,6 +5318,18 @@
             <b>IBGE - Estimativas da Popula&#231;&#227;o</b>
             <span>popula&#231;&#227;o estimada de 2026 e marco dos 3 milh&#245;es no DF</span>
           </a>
+          <a class="source-link" href="https://agenciadenoticias.ibge.gov.br/media/com_mediaibge/arquivos/01a76679f450b86e5fff76c6887b0b2b.pdf" target="_blank" rel="noreferrer">
+            <b>IBGE - Rendimento de Todas as Fontes 2025</b>
+            <span>renda real, massa de rendimento e desigualdade medida pelo Gini</span>
+          </a>
+          <a class="source-link" href="https://agenciadenoticias.ibge.gov.br/media/com_mediaibge/arquivos/71016b2eb0a5feb8f7685271b1233db7.pdf" target="_blank" rel="noreferrer">
+            <b>IBGE - S&iacute;ntese de Indicadores Sociais 2025</b>
+            <span>educa&#231;&#227;o, pobreza e desigualdades de renda por sexo e cor ou ra&#231;a</span>
+          </a>
+          <a class="source-link" href="https://www.ibge.gov.br/estatisticas/sociais/trabalho/17270-pnad-continua.html" target="_blank" rel="noreferrer">
+            <b>IBGE - PNAD Cont&iacute;nua Trimestral</b>
+            <span>desocupa&#231;&#227;o, ocupa&#231;&#227;o, informalidade, posi&#231;&#227;o no trabalho e rendimento</span>
+          </a>
           <a class="source-link" href="https://www.ibge.gov.br/geociencias/organizacao-do-territorio/tipologias-do-territorio/15789-areas-urbanizadas.html" target="_blank" rel="noreferrer">
             <b>IBGE - &#193;reas Urbanizadas do Brasil</b>
             <span>expans&#227;o urbana, mancha urbana, densidade e solo impermeabilizado</span>
@@ -4412,9 +5338,17 @@
             <b>IPEDF / Codeplan</b>
             <span>indicadores distritais, PDAD, economia e estudos territoriais</span>
           </a>
-          <a class="source-link" href="https://www.ipe.df.gov.br/" target="_blank" rel="noreferrer">
+          <a class="source-link" href="https://infodf.ipe.df.gov.br/painel" target="_blank" rel="noreferrer">
             <b>IPEDF - popula&ccedil;&atilde;o em situa&ccedil;&atilde;o de rua</b>
-            <span>2&ordm; Censo Distrital da Popula&ccedil;&atilde;o em Situa&ccedil;&atilde;o de Rua, divulgado em 29/04/2025</span>
+            <span>painel comparativo dos Censos Distritais de 2022 e 2025</span>
+          </a>
+          <a class="source-link" href="https://www.cl.df.gov.br/-/nova-politica-para-populacao-em-situacao-de-rua-entra-em-vigor-no-df" target="_blank" rel="noreferrer">
+            <b>CLDF - Lei n&ordm; 7.923/2026</b>
+            <span>acolhimento humanizado e aten&#231;&#227;o integral &#224; popula&#231;&#227;o em situa&#231;&#227;o de rua</span>
+          </a>
+          <a class="source-link" href="https://www.ipe.df.gov.br/" target="_blank" rel="noreferrer">
+            <b>IPEDF - Apostadores no Distrito Federal</b>
+            <span>perfil sociodemogr&#225;fico, modalidades, motiva&#231;&#245;es e impactos das apostas</span>
           </a>
           <a class="source-link" href="https://www.ipe.df.gov.br/" target="_blank" rel="noreferrer">
             <b>IPEDF - Pets no DF</b>
@@ -4423,6 +5357,10 @@
           <a class="source-link" href="https://idsc.cidadessustentaveis.org.br/" target="_blank" rel="noreferrer">
             <b>IDSC-BR / Instituto Cidades Sustent&aacute;veis</b>
             <span>desenvolvimento sustent&aacute;vel municipal, ranking de munic&iacute;pios e equivalentes e compara&ccedil;&otilde;es territoriais</span>
+          </a>
+          <a class="source-link" href="https://www.undp.org/pt/brazil/publications/radar-idhm-evolucao-do-idhm-e-de-seus-componentes-periodo-de-2012-2024" target="_blank" rel="noreferrer">
+            <b>Pnud - Radar IDHM 2012-2024</b>
+            <span>IDHM e componentes de renda, longevidade e educa&#231;&atilde;o para Brasil e UFs</span>
           </a>
           <a class="source-link" href="https://arxiv.org/abs/2603.10657" target="_blank" rel="noreferrer">
             <b>Renninger / CASA-UCL</b>
@@ -4491,6 +5429,10 @@
           <a class="source-link" href="https://www.bcb.gov.br/" target="_blank" rel="noreferrer">
             <b>Banco Central</b>
             <span>cr&#233;dito, endividamento, infla&#231;&#227;o, atividade econ&#244;mica e indicadores financeiros</span>
+          </a>
+          <a class="source-link" href="https://www.fecomerciodf.com.br/endividamento-e-inadimplencia-avancam-no-distrito-federal/" target="_blank" rel="noreferrer">
+            <b>Fecom&eacute;rcio-DF / Peic</b>
+            <span>endividamento, contas em atraso e capacidade de pagamento das fam&#237;lias em julho de 2026</span>
           </a>
           <a class="source-link" href="https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/estatisticas-trabalho/novo-caged" target="_blank" rel="noreferrer">
             <b>Novo Caged</b>
